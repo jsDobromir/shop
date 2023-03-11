@@ -36,43 +36,41 @@ document.addEventListener('DOMContentLoaded', (ev) => {
     sliderManager.on('pan', function (e) {
         let currentXposition = carouselInner.getBoundingClientRect().x;
         let newPosition = currentXposition + e.deltaX;
-        let itemWidth = carouselInner.querySelector('.carousel__custom__inner__item').getBoundingClientRect().width / 4;
         carouselInner.style.transform = 'translateX(' + (newPosition) + 'px)';
         if (e.isFinal) {
             let activeElement = carouselInner.querySelector('.active');
-            if (e.distance > itemWidth) {
-                console.log(e.additionalEvent);
-                if (e.additionalEvent === 'panleft') {
-                    let nextElement = activeElement.nextElementSibling;
-                    if (!nextElement || !nextElement.classList.contains('carousel__custom__inner__item')) {
-                        carouselInner.parentElement.querySelector('.carousel-control-next').classList.add('d-none');
-                        return;
-                    }
-                    activeElement.classList.remove('active');
-                    nextElement.classList.add('active');
-                    let xPos = nextElement.getBoundingClientRect().x;
-                    let currentXposition = carouselInner.getBoundingClientRect().x;
-                    let newPosition = currentXposition - xPos;
-                    carouselInner.style.transform = 'translateX(' + (newPosition) + 'px)';
+            console.log(e.deltaX);
+            if (e.velocityX < -1) {
+                //go to right
+                let nextElement = activeElement.nextElementSibling;
+                if (!nextElement || !nextElement.classList.contains('carousel__custom__inner__item')) {
+                    carouselInner.parentElement.querySelector('.carousel-control-next').classList.add('d-none');
                     return;
                 }
-                else if (e.additionalEvent === 'panright') {
-                    let prevElement = activeElement.previousElementSibling;
-                    if (!prevElement || !prevElement.classList.contains('carousel__custom__inner__item')) {
-                        carouselInner.parentElement.querySelector('.carousel-control-next').classList.add('d-none');
-                        return;
-                    }
-    
-                    activeElement.classList.remove('active');
-                    prevElement.classList.add('active');
-                    let xPos = prevElement.getBoundingClientRect().x;
-                    let currentXposition = carouselInner.getBoundingClientRect().x;
-                    let newPosition = currentXposition - xPos;
-                    carouselInner.style.transform = 'translateX(' + (newPosition) + 'px)';
-                    return;
-                }
+                activeElement.classList.remove('active');
+                nextElement.classList.add('active');
+                let xPos = nextElement.getBoundingClientRect().x;
+                let currentXposition = carouselInner.getBoundingClientRect().x;
+                let newPosition = currentXposition - xPos;
+                carouselInner.style.transform = 'translateX(' + (newPosition) + 'px)';
+                return;
             }
-            
+            else if (e.velocityX > 1) {
+                //left
+                let prevElement = activeElement.previousElementSibling;
+                if (!prevElement || !prevElement.classList.contains('carousel__custom__inner__item')) {
+                    carouselInner.parentElement.querySelector('.carousel-control-next').classList.add('d-none');
+                    return;
+                }
+
+                activeElement.classList.remove('active');
+                prevElement.classList.add('active');
+                let xPos = prevElement.getBoundingClientRect().x;
+                let currentXposition = carouselInner.getBoundingClientRect().x;
+                let newPosition = currentXposition - xPos;
+                carouselInner.style.transform = 'translateX(' + (newPosition) + 'px)';
+                return;
+            }
             else {
                 let newPosition = currentXposition - activeElement.getBoundingClientRect().x;
                 carouselInner.style.transform = 'translateX(' + (newPosition) + 'px)';
