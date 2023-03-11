@@ -9,7 +9,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, 'dist')));
 
 app.get('/', (req, res) => {
-    let file = fs.createReadStream(path.join(__dirname, 'home.html'));
+    let file = fs.createReadStream(path.join(__dirname, 'index.html'));
     res.status(200);
     file.pipe(res);
 });
