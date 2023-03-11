@@ -1,0 +1,223 @@
+.header {
+    height: 60rem;
+    margin: 0 .5rem;
+    
+
+    @include media-breakpoint-up(lg) {
+        height: 50rem;
+    }
+
+
+    &__desktop {
+        width: 100%;
+        height: 70%;
+        position: relative;
+        overflow: hidden;
+
+        .bck_image {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &_1 {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), url(../images/back2.jpg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+
+            &_2 {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), url(../images/bck_cropped.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                -webkit-clip-path: polygon(100% 0%, 100% 0, 100% 100%, 0% 100%);
+                clip-path: polygon(100% 0%, 100% 0, 100% 100%, 0% 100%);
+
+                @include media-breakpoint-up(md) {
+                    -webkit-clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 50% 100%);
+                    clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 50% 100%);
+                }
+
+                @include media-breakpoint-up(lg) {
+                    -webkit-clip-path: polygon(80% 0%, 100% 0%, 100% 100%, 60% 100%);
+                    clip-path: polygon(80% 0%, 100% 0%, 100% 100%, 60% 100%);
+                }
+            }
+        }
+        [class^="header__desktop__text-box"] {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            transition: all 1s linear;
+        }
+    }
+
+    &__search-top-bar {
+        background-color: #f7f7f7;
+        height: 30%;
+        width: 95%;
+        margin: 0 auto;
+        @include media-breakpoint-up(lg) {
+            height: 10rem;
+        }
+        display: flex;
+        flex-direction: column;
+
+        .search__input {
+            font-size: 2.5rem;
+            font-family: inherit;
+            color: inherit;
+            padding: 1.5rem 2rem;
+            @include media-breakpoint-up(md) {
+                padding: 1rem 2rem;
+            }
+            border-radius: 10rem;
+            background-color: rbga($color-white, .5);
+            border: none;
+            border-bottom: 3px solid transparent;
+            width: 100%;
+            display: block;
+            transition: all .3s;
+
+            &:focus {
+                outline: none;
+                box-shadow: 0 1rem 2rem rgba($color-black, .1);
+            }
+
+            &::-webkit-input-placeholder {
+                color: $color-grey-dark-2;
+            }
+        }
+
+        .form_wrapper-lg {
+            display: none;
+            flex-grow: .8;
+            @include media-breakpoint-up(lg) {
+                display: block;
+            }
+
+            .search__input {
+                background-color: #ffffff;
+            }
+
+            .search_icon {
+                position: relative;
+
+                .search_span {
+                    position: absolute;
+                    top: 10%;
+                    right: 2%;
+                    font-size: 2.5rem;
+                }
+            }
+        }
+
+        &-form {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            @include media-breakpoint-up(lg) {
+                display: none;
+            }
+            width: 100%;
+            gap: 1rem;
+            .form_wrapper {
+                flex: 2;
+            }
+
+            .search_icon {
+                position: relative;
+
+                .search_span {
+                    position: absolute;
+                    top: 15%;
+                    right: 2%;
+                    font-size: 2.5rem;
+                }
+            }
+            
+        }
+    }
+
+    &__logo-card-icon {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            padding-left: 2rem;
+            img {
+                width: 8rem;
+                height: 8rem;
+            }
+        }
+
+        .icons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 3rem;
+
+            @include media-breakpoint-up(lg) {
+                gap: 5rem;
+            }
+
+            .profile {
+                font-size: 3rem;
+            }
+            .cart {
+                font-size: 3rem;
+            }
+        }
+    }
+
+    &__top-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo-box {
+        margin-left: 1rem;
+        margin-top: 1rem;
+        @include respond(tab-port) {
+            margin-left: 2rem;
+        }
+        @include respond(desktop) {
+            margin-left: 4rem;
+        }
+    }
+
+    &__atag {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: 400;
+        color: $color-black;
+    }
+
+    &__logo {
+        height: 7rem;
+        width: 7rem;
+    }
+
+}

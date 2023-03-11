@@ -1,0 +1,875 @@
+front_small 168 x 320
+resp_xs 168 x 320
+resp_sm 252 x 480
+
+
+//mid carousel
+<div id="carouselProductFirstMid" class="carousel slide d-none d-md-block d-xl-none"
+                    data-bs-ride="carousel">
+
+                    <!-- Responsive carousel on md with 3 items -->
+
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+
+                            <div class="kozmetika__carousel__prod">
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/retionol_cream">
+                                                <img src="/prod_images/prod1/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod1/resp_xs.jpg 1x, /prod_images/prod1/resp_sm.jpg 1.5x, /prod_images/prod1/resp_md.jpg 2x, /prod_images/prod1/resp_lg.jpg 2.5x, /prod_images/prod1/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/retionol_cream"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Хидратиращ крем – с 2,5% ретинол, витамин С 10%, веган хиалуронова
+                                                    киселина, масло от ший и масло от жожоба
+                                                </a>
+                                            </h3>
+                                        </div>
+
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod2/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod2/resp_xs.jpg 1x, /prod_images/prod2/resp_sm.jpg 1.5x, /prod_images/prod2/resp_md.jpg 2x, /prod_images/prod2/resp_lg.jpg 2.5x, /prod_images/prod2/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">Околоочен
+                                                    гел
+                                                    крем - Намалява бръчките, тъмните кръгове, линиите и зачервяванията
+                                                    -
+                                                    Чист и органичен</a>
+                                            </h3>
+
+                                        </div>
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod3/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod3/resp_xs.jpg 1x, /prod_images/prod3/resp_sm.jpg 1.5x, /prod_images/prod3/resp_md.jpg 2x, /prod_images/prod3/resp_lg.jpg 2.5x, /prod_images/prod3/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Серум с витамин С 20% с ретинол 2,5%, салицилова киселина 2%,
+                                                    хиалуронова киселина</a>
+                                            </h3>
+
+                                        </div>
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                        <div class="carousel-item">
+
+                            <div class="kozmetika__carousel__prod">
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod4/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod4/resp_xs.jpg 1x, /prod_images/prod4/resp_sm.jpg 1.5x, /prod_images/prod4/resp_md.jpg 2x, /prod_images/prod4/resp_lg.jpg 2.5x, /prod_images/prod4/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Овлажнител против стареене с витамин B3 Намалява появата на акне,
+                                                    пъпки,
+                                                    бръчки, фини линии</a>
+                                            </h3>
+
+                                        </div>
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod5/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod5/resp_xs.jpg 1x, /prod_images/prod5/resp_sm.jpg 1.5x, /prod_images/prod5/resp_md.jpg 2x, /prod_images/prod5/resp_lg.jpg 2.5x, /prod_images/prod5/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Серум за очи за тъмни кръгове и подпухналост - Намалява торбичките,
+                                                    бръчките, фините линии, отпуснатата кожа и</a>
+                                            </h3>
+
+                                        </div>
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod6/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod6/resp_xs.jpg 1x, /prod_images/prod6/resp_sm.jpg 1.5x, /prod_images/prod6/resp_md.jpg 2x, /prod_images/prod6/resp_lg.jpg 2.5x, /prod_images/prod6/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    СЕРУМ С ХИАЛУРОНОВА КИСЕЛИНА</a>
+                                            </h3>
+
+                                        </div>
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="kozmetika__carousel__prod">
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod7/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod7/resp_xs.jpg 1x, /prod_images/prod7/resp_sm.jpg 1.5x, /prod_images/prod7/resp_md.jpg 2x, /prod_images/prod7/resp_lg.jpg 2.5x, /prod_images/prod7/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Серум за бръчки, фини линии, хиперпигментация и други - Мощна
+                                                    формула
+                                                    срещу торбички под очите и стареене - С хиалуронова киселина</a>
+                                            </h3>
+
+                                        </div>
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod8/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod8/resp_xs.jpg 1x, /prod_images/prod8/resp_sm.jpg 1.5x, /prod_images/prod8/resp_md.jpg 2x, /prod_images/prod8/resp_lg.jpg 2.5x, /prod_images/prod8/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Най-добрият течен серум против стареене за лице - Намалява бръчките,
+                                                    хиперпигментацията и слънчевите петна - Съдържа чист витамин С и
+                                                    хиалуронова киселина</a>
+                                            </h3>
+
+                                        </div>
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod9/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod9/resp_xs.jpg 1x, /prod_images/prod9/resp_sm.jpg 1.5x, /prod_images/prod9/resp_md.jpg 2x, /prod_images/prod9/resp_lg.jpg 2.5x, /prod_images/prod9/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Тоник за лице с витамин С - 100% натурален и органичен против
+                                                    стареене
+                                                    пречистване на порите и третиране на лицето</a>
+                                            </h3>
+
+                                        </div>
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+
+                            <div class="kozmetika__carousel__prod">
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod10/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod10/resp_xs.jpg 1x, /prod_images/prod10/resp_sm.jpg 1.5x, /prod_images/prod10/resp_md.jpg 2x, /prod_images/prod10/resp_lg.jpg 2.5x, /prod_images/prod10/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Против бръчки, фини линии, старчески петна и хиперпигментация
+                                                    Ексфолира
+                                                    и почиства - С гликолова киселина</a>
+                                            </h3>
+
+                                        </div>
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod17/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod17/resp_xs.jpg 1x, /prod_images/prod17/resp_sm.jpg 1.5x, /prod_images/prod17/resp_md.jpg 2x, /prod_images/prod17/resp_lg.jpg 2.5x, /prod_images/prod17/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Серум с витамин С - ОГРОМЕН 60 мл, 3 пъти по-стабилен и 10
+                                                    антиоксиданта</a>
+                                            </h3>
+
+                                        </div>
+
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod18/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod18/resp_xs.jpg 1x, /prod_images/prod18/resp_sm.jpg 1.5x, /prod_images/prod18/resp_md.jpg 2x, /prod_images/prod18/resp_lg.jpg 2.5x, /prod_images/prod18/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">Olay
+                                                    AHA24 + Серум с витамин С за деня, с витамин С, AHA и ниацинамид, за
+                                                    сияйна и равномерна кожа, 40 ml</a>
+                                            </h3>
+
+                                        </div>
+
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="kozmetika__carousel__prod">
+                                <div class="kozmetika__carousel__prod__wrapper">
+
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod19/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod19/resp_xs.jpg 1x, /prod_images/prod19/resp_sm.jpg 1.5x, /prod_images/prod19/resp_md.jpg 2x, /prod_images/prod19/resp_lg.jpg 2.5x, /prod_images/prod19/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Olay Collagen Peptide24 Дневен крем 50 мл Хидратиращ крем без аромат
+                                                    с витамин B3 и колагенови пептиди</a>
+                                            </h3>
+
+                                        </div>
+
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod28/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod28/resp_xs.jpg 1x, /prod_images/prod28/resp_sm.jpg 1.5x, /prod_images/prod28/resp_md.jpg 2x, /prod_images/prod28/resp_lg.jpg 2.5x, /prod_images/prod28/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Moisture Surge™ 100H Автоматично допълващ хидрататор</a>
+                                            </h3>
+
+                                        </div>
+
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod32/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod32/resp_xs.jpg 1x, /prod_images/prod32/resp_sm.jpg 1.5x, /prod_images/prod32/resp_md.jpg 2x, /prod_images/prod32/resp_lg.jpg 2.5x, /prod_images/prod32/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Take The Day Off™ Cleansing Balm</a>
+                                            </h3>
+
+                                        </div>
+
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="kozmetika__carousel__prod">
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod33/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod33/resp_xs.jpg 1x, /prod_images/prod33/resp_sm.jpg 1.5x, /prod_images/prod33/resp_md.jpg 2x, /prod_images/prod33/resp_lg.jpg 2.5x, /prod_images/prod33/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Smart Clinical™ Repair Wrinke Correcting Serum</a>
+                                            </h3>
+
+                                        </div>
+
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod35/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod35/resp_xs.jpg 1x, /prod_images/prod35/resp_sm.jpg 1.5x, /prod_images/prod35/resp_md.jpg 2x, /prod_images/prod35/resp_lg.jpg 2.5x, /prod_images/prod35/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Even Better Clinical™ Radical Dark Spot Corrector + Interrupter</a>
+                                            </h3>
+
+                                        </div>
+
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod34/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod34/resp_xs.jpg 1x, /prod_images/prod34/resp_sm.jpg 1.5x, /prod_images/prod34/resp_md.jpg 2x, /prod_images/prod34/resp_lg.jpg 2.5x, /prod_images/prod34/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Smart Clinical™ Repair Wrinkle Correcting Eye Cream</a>
+                                            </h3>
+
+                                        </div>
+
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+
+                            <div class="kozmetika__carousel__prod">
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod36/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod36/resp_xs.jpg 1x, /prod_images/prod36/resp_sm.jpg 1.5x, /prod_images/prod36/resp_md.jpg 2x, /prod_images/prod36/resp_lg.jpg 2.5x, /prod_images/prod36/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Smart Clinical™ Repair Wrinke Correcting Serum</a>
+                                            </h3>
+
+                                        </div>
+
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod37/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod37/resp_xs.jpg 1x, /prod_images/prod37/resp_sm.jpg 1.5x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Clinique Smart Clinical Repair</a>
+                                            </h3>
+
+                                        </div>
+
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod38/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod38/resp_xs.jpg 1x, /prod_images/prod38/resp_sm.jpg 1.5x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Smart Clinical™ Repair Wrinke Correcting Serum</a>
+                                            </h3>
+
+                                        </div>
+
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="kozmetika__carousel__prod">
+                                <div class="kozmetika__carousel__prod__wrapper">
+
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod39/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod39/resp_xs.jpg 1x, /prod_images/prod39/resp_sm.jpg 1.5x, /prod_images/prod39/resp_md.jpg 2x, /prod_images/prod39/resp_lg.jpg 2.5x, /prod_images/prod39/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    La Roche-Posay Toleriane Hydrating Gentle Face Cleanser, Daily
+                                                    Facial Cleanser with Niacinamide</a>
+                                            </h3>
+
+                                        </div>
+
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod40/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod40/resp_xs.jpg 1x, /prod_images/prod40/resp_sm.jpg 1.5x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    La Roche-Posay Toleriane Hydrating Gentle Face Cleanser, Daily
+                                                    Facial Cleanser with Niacinamide</a>
+                                            </h3>
+
+                                        </div>
+
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod41/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod41/resp_xs.jpg 1x, /prod_images/prod41/resp_sm.jpg 1.5x, /prod_images/prod41/resp_md.jpg 2x, /prod_images/prod41/resp_lg.jpg 2.5x, /prod_images/prod41/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Hyaluronic Acid 2% + B5 Hydration Support Formula</a>
+                                            </h3>
+
+                                        </div>
+
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <button class="carousel-control-prev d-none" type="button" data-bs-target="#carouselProductFirstMid"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next d-none" type="button" data-bs-target="#carouselProductFirstMid"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
+
+                </div>

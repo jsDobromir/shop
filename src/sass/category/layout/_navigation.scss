@@ -1,0 +1,198 @@
+.navigation {
+    @include media-breakpoint-up(lg) {
+        display: none;
+    } 
+    &__checkbox {
+        display: none;
+    }
+
+    &__button {
+        display: block;
+        background-color: rgb(233, 229, 229);
+        height: 8rem;
+        width: 8rem;
+        border-radius: 50%;
+        z-index: 2000;
+        cursor: pointer;
+        position: relative;
+        
+        .line {
+            transition: all .3s;
+            &:before {
+                position: absolute;
+                content: '';
+                top: -1.5rem;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: black;
+            }
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            width: 80%;
+            height: 2px;
+            background-color: black;
+
+            &:after {
+                position: absolute;
+                content: '';
+                top: 1.5rem;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: black;
+            }
+        }
+    }
+
+    // &__background {
+    //     width: 5rem;
+    //     height: 5rem;
+    //     position: absolute;
+    //     top: 8rem;
+    //     right: 6rem;
+    //     background-image: radial-gradient(#e1dddd, #d4d6df);
+    //     z-index: 1000;
+    //     transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+    // }
+
+    &__nav {
+        height: 100vh;
+        width: 0;
+        position: fixed;
+        background-image: radial-gradient(#e1dddd, #d4d6df);
+        top: 0;
+        left: 0;
+        overflow: auto;
+        z-index: 1500;
+        opacity: 0;
+        transition: all .8s;
+    }
+
+    &__list {
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        width: 100%;
+        display: none;
+        transform: translate(-50%, 0%);
+        list-style: none;
+        text-align: center;
+        transition: all .8s;
+    }
+
+    &__item {
+        border-bottom: 2px solid #ffffff;
+        &:first-child {
+            margin: 0 2rem 0 2rem;
+        }
+        &:not(:first-child) {
+            margin: 4rem 2rem 0 2rem;
+        }
+        &__dropdown {
+            &__wrapper {
+                font-size: 4rem;
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                justify-content: center;
+
+                &__tittle {
+                    color: #615d5d;
+                }
+
+                .plus_icon {
+                    cursor: pointer;
+                    position: relative;
+                    height: 3rem;
+                    width: 3rem;
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 2rem;
+                        width: 2rem;
+                        border-top: 2px solid black;
+                        border-left: 2px solid black;
+                        transform: rotate(225deg);
+                        transition: all .6s linear;
+                    }
+                }
+            }
+        }
+
+        .navigation__checkbox__item {
+            display: none;
+        }
+
+        .navigation__checkbox__item:checked + .navigation__item__dropdown {
+            .plus_icon {
+                &::after {
+                    top: 45%;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+
+        .navigation__checkbox__item:checked ~ .navigation__list__nested{
+            //display: block;
+        }
+
+        .navigation__checkbox__item:checked ~ .navigation__list__nested .navigation__list__nested__list {
+            //opacity: 1;
+            max-height: 200rem;
+        }
+
+        .navigation__list__nested {
+            display: block;
+            margin-top: 1rem;
+
+            &__list {
+                transition: max-height .8s ease-in;
+                //opacity: 0;
+                width: 100%;
+                max-height: 0;
+                overflow: hidden;
+                text-align: center;
+                font-size: 4rem;
+                list-style: none;
+                color: #13131abd;
+
+                &__item:not(:first-child) {
+                    margin-top: 1.5rem;
+                }
+            }
+        }
+    }
+
+    &__link {
+        font-size: 4rem;
+        font-weight: 300;
+        color: black;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    &__checkbox:checked ~ &__nav {
+        opacity: 1;
+        width: 100%;
+    }
+
+    &__checkbox:checked ~ &__nav .navigation__list {
+        display: block;
+    }
+    
+    &__checkbox:checked ~ &__button .line {
+        transform: rotate(45deg);
+        &:before {
+            top: 0;
+            transform: rotate(90deg);
+        }
+        &:after {
+            content: '';
+            opacity: 0;
+        }
+    }
+}

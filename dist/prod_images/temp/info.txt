@@ -1,0 +1,3 @@
+title = Olay AHA24 + Серум с витамин С за деня, с витамин С, AHA и ниацинамид, за сияйна и равномерна кожа, 40 ml
+url = https://www.amazon.de/AHA24-Vitamin-Serum-Niacinamide-Radiant/dp/B09NRPWZDK?ref_=ast_sto_dp&th=1&psc=1
+category = kozmetika

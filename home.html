@@ -1,0 +1,3119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/styles/home.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="text/javascript" src="/home.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header__search-top-bar">
+
+            <div class="header__logo-card-icon">
+                <span class="logo">
+                    <a href="/"><img src="/images/logo.png" alt="logo" /></a>
+                </span>
+
+                <div class="form_wrapper-lg">
+                    <form action="/search" method="GET">
+                        <div class="form__group search_icon">
+                            <input type="text" name="search" id="search" class="search__input"
+                                placeholder="Какво търсиш днес?" />
+                            <span class="search_span"><i class="fa-solid fa-magnifying-glass"></i></span>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="icons">
+                    <span class="profile"><a href="/account"><i class="fa-regular fa-user fa-xl"></i></a></span>
+                    <span class="cart"><a href="/cart"><i class="fa-solid fa-cart-shopping fa-xl"></a></i></span>
+                </div>
+            </div>
+
+            <div class="header__search-top-bar-form">
+
+                <div class="navigation">
+                    <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+                    <label for="navi-toggle" class="navigation__button">
+                        <span class="line"></span>
+                    </label>
+
+                    <nav class="navigation__nav">
+                        <ul class="navigation__list">
+                            <li class="navigation__item">
+                                <input type="checkbox" class="navigation__checkbox__item" id="navi-item-1">
+
+                                <label for="navi-item-1" class="navigation__item__dropdown">
+                                    <span class="navigation__item__dropdown__wrapper">
+                                        <h4 class="navigation__item__dropdown__wrapper__tittle">Козметика</h4>
+                                        <span class="plus_icon"></span>
+                                    </span>
+                                </label>
+
+                                <div class="navigation__list__nested">
+                                    <ul class="navigation__list__nested__list">
+
+                                        <li class="navigation__list__nested__list__item">
+                                            <a href="/kozmetika/lice/">Грижа за кожата</a>
+                                        </li>
+
+                                        <li class="navigation__list__nested__list__item">
+                                            <a href="/kozmetika/kosa/">Грижа за косата</a>
+                                        </li>
+
+                                        <li class="navigation__list__nested__list__item">
+                                            <a href="/kozmetika/lichna/">Лична грижа</a>
+                                        </li>
+
+                                        <li class="navigation__list__nested__list__item">
+                                            <a href="/kozmetika/grim/">Грим</a>
+                                        </li>
+
+                                        <li class="navigation__list__nested__list__item">
+                                            <a href="/kozmetika/muzhe/">Мъжка козметика</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="navigation__item">
+                                <input type="checkbox" class="navigation__checkbox__item" id="navi-item-2">
+
+                                <label for="navi-item-2" class="navigation__item__dropdown">
+                                    <span class="navigation__item__dropdown__wrapper">
+                                        <h4 class="navigation__item__dropdown__wrapper__tittle">Добавки</h4>
+                                        <span class="plus_icon"></span>
+                                    </span>
+                                </label>
+
+                                <div class="navigation__list__nested">
+                                    <ul class="navigation__list__nested__list">
+
+                                        <li class="navigation__list__nested__list__item">
+                                            <a href="/zdrave/dobavki/">Минерали</a>
+                                        </li>
+
+                                        <li class="navigation__list__nested__list__item">
+                                            <a href="/zdrave/protein/">Антиоксиданти</a>
+                                        </li>
+
+                                        <li class="navigation__list__nested__list__item">
+                                            <a href="/zdrave/vitamini/">За Сън</a>
+                                        </li>
+
+                                        <li class="navigation__list__nested__list__item">
+                                            <a href="/zdrave/dobavki/">Мозък и когнитивни</a>
+                                        </li>
+
+                                        <li class="navigation__list__nested__list__item">
+                                            <a href="/zdrave/bilki/">Аминокиселини</a>
+                                        </li>
+
+                                        <li class="navigation__list__nested__list__item">
+                                            <a href="/zrave/kolagen">Колаген</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="navigation__item">
+                                <input type="checkbox" class="navigation__checkbox__item" id="navi-item-3">
+
+                                <label for="navi-item-3" class="navigation__item__dropdown">
+                                    <span class="navigation__item__dropdown__wrapper">
+                                        <h4 class="navigation__item__dropdown__wrapper__tittle">Витамини</h4>
+                                        <span class="plus_icon"></span>
+                                    </span>
+                                </label>
+
+                                <div class="navigation__list__nested">
+                                    <ul class="navigation__list__nested__list">
+
+                                        <li class="navigation__list__nested__list__item">
+                                            <a href="/zdrave/dobavki/">Витамин Д</a>
+                                        </li>
+
+                                        <li class="navigation__list__nested__list__item">
+                                            <a href="/zdrave/protein/">Витамин Ц</a>
+                                        </li>
+
+                                        <li class="navigation__list__nested__list__item">
+                                            <a href="/zdrave/vitamini/">Мултивитамини</a>
+                                        </li>
+
+                                        <li class="navigation__list__nested__list__item">
+                                            <a href="/zdrave/dobavki/">Витамин Е</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="navigation__item">
+                                <input type="checkbox" class="navigation__checkbox__item" id="navi-item-4">
+
+                                <label for="navi-item-4" class="navigation__item__dropdown">
+                                    <span class="navigation__item__dropdown__wrapper">
+                                        <h4 class="navigation__item__dropdown__wrapper__tittle">Спорт</h4>
+                                        <span class="plus_icon"></span>
+                                    </span>
+                                </label>
+                                <div class="navigation__list__nested">
+                                    <ul class="navigation__list__nested__list">
+
+                                        <li class="navigation__list__nested__list__item">
+                                            <a href="/sport/fitness/">Фитнес</a>
+                                        </li>
+
+                                        <li class="navigation__list__nested__list__item">
+                                            <a href="/sport/tech/">Спортни Технологии</a>
+                                        </li>
+
+                                        <li class="navigation__list__nested__list__item">
+                                            <a href="/sport/aksesoari/">Фитнес аксесоари</a>
+                                        </li>
+
+                                        <li class="navigation__list__nested__list__item">
+                                            <a href="/sport/running/">Бягане</a>
+                                        </li>
+
+                                        <li class="navigation__list__nested__list__item">
+                                            <a href="/sport/dumbells/">Гири и дъмбели</a>
+                                        </li>
+
+                                        <li class="navigation__list__nested__list__item">
+                                            <a href="/sport/yoga/">Йога</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="navigation__item">
+                                <input type="checkbox" class="navigation__checkbox__item" id="navi-item-5">
+
+                                <label for="navi-item-5" class="navigation__item__dropdown">
+                                    <span class="navigation__item__dropdown__wrapper">
+                                        <h4 class="navigation__item__dropdown__wrapper__tittle">Спортно Облекло</h4>
+                                        <span class="plus_icon"></span>
+                                    </span>
+                                </label>
+
+                                <div class="navigation__list__nested">
+                                    <ul class="navigation__list__nested__list">
+
+                                        <li class="navigation__list__nested__list__item">
+                                            <a href="/fashion/womenclothes/">Дамски дрехи</a>
+                                        </li>
+
+                                        <li class="navigation__list__nested__list__item">
+                                            <a href="/fashion/womenshoes/">Дамски обувки</a>
+                                        </li>
+
+                                        <li class="navigation__list__nested__list__item">
+                                            <a href="/fashion/accessoires/">Дамски аксесоари</a>
+                                        </li>
+
+                                        <li class="navigation__list__nested__list__item">
+                                            <a href="/fashion/men/">Мъжки дрехи</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="navigation__item">
+                                <input type="checkbox" class="navigation__checkbox__item" id="navi-item-6">
+
+                                <label for="navi-item-6" class="navigation__item__dropdown">
+                                    <span class="navigation__item__dropdown__wrapper">
+                                        <h4 class="navigation__item__dropdown__wrapper__tittle">Баня</h4>
+                                        <span class="plus_icon"></span>
+                                    </span>
+                                </label>
+
+                                <div class="navigation__list__nested">
+                                    <ul class="navigation__list__nested__list">
+
+                                        <li class="navigation__list__nested__list__item">
+                                            <a href="/home/kuhnq/">Кухня</a>
+                                        </li>
+
+                                        <li class="navigation__list__nested__list__item">
+                                            <a href="/home/dekoracii/">Декорации за дома</a>
+                                        </li>
+
+                                        <li class="navigation__list__nested__list__item">
+                                            <a href="/home/aksesoari/">Аксесоари за дома</a>
+                                        </li>
+
+                                        <li class="navigation__list__nested__list__item">
+                                            <a href="/home/clean/">Почистване на дома</a>
+                                        </li>
+
+                                        <li class="navigation__list__nested__list__item">
+                                            <a href="/home/bathroom/">Баня</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="form_wrapper">
+                    <form action="/search" method="GET">
+                        <div class="form__group search_icon">
+                            <input type="text" name="search" id="search" class="search__input"
+                                placeholder="Какво търсиш днес?" />
+                            <span class="search_span"><i class="fa-solid fa-magnifying-glass"></i></span>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Navigation desktop -->
+
+        <div class="navigation__desktop">
+            <nav class="navigation__desktop__nav">
+                <ul class="navigation__desktop__list">
+                    <li class="navigation__desktop__item">
+                        <a href="/kozmetika/" class="navigation__desktop__link">Козметика</a>
+                        <ul class="navigation__desktop__item__dropdown">
+
+                            <li class="navigation__desktop__item__dropdown__item">
+                                <a href="/kozmetika/lice/" class="navigation__desktop__item__dropdown__item__link">Грижа
+                                    за кожата</a>
+                            </li>
+
+                            <li class="navigation__desktop__item__dropdown__item">
+                                <a href="/kozmetika/kosa/" class="navigation__desktop__item__dropdown__item__link">Грижа
+                                    за косата</a>
+                            </li>
+
+                            <li class="navigation__desktop__item__dropdown__item">
+                                <a href="/kozmetika/lichna/"
+                                    class="navigation__desktop__item__dropdown__item__link">Лична грижа</a>
+                            </li>
+
+                            <li class="navigation__desktop__item__dropdown__item">
+                                <a href="/kozmetika/grim/"
+                                    class="navigation__desktop__item__dropdown__item__link">Грим</a>
+                            </li>
+
+                            <li class="navigation__desktop__item__dropdown__item">
+                                <a href="/kozmetika/muzhe/"
+                                    class="navigation__desktop__item__dropdown__item__link">Мъжка козметика</a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="navigation__desktop__item"><a href="/zdrave/"
+                            class="navigation__desktop__link">Добавки</a>
+
+                        <ul class="navigation__desktop__item__dropdown">
+
+                            <li class="navigation__desktop__item__dropdown__item">
+                                <a href="/zdrave/dobavki/"
+                                    class="navigation__desktop__item__dropdown__item__link">Минерали</a>
+                            </li>
+
+                            <li class="navigation__desktop__item__dropdown__item">
+                                <a href="/zdrave/protein/"
+                                    class="navigation__desktop__item__dropdown__item__link">Антиоксиданти</a>
+                            </li>
+
+                            <li class="navigation__desktop__item__dropdown__item">
+                                <a href="/zdrave/vitamini/" class="navigation__desktop__item__dropdown__item__link">За
+                                    Сън</a>
+                            </li>
+
+                            <li class="navigation__desktop__item__dropdown__item">
+                                <a href="/zdrave/dobavki/" class="navigation__desktop__item__dropdown__item__link">Мозък
+                                    и когнитивни</a>
+                            </li>
+
+                            <li class="navigation__desktop__item__dropdown__item">
+                                <a href="/zdrave/bilki/"
+                                    class="navigation__desktop__item__dropdown__item__link">Аминокиселини</a>
+                            </li>
+
+                            <li class="navigation__desktop__item__dropdown__item">
+                                <a href="/zdrave/bilki/"
+                                    class="navigation__desktop__item__dropdown__item__link">Колаген</a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="navigation__desktop__item"><a href="/sport/"
+                            class="navigation__desktop__link">Витамини</a>
+                        <ul class="navigation__desktop__item__dropdown vitamini">
+
+                            <li class="navigation__desktop__item__dropdown__item">
+                                <a href="/sport/fitness/"
+                                    class="navigation__desktop__item__dropdown__item__link">Витамин Д</a>
+                            </li>
+
+                            <li class="navigation__desktop__item__dropdown__item">
+                                <a href="/sport/tech/" class="navigation__desktop__item__dropdown__item__link">Витамин
+                                    Ц</a>
+                            </li>
+
+                            <li class="navigation__desktop__item__dropdown__item">
+                                <a href="/sport/aksesoari/"
+                                    class="navigation__desktop__item__dropdown__item__link">Мултивитамини</a>
+                            </li>
+
+                            <li class="navigation__desktop__item__dropdown__item">
+                                <a href="/sport/running/"
+                                    class="navigation__desktop__item__dropdown__item__link">Витамин Е</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navigation__desktop__item"><a href="/sport/" class="navigation__desktop__link">Спорт</a>
+                        <ul class="navigation__desktop__item__dropdown sport">
+
+                            <li class="navigation__desktop__item__dropdown__item">
+                                <a href="/sport/fitness/"
+                                    class="navigation__desktop__item__dropdown__item__link">Фитнес</a>
+                            </li>
+
+                            <li class="navigation__desktop__item__dropdown__item">
+                                <a href="/sport/tech/" class="navigation__desktop__item__dropdown__item__link">Спортни
+                                    Технологии</a>
+                            </li>
+
+                            <li class="navigation__desktop__item__dropdown__item">
+                                <a href="/sport/aksesoari/"
+                                    class="navigation__desktop__item__dropdown__item__link">Фитнес аксесоари</a>
+                            </li>
+
+                            <li class="navigation__desktop__item__dropdown__item">
+                                <a href="/sport/running/"
+                                    class="navigation__desktop__item__dropdown__item__link">Бягане</a>
+                            </li>
+
+                            <li class="navigation__desktop__item__dropdown__item">
+                                <a href="/sport/dumbells/" class="navigation__desktop__item__dropdown__item__link">Гири
+                                    и дъмбели</a>
+                            </li>
+
+                            <li class="navigation__desktop__item__dropdown__item">
+                                <a href="/sport/yoga/" class="navigation__desktop__item__dropdown__item__link">Йога</a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="navigation__desktop__item"><a href="/obleklo/" class="navigation__desktop__link">Спортно
+                            Облекло</a>
+                        <ul class="navigation__desktop__item__dropdown sport_wear">
+
+                            <li class="navigation__desktop__item__dropdown__item">
+                                <a href="/fashion/womenclothes/"
+                                    class="navigation__desktop__item__dropdown__item__link">Дамски дрехи</a>
+                            </li>
+
+                            <li class="navigation__desktop__item__dropdown__item">
+                                <a href="/fashion/womenshoes/"
+                                    class="navigation__desktop__item__dropdown__item__link">Дамски обувки</a>
+                            </li>
+
+                            <li class="navigation__desktop__item__dropdown__item">
+                                <a href="/fashion/accessoires/"
+                                    class="navigation__desktop__item__dropdown__item__link">Дамски аксесоари</a>
+                            </li>
+
+                            <li class="navigation__desktop__item__dropdown__item">
+                                <a href="/fashion/men/" class="navigation__desktop__item__dropdown__item__link">Мъжки
+                                    дрехи</a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="navigation__desktop__item"><a href="/zadoma/" class="navigation__desktop__link">Баня</a>
+                        <ul class="navigation__desktop__item__dropdown">
+
+                            <li class="navigation__desktop__item__dropdown__item">
+                                <a href="/home/kuhnq/" class="navigation__desktop__item__dropdown__item__link">Кухня</a>
+                            </li>
+
+                            <li class="navigation__desktop__item__dropdown__item">
+                                <a href="/home/dekoracii/"
+                                    class="navigation__desktop__item__dropdown__item__link">Декорации за дома</a>
+                            </li>
+
+                            <li class="navigation__desktop__item__dropdown__item">
+                                <a href="/home/aksesoari/"
+                                    class="navigation__desktop__item__dropdown__item__link">Аксесоари за дома</a>
+                            </li>
+
+                            <li class="navigation__desktop__item__dropdown__item">
+                                <a href="/home/clean/"
+                                    class="navigation__desktop__item__dropdown__item__link">Почистване на дома</a>
+                            </li>
+
+                            <li class="navigation__desktop__item__dropdown__item">
+                                <a href="/home/bathroom/"
+                                    class="navigation__desktop__item__dropdown__item__link">Баня</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header__desktop">
+
+            <div class="bck_image">
+
+                <div class="bck_image_1"></div>
+                <div class="bck_image_2"></div>
+
+
+                <div class="header__desktop__text-box-1 activeOpacity">
+                    <h1 class="heading-primary">
+                        <span class="heading-primary--main-2">Витамини билкови</span>
+                        <span class="heading-primary--sub-2">и хранителни добавки</span>
+                    </h1>
+                </div>
+
+                <div class="header__desktop__text-box-2 disabledOpacity">
+                    <h1 class="heading-primary">
+                        <span class="heading-primary--main">Качествена</span>
+                        <span class="heading-primary--sub">козметика от природата</span>
+                    </h1>
+                </div>
+
+                <div class="header__desktop__text-box-3 disabledOpacity">
+                    <h1 class="heading-primary">
+                        <span class="heading-primary--main-3">Фитнес и</span>
+                        <span class="heading-primary--sub-3">уреди за спорт</span>
+                    </h1>
+                </div>
+
+                <div class="header__desktop__text-box-4 disabledOpacity">
+                    <h1 class="heading-primary">
+                        <span class="heading-primary--main-4">Спортно</span>
+                        <span class="heading-primary--sub-4">облекло</span>
+                    </h1>
+                </div>
+
+                <div class="header__desktop__text-box-5 disabledOpacity">
+                    <h1 class="heading-primary">
+                        <span class="heading-primary--main-6">Продукти за</span>
+                        <span class="heading-primary--sub-6">Дома</span>
+                    </h1>
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <div class="container_prod">
+
+            <div class="kozmetika__carousel">
+
+                <div class="kozmetika__carousel__tittle">
+                    <h3>Козметика</h3>
+                </div>
+
+                <div class="carousel__custom d-lg-none">
+
+                    <div class="carousel__custom__inner">
+
+                        <div class="carousel__custom__inner__item active">
+
+                            <div class="carousel__custom__inner__item__wrapper">
+
+                                <div class="carousel__custom__inner__item__wrapper__image">
+                                    <div class="carousel__custom__inner__item__wrapper__image__wrapper">
+                                        <a href="/product/retionol_cream">
+                                            <img src="/prod_images/prod1/front_small.jpg"
+                                                class="carousel__custom__inner__item__wrapper__image__imgclass"
+                                                alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                srcset="/prod_images/prod1/resp_xs.jpg 1x, /prod_images/prod1/resp_sm.jpg 1.5x, /prod_images/prod1/resp_md.jpg 2x, /prod_images/prod1/resp_lg.jpg 2.5x, /prod_images/prod1/resp_xl.jpg 3x" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="carousel__custom__inner__item__wrapper__second">
+                                    <div class="carousel__custom__inner__item__wrapper__second__tittle">
+                                        <h3>
+                                            <a href="/product/retionol_cream"
+                                                class="carousel__custom__inner__item__wrapper__second__tittle__link">
+                                                Хидратиращ крем – с 2,5% ретинол, витамин С 10%, веган хиалуронова
+                                                киселина, масло от ший и масло от жожоба
+                                            </a>
+                                        </h3>
+                                    </div>
+
+                                    <div class="carousel__custom__inner__item__wrapper__second__price">
+                                        <span class="price">
+                                            85лв.
+                                        </span>
+
+                                        <span class="bag">
+                                            <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="carousel__custom__inner__item">
+                            <div class="carousel__custom__inner__item__wrapper">
+                                <div class="carousel__custom__inner__item__wrapper__image">
+                                    <div class="carousel__custom__inner__item__wrapper__image__wrapper">
+                                            <a href="/product/retionol_cream">
+                                                <img src="/prod_images/prod3/front_small.jpg"
+                                                alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                srcset="/prod_images/prod3/resp_xs.jpg 1x, /prod_images/prod3/resp_sm.jpg 1.5x, /prod_images/prod3/resp_md.jpg 2x, /prod_images/prod3/resp_lg.jpg 2.5x, /prod_images/prod3/resp_xl.jpg 3x" />
+                                            </a>
+                                    </div>
+                                </div>
+                                <div class="carousel__custom__inner__item__wrapper__second">
+                                    <div class="carousel__custom__inner__item__wrapper__second__tittle">
+                                        <h3>
+                                            <a href="/product/retionol_cream"
+                                                class="carousel__custom__inner__item__wrapper__second__tittle__link">
+                                                Серум с витамин С 20% с ретинол 2,5%, салицилова киселина 2%, хиалуронова киселина
+                                            </a>
+                                        </h3>
+                                    </div>
+
+                                    <div class="carousel__custom__inner__item__wrapper__second__price">
+                                        <span class="price">
+                                            85лв.
+                                        </span>
+
+                                        <span class="bag">
+                                            <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel__custom__inner__item">
+                            <div class="carousel__custom__inner__item__wrapper">
+                                <div class="carousel__custom__inner__item__wrapper__image">
+                                    <div class="carousel__custom__inner__item__wrapper__image__wrapper">
+                                        <a href="/product/retionol_cream">
+                                            <img src="/prod_images/prod5/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod5/resp_xs.jpg 1x, /prod_images/prod5/resp_sm.jpg 1.5x, /prod_images/prod5/resp_md.jpg 2x, /prod_images/prod5/resp_lg.jpg 2.5x, /prod_images/prod5/resp_xl.jpg 3x" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="carousel__custom__inner__item__wrapper__second">
+                                    <div class="carousel__custom__inner__item__wrapper__second__tittle">
+                                        <h3>
+                                            <a href="/product/retionol_cream"
+                                                class="carousel__custom__inner__item__wrapper__second__tittle__link">
+                                                Серум за очи за тъмни кръгове и подпухналост - Намалява торбичките, бръчките, фините линии, отпуснатата кожа и
+                                            </a>
+                                        </h3>
+                                    </div>
+
+                                    <div class="carousel__custom__inner__item__wrapper__second__price">
+                                        <span class="price">
+                                            85лв.
+                                        </span>
+
+                                        <span class="bag">
+                                            <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel__custom__inner__item">
+                            <div class="carousel__custom__inner__item__wrapper">
+                                <div class="carousel__custom__inner__item__wrapper__image">
+                                    <div class="carousel__custom__inner__item__wrapper__image__wrapper">
+                                        <a href="/product/retionol_cream">
+                                            <img src="/prod_images/prod7/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod7/resp_xs.jpg 1x, /prod_images/prod7/resp_sm.jpg 1.5x, /prod_images/prod7/resp_md.jpg 2x, /prod_images/prod7/resp_lg.jpg 2.5x, /prod_images/prod7/resp_xl.jpg 3x" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="carousel__custom__inner__item__wrapper__second">
+                                    <div class="carousel__custom__inner__item__wrapper__second__tittle">
+                                        <h3>
+                                            <a href="/product/vitaminc_serum"
+                                                    class="carousel__custom__inner__item__wrapper__second__tittle__link">
+                                                    Серум за бръчки, фини линии, хиперпигментация и други - Мощна
+                                                    формула
+                                                    срещу торбички под очите и стареене - С хиалуронова киселина</a>
+                                        </h3>
+                                    </div>
+
+                                    <div class="carousel__custom__inner__item__wrapper__second__price">
+                                        <span class="price">
+                                            85лв.
+                                        </span>
+
+                                        <span class="bag">
+                                            <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel__custom__inner__item">
+                            <div class="carousel__custom__inner__item__wrapper">
+                                <div class="carousel__custom__inner__item__wrapper__image">
+                                    <div class="carousel__custom__inner__item__wrapper__image__wrapper">
+                                        <a href="/product/retionol_cream">
+                                            <img src="/prod_images/prod7/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod7/resp_xs.jpg 1x, /prod_images/prod7/resp_sm.jpg 1.5x, /prod_images/prod7/resp_md.jpg 2x, /prod_images/prod7/resp_lg.jpg 2.5x, /prod_images/prod7/resp_xl.jpg 3x" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="carousel__custom__inner__item__wrapper__second">
+                                    <div class="carousel__custom__inner__item__wrapper__second__tittle">
+                                        <h3>
+                                            <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Серум за бръчки, фини линии, хиперпигментация и други - Мощна
+                                                    формула
+                                                    срещу торбички под очите и стареене - С хиалуронова киселина</a>
+                                        </h3>
+                                    </div>
+
+                                    <div class="carousel__custom__inner__item__wrapper__second__price">
+                                        <span class="price">
+                                            85лв.
+                                        </span>
+
+                                        <span class="bag">
+                                            <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel__custom__inner__item">
+                            <div class="carousel__custom__inner__item__wrapper">
+                                <div class="carousel__custom__inner__item__wrapper__image">
+                                    <div class="carousel__custom__inner__item__wrapper__image__wrapper">
+                                        <a href="/product/retionol_cream">
+                                            <img src="/prod_images/prod9/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod9/resp_xs.jpg 1x, /prod_images/prod9/resp_sm.jpg 1.5x, /prod_images/prod9/resp_md.jpg 2x, /prod_images/prod9/resp_lg.jpg 2.5x, /prod_images/prod9/resp_xl.jpg 3x" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="carousel__custom__inner__item__wrapper__second">
+                                    <div class="carousel__custom__inner__item__wrapper__second__tittle">
+                                        <h3>
+                                            <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Тоник за лице с витамин С - 100% натурален и органичен против
+                                                    стареене
+                                                    пречистване на порите и третиране на лицето</a>
+                                        </h3>
+                                    </div>
+
+                                    <div class="carousel__custom__inner__item__wrapper__second__price">
+                                        <span class="price">
+                                            85лв.
+                                        </span>
+
+                                        <span class="bag">
+                                            <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel__custom__inner__item">
+                            <div class="carousel__custom__inner__item__wrapper">
+                                <div class="carousel__custom__inner__item__wrapper__image">
+                                    <div class="carousel__custom__inner__item__wrapper__image__wrapper">
+                                        <a href="/product/retionol_cream">
+                                            <img src="/prod_images/prod10/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod10/resp_xs.jpg 1x, /prod_images/prod10/resp_sm.jpg 1.5x, /prod_images/prod10/resp_md.jpg 2x, /prod_images/prod10/resp_lg.jpg 2.5x, /prod_images/prod10/resp_xl.jpg 3x" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="carousel__custom__inner__item__wrapper__second">
+                                    <div class="carousel__custom__inner__item__wrapper__second__tittle">
+                                        <h3>
+                                            <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Против бръчки, фини линии, старчески петна и хиперпигментация
+                                                    Ексфолира
+                                                    и почиства - С гликолова киселина</a>
+                                        </h3>
+                                    </div>
+
+                                    <div class="carousel__custom__inner__item__wrapper__second__price">
+                                        <span class="price">
+                                            85лв.
+                                        </span>
+
+                                        <span class="bag">
+                                            <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel__custom__inner__item">
+                            <div class="carousel__custom__inner__item__wrapper">
+                                <div class="carousel__custom__inner__item__wrapper__image">
+                                    <div class="carousel__custom__inner__item__wrapper__image__wrapper">
+                                        <a href="/product/retionol_cream">
+                                            <img src="/prod_images/prod17/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod17/resp_xs.jpg 1x, /prod_images/prod17/resp_sm.jpg 1.5x, /prod_images/prod17/resp_md.jpg 2x, /prod_images/prod17/resp_lg.jpg 2.5x, /prod_images/prod17/resp_xl.jpg 3x" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="carousel__custom__inner__item__wrapper__second">
+                                    <div class="carousel__custom__inner__item__wrapper__second__tittle">
+                                        <h3>
+                                            <a href="/product/vitaminc_serum"
+                                                    class="carousel__custom__inner__item__wrapper__second__tittle__link">
+                                                    Серум с витамин С - ОГРОМЕН 60 мл, 3 пъти по-стабилен и 10
+                                                    антиоксиданта</a>
+                                        </h3>
+                                    </div>
+
+                                    <div class="carousel__custom__inner__item__wrapper__second__price">
+                                        <span class="price">
+                                            85лв.
+                                        </span>
+
+                                        <span class="bag">
+                                            <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel__custom__inner__item">
+                            <div class="carousel__custom__inner__item__wrapper">
+                                <div class="carousel__custom__inner__item__wrapper__image">
+                                    <div class="carousel__custom__inner__item__wrapper__image__wrapper">
+                                        <a href="/product/retionol_cream">
+                                            <img src="/prod_images/prod17/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod17/resp_xs.jpg 1x, /prod_images/prod17/resp_sm.jpg 1.5x, /prod_images/prod17/resp_md.jpg 2x, /prod_images/prod17/resp_lg.jpg 2.5x, /prod_images/prod17/resp_xl.jpg 3x" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="carousel__custom__inner__item__wrapper__second">
+                                    <div class="carousel__custom__inner__item__wrapper__second__tittle">
+                                        <h3>
+                                            <a href="/product/vitaminc_serum"
+                                                    class="carousel__custom__inner__item__wrapper__second__tittle__link">Olay
+                                                    AHA24 + Серум с витамин С за деня, с витамин С, AHA и ниацинамид, за
+                                                    сияйна и равномерна кожа, 40 ml</a>
+                                        </h3>
+                                    </div>
+
+                                    <div class="carousel__custom__inner__item__wrapper__second__price">
+                                        <span class="price">
+                                            85лв.
+                                        </span>
+
+                                        <span class="bag">
+                                            <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel__custom__inner__item">
+                            <div class="carousel__custom__inner__item__wrapper">
+                                <div class="carousel__custom__inner__item__wrapper__image">
+                                    <div class="carousel__custom__inner__item__wrapper__image__wrapper">
+                                        <a href="/product/retionol_cream">
+                                            <img src="/prod_images/prod19/front_small.jpg"
+                                            alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                            srcset="/prod_images/prod19/resp_xs.jpg 1x, /prod_images/prod19/resp_sm.jpg 1.5x, /prod_images/prod19/resp_md.jpg 2x, /prod_images/prod19/resp_lg.jpg 2.5x, /prod_images/prod19/resp_xl.jpg 3x" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="carousel__custom__inner__item__wrapper__second">
+                                    <div class="carousel__custom__inner__item__wrapper__second__tittle">
+                                        <h3>
+                                            <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Olay Collagen Peptide24 Дневен крем 50 мл Хидратиращ крем без аромат
+                                                    с витамин B3 и колагенови пептиди</a>
+                                        </h3>
+                                    </div>
+
+                                    <div class="carousel__custom__inner__item__wrapper__second__price">
+                                        <span class="price">
+                                            85лв.
+                                        </span>
+
+                                        <span class="bag">
+                                            <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel__custom__inner__item">
+                            <div class="carousel__custom__inner__item__wrapper">
+                                <div class="carousel__custom__inner__item__wrapper__image">
+                                    <div class="carousel__custom__inner__item__wrapper__image__wrapper">
+                                        <a href="/product/retionol_cream">
+                                            <img src="/prod_images/prod28/front_small.jpg"
+                                            alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                            srcset="/prod_images/prod28/resp_xs.jpg 1x, /prod_images/prod28/resp_sm.jpg 1.5x, /prod_images/prod28/resp_md.jpg 2x, /prod_images/prod28/resp_lg.jpg 2.5x, /prod_images/prod28/resp_xl.jpg 3x" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="carousel__custom__inner__item__wrapper__second">
+                                    <div class="carousel__custom__inner__item__wrapper__second__tittle">
+                                        <h3>
+                                            <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Moisture Surge™ 100H Автоматично допълващ хидрататор</a>
+                                        </h3>
+                                    </div>
+
+                                    <div class="carousel__custom__inner__item__wrapper__second__price">
+                                        <span class="price">
+                                            85лв.
+                                        </span>
+
+                                        <span class="bag">
+                                            <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel__custom__inner__item">
+                            <div class="carousel__custom__inner__item__wrapper">
+                                <div class="carousel__custom__inner__item__wrapper__image">
+                                    <div class="carousel__custom__inner__item__wrapper__image__wrapper">
+                                        <a href="/product/retionol_cream">
+                                            <img src="/prod_images/prod32/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod32/resp_xs.jpg 1x, /prod_images/prod32/resp_sm.jpg 1.5x, /prod_images/prod32/resp_md.jpg 2x, /prod_images/prod32/resp_lg.jpg 2.5x, /prod_images/prod32/resp_xl.jpg 3x" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="carousel__custom__inner__item__wrapper__second">
+                                    <div class="carousel__custom__inner__item__wrapper__second__tittle">
+                                        <h3>
+                                            <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Take The Day Off™ Cleansing Balm</a>
+                                        </h3>
+                                    </div>
+
+                                    <div class="carousel__custom__inner__item__wrapper__second__price">
+                                        <span class="price">
+                                            85лв.
+                                        </span>
+
+                                        <span class="bag">
+                                            <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel__custom__inner__item">
+                            <div class="carousel__custom__inner__item__wrapper">
+                                <div class="carousel__custom__inner__item__wrapper__image">
+                                    <div class="carousel__custom__inner__item__wrapper__image__wrapper">
+                                        <a href="/product/retionol_cream">
+                                            <img src="/prod_images/prod33/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod33/resp_xs.jpg 1x, /prod_images/prod33/resp_sm.jpg 1.5x, /prod_images/prod33/resp_md.jpg 2x, /prod_images/prod33/resp_lg.jpg 2.5x, /prod_images/prod33/resp_xl.jpg 3x" />
+                                    </div>
+                                </div>
+                                <div class="carousel__custom__inner__item__wrapper__second">
+                                    <div class="carousel__custom__inner__item__wrapper__second__tittle">
+                                        <h3>
+                                            <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Smart Clinical™ Repair Wrinke Correcting Serum</a>
+                                        </h3>
+                                    </div>
+
+                                    <div class="carousel__custom__inner__item__wrapper__second__price">
+                                        <span class="price">
+                                            85лв.
+                                        </span>
+
+                                        <span class="bag">
+                                            <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel__custom__inner__item">
+                            <div class="carousel__custom__inner__item__wrapper">
+                                <div class="carousel__custom__inner__item__wrapper__image">
+                                    <div class="carousel__custom__inner__item__wrapper__image__wrapper">
+                                        <a href="/product/retionol_cream">
+                                            <img src="/prod_images/prod35/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod35/resp_xs.jpg 1x, /prod_images/prod35/resp_sm.jpg 1.5x, /prod_images/prod35/resp_md.jpg 2x, /prod_images/prod35/resp_lg.jpg 2.5x, /prod_images/prod35/resp_xl.jpg 3x" />
+                                    </div>
+                                </div>
+                                <div class="carousel__custom__inner__item__wrapper__second">
+                                    <div class="carousel__custom__inner__item__wrapper__second__tittle">
+                                        <h3>
+                                            <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Even Better Clinical™ Radical Dark Spot Corrector + Interrupter</a>
+                                        </h3>
+                                    </div>
+
+                                    <div class="carousel__custom__inner__item__wrapper__second__price">
+                                        <span class="price">
+                                            85лв.
+                                        </span>
+
+                                        <span class="bag">
+                                            <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel__custom__inner__item">
+                            <div class="carousel__custom__inner__item__wrapper">
+                                <div class="carousel__custom__inner__item__wrapper__image">
+                                    <div class="carousel__custom__inner__item__wrapper__image__wrapper">
+                                        <a href="/product/retionol_cream">
+                                            <img src="/prod_images/prod34/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod34/resp_xs.jpg 1x, /prod_images/prod34/resp_sm.jpg 1.5x, /prod_images/prod34/resp_md.jpg 2x, /prod_images/prod34/resp_lg.jpg 2.5x, /prod_images/prod34/resp_xl.jpg 3x" />
+                                                    </a>
+                                        </div>
+                                </div>
+                                <div class="carousel__custom__inner__item__wrapper__second">
+                                    <div class="carousel__custom__inner__item__wrapper__second__tittle">
+                                        <h3>
+                                            <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Smart Clinical™ Repair Wrinkle Correcting Eye Cream</a>
+                                        </h3>
+                                    </div>
+
+                                    <div class="carousel__custom__inner__item__wrapper__second__price">
+                                        <span class="price">
+                                            85лв.
+                                        </span>
+
+                                        <span class="bag">
+                                            <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- End of md carousel with 3 items-->
+
+                    <button class="carousel-control-prev d-none" type="button">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
+
+                </div>
+
+                <div id="carouselProductFirstXL" class="carousel slide d-none d-xl-block" data-bs-ride="carousel">
+
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+
+                            <div class="kozmetika__carousel__prod">
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/retionol_cream">
+                                                <img src="/prod_images/prod1/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod1/resp_xs.jpg 1x, /prod_images/prod1/resp_sm.jpg 1.5x, /prod_images/prod1/resp_md.jpg 2x, /prod_images/prod1/resp_lg.jpg 2.5x, /prod_images/prod1/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/retionol_cream"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Хидратиращ крем – с 2,5% ретинол, витамин С 10%, веган хиалуронова
+                                                    киселина, масло от ший и масло от жожоба
+                                                </a>
+                                            </h3>
+                                        </div>
+
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod2/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod2/resp_sm.jpg 1x, /prod_images/prod2/resp_sm.jpg 1.5x, /prod_images/prod2/resp_md.jpg 2x, /prod_images/prod2/resp_lg.jpg 2.5x, /prod_images/prod2/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">Околоочен
+                                                    гел
+                                                    крем - Намалява бръчките, тъмните кръгове, линиите и зачервяванията
+                                                    -
+                                                    Чист и органичен</a>
+                                            </h3>
+
+                                        </div>
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod3/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod3/resp_xs.jpg 1x, /prod_images/prod3/resp_sm.jpg 1.5x, /prod_images/prod3/resp_md.jpg 2x, /prod_images/prod3/resp_lg.jpg 2.5x, /prod_images/prod3/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Серум с витамин С 20% с ретинол 2,5%, салицилова киселина 2%,
+                                                    хиалуронова киселина</a>
+                                            </h3>
+
+                                        </div>
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod4/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod4/resp_xs.jpg 1x, /prod_images/prod4/resp_sm.jpg 1.5x, /prod_images/prod4/resp_md.jpg 2x, /prod_images/prod4/resp_lg.jpg 2.5x, /prod_images/prod4/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Овлажнител против стареене с витамин B3 Намалява появата на акне,
+                                                    пъпки,
+                                                    бръчки, фини линии</a>
+                                            </h3>
+
+                                        </div>
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="carousel-item">
+
+                            <div class="kozmetika__carousel__prod">
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod5/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod5/resp_xs.jpg 1x, /prod_images/prod5/resp_sm.jpg 1.5x, /prod_images/prod5/resp_md.jpg 2x, /prod_images/prod5/resp_lg.jpg 2.5x, /prod_images/prod5/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Серум за очи за тъмни кръгове и подпухналост - Намалява торбичките,
+                                                    бръчките, фините линии, отпуснатата кожа и</a>
+                                            </h3>
+
+                                        </div>
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod6/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod6/resp_xs.jpg 1x, /prod_images/prod6/resp_sm.jpg 1.5x, /prod_images/prod6/resp_md.jpg 2x, /prod_images/prod6/resp_lg.jpg 2.5x, /prod_images/prod6/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    СЕРУМ С ХИАЛУРОНОВА КИСЕЛИНА</a>
+                                            </h3>
+
+                                        </div>
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod7/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod7/resp_xs.jpg 1x, /prod_images/prod7/resp_sm.jpg 1.5x, /prod_images/prod7/resp_md.jpg 2x, /prod_images/prod7/resp_lg.jpg 2.5x, /prod_images/prod7/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Серум за бръчки, фини линии, хиперпигментация и други - Мощна
+                                                    формула
+                                                    срещу торбички под очите и стареене - С хиалуронова киселина</a>
+                                            </h3>
+
+                                        </div>
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod8/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod8/resp_xs.jpg 1x, /prod_images/prod8/resp_sm.jpg 1.5x, /prod_images/prod8/resp_md.jpg 2x, /prod_images/prod8/resp_lg.jpg 2.5x, /prod_images/prod8/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Най-добрият течен серум против стареене за лице - Намалява бръчките,
+                                                    хиперпигментацията и слънчевите петна - Съдържа чист витамин С и
+                                                    хиалуронова киселина</a>
+                                            </h3>
+
+                                        </div>
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="carousel-item">
+
+                            <div class="kozmetika__carousel__prod">
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod9/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod9/resp_xs.jpg 1x, /prod_images/prod9/resp_sm.jpg 1.5x, /prod_images/prod9/resp_md.jpg 2x, /prod_images/prod9/resp_lg.jpg 2.5x, /prod_images/prod9/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Тоник за лице с витамин С - 100% натурален и органичен против
+                                                    стареене
+                                                    пречистване на порите и третиране на лицето</a>
+                                            </h3>
+
+                                        </div>
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod10/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod10/resp_xs.jpg 1x, /prod_images/prod10/resp_sm.jpg 1.5x, /prod_images/prod10/resp_md.jpg 2x, /prod_images/prod10/resp_lg.jpg 2.5x, /prod_images/prod10/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Против бръчки, фини линии, старчески петна и хиперпигментация
+                                                    Ексфолира
+                                                    и почиства - С гликолова киселина</a>
+                                            </h3>
+
+                                        </div>
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod17/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod17/resp_xs.jpg 1x, /prod_images/prod17/resp_sm.jpg 1.5x, /prod_images/prod17/resp_md.jpg 2x, /prod_images/prod17/resp_lg.jpg 2.5x, /prod_images/prod17/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Серум с витамин С - ОГРОМЕН 60 мл, 3 пъти по-стабилен и 10
+                                                    антиоксиданта</a>
+                                            </h3>
+
+                                        </div>
+
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod18/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod18/resp_xs.jpg 1x, /prod_images/prod18/resp_sm.jpg 1.5x, /prod_images/prod18/resp_md.jpg 2x, /prod_images/prod18/resp_lg.jpg 2.5x, /prod_images/prod18/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">Olay
+                                                    AHA24 + Серум с витамин С за деня, с витамин С, AHA и ниацинамид, за
+                                                    сияйна и равномерна кожа, 40 ml</a>
+                                            </h3>
+
+                                        </div>
+
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="kozmetika__carousel__prod">
+                                <div class="kozmetika__carousel__prod__wrapper">
+
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod19/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod19/resp_xs.jpg 1x, /prod_images/prod19/resp_sm.jpg 1.5x, /prod_images/prod19/resp_md.jpg 2x, /prod_images/prod19/resp_lg.jpg 2.5x, /prod_images/prod19/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Olay Collagen Peptide24 Дневен крем 50 мл Хидратиращ крем без аромат
+                                                    с витамин B3 и колагенови пептиди</a>
+                                            </h3>
+
+                                        </div>
+
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod28/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod28/resp_xs.jpg 1x, /prod_images/prod28/resp_sm.jpg 1.5x, /prod_images/prod28/resp_md.jpg 2x, /prod_images/prod28/resp_lg.jpg 2.5x, /prod_images/prod28/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Moisture Surge™ 100H Автоматично допълващ хидрататор</a>
+                                            </h3>
+
+                                        </div>
+
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod32/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod32/resp_xs.jpg 1x, /prod_images/prod32/resp_sm.jpg 1.5x, /prod_images/prod32/resp_md.jpg 2x, /prod_images/prod32/resp_lg.jpg 2.5x, /prod_images/prod32/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Take The Day Off™ Cleansing Balm</a>
+                                            </h3>
+
+                                        </div>
+
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod33/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod33/resp_xs.jpg 1x, /prod_images/prod33/resp_sm.jpg 1.5x, /prod_images/prod33/resp_md.jpg 2x, /prod_images/prod33/resp_lg.jpg 2.5x, /prod_images/prod33/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Smart Clinical™ Repair Wrinke Correcting Serum</a>
+                                            </h3>
+
+                                        </div>
+
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="kozmetika__carousel__prod">
+                                <div class="kozmetika__carousel__prod__wrapper">
+
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod35/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod35/resp_xs.jpg 1x, /prod_images/prod35/resp_sm.jpg 1.5x, /prod_images/prod35/resp_md.jpg 2x, /prod_images/prod35/resp_lg.jpg 2.5x, /prod_images/prod35/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Even Better Clinical™ Radical Dark Spot Corrector + Interrupter</a>
+                                            </h3>
+
+                                        </div>
+
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod34/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod34/resp_xs.jpg 1x, /prod_images/prod34/resp_sm.jpg 1.5x, /prod_images/prod34/resp_md.jpg 2x, /prod_images/prod34/resp_lg.jpg 2.5x, /prod_images/prod34/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Smart Clinical™ Repair Wrinkle Correcting Eye Cream</a>
+                                            </h3>
+
+                                        </div>
+
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod36/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod36/resp_xs.jpg 1x, /prod_images/prod36/resp_sm.jpg 1.5x, /prod_images/prod36/resp_md.jpg 2x, /prod_images/prod36/resp_lg.jpg 2.5x, /prod_images/prod36/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Smart Clinical™ Repair Wrinke Correcting Serum</a>
+                                            </h3>
+
+                                        </div>
+
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod37/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod37/resp_xs.jpg 1x, /prod_images/prod37/resp_sm.jpg 1.5x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Clinique Smart Clinical Repair</a>
+                                            </h3>
+
+                                        </div>
+
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="kozmetika__carousel__prod">
+                                <div class="kozmetika__carousel__prod__wrapper">
+
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod38/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod38/resp_xs.jpg 1x, /prod_images/prod38/resp_sm.jpg 1.5x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Smart Clinical™ Repair Wrinke Correcting Serum</a>
+                                            </h3>
+
+                                        </div>
+
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod39/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod39/resp_xs.jpg 1x, /prod_images/prod39/resp_sm.jpg 1.5x, /prod_images/prod39/resp_md.jpg 2x, /prod_images/prod39/resp_lg.jpg 2.5x, /prod_images/prod39/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    La Roche-Posay Toleriane Hydrating Gentle Face Cleanser, Daily
+                                                    Facial Cleanser with Niacinamide</a>
+                                            </h3>
+
+                                        </div>
+
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod40/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod40/resp_xs.jpg 1x, /prod_images/prod40/resp_sm.jpg 1.5x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    La Roche-Posay Toleriane Hydrating Gentle Face Cleanser, Daily
+                                                    Facial Cleanser with Niacinamide</a>
+                                            </h3>
+
+                                        </div>
+
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="kozmetika__carousel__prod__wrapper">
+
+                                    <div class="kozmetika__carousel__prod__wrapper__image">
+                                        <div class="kozmetika__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod41/front_small.jpg"
+                                                    alt="InstaNatural Retinol Moisturizer Cream – With 2.5% Retinol, Vitamin C 10%, Vegan Hyaluronic Acid, Shea Butter & Jojoba Oil..."
+                                                    srcset="/prod_images/prod41/resp_xs.jpg 1x, /prod_images/prod41/resp_sm.jpg 1.5x, /prod_images/prod41/resp_md.jpg 2x, /prod_images/prod41/resp_lg.jpg 2.5x, /prod_images/prod41/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="kozmetika__carousel__prod__wrapper__second">
+                                        <div class="kozmetika__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="kozmetika__carousel__prod__wrapper__second__tittle__link">
+                                                    Hyaluronic Acid 2% + B5 Hydration Support Formula</a>
+                                            </h3>
+
+                                        </div>
+
+                                        <div class="kozmetika__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button class="carousel-control-prev d-none" type="button" data-bs-target="#carouselProductFirstXL"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next d-none" type="button" data-bs-target="#carouselProductFirstXL"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="vitamini__carousel">
+
+                <div class="vitamini__carousel__tittle">
+                    <h3>Добавки</h3>
+                </div>
+
+                <div id="carouselVitaminiSmall" class="carousel slide d-md-none" data-bs-ride="carousel">
+
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+
+                            <div class="vitamini__carousel__prod">
+
+                                <div class="vitamini__carousel__prod__wrapper">
+
+                                    <div class="vitamini__carousel__prod__wrapper__image">
+                                        <div class="vitamini__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/retionol_cream">
+                                                <img src="/prod_images/prod11/front_small.jpg"
+                                                    alt="California Gold Nutrition, Gold C, USP Grade Vitamin C, 1,000 mg, 60 Veggie Capsules" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="vitamini__carousel__prod__wrapper__second">
+                                        <div class="vitamini__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/retionol_cream"
+                                                    class="vitamini__carousel__prod__wrapper__second__tittle__link">
+                                                    NOW Foods,бромелаин, балансирана имунна система*, 120 растителни
+                                                    капсули
+                                                </a>
+                                            </h3>
+                                        </div>
+
+                                        <div class="vitamini__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="vitamini__carousel__prod__wrapper">
+                                    <div class="vitamini__carousel__prod__wrapper__image">
+                                        <div class="vitamini__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod12/front_small.jpg"
+                                                    alt="California Gold Nutrition, Витамин D3, 125 mcg (5000 IU), 360 меки капсули с рибен желатин."
+                                                    srcset="/prod_images/prod12/resp_xs.jpg 1x, /prod_images/prod12/resp_sm.jpg 1.5x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="vitamini__carousel__prod__wrapper__second">
+                                        <div class="vitamini__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="vitamini__carousel__prod__wrapper__second__tittle__link">California
+                                                    Gold
+                                                    Nutrition, Витамин D3, 125 mcg (5000 IU), 360 меки капсули с рибен
+                                                    желатин</a>
+                                            </h3>
+
+                                        </div>
+                                        <div class="vitamini__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+
+                            <div class="vitamini__carousel__prod">
+
+                                <div class="vitamini__carousel__prod__wrapper">
+
+                                    <div class="vitamini__carousel__prod__wrapper__image">
+                                        <div class="vitamini__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/retionol_cream">
+                                                <img src="/prod_images/prod13/front_small.jpg"
+                                                    alt="California Gold Nutrition, Gold C, USP Grade Vitamin C, 1,000 mg, 60 Veggie Capsules"
+                                                    srcset="/prod_images/prod13/resp_xs.jpg 1x, /prod_images/prod13/resp_sm.jpg 1.5x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="vitamini__carousel__prod__wrapper__second">
+                                        <div class="vitamini__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/retionol_cream"
+                                                    class="vitamini__carousel__prod__wrapper__second__tittle__link">
+                                                    BioActive Complete B-Complex, 60 вегетариански капсули
+                                                </a>
+                                            </h3>
+                                        </div>
+
+                                        <div class="vitamini__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="vitamini__carousel__prod__wrapper">
+
+                                    <div class="vitamini__carousel__prod__wrapper__image">
+                                        <div class="vitamini__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/retionol_cream">
+                                                <img src="/prod_images/prod14/front_small.jpg"
+                                                    alt="California Gold Nutrition, Gold C, USP Grade Vitamin C, 1,000 mg, 60 Veggie Capsules"
+                                                    srcset="/prod_images/prod14/resp_xs.jpg 1x, /prod_images/prod14/resp_sm.jpg 1.5x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="vitamini__carousel__prod__wrapper__second">
+                                        <div class="vitamini__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/retionol_cream"
+                                                    class="vitamini__carousel__prod__wrapper__second__tittle__link">
+                                                    California Gold Nutrition, гуми с витамин С, 90 гуми
+                                                </a>
+                                            </h3>
+                                        </div>
+
+                                        <div class="vitamini__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="carousel-item">
+
+                            <div class="vitamini__carousel__prod">
+
+                                <div class="vitamini__carousel__prod__wrapper">
+
+                                    <div class="vitamini__carousel__prod__wrapper__image">
+                                        <div class="vitamini__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/retionol_cream">
+                                                <img src="/prod_images/prod15/front_small.jpg"
+                                                    alt="California Gold Nutrition, Gold C, USP Grade Vitamin C, 1,000 mg, 60 Veggie Capsules"
+                                                    srcset="/prod_images/prod15/resp_xs.jpg 1x, /prod_images/prod15/resp_sm.jpg 1.5x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="vitamini__carousel__prod__wrapper__second">
+                                        <div class="vitamini__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/retionol_cream"
+                                                    class="vitamini__carousel__prod__wrapper__second__tittle__link">
+                                                    NOW Foods, Витамин D-3, 125 mcg (5000 IU), 120 меки капсули
+                                                </a>
+                                            </h3>
+                                        </div>
+
+                                        <div class="vitamini__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="vitamini__carousel__prod__wrapper">
+
+                                    <div class="vitamini__carousel__prod__wrapper__image">
+                                        <div class="vitamini__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/retionol_cream">
+                                                <img src="/prod_images/prod16/front_small.jpg"
+                                                    alt="California Gold Nutrition, Gold C, USP Grade Vitamin C, 1,000 mg, 60 Veggie Capsules"
+                                                    srcset="/prod_images/prod16/resp_xs.jpg 1x, /prod_images/prod16/resp_sm.jpg 1.5x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="vitamini__carousel__prod__wrapper__second">
+                                        <div class="vitamini__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/retionol_cream"
+                                                    class="vitamini__carousel__prod__wrapper__second__tittle__link">
+                                                    NOW Foods, C-1000, 250 таблетки
+                                                </a>
+                                            </h3>
+                                        </div>
+
+                                        <div class="vitamini__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="vitamini__carousel__prod">
+                                <div class="vitamini__carousel__prod__wrapper">
+
+                                    <div class="vitamini__carousel__prod__wrapper__image">
+                                        <div class="vitamini__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/retionol_cream">
+                                                <img src="/prod_images/prod29/front_small.jpg"
+                                                    alt="California Gold Nutrition, Gold C, USP Grade Vitamin C, 1,000 mg, 60 Veggie Capsules"
+                                                    srcset="/prod_images/prod29/resp_xs.jpg 1x, /prod_images/prod29/resp_sm.jpg 1.5x, /prod_images/prod29/resp_md.jpg 2x, /prod_images/prod29/resp_lg.jpg 2.5x, /prod_images/prod29/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="vitamini__carousel__prod__wrapper__second">
+                                        <div class="vitamini__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/retionol_cream"
+                                                    class="vitamini__carousel__prod__wrapper__second__tittle__link">
+                                                    NOW Foods, Sports, Мъжки Active Sports Multi, 90 меки капсули
+                                                </a>
+                                            </h3>
+                                        </div>
+
+                                        <div class="vitamini__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="vitamini__carousel__prod__wrapper">
+
+                                    <div class="vitamini__carousel__prod__wrapper__image">
+                                        <div class="vitamini__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/retionol_cream">
+                                                <img src="/prod_images/prod30/front_small.jpg"
+                                                    alt="California Gold Nutrition, Gold C, USP Grade Vitamin C, 1,000 mg, 60 Veggie Capsules"
+                                                    srcset="/prod_images/prod30/resp_xs.jpg 1x, /prod_images/prod30/resp_sm.jpg 1.5x, /prod_images/prod30/resp_md.jpg 2x, /prod_images/prod30/resp_lg.jpg 2.5x, /prod_images/prod30/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="vitamini__carousel__prod__wrapper__second">
+                                        <div class="vitamini__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/retionol_cream"
+                                                    class="vitamini__carousel__prod__wrapper__second__tittle__link">
+                                                    Life Extension Super Omega-3 Plus Epa/dha Рибено масло, сусамови
+                                                    лигнани и екстракт от маслина - Омега 3 добавка - За здравето на
+                                                    сърцето и мозъка - Без глутен, без ГМО - 240 лесни за поглъщане меки
+                                                    капсули
+                                                </a>
+                                            </h3>
+                                        </div>
+
+                                        <div class="vitamini__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="vitamini__carousel__prod">
+                                <div class="vitamini__carousel__prod__wrapper">
+
+                                    <div class="vitamini__carousel__prod__wrapper__image">
+                                        <div class="vitamini__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/retionol_cream">
+                                                <img src="/prod_images/prod31/front_small.jpg"
+                                                    alt="California Gold Nutrition, Gold C, USP Grade Vitamin C, 1,000 mg, 60 Veggie Capsules"
+                                                    srcset="/prod_images/prod31/resp_xs.jpg 1x, /prod_images/prod31/resp_sm.jpg 1.5x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="vitamini__carousel__prod__wrapper__second">
+                                        <div class="vitamini__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/retionol_cream"
+                                                    class="vitamini__carousel__prod__wrapper__second__tittle__link">
+                                                    California Gold Nutrition, Омега-3 първокласно рибено масло, 180 EPA
+                                                    / 120 DHA, 100 меки капсули с рибен желатин
+                                                </a>
+                                            </h3>
+                                        </div>
+
+                                        <div class="vitamini__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button class="carousel-control-prev d-none" type="button" data-bs-target="#carouselVitaminiSmall"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next d-none" type="button" data-bs-target="#carouselVitaminiSmall"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
+                </div>
+
+                <div id="carouselVitaminiMid" class="carousel slide d-none d-md-block d-xl-none"
+                    data-bs-ride="carousel">
+
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+
+                            <div class="vitamini__carousel__prod">
+
+                                <div class="vitamini__carousel__prod__wrapper">
+
+                                    <div class="vitamini__carousel__prod__wrapper__image">
+                                        <div class="vitamini__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/retionol_cream">
+                                                <img src="/prod_images/prod11/front_small.jpg"
+                                                    alt="California Gold Nutrition, Gold C, USP Grade Vitamin C, 1,000 mg, 60 Veggie Capsules" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="vitamini__carousel__prod__wrapper__second">
+                                        <div class="vitamini__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/retionol_cream"
+                                                    class="vitamini__carousel__prod__wrapper__second__tittle__link">
+                                                    NOW Foods,бромелаин, балансирана имунна система*, 120 растителни
+                                                    капсули
+                                                </a>
+                                            </h3>
+                                        </div>
+
+                                        <div class="vitamini__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="vitamini__carousel__prod__wrapper">
+                                    <div class="vitamini__carousel__prod__wrapper__image">
+                                        <div class="vitamini__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod12/front_small.jpg"
+                                                    alt="California Gold Nutrition, Витамин D3, 125 mcg (5000 IU), 360 меки капсули с рибен желатин."
+                                                    srcset="/prod_images/prod12/resp_xs.jpg 1x, /prod_images/prod12/resp_sm.jpg 1.5x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="vitamini__carousel__prod__wrapper__second">
+                                        <div class="vitamini__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="vitamini__carousel__prod__wrapper__second__tittle__link">California
+                                                    Gold
+                                                    Nutrition, Витамин D3, 125 mcg (5000 IU), 360 меки капсули с рибен
+                                                    желатин</a>
+                                            </h3>
+
+                                        </div>
+                                        <div class="vitamini__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="vitamini__carousel__prod__wrapper">
+
+                                    <div class="vitamini__carousel__prod__wrapper__image">
+                                        <div class="vitamini__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/retionol_cream">
+                                                <img src="/prod_images/prod13/front_small.jpg"
+                                                    alt="California Gold Nutrition, Gold C, USP Grade Vitamin C, 1,000 mg, 60 Veggie Capsules"
+                                                    srcset="/prod_images/prod13/resp_xs.jpg 1x, /prod_images/prod13/resp_sm.jpg 1.5x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="vitamini__carousel__prod__wrapper__second">
+                                        <div class="vitamini__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/retionol_cream"
+                                                    class="vitamini__carousel__prod__wrapper__second__tittle__link">
+                                                    BioActive Complete B-Complex, 60 вегетариански капсули
+                                                </a>
+                                            </h3>
+                                        </div>
+
+                                        <div class="vitamini__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="carousel-item">
+
+                            <div class="vitamini__carousel__prod">
+
+                                <div class="vitamini__carousel__prod__wrapper">
+
+                                    <div class="vitamini__carousel__prod__wrapper__image">
+                                        <div class="vitamini__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/retionol_cream">
+                                                <img src="/prod_images/prod14/front_small.jpg"
+                                                    alt="California Gold Nutrition, Gold C, USP Grade Vitamin C, 1,000 mg, 60 Veggie Capsules"
+                                                    srcset="/prod_images/prod14/resp_xs.jpg 1x, /prod_images/prod14/resp_sm.jpg 1.5x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="vitamini__carousel__prod__wrapper__second">
+                                        <div class="vitamini__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/retionol_cream"
+                                                    class="vitamini__carousel__prod__wrapper__second__tittle__link">
+                                                    California Gold Nutrition, гуми с витамин С, 90 гуми
+                                                </a>
+                                            </h3>
+                                        </div>
+
+                                        <div class="vitamini__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="vitamini__carousel__prod__wrapper">
+
+                                    <div class="vitamini__carousel__prod__wrapper__image">
+                                        <div class="vitamini__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/retionol_cream">
+                                                <img src="/prod_images/prod15/front_small.jpg"
+                                                    alt="California Gold Nutrition, Gold C, USP Grade Vitamin C, 1,000 mg, 60 Veggie Capsules"
+                                                    srcset="/prod_images/prod15/resp_xs.jpg 1x, /prod_images/prod15/resp_sm.jpg 1.5x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="vitamini__carousel__prod__wrapper__second">
+                                        <div class="vitamini__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/retionol_cream"
+                                                    class="vitamini__carousel__prod__wrapper__second__tittle__link">
+                                                    NOW Foods, Витамин D-3, 125 mcg (5000 IU), 120 меки капсули
+                                                </a>
+                                            </h3>
+                                        </div>
+
+                                        <div class="vitamini__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="vitamini__carousel__prod__wrapper">
+
+                                    <div class="vitamini__carousel__prod__wrapper__image">
+                                        <div class="vitamini__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/retionol_cream">
+                                                <img src="/prod_images/prod16/front_small.jpg"
+                                                    alt="California Gold Nutrition, Gold C, USP Grade Vitamin C, 1,000 mg, 60 Veggie Capsules"
+                                                    srcset="/prod_images/prod16/resp_xs.jpg 1x, /prod_images/prod16/resp_sm.jpg 1.5x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="vitamini__carousel__prod__wrapper__second">
+                                        <div class="vitamini__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/retionol_cream"
+                                                    class="vitamini__carousel__prod__wrapper__second__tittle__link">
+                                                    NOW Foods, C-1000, 250 таблетки
+                                                </a>
+                                            </h3>
+                                        </div>
+
+                                        <div class="vitamini__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="vitamini__carousel__prod">
+                                <div class="vitamini__carousel__prod__wrapper">
+
+                                    <div class="vitamini__carousel__prod__wrapper__image">
+                                        <div class="vitamini__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/retionol_cream">
+                                                <img src="/prod_images/prod29/front_small.jpg"
+                                                    alt="California Gold Nutrition, Gold C, USP Grade Vitamin C, 1,000 mg, 60 Veggie Capsules"
+                                                    srcset="/prod_images/prod29/resp_xs.jpg 1x, /prod_images/prod29/resp_sm.jpg 1.5x, /prod_images/prod29/resp_md.jpg 2x, /prod_images/prod29/resp_lg.jpg 2.5x, /prod_images/prod29/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="vitamini__carousel__prod__wrapper__second">
+                                        <div class="vitamini__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/retionol_cream"
+                                                    class="vitamini__carousel__prod__wrapper__second__tittle__link">
+                                                    NOW Foods, Sports, Мъжки Active Sports Multi, 90 меки капсули
+                                                </a>
+                                            </h3>
+                                        </div>
+
+                                        <div class="vitamini__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="vitamini__carousel__prod__wrapper">
+
+                                    <div class="vitamini__carousel__prod__wrapper__image">
+                                        <div class="vitamini__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/retionol_cream">
+                                                <img src="/prod_images/prod30/front_small.jpg"
+                                                    alt="California Gold Nutrition, Gold C, USP Grade Vitamin C, 1,000 mg, 60 Veggie Capsules"
+                                                    srcset="/prod_images/prod30/resp_xs.jpg 1x, /prod_images/prod30/resp_sm.jpg 1.5x, /prod_images/prod30/resp_md.jpg 2x, /prod_images/prod30/resp_lg.jpg 2.5x, /prod_images/prod30/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="vitamini__carousel__prod__wrapper__second">
+                                        <div class="vitamini__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/retionol_cream"
+                                                    class="vitamini__carousel__prod__wrapper__second__tittle__link">
+                                                    Life Extension Super Omega-3 Plus Epa/dha Рибено масло, сусамови
+                                                    лигнани и екстракт от маслина - Омега 3 добавка - За здравето на
+                                                    сърцето и мозъка - Без глутен, без ГМО - 240 лесни за поглъщане меки
+                                                    капсули
+                                                </a>
+                                            </h3>
+                                        </div>
+
+                                        <div class="vitamini__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="vitamini__carousel__prod__wrapper">
+
+                                    <div class="vitamini__carousel__prod__wrapper__image">
+                                        <div class="vitamini__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/retionol_cream">
+                                                <img src="/prod_images/prod31/front_small.jpg"
+                                                    alt="California Gold Nutrition, Gold C, USP Grade Vitamin C, 1,000 mg, 60 Veggie Capsules"
+                                                    srcset="/prod_images/prod31/resp_xs.jpg 1x, /prod_images/prod31/resp_sm.jpg 1.5x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="vitamini__carousel__prod__wrapper__second">
+                                        <div class="vitamini__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/retionol_cream"
+                                                    class="vitamini__carousel__prod__wrapper__second__tittle__link">
+                                                    California Gold Nutrition, Омега-3 първокласно рибено масло, 180 EPA
+                                                    / 120 DHA, 100 меки капсули с рибен желатин
+                                                </a>
+                                            </h3>
+                                        </div>
+
+                                        <div class="vitamini__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button class="carousel-control-prev d-none" type="button" data-bs-target="#carouselVitaminiMid"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next d-none" type="button" data-bs-target="#carouselVitaminiMid"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
+
+                </div>
+
+                <div id="carouselVitaminiXL" class="carousel slide d-none d-xl-block" data-bs-ride="carousel">
+
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+
+                            <div class="vitamini__carousel__prod">
+
+                                <div class="vitamini__carousel__prod__wrapper">
+
+                                    <div class="vitamini__carousel__prod__wrapper__image">
+                                        <div class="vitamini__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/retionol_cream">
+                                                <img src="/prod_images/prod11/front_small.jpg"
+                                                    alt="California Gold Nutrition, Gold C, USP Grade Vitamin C, 1,000 mg, 60 Veggie Capsules" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="vitamini__carousel__prod__wrapper__second">
+                                        <div class="vitamini__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/retionol_cream"
+                                                    class="vitamini__carousel__prod__wrapper__second__tittle__link">
+                                                    NOW Foods,бромелаин, балансирана имунна система*, 120 растителни
+                                                    капсули
+                                                </a>
+                                            </h3>
+                                        </div>
+
+                                        <div class="vitamini__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="vitamini__carousel__prod__wrapper">
+                                    <div class="vitamini__carousel__prod__wrapper__image">
+                                        <div class="vitamini__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/vitaminc_serum">
+                                                <img src="/prod_images/prod12/front_small.jpg"
+                                                    alt="California Gold Nutrition, Витамин D3, 125 mcg (5000 IU), 360 меки капсули с рибен желатин."
+                                                    srcset="/prod_images/prod12/resp_xs.jpg 1x, /prod_images/prod12/resp_sm.jpg 1.5x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="vitamini__carousel__prod__wrapper__second">
+                                        <div class="vitamini__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/vitaminc_serum"
+                                                    class="vitamini__carousel__prod__wrapper__second__tittle__link">California
+                                                    Gold
+                                                    Nutrition, Витамин D3, 125 mcg (5000 IU), 360 меки капсули с рибен
+                                                    желатин</a>
+                                            </h3>
+
+                                        </div>
+                                        <div class="vitamini__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="vitamini__carousel__prod__wrapper">
+
+                                    <div class="vitamini__carousel__prod__wrapper__image">
+                                        <div class="vitamini__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/retionol_cream">
+                                                <img src="/prod_images/prod13/front_small.jpg"
+                                                    alt="California Gold Nutrition, Gold C, USP Grade Vitamin C, 1,000 mg, 60 Veggie Capsules"
+                                                    srcset="/prod_images/prod13/resp_xs.jpg 1x, /prod_images/prod13/resp_sm.jpg 1.5x" />
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="vitamini__carousel__prod__wrapper__second">
+                                        <div class="vitamini__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/retionol_cream"
+                                                    class="vitamini__carousel__prod__wrapper__second__tittle__link">
+                                                    BioActive Complete B-Complex, 60 вегетариански капсули
+                                                </a>
+                                            </h3>
+                                        </div>
+
+                                        <div class="vitamini__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="vitamini__carousel__prod__wrapper">
+
+                                    <div class="vitamini__carousel__prod__wrapper__image">
+                                        <div class="vitamini__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/retionol_cream">
+                                                <img src="/prod_images/prod14/front_small.jpg"
+                                                    alt="California Gold Nutrition, Gold C, USP Grade Vitamin C, 1,000 mg, 60 Veggie Capsules"
+                                                    srcset="/prod_images/prod14/resp_xs.jpg 1x, /prod_images/prod14/resp_sm.jpg 1.5x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="vitamini__carousel__prod__wrapper__second">
+                                        <div class="vitamini__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/retionol_cream"
+                                                    class="vitamini__carousel__prod__wrapper__second__tittle__link">
+                                                    California Gold Nutrition, гуми с витамин С, 90 гуми
+                                                </a>
+                                            </h3>
+                                        </div>
+
+                                        <div class="vitamini__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="carousel-item">
+
+                            <div class="vitamini__carousel__prod">
+
+                                <div class="vitamini__carousel__prod__wrapper">
+
+                                    <div class="vitamini__carousel__prod__wrapper__image">
+                                        <div class="vitamini__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/retionol_cream">
+                                                <img src="/prod_images/prod15/front_small.jpg"
+                                                    alt="California Gold Nutrition, Gold C, USP Grade Vitamin C, 1,000 mg, 60 Veggie Capsules"
+                                                    srcset="/prod_images/prod15/resp_xs.jpg 1x, /prod_images/prod15/resp_sm.jpg 1.5x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="vitamini__carousel__prod__wrapper__second">
+                                        <div class="vitamini__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/retionol_cream"
+                                                    class="vitamini__carousel__prod__wrapper__second__tittle__link">
+                                                    NOW Foods, Витамин D-3, 125 mcg (5000 IU), 120 меки капсули
+                                                </a>
+                                            </h3>
+                                        </div>
+
+                                        <div class="vitamini__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="vitamini__carousel__prod__wrapper">
+
+                                    <div class="vitamini__carousel__prod__wrapper__image">
+                                        <div class="vitamini__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/retionol_cream">
+                                                <img src="/prod_images/prod16/front_small.jpg"
+                                                    alt="California Gold Nutrition, Gold C, USP Grade Vitamin C, 1,000 mg, 60 Veggie Capsules"
+                                                    srcset="/prod_images/prod16/resp_xs.jpg 1x, /prod_images/prod16/resp_sm.jpg 1.5x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="vitamini__carousel__prod__wrapper__second">
+                                        <div class="vitamini__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/retionol_cream"
+                                                    class="vitamini__carousel__prod__wrapper__second__tittle__link">
+                                                    NOW Foods, C-1000, 250 таблетки
+                                                </a>
+                                            </h3>
+                                        </div>
+
+                                        <div class="vitamini__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="vitamini__carousel__prod__wrapper">
+
+                                    <div class="vitamini__carousel__prod__wrapper__image">
+                                        <div class="vitamini__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/retionol_cream">
+                                                <img src="/prod_images/prod29/front_small.jpg"
+                                                    alt="California Gold Nutrition, Gold C, USP Grade Vitamin C, 1,000 mg, 60 Veggie Capsules"
+                                                    srcset="/prod_images/prod29/resp_xs.jpg 1x, /prod_images/prod29/resp_sm.jpg 1.5x, /prod_images/prod29/resp_md.jpg 2x, /prod_images/prod29/resp_lg.jpg 2.5x, /prod_images/prod29/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="vitamini__carousel__prod__wrapper__second">
+                                        <div class="vitamini__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/retionol_cream"
+                                                    class="vitamini__carousel__prod__wrapper__second__tittle__link">
+                                                    NOW Foods, Sports, Мъжки Active Sports Multi, 90 меки капсули
+                                                </a>
+                                            </h3>
+                                        </div>
+
+                                        <div class="vitamini__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="vitamini__carousel__prod__wrapper">
+
+                                    <div class="vitamini__carousel__prod__wrapper__image">
+                                        <div class="vitamini__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/retionol_cream">
+                                                <img src="/prod_images/prod30/front_small.jpg"
+                                                    alt="California Gold Nutrition, Gold C, USP Grade Vitamin C, 1,000 mg, 60 Veggie Capsules"
+                                                    srcset="/prod_images/prod30/resp_xs.jpg 1x, /prod_images/prod30/resp_sm.jpg 1.5x, /prod_images/prod30/resp_md.jpg 2x, /prod_images/prod30/resp_lg.jpg 2.5x, /prod_images/prod30/resp_xl.jpg 3x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="vitamini__carousel__prod__wrapper__second">
+                                        <div class="vitamini__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/retionol_cream"
+                                                    class="vitamini__carousel__prod__wrapper__second__tittle__link">
+                                                    Life Extension Super Omega-3 Plus Epa/dha Рибено масло, сусамови
+                                                    лигнани и екстракт от маслина - Омега 3 добавка - За здравето на
+                                                    сърцето и мозъка - Без глутен, без ГМО - 240 лесни за поглъщане меки
+                                                    капсули
+                                                </a>
+                                            </h3>
+                                        </div>
+
+                                        <div class="vitamini__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="vitamini__carousel__prod">
+                                <div class="vitamini__carousel__prod__wrapper">
+
+                                    <div class="vitamini__carousel__prod__wrapper__image">
+                                        <div class="vitamini__carousel__prod__wrapper__image__wrapper">
+                                            <a href="/product/retionol_cream">
+                                                <img src="/prod_images/prod31/front_small.jpg"
+                                                    alt="California Gold Nutrition, Gold C, USP Grade Vitamin C, 1,000 mg, 60 Veggie Capsules"
+                                                    srcset="/prod_images/prod31/resp_xs.jpg 1x, /prod_images/prod30/resp_sm.jpg 1.5x" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="vitamini__carousel__prod__wrapper__second">
+                                        <div class="vitamini__carousel__prod__wrapper__second__tittle">
+                                            <h3>
+                                                <a href="/product/retionol_cream"
+                                                    class="vitamini__carousel__prod__wrapper__second__tittle__link">
+                                                    California Gold Nutrition, Омега-3 първокласно рибено масло, 180 EPA
+                                                    / 120 DHA, 100 меки капсули с рибен желатин
+                                                </a>
+                                            </h3>
+                                        </div>
+
+                                        <div class="vitamini__carousel__prod__wrapper__second__price">
+                                            <span class="price">
+                                                85лв.
+                                            </span>
+
+                                            <span class="bag">
+                                                <i class="fa-solid fa-cart-plus fa-xl"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button class="carousel-control-prev d-none" type="button" data-bs-target="#carouselVitaminiXL"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next d-none" type="button" data-bs-target="#carouselVitaminiXL"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </main>
+
+    <footer id="footer">
+
+        <section class="rel__image">
+
+            <div class="rel__image__wrapper">
+                <div class="rel__image__wrapper__image">
+
+                </div>
+            </div>
+
+        </section>
+
+        <section class="footer__content">
+
+            <div class="footer__content__menu">
+
+                <div class="footer__content__menu__item footer__content__menu__item__klient">
+                    <input type="checkbox"
+                        class="footer__content__menu__item__checkbox footer__content__menu__item__klient__checkbox"
+                        id="footer-item-1" />
+
+                    <label for="footer-item-1" class="footer__content__menu__item__klient__dropdown">
+
+                        <span class="footer__content__menu__item__klient__dropdown__wrapper">
+                            <h4 class="footer__content__menu__item__klient__dropdown__wrapper__tittle">
+                                За клиента
+                            </h4>
+
+                            <span
+                                class="footer__content__menu__item__klient__dropdown__wrapper__plus-icon d-lg-none"></span>
+                        </span>
+
+                    </label>
+
+                    <ul class="footer__content__menu__item__klient__list">
+                        <li class="footer__content__menu__item__list__klient__item">
+                            <a href="#">Контакти</a>
+                        </li>
+
+                        <li class="footer__content__menu__item__list__klient___item">
+                            <a href="#">За нас</a>
+                        </li>
+
+                        <li class="footer__content__menu__item__list__klient___item">
+                            <a href="#">Връщане на продукт</a>
+                        </li>
+
+                        <li class="footer__content__menu__item__list__klient___item">
+                            <a href="#">Доставка и плащане</a>
+                        </li>
+
+                        <li class="footer__content__menu__item__list__klient___item">
+                            <a href="#">Често задавани въпроси</a>
+                        </li>
+
+                        <li class="footer__content__menu__item__list__klient___item">
+                            <a href="#">Политика за поверителност</a>
+                        </li>
+
+                        <li class="footer__content__menu__item__list__klient___item">
+                            <a href="#">Политика за използване на бисквитки</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="footer__content__menu__item footer__content__menu__item__kategorii">
+                    <input type="checkbox"
+                        class="footer__content__menu__item__checkbox footer__content__menu__item__kategorii__checkbox"
+                        id="footer-item-2" />
+
+                    <label for="footer-item-2" class="footer__content__menu__item__kategorii__dropdown">
+                        <span class="footer__content__menu__item__kategorii__dropdown__wrapper">
+                            <h4 class="footer__content__menu__item__kategorii__dropdown__wrapper__tittle">
+                                Категории
+                            </h4>
+
+                            <span
+                                class="footer__content__menu__item__kategorii__dropdown__wrapper__plus-icon d-lg-none"></span>
+                        </span>
+
+                    </label>
+
+                    <ul class="footer__content__menu__item__kategorii__list">
+                        <li class="footer__content__menu__item__list__kategorii__item">
+                            <a href="#">Козметика</a>
+                        </li>
+
+                        <li class="footer__content__menu__item__list__kategorii___item">
+                            <a href="#">Добавки</a>
+                        </li>
+
+                        <li class="footer__content__menu__item__list__kategorii___item">
+                            <a href="#">Витамини</a>
+                        </li>
+
+                        <li class="footer__content__menu__item__list__kategorii___item">
+                            <a href="#">Спорт</a>
+                        </li>
+
+                        <li class="footer__content__menu__item__list__kategorii___item">
+                            <a href="#">Спортно облекло</a>
+                        </li>
+
+                        <li class="footer__content__menu__item__list__kategorii___item">
+                            <a href="#">Баня</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="footer__content__menu__item footer__content__menu__item__sub">
+                    <h4 class="footer__content__menu__item__title footer__content__menu__item__sub__title">
+                        Абонирай се за новини и промоции
+                    </h4>
+
+                    <div class="footer__content__menu__item__sub__newsletter">
+
+                        <form action="#" class="footer__content__menu__item__sub__newsletter__form">
+
+                            <input type="email" name="email" class="form__input" placeholder="Имейл" />
+
+                            <button type="button" class="btn btn--green">Абонирай се</button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="footer_rights">
+
+            <p class="footer_rights_text">
+                Всички права запазени 2023@
+            </p>
+        </section>
+
+    </footer>
+
+</body>
+
+</html>
