@@ -1,9 +1,11 @@
 .header {
     height: 60rem;
-    margin: 0 .5rem;
-    
+    width: 100%;
+    @include media-breakpoint-up(md) {
+        padding: 0 0.3rem;
+    }
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
         height: 50rem;
     }
 
@@ -11,8 +13,17 @@
     &__desktop {
         width: 100%;
         height: 70%;
+        @include media-breakpoint-up(md) {
+            height: 65%;
+        }
         position: relative;
         overflow: hidden;
+        border: 1px solid transparent;
+        border-radius: .5rem;
+        @include media-breakpoint-up(lg) {
+            border: unset;
+            border-radius: unset;
+        }
 
         .bck_image {
             position: relative;
@@ -28,7 +39,7 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), url(../images/back2.jpg);
+                background-image: linear-gradient(to right bottom, rgb(81 126 74 / 80%), rgb(34 159 56 / 80%)), url(../images/back2.jpg);
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: cover;
@@ -40,11 +51,11 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), url(../images/bck_cropped.jpg);
+                background-image: linear-gradient(to right bottom, rgba(81, 126, 74, 0.8), rgb(26 86 37 / 80%)), url(../images/bck_cropped.jpg);
                 background-repeat: no-repeat;
                 background-size: cover;
-                -webkit-clip-path: polygon(100% 0%, 100% 0, 100% 100%, 0% 100%);
-                clip-path: polygon(100% 0%, 100% 0, 100% 100%, 0% 100%);
+                -webkit-clip-path: polygon(100% 30%, 100% 0, 100% 100%, 30% 100%);
+                clip-path: polygon(100% 30%, 100% 0, 100% 100%, 30% 100%);
 
                 @include media-breakpoint-up(md) {
                     -webkit-clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 50% 100%);
@@ -70,6 +81,9 @@
     &__search-top-bar {
         background-color: #f7f7f7;
         height: 30%;
+        @include media-breakpoint-up(md) {
+            height: 35%;
+        }
         width: 95%;
         margin: 0 auto;
         @include media-breakpoint-up(lg) {

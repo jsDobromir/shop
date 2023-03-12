@@ -1,132 +1,182 @@
 .carousel__custom {
     width: 100%;
     height: 45rem;
-    overflow: hidden;
-    mix-blend-mode: multiply;
     position: relative;
-
-    &__inner {
+    mix-blend-mode: multiply;
+    &__wrapper {
         display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: flex-start;
-        gap: 1rem;
+        overflow: hidden;
+        position: relative;
+        --item_to_slide: 1;
         width: 100%;
         height: 100%;
-        transition: all .2s linear;
+        margin: 0 auto;
+        @include media-breakpoint-up(sm) {
+            width: 90%;
+        }
+        @include media-breakpoint-up(md) {
+            width: 98%;
+        }
+        @include media-breakpoint-up(lg) {
+            width: 90%;
+        }
 
-        &__item {
+        @include media-breakpoint-up(md) {
+            --item_to_slide: 2;
+        }
+
+        @include media-breakpoint-up(xl) {
+            --item_to_slide: 3;
+        }
+
+        &__inner {
             display: flex;
-            height: 100%;
-            min-width: 70%;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 1rem;
             @include media-breakpoint-up(sm) {
-                min-width: 60%;
+                gap: 2rem;
             }
-            @include media-breakpoint-up(md) {
-                min-width: 40%;
-            }
-            flex-direction: column;
-            align-items: center;
-            border: 1px solid rgba(169, 167, 167, 0.34);
-            border-radius: 1rem;
 
-            &__wrapper {
-                width: 100%;
-                height: 100%;
+            @include media-breakpoint-up(lg) {
+                gap: 3rem;
+            }
+
+            width: 100%;
+            height: 100%;
+            transition: all .4s ease-in-out;
+
+            &__item {
                 display: flex;
+                height: 100%;
+                min-width: 70%;
+
+                @include media-breakpoint-up(sm) {
+                    min-width: 60%;
+                }
+
+                @include media-breakpoint-up(md) {
+                    min-width: 40%;
+                }
+
+                @include media-breakpoint-up(xl) {
+                    min-width: 27%;
+                }
+
                 flex-direction: column;
                 align-items: center;
-                transition: all 0.5s;
-                justify-content: center;
+                border: 1px solid rgba(169, 167, 167, 0.34);
+                border-radius: 1rem;
 
-                &__image {
+                &__wrapper {
                     width: 100%;
-                    height: 65%;
-                    background-color: rgb(249 248 248 / 35%);
+                    height: 100%;
                     display: flex;
-                    justify-content: center;
+                    flex-direction: column;
                     align-items: center;
                     transition: all 0.5s;
-                    
-                    &__wrapper {
-                        width: 90%;
-                        height: 90%;
-                        overflow: hidden;
+                    justify-content: center;
+
+                    &__image {
+                        width: 100%;
+                        height: 65%;
+                        background-color: rgba(230, 213, 213, 0.14);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transition: all 0.5s;
+
+                        &__wrapper {
+                            width: 90%;
+                            height: 90%;
+                            overflow: hidden;
+                            display: flex;
+                            justify-content: center;
+                            text-align: center;
+                        }
+
+                        img {
+                            transition: all .5s;
+                            max-width: 100%;
+                            max-height: 100%;
+                            object-fit: contain;
+                            mix-blend-mode: multiply;
+
+                            &:hover {
+                                @include media-breakpoint-up(xl) {
+                                    transform: scale(1.2);
+                                }
+                            }
+                        }
                     }
 
-                    img {
-                        transition: all .5s;
+                    &__second {
+                        height: 35%;
+                        padding-top: .3rem;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
                         width: 100%;
-                        height: 100%;
-                        object-fit: contain;
-                        mix-blend-mode: multiply;
-                        &:hover {
-                            @include media-breakpoint-up(xl) {
-                                transform: scale(1.2);
+                        background-color: rgba(90, 108, 94, 0.16);
+
+                        &__tittle {
+                            font-size: 2rem;
+                            text-align: center;
+
+                            h3 {
+                                font-weight: 800;
+                            }
+
+                            &__link {
+                                display: -webkit-box;
+                                -webkit-line-clamp: 2;
+                                -webkit-box-orient: vertical;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
+                        }
+
+                        &__price {
+                            width: 90%;
+                            margin: 0 auto;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            .price {
+                                font-size: 3rem;
+                                color: red;
+                            }
+
+                            .bag {
+                                font-size: 3rem;
                             }
                         }
                     }
                 }
-
-                &__second {
-                    height: 35%;
-                    padding-top: .3rem;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    max-width: 100%;
-                    background-color: rgba(90, 108, 94, 0.16);
-
-                    &__tittle {
-                        font-size: 2rem;
-                        text-align: center;
-                        
-                        h3 {
-                            font-weight: 800;
-                        }
-        
-                        &__link {
-                            display: -webkit-box;
-                            -webkit-line-clamp: 2;
-                            -webkit-box-orient: vertical;
-                            overflow: hidden;
-                            text-overflow: ellipsis;
-                        }
-                    }
-
-                    &__price {
-                        width: 90%;
-                        margin: 0 auto;
-                        display: flex;
-                        flex-direction: row;
-                        align-items: center;
-                        justify-content: space-between;
-        
-                        .price {
-                            font-size: 3rem;
-                            color: red;
-                        }
-                        .bag {
-                            font-size: 3rem;
-                        }
-                    }
-                }
             }
         }
+
     }
 
     .carousel-control-prev {
-        left: 1%;
+        left: 2%;
         width: 6rem;
         height: 6rem;
         top: 35%;
-        .carousel-control-prev-icon{
+        opacity: .7;
+        cursor: pointer;
+        .carousel-control-prev-icon {
             background-color: #657fa5;
             width: 100%;
             height: 100%;
         }
-        &:hover, &:focus {
-            opacity: .6;
+
+        &:hover,
+        &:focus {
+            opacity: .7;
         }
     }
 
@@ -134,15 +184,18 @@
         width: 6rem;
         height: 6rem;
         top: 35%;
-        right: 1%;
-
-        .carousel-control-next-icon{
+        right: 2%;
+        opacity: .7;
+        cursor: pointer;
+        .carousel-control-next-icon {
             background-color: #657fa5;
             width: 100%;
             height: 100%;
         }
-        &:hover, &:focus {
-            opacity: .5;
+
+        &:hover,
+        &:focus {
+            opacity: .7;
         }
     }
 }

@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', (ev) => {
         let home_desktop = document.querySelector('.header__desktop');
         let active = home_desktop.querySelector('.activeOpacity');
         let next = active.nextElementSibling;
-        
+
         if (next) {
             active.classList.add('disabledOpacity');
             active.classList.remove('activeOpacity');
@@ -29,298 +29,397 @@ document.addEventListener('DOMContentLoaded', (ev) => {
         }
     }, 5000);
 
-    const carouselInner = document.querySelector('.carousel__custom__inner');
+    const carouselInner = document.querySelector('.kozmetika__carousel').querySelector('.carousel__custom__wrapper__inner');
     var sliderManager = new Hammer.Manager(carouselInner);
-    let initialLeftMin = carouselInner.getBoundingClientRect().x;
-    sliderManager.add(new Hammer.Pan({ threshold: 0, pointers: 0 }));
-    sliderManager.on('pan', function (e) {
-        let currentXposition = carouselInner.getBoundingClientRect().x;
-        let newPosition = currentXposition + e.deltaX;
-        carouselInner.style.transform = 'translateX(' + (newPosition) + 'px)';
-        if (e.isFinal) {
-            let activeElement = carouselInner.querySelector('.active');
-            console.log(e.deltaX);
-            if (e.velocityX < -1) {
-                //go to right
-                let nextElement = activeElement.nextElementSibling;
-                if (!nextElement || !nextElement.classList.contains('carousel__custom__inner__item')) {
-                    carouselInner.parentElement.querySelector('.carousel-control-next').classList.add('d-none');
-                    return;
-                }
-                activeElement.classList.remove('active');
-                nextElement.classList.add('active');
-                let xPos = nextElement.getBoundingClientRect().x;
-                let currentXposition = carouselInner.getBoundingClientRect().x;
-                let newPosition = currentXposition - xPos;
-                carouselInner.style.transform = 'translateX(' + (newPosition) + 'px)';
-                return;
-            }
-            else if (e.velocityX > 1) {
-                //left
-                let prevElement = activeElement.previousElementSibling;
-                if (!prevElement || !prevElement.classList.contains('carousel__custom__inner__item')) {
-                    carouselInner.parentElement.querySelector('.carousel-control-next').classList.add('d-none');
-                    return;
-                }
-
-                activeElement.classList.remove('active');
-                prevElement.classList.add('active');
-                let xPos = prevElement.getBoundingClientRect().x;
-                let currentXposition = carouselInner.getBoundingClientRect().x;
-                let newPosition = currentXposition - xPos;
-                carouselInner.style.transform = 'translateX(' + (newPosition) + 'px)';
-                return;
-            }
-            else {
-                let newPosition = currentXposition - activeElement.getBoundingClientRect().x;
-                carouselInner.style.transform = 'translateX(' + (newPosition) + 'px)';
-                return;
-            }
-        }
-        // let currentXposition = carouselInner.getBoundingClientRect().x;
-        // let newPosition = currentXposition + e.deltaX;
-        
-        // if (newPosition < (-(carouselInner.scrollWidth - carouselInner.offsetWidth))) {
-        //     let pos = carouselInner.scrollWidth - carouselInner.offsetWidth;
-        //     carouselInner.style.transform = 'translateX(' + (-pos) + 'px)';
-        //     carouselInner.parentElement.querySelector('.carousel-control-next').classList.add('d-none');
-        //     return;
-        // }
-        // if (newPosition > (-initialLeftMin)) {
-        //     carouselInner.style.transform = `translateX(0%)`;
-        //     carouselInner.parentElement.querySelector('.carousel-control-prev').classList.add('d-none');
-        //     return;
-        // }
-        // carouselInner.parentElement.querySelector('.carousel-control-next').classList.remove('d-none');
-        // carouselInner.parentElement.querySelector('.carousel-control-prev').classList.remove('d-none');
-        // carouselInner.style.transform = 'translateX(' + (newPosition) + 'px)';
+    const items_to_slide = parseInt(window.getComputedStyle(carouselInner.parentElement).getPropertyValue('--item_to_slide'), 10);
+    let Swipe = new Hammer.Swipe({
+        direction: Hammer.DIRECTION_HORIZONTAL
     });
-
-    carouselInner.parentElement.querySelector('.carousel-control-prev').addEventListener('click', (ev) => {
-        let amount = getXAmount(carouselInner);
-        let currentXposition = carouselInner.getBoundingClientRect().x;
-        let newPosition = currentXposition + amount;
-        if (newPosition > (-initialLeftMin)) {
-            carouselInner.style.transform = `translateX(0%)`;
-            carouselInner.parentElement.querySelector('.carousel-control-prev').classList.add('d-none');
+    sliderManager.add(Swipe);
+    if (items_to_slide < 3) {
+        sliderManager.on('swipeleft', function (e) {
+            let activeElement = carouselInner.querySelector('.active');
+            let nextElement = null;
+            if (items_to_slide === 1) {
+                nextElement = activeElement.nextElementSibling;
+            }
+            else if (items_to_slide === 2) {
+                nextElement = activeElement.nextElementSibling ? activeElement.nextElementSibling.nextElementSibling : null;
+            }
+            carouselInner.parentElement.parentElement.querySelector('.carousel-control-prev').classList.remove('d-none');
+            if (!nextElement || !nextElement.classList.contains('carousel__custom__wrapper__inner__item')) {
+                return;
+            }
+            activeElement.classList.remove('active');
+            nextElement.classList.add('active');
+            let xPos = nextElement.getBoundingClientRect().x;
+            let currentXposition = carouselInner.getBoundingClientRect().x;
+            let newPosition = currentXposition - xPos;
+            carouselInner.style.transform = 'translateX(' + (newPosition) + 'px)';
+            if (items_to_slide === 1) {
+                if (!nextElement.nextElementSibling) {
+                    carouselInner.parentElement.parentElement.querySelector('.carousel-control-next').classList.add('d-none');
+                }
+            }
+            else if (items_to_slide === 2) {
+                let nextElementSibling = nextElement.nextElementSibling;
+                if (!nextElementSibling) {
+                    carouselInner.parentElement.parentElement.querySelector('.carousel-control-next').classList.add('d-none');
+                }
+                if (nextElementSibling && !nextElementSibling.nextElementSibling) {
+                    carouselInner.parentElement.parentElement.querySelector('.carousel-control-next').classList.add('d-none');
+                }
+            }
+            return;
+        });
+        sliderManager.on('swiperight', function (e) {
+            let activeElement = carouselInner.querySelector('.active');
+            let prevElement = null;
+            if (items_to_slide === 1) {
+                prevElement = activeElement.previousElementSibling;
+            }
+            else if (items_to_slide === 2) {
+                prevElement = activeElement.previousElementSibling ? activeElement.previousElementSibling.previousElementSibling : null;
+            }
+            carouselInner.parentElement.parentElement.querySelector('.carousel-control-next').classList.remove('d-none');
+            if (!prevElement || !prevElement.classList.contains('carousel__custom__wrapper__inner__item')) {
+                return;
+            }
+            activeElement.classList.remove('active');
+            prevElement.classList.add('active');
+            let xPos = prevElement.getBoundingClientRect().x;
+            let currentXposition = carouselInner.getBoundingClientRect().x;
+            let newPosition = currentXposition - xPos;
+            carouselInner.style.transform = 'translateX(' + (newPosition) + 'px)';
+            if (items_to_slide === 1) {
+                if (!prevElement.previousElementSibling) {
+                    carouselInner.parentElement.parentElement.querySelector('.carousel-control-prev').classList.add('d-none');
+                }
+            }
+            else if (items_to_slide === 2) {
+                let prevElementSibling = prevElement.previousElementSibling;
+                if (!prevElementSibling) {
+                    carouselInner.parentElement.parentElement.querySelector('.carousel-control-prev').classList.add('d-none');
+                }
+                if (prevElementSibling && !prevElementSibling.previousElementSibling) {
+                    carouselInner.parentElement.parentElement.querySelector('.carousel-control-prev').classList.add('d-none');
+                }
+            }
+            return;
+        });
+    }
+    carouselInner.parentElement.parentElement.querySelector('.carousel-control-prev').addEventListener('click', (ev) => {
+        let activeElement = carouselInner.querySelector('.active');
+        let prevElement = null;
+        if (items_to_slide === 1) {
+            prevElement = activeElement.previousElementSibling;
+        }
+        else if (items_to_slide === 2) {
+            prevElement = activeElement.previousElementSibling ? activeElement.previousElementSibling.previousElementSibling : null;
+        }
+        else if (items_to_slide === 3) {
+            prevElement = (activeElement.previousElementSibling && activeElement.previousElementSibling.previousElementSibling) ?
+                activeElement.previousElementSibling.previousElementSibling.previousElementSibling : null;
+        }
+        carouselInner.parentElement.parentElement.querySelector('.carousel-control-next').classList.remove('d-none');
+        if (!prevElement || !prevElement.classList.contains('carousel__custom__wrapper__inner__item')) {
             return;
         }
-        carouselInner.parentElement.querySelector('.carousel-control-next').classList.remove('d-none');
+        activeElement.classList.remove('active');
+        prevElement.classList.add('active');
+        let xPos = prevElement.getBoundingClientRect().x;
+        let currentXposition = carouselInner.getBoundingClientRect().x;
+        let newPosition = currentXposition - xPos;
         carouselInner.style.transform = 'translateX(' + (newPosition) + 'px)';
+        if (items_to_slide === 1) {
+            if (!prevElement.previousElementSibling) {
+                carouselInner.parentElement.parentElement.querySelector('.carousel-control-prev').classList.add('d-none');
+            }
+        }
+        else if (items_to_slide === 2) {
+            let prevElementSibling = prevElement.previousElementSibling;
+            if (!prevElementSibling) {
+                carouselInner.parentElement.parentElement.querySelector('.carousel-control-prev').classList.add('d-none');
+                return;
+            }
+            if (prevElementSibling && !prevElementSibling.previousElementSibling) {
+                carouselInner.parentElement.parentElement.querySelector('.carousel-control-prev').classList.add('d-none');
+                return;
+            }
+        }
+        else if (items_to_slide === 3) {
+            let prevElementSibling = prevElement.previousElementSibling;
+            if (!prevElementSibling) {
+                carouselInner.parentElement.parentElement.querySelector('.carousel-control-prev').classList.add('d-none');
+                return;
+            }
+            let prevPrevElementSibling = prevElementSibling.previousElementSibling;
+            if (!prevPrevElementSibling) {
+                carouselInner.parentElement.parentElement.querySelector('.carousel-control-prev').classList.add('d-none');
+                return;
+            }
+            let prevPrevPrevElementSiblig = prevPrevElementSibling.previousElementSibling;
+            if (!prevPrevPrevElementSiblig) {
+                carouselInner.parentElement.parentElement.querySelector('.carousel-control-prev').classList.add('d-none');
+                return;
+            }
+        }
+        return;
     });
 
-    carouselInner.parentElement.querySelector('.carousel-control-next').addEventListener('click', (ev) => {
+    carouselInner.parentElement.parentElement.querySelector('.carousel-control-next').addEventListener('click', (ev) => {
         let activeElement = carouselInner.querySelector('.active');
-        let nextElement = activeElement.nextElementSibling;
-        console.log(nextElement);
-        if (!nextElement || !nextElement.classList.contains('carousel__custom__inner__item')) {
-            carouselInner.parentElement.querySelector('.carousel-control-next').classList.add('d-none');
+        let nextElement = null;
+        if (items_to_slide === 1) {
+            nextElement = activeElement.nextElementSibling;
+        }
+        else if (items_to_slide === 2) {
+            nextElement = activeElement.nextElementSibling ? activeElement.nextElementSibling.nextElementSibling : null;
+        }
+        else if (items_to_slide === 3) {
+            nextElement = (activeElement.nextElementSibling && activeElement.nextElementSibling.nextElementSibling) ?
+                activeElement.nextElementSibling.nextElementSibling.nextElementSibling : null;
+        }
+        carouselInner.parentElement.parentElement.querySelector('.carousel-control-prev').classList.remove('d-none');
+        if (!nextElement || !nextElement.classList.contains('carousel__custom__wrapper__inner__item')) {
             return;
         }
         activeElement.classList.remove('active');
         nextElement.classList.add('active');
-        console.log(nextElement.getBoundingClientRect());
         let xPos = nextElement.getBoundingClientRect().x;
         let currentXposition = carouselInner.getBoundingClientRect().x;
         let newPosition = currentXposition - xPos;
         carouselInner.style.transform = 'translateX(' + (newPosition) + 'px)';
-        // let amount = getXAmount(carouselInner);
-        // let currentXposition = carouselInner.getBoundingClientRect().x;
-        // let newPosition = currentXposition - amount;
-        // if (newPosition < (-(carouselInner.scrollWidth - carouselInner.offsetWidth))) {
-        //     let pos = carouselInner.scrollWidth - carouselInner.offsetWidth;
-        //     carouselInner.style.transform = 'translateX(' + (-pos) + 'px)';
-        //     carouselInner.parentElement.querySelector('.carousel-control-next').classList.add('d-none');
-        //     return;
-        // }
-        // carouselInner.parentElement.querySelector('.carousel-control-prev').classList.remove('d-none');
-        // carouselInner.style.transform = 'translateX(' + (newPosition) + 'px)';
+        if (items_to_slide === 1) {
+            if (!nextElement.nextElementSibling) {
+                carouselInner.parentElement.parentElement.querySelector('.carousel-control-next').classList.add('d-none');
+            }
+        }
+        else if (items_to_slide === 2) {
+            let nextElementSibling = nextElement.nextElementSibling;
+            if (!nextElementSibling) {
+                carouselInner.parentElement.parentElement.querySelector('.carousel-control-next').classList.add('d-none');
+                return;
+            }
+            if (nextElementSibling && !nextElementSibling.nextElementSibling) {
+                carouselInner.parentElement.parentElement.querySelector('.carousel-control-next').classList.add('d-none');
+                return;
+            }
+        }
+        else if (items_to_slide === 3) {
+            let nextElementSibling = nextElement.nextElementSibling;
+            if (!nextElementSibling) {
+                carouselInner.parentElement.parentElement.querySelector('.carousel-control-next').classList.add('d-none');
+                return;
+            }
+            let nextNextElementSibling = nextElementSibling.nextElementSibling;
+            if (!nextNextElementSibling) {
+                carouselInner.parentElement.parentElement.querySelector('.carousel-control-next').classList.add('d-none');
+                return;
+            }
+            let nextNextNextElementSiblig = nextNextElementSibling.nextElementSibling;
+            if (!nextNextNextElementSiblig) {
+                carouselInner.parentElement.parentElement.querySelector('.carousel-control-next').classList.add('d-none');
+                return;
+            }
+        }
+        return;
     });
 
-    // const carouselProductFirstSmallDom = document.querySelector('#carouselProductFirstSmall');
-    // const carouselProductFistSmall = new Carousel(carouselProductFirstSmallDom, {
-    //     interval: 5000,
-    //     keyboard: true,
-    //     pause: false,
-    //     ride: false,
-    //     touch: true,
-    //     wrap: true
-    // });
+    /////////////////////////////////////////////////
 
-    // const carouselProductFirstMidDom = document.querySelector('#carouselProductFirstMid');
-    // const carouselProdutFirstMid = new Carousel(carouselProductFirstMidDom, {
-    //     interval: 5000,
-    //     keyboard: true,
-    //     pause: false,
-    //     ride: false,
-    //     touch: true,
-    //     wrap: false
-    // });
-
-    const carouselProductFirstXLDom = document.querySelector('#carouselProductFirstXL');
-    const carouselProductFirstXL = new Carousel(carouselProductFirstXLDom, {
-        interval: 5000,
-        keyboard: true,
-        pause: false,
-        ride: false,
-        touch: true,
-        wrap: false
+    const carouselInnerVit = document.querySelector('.vitamini__carousel').querySelector('.carousel__custom__wrapper__inner');
+    var sliderManagerVit = new Hammer.Manager(carouselInnerVit);
+    const items_to_slideVit = parseInt(window.getComputedStyle(carouselInnerVit.parentElement).getPropertyValue('--item_to_slide'), 10);
+    let SwipeVit = new Hammer.Swipe({
+        direction: Hammer.DIRECTION_HORIZONTAL
     });
-
-    const carouselVitaminiSmallDom = document.querySelector('#carouselVitaminiSmall');
-    const carouselVitaminiSmall = new Carousel(carouselVitaminiSmallDom, {
-        interval: 5000,
-        keyboard: true,
-        pause: false,
-        ride: false,
-        touch: true,
-        wrap: false
-    });
-
-    const carouselVitaminiMidDom = document.querySelector('#carouselVitaminiMid');
-    const carouselVitaminiMid = new Carousel(carouselVitaminiMidDom, {
-        interval: 5000,
-        keyboard: true,
-        pause: false,
-        ride: false,
-        touch: true,
-        wrap: false
-    });
-
-    const carouselVitaminiXLDom = document.querySelector('#carouselVitaminiXL');
-    const carouselVitaminiXL = new Carousel(carouselVitaminiXLDom, {
-        interval: 5000,
-        keyboard: true,
-        pause: false,
-        ride: false,
-        touch: true,
-        wrap: false
-    });
-
-    // let carouselProductFistSmallLength = carouselProductFirstSmallDom.querySelectorAll('.carousel-item').length - 1;
-    // if (carouselProductFistSmallLength) {
-    //     carouselProductFirstSmallDom.querySelector('.carousel-control-next').classList.remove('d-none');
-    // }
-    // carouselProductFirstSmallDom.addEventListener('slid.bs.carousel', (e) => {
-    //     if (e.to===0) {
-    //         carouselProductFirstSmallDom.querySelector('.carousel-control-prev').classList.add('d-none');
-    //         carouselProductFirstSmallDom.querySelector('.carousel-control-next').classList.remove('d-none');
-    //     }
-    //     else if (e.to===carouselProductFistSmallLength) {
-    //         carouselProductFirstSmallDom.querySelector('.carousel-control-prev').classList.remove('d-none');
-    //         carouselProductFirstSmallDom.querySelector('.carousel-control-next').classList.add('d-none');
-    //     }
-    //     else {
-    //         carouselProductFirstSmallDom.querySelector('.carousel-control-prev').classList.remove('d-none');
-    //         carouselProductFirstSmallDom.querySelector('.carousel-control-next').classList.remove('d-none');
-    //     }
-    // });
-
-    // let carouselProductFistMidLength = carouselProductFirstMidDom.querySelectorAll('.carousel-item').length - 1;
-    // if (carouselProductFistMidLength) {
-    //     carouselProductFirstMidDom.querySelector('.carousel-control-next').classList.remove('d-none');
-    // }
-    // carouselProductFirstMidDom.addEventListener('slid.bs.carousel', (e) => {
-    //     if (e.to===0) {
-    //         carouselProductFirstMidDom.querySelector('.carousel-control-prev').classList.add('d-none');
-    //         carouselProductFirstMidDom.querySelector('.carousel-control-next').classList.remove('d-none');
-    //     }
-    //     else if (e.to===carouselProductFistMidLength) {
-    //         carouselProductFirstMidDom.querySelector('.carousel-control-prev').classList.remove('d-none');
-    //         carouselProductFirstMidDom.querySelector('.carousel-control-next').classList.add('d-none');
-    //     }
-    //     else {
-    //         carouselProductFirstMidDom.querySelector('.carousel-control-prev').classList.remove('d-none');
-    //         carouselProductFirstMidDom.querySelector('.carousel-control-next').classList.remove('d-none');
-    //     }
-    // });
-
-    let carouselProductXLLength = carouselProductFirstXLDom.querySelectorAll('.carousel-item').length - 1;
-    if (carouselProductXLLength) {
-        carouselProductFirstXLDom.querySelector('.carousel-control-next').classList.remove('d-none');
+    sliderManagerVit.add(SwipeVit);
+    if (items_to_slideVit < 3) {
+        sliderManagerVit.on('swipeleft', function (e) {
+            let activeElement = carouselInnerVit.querySelector('.active');
+            let nextElement = null;
+            if (items_to_slideVit === 1) {
+                nextElement = activeElement.nextElementSibling;
+            }
+            else if (items_to_slideVit === 2) {
+                nextElement = activeElement.nextElementSibling ? activeElement.nextElementSibling.nextElementSibling : null;
+            }
+            carouselInnerVit.parentElement.parentElement.querySelector('.carousel-control-prev').classList.remove('d-none');
+            if (!nextElement || !nextElement.classList.contains('carousel__custom__wrapper__inner__item')) {
+                return;
+            }
+            activeElement.classList.remove('active');
+            nextElement.classList.add('active');
+            let xPos = nextElement.getBoundingClientRect().x;
+            let currentXposition = carouselInnerVit.getBoundingClientRect().x;
+            let newPosition = currentXposition - xPos;
+            carouselInnerVit.style.transform = 'translateX(' + (newPosition) + 'px)';
+            if (items_to_slideVit === 1) {
+                if (!nextElement.nextElementSibling) {
+                    carouselInnerVit.parentElement.parentElement.querySelector('.carousel-control-next').classList.add('d-none');
+                }
+            }
+            else if (items_to_slideVit === 2) {
+                let nextElementSibling = nextElement.nextElementSibling;
+                if (!nextElementSibling) {
+                    carouselInnerVit.parentElement.parentElement.querySelector('.carousel-control-next').classList.add('d-none');
+                }
+                if (nextElementSibling && !nextElementSibling.nextElementSibling) {
+                    carouselInnerVit.parentElement.parentElement.querySelector('.carousel-control-next').classList.add('d-none');
+                }
+            }
+            return;
+        });
+        sliderManagerVit.on('swiperight', function (e) {
+            let activeElement = carouselInnerVit.querySelector('.active');
+            let prevElement = null;
+            if (items_to_slideVit === 1) {
+                prevElement = activeElement.previousElementSibling;
+            }
+            else if (items_to_slideVit === 2) {
+                prevElement = activeElement.previousElementSibling ? activeElement.previousElementSibling.previousElementSibling : null;
+            }
+            carouselInnerVit.parentElement.parentElement.querySelector('.carousel-control-next').classList.remove('d-none');
+            if (!prevElement || !prevElement.classList.contains('carousel__custom__wrapper__inner__item')) {
+                return;
+            }
+            activeElement.classList.remove('active');
+            prevElement.classList.add('active');
+            let xPos = prevElement.getBoundingClientRect().x;
+            let currentXposition = carouselInnerVit.getBoundingClientRect().x;
+            let newPosition = currentXposition - xPos;
+            carouselInnerVit.style.transform = 'translateX(' + (newPosition) + 'px)';
+            if (items_to_slideVit === 1) {
+                if (!prevElement.previousElementSibling) {
+                    carouselInnerVit.parentElement.parentElement.querySelector('.carousel-control-prev').classList.add('d-none');
+                }
+            }
+            else if (items_to_slideVit === 2) {
+                let prevElementSibling = prevElement.previousElementSibling;
+                if (!prevElementSibling) {
+                    carouselInnerVit.parentElement.parentElement.querySelector('.carousel-control-prev').classList.add('d-none');
+                }
+                if (prevElementSibling && !prevElementSibling.previousElementSibling) {
+                    carouselInnerVit.parentElement.parentElement.querySelector('.carousel-control-prev').classList.add('d-none');
+                }
+            }
+            return;
+        });
     }
-
-    carouselProductFirstXLDom.addEventListener('slid.bs.carousel', (e) => {
-        if (e.to===0) {
-            carouselProductFirstXLDom.querySelector('.carousel-control-prev').classList.add('d-none');
-            carouselProductFirstXLDom.querySelector('.carousel-control-next').classList.remove('d-none');
+    carouselInnerVit.parentElement.parentElement.querySelector('.carousel-control-prev').addEventListener('click', (ev) => {
+        let activeElement = carouselInnerVit.querySelector('.active');
+        let prevElement = null;
+        if (items_to_slideVit === 1) {
+            prevElement = activeElement.previousElementSibling;
         }
-        else if (e.to===carouselProductXLLength) {
-            carouselProductFirstXLDom.querySelector('.carousel-control-prev').classList.remove('d-none');
-            carouselProductFirstXLDom.querySelector('.carousel-control-next').classList.add('d-none');
+        else if (items_to_slideVit === 2) {
+            prevElement = activeElement.previousElementSibling ? activeElement.previousElementSibling.previousElementSibling : null;
         }
-        else {
-            carouselProductFirstXLDom.querySelector('.carousel-control-prev').classList.remove('d-none');
-            carouselProductFirstXLDom.querySelector('.carousel-control-next').classList.remove('d-none');
+        else if (items_to_slide === 3) {
+            prevElement = (activeElement.previousElementSibling && activeElement.previousElementSibling.previousElementSibling) ?
+                activeElement.previousElementSibling.previousElementSibling.previousElementSibling : null;
         }
+        carouselInnerVit.parentElement.parentElement.querySelector('.carousel-control-next').classList.remove('d-none');
+        if (!prevElement || !prevElement.classList.contains('carousel__custom__wrapper__inner__item')) {
+            return;
+        }
+        activeElement.classList.remove('active');
+        prevElement.classList.add('active');
+        let xPos = prevElement.getBoundingClientRect().x;
+        let currentXposition = carouselInnerVit.getBoundingClientRect().x;
+        let newPosition = currentXposition - xPos;
+        carouselInnerVit.style.transform = 'translateX(' + (newPosition) + 'px)';
+        if (items_to_slideVit === 1) {
+            if (!prevElement.previousElementSibling) {
+                carouselInnerVit.parentElement.parentElement.querySelector('.carousel-control-prev').classList.add('d-none');
+            }
+        }
+        else if (items_to_slideVit === 2) {
+            let prevElementSibling = prevElement.previousElementSibling;
+            if (!prevElementSibling) {
+                carouselInnerVit.parentElement.parentElement.querySelector('.carousel-control-prev').classList.add('d-none');
+            }
+            if (prevElementSibling && !prevElementSibling.previousElementSibling) {
+                carouselInnerVit.parentElement.parentElement.querySelector('.carousel-control-prev').classList.add('d-none');
+            }
+        }
+        else if (items_to_slide === 3) {
+            let prevElementSibling = prevElement.previousElementSibling;
+            if (!prevElementSibling) {
+                carouselInnerVit.parentElement.parentElement.querySelector('.carousel-control-prev').classList.add('d-none');
+                return;
+            }
+            let prevPrevElementSibling = prevElementSibling.previousElementSibling;
+            if (!prevPrevElementSibling) {
+                carouselInnerVit.parentElement.parentElement.querySelector('.carousel-control-prev').classList.add('d-none');
+                return;
+            }
+            let prevPrevPrevElementSiblig = prevPrevElementSibling.previousElementSibling;
+            if (!prevPrevPrevElementSiblig) {
+                carouselInnerVit.parentElement.parentElement.querySelector('.carousel-control-prev').classList.add('d-none');
+                return;
+            }
+        }
+        return;
     });
 
-    let carouselVitaminiSmallLength = carouselVitaminiSmallDom.querySelectorAll('.carousel-item').length - 1;
-    if (carouselVitaminiSmallLength) {
-        carouselVitaminiSmallDom.querySelector('.carousel-control-next').classList.remove('d-none');
-    }
-
-    carouselVitaminiSmallDom.addEventListener('slid.bs.carousel', (e) => {
-        if (e.to===0) {
-            carouselVitaminiSmallDom.querySelector('.carousel-control-prev').classList.add('d-none');
-            carouselVitaminiSmallDom.querySelector('.carousel-control-next').classList.remove('d-none');
+    carouselInnerVit.parentElement.parentElement.querySelector('.carousel-control-next').addEventListener('click', (ev) => {
+        let activeElement = carouselInnerVit.querySelector('.active');
+        let nextElement = null;
+        if (items_to_slideVit === 1) {
+            nextElement = activeElement.nextElementSibling;
         }
-        else if (e.to===carouselVitaminiSmallLength) {
-            carouselVitaminiSmallDom.querySelector('.carousel-control-prev').classList.remove('d-none');
-            carouselVitaminiSmallDom.querySelector('.carousel-control-next').classList.add('d-none');
+        else if (items_to_slideVit === 2) {
+            nextElement = activeElement.nextElementSibling ? activeElement.nextElementSibling.nextElementSibling : null;
         }
-        else {
-            carouselVitaminiSmallDom.querySelector('.carousel-control-prev').classList.remove('d-none');
-            carouselVitaminiSmallDom.querySelector('.carousel-control-next').classList.remove('d-none');
+        else if (items_to_slide === 3) {
+            nextElement = (activeElement.nextElementSibling && activeElement.nextElementSibling.nextElementSibling) ?
+                activeElement.nextElementSibling.nextElementSibling.nextElementSibling : null;
         }
+        carouselInnerVit.parentElement.parentElement.querySelector('.carousel-control-prev').classList.remove('d-none');
+        if (!nextElement || !nextElement.classList.contains('carousel__custom__wrapper__inner__item')) {
+            return;
+        }
+        activeElement.classList.remove('active');
+        nextElement.classList.add('active');
+        let xPos = nextElement.getBoundingClientRect().x;
+        let currentXposition = carouselInnerVit.getBoundingClientRect().x;
+        let newPosition = currentXposition - xPos;
+        carouselInnerVit.style.transform = 'translateX(' + (newPosition) + 'px)';
+        if (items_to_slideVit === 1) {
+            if (!nextElement.nextElementSibling) {
+                carouselInnerVit.parentElement.parentElement.querySelector('.carousel-control-next').classList.add('d-none');
+            }
+        }
+        else if (items_to_slideVit === 2) {
+            let nextElementSibling = nextElement.nextElementSibling;
+            if (!nextElementSibling) {
+                carouselInnerVit.parentElement.parentElement.querySelector('.carousel-control-next').classList.add('d-none');
+            }
+            if (nextElementSibling && !nextElementSibling.nextElementSibling) {
+                carouselInnerVit.parentElement.parentElement.querySelector('.carousel-control-next').classList.add('d-none');
+            }
+        }
+        else if (items_to_slide === 3) {
+            let nextElementSibling = nextElement.nextElementSibling;
+            if (!nextElementSibling) {
+                carouselInnerVit.parentElement.parentElement.querySelector('.carousel-control-next').classList.add('d-none');
+                return;
+            }
+            let nextNextElementSibling = nextElementSibling.nextElementSibling;
+            if (!nextNextElementSibling) {
+                carouselInnerVit.parentElement.parentElement.querySelector('.carousel-control-next').classList.add('d-none');
+                return;
+            }
+            let nextNextNextElementSiblig = nextNextElementSibling.nextElementSibling;
+            if (!nextNextNextElementSiblig) {
+                carouselInnerVit.parentElement.parentElement.querySelector('.carousel-control-next').classList.add('d-none');
+                return;
+            }
+        }
+        return;
     });
 
-    let carouselVitaminiMidLength = carouselVitaminiMidDom.querySelectorAll('.carousel-item').length - 1;
-    if (carouselVitaminiMidLength) {
-        carouselVitaminiMidDom.querySelector('.carousel-control-next').classList.remove('d-none');
-    }
 
-    carouselVitaminiMidDom.addEventListener('slid.bs.carousel', (e) => {
-        if (e.to===0) {
-            carouselVitaminiMidDom.querySelector('.carousel-control-prev').classList.add('d-none');
-            carouselVitaminiMidDom.querySelector('.carousel-control-next').classList.remove('d-none');
-        }
-        else if (e.to===carouselVitaminiMidLength) {
-            carouselVitaminiMidDom.querySelector('.carousel-control-prev').classList.remove('d-none');
-            carouselVitaminiMidDom.querySelector('.carousel-control-next').classList.add('d-none');
-        }
-        else {
-            carouselVitaminiMidDom.querySelector('.carousel-control-prev').classList.remove('d-none');
-            carouselVitaminiMidDom.querySelector('.carousel-control-next').classList.remove('d-none');
-        }
-    });
-
-    let carouselVitaminiXLLength = carouselVitaminiXLDom.querySelectorAll('.carousel-item').length - 1;
-    if (carouselVitaminiXLLength) {
-        carouselVitaminiXLDom.querySelector('.carousel-control-next').classList.remove('d-none');
-    }
-
-    carouselVitaminiXLDom.addEventListener('slid.bs.carousel', (e) => {
-        if (e.to===0) {
-            carouselVitaminiXLDom.querySelector('.carousel-control-prev').classList.add('d-none');
-            carouselVitaminiXLDom.querySelector('.carousel-control-next').classList.remove('d-none');
-        }
-        else if (e.to===carouselVitaminiXLLength) {
-            carouselVitaminiXLDom.querySelector('.carousel-control-prev').classList.remove('d-none');
-            carouselVitaminiXLDom.querySelector('.carousel-control-next').classList.add('d-none');
-        }
-        else {
-            carouselVitaminiXLDom.querySelector('.carousel-control-prev').classList.remove('d-none');
-            carouselVitaminiXLDom.querySelector('.carousel-control-next').classList.remove('d-none');
-        }
-    });
 });
-
-function getXAmount(carouselInner) {
-    let itemWidth = carouselInner.querySelector('.carousel__custom__inner__item').getBoundingClientRect().width;
-    let ratio = carouselInner.offsetWidth / itemWidth;
-    if (ratio < 2) {
-        return itemWidth;
-    }
-    return itemWidth * 2;
-}
