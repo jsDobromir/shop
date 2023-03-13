@@ -1,7 +1,6 @@
 /*!*******************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/sass/category.scss ***!
   \*******************************************************************************************************************************************************************************************************************/
-@charset "UTF-8";
 /*
 0 - 600px; phone
 600px - 900px; tablet portrait
@@ -5210,34 +5209,24 @@ textarea.form-control-lg {
     opacity: 1;
   }
 }
-@keyframes changeToUpArrow {
+@keyframes fadeIn {
   0% {
-    content: "↓";
-  }
-  50% {
-    color: #e1dddd;
+    opacity: 0;
+    transform: translate(-50%, 100%);
   }
   100% {
-    content: "↑";
+    opacity: 1;
+    transform: translate(-50%, -50%);
   }
 }
-@keyframes imageAnimation {
+@keyframes fadeOut {
   0% {
-    opacity: 0;
-    animation-timing-function: ease-in;
-  }
-  8% {
     opacity: 1;
-    animation-timing-function: ease-out;
-  }
-  17% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 0;
+    transform: translate(-50%, -50%);
   }
   100% {
     opacity: 0;
+    transform: translate(-50%, -100%);
   }
 }
 *,
@@ -5309,11 +5298,12 @@ body .heading-primary {
 }
 body .heading-primary--main {
   display: block;
-  font-size: 5rem;
+  font-size: 5.5rem;
   font-weight: 400;
-  letter-spacing: 1.5rem;
+  letter-spacing: 1rem;
+  animation: moveInLeft 1s ease-out;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   body .heading-primary--main {
     letter-spacing: 3rem;
   }
@@ -5322,25 +5312,50 @@ body .heading-primary--sub {
   display: block;
   font-size: 4rem;
   font-weight: 700;
-  letter-spacing: 1.75rem;
+  letter-spacing: 1.8rem;
+  animation: moveInRight 1s ease-out;
 }
 body .heading-primary--main-2 {
   display: block;
   font-weight: 400;
-  letter-spacing: 2.5rem;
-  font-size: 4.5rem;
+  letter-spacing: 1rem;
+  font-size: 5rem;
+  line-height: 2;
+}
+@media (min-width: 768px) {
+  body .heading-primary--main-2 {
+    letter-spacing: 3rem;
+  }
+}
+@media (min-width: 768px) {
+  body .heading-primary--main-2 {
+    font-size: 6rem;
+  }
 }
 body .heading-primary--sub-2 {
   display: block;
   font-weight: 700;
   letter-spacing: 1.5rem;
-  font-size: 3rem;
+  font-size: 4rem;
 }
 body .heading-primary--main-3 {
   display: block;
   font-weight: 400;
-  letter-spacing: 2.5rem;
-  font-size: 6rem;
+  letter-spacing: 1rem;
+  line-height: 1.5;
+  font-size: 5rem;
+}
+@media (min-width: 768px) {
+  body .heading-primary--main-3 {
+    letter-spacing: 2rem;
+    line-height: 1;
+  }
+}
+@media (min-width: 992px) {
+  body .heading-primary--main-3 {
+    line-height: 1.5;
+    letter-spacing: 2.5rem;
+  }
 }
 body .heading-primary--sub-3 {
   display: block;
@@ -5351,37 +5366,35 @@ body .heading-primary--sub-3 {
 body .heading-primary--main-4 {
   display: block;
   font-weight: 600;
-  letter-spacing: 3rem;
+  letter-spacing: 1rem;
   font-size: 5rem;
+}
+@media (min-width: 768px) {
+  body .heading-primary--main-4 {
+    letter-spacing: 2.5rem;
+  }
 }
 body .heading-primary--sub-4 {
   display: block;
   font-weight: 500;
   letter-spacing: 2rem;
-  font-size: 4rem;
+  font-size: 5rem;
 }
 body .heading-primary--main-5 {
   display: block;
   font-weight: 600;
-  letter-spacing: 3rem;
-  font-size: 5.5rem;
+  letter-spacing: 1rem;
+  font-size: 5rem;
+}
+@media (min-width: 768px) {
+  body .heading-primary--main-5 {
+    letter-spacing: 2.5rem;
+  }
 }
 body .heading-primary--sub-5 {
   display: block;
   font-weight: 500;
   letter-spacing: 2rem;
-  font-size: 4rem;
-}
-body .heading-primary--main-6 {
-  display: block;
-  font-weight: 600;
-  letter-spacing: 2.5rem;
-  font-size: 5rem;
-}
-body .heading-primary--sub-6 {
-  display: block;
-  font-weight: 500;
-  letter-spacing: 3rem;
   font-size: 5rem;
 }
 
@@ -5427,14 +5440,6 @@ body .heading-primary--sub-6 {
 
 .capitalize {
   text-transform: capitalize;
-}
-
-.activeOpacity {
-  opacity: 1;
-}
-
-.disabledOpacity {
-  opacity: 0;
 }
 
 .header {
@@ -5982,23 +5987,32 @@ main .container .filters__sort__filter__fixedfilters__wrapper {
   transition: all 0.8s;
 }
 main .container .filters__sort__filter__fixedfilters__wrapper__close {
-  height: 10rem;
+  height: 12rem;
   width: 100%;
-  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
-main .container .filters__sort__filter__fixedfilters__wrapper__close .close__icon {
-  position: absolute;
-  top: 10%;
-  right: 1%;
-  background-color: #fff;
+main .container .filters__sort__filter__fixedfilters__wrapper__close__wrapper {
   height: 10rem;
   width: 10rem;
+  background-color: #fff;
   border-radius: 50%;
   text-align: center;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  position: relative;
+  margin: 1rem;
 }
-main .container .filters__sort__filter__fixedfilters__wrapper__close .close__icon:after, main .container .filters__sort__filter__fixedfilters__wrapper__close .close__icon:before {
+main .container .filters__sort__filter__fixedfilters__wrapper__close__wrapper .close__icon {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main .container .filters__sort__filter__fixedfilters__wrapper__close__wrapper .close__icon:after, main .container .filters__sort__filter__fixedfilters__wrapper__close__wrapper .close__icon:before {
   position: absolute;
   content: "";
   height: 7rem;
@@ -6006,10 +6020,10 @@ main .container .filters__sort__filter__fixedfilters__wrapper__close .close__ico
   width: 5px;
   background-color: #333;
 }
-main .container .filters__sort__filter__fixedfilters__wrapper__close .close__icon:before {
+main .container .filters__sort__filter__fixedfilters__wrapper__close__wrapper .close__icon:before {
   transform: rotate(45deg);
 }
-main .container .filters__sort__filter__fixedfilters__wrapper__close .close__icon:after {
+main .container .filters__sort__filter__fixedfilters__wrapper__close__wrapper .close__icon:after {
   transform: rotate(-45deg);
 }
 main .container .filters__sort__filter__fixedfilters__wrapper__menu {

@@ -55,23 +55,25 @@
     }
 }
 
-@keyframes changeToUpArrow {
+
+@keyframes fadeIn {
     0% {
-      content: "\2193";
-    }
-    50% {
-      color: #e1dddd;
+        opacity: 0;
+        transform: translate(-50%, 100%);
     }
     100% {
-      content: "\2191";
+        opacity: 1;
+        transform: translate(-50%, -50%);
     }
 }
 
-
-@keyframes imageAnimation { 
-    0% { opacity: 0; animation-timing-function: ease-in; }
-    8% { opacity: 1; animation-timing-function: ease-out; }
-    17% { opacity: 1 }
-    25% { opacity: 0 }
-    100% { opacity: 0 }
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -100%);
+    }
 }

@@ -15,42 +15,58 @@ body {
 
         &--main {
             display: block;
-            font-size: 5rem;
+            font-size: 5.5rem;
             font-weight: 400;
-            letter-spacing: 1.5rem;
-            @include media-breakpoint-up(lg) {
+            letter-spacing: 1rem;
+            @include media-breakpoint-up(md) {
                 letter-spacing: 3rem;
             }
+            animation: moveInLeft 1s ease-out;
         }
 
         &--sub {
             display: block;
             font-size: 4rem;
             font-weight: 700;
-            letter-spacing: 1.75rem;
-            //animation: moveInRight 1s ease-out;
+            letter-spacing: 1.8rem;
+            animation: moveInRight 1s ease-out;
         }
 
         &--main-2 {
             display: block;
             font-weight: 400;
-            letter-spacing: 2.5rem;
-            font-size: 4.5rem;
+            letter-spacing: 1rem;
+            @include media-breakpoint-up(md) {
+                letter-spacing: 3rem;
+            }
+            font-size: 5rem;
+            @include media-breakpoint-up(md) {
+                font-size: 6rem;
+            }
+            line-height: 2;
         }
 
         &--sub-2 {
             display: block;
             font-weight: 700;
             letter-spacing: 1.5rem;
-            font-size: 3rem;
-            
+            font-size: 4rem;
         }
 
         &--main-3 {
             display: block;
             font-weight: 400;
-            letter-spacing: 2.5rem;
-            font-size: 6rem;
+            letter-spacing: 1rem;
+            line-height: 1.5;
+            @include media-breakpoint-up(md) {
+                letter-spacing: 2rem;
+                line-height: 1;
+            }
+            @include media-breakpoint-up(lg) {
+                line-height: 1.5;
+                letter-spacing: 2.5rem;
+            }
+            font-size: 5rem;
         }
 
         &--sub-3 {
@@ -63,7 +79,10 @@ body {
         &--main-4 {
             display: block;
             font-weight: 600;
-            letter-spacing: 3rem;
+            letter-spacing: 1rem;
+            @include media-breakpoint-up(md) {
+                letter-spacing: 2.5rem;
+            }
             font-size: 5rem;
         }
 
@@ -71,35 +90,23 @@ body {
             display: block;
             font-weight: 500;
             letter-spacing: 2rem;
-            font-size: 4rem;
+            font-size: 5rem;
         }
 
         &--main-5 {
             display: block;
             font-weight: 600;
-            letter-spacing: 3rem;
-            font-size: 5.5rem;
+            letter-spacing: 1rem;
+            @include media-breakpoint-up(md) {
+                letter-spacing: 2.5rem;
+            }
+            font-size: 5rem;
         }
 
         &--sub-5 {
             display: block;
             font-weight: 500;
             letter-spacing: 2rem;
-            font-size: 4rem;
-        }
-
-        &--main-6 {
-            display: block;
-            font-weight: 600;
-            letter-spacing: 2.5rem;
-            font-size: 5rem;
-            
-        }
-
-        &--sub-6 {
-            display: block;
-            font-weight: 500;
-            letter-spacing: 3rem;
             font-size: 5rem;
         }
     }

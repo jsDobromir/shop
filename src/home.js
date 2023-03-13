@@ -4,30 +4,30 @@ import Hammer from 'hammerjs';
 
 document.addEventListener('DOMContentLoaded', (ev) => {
 
-    let bckInt = setInterval(() => {
-        let home_desktop = document.querySelector('.header__desktop');
-        let active = home_desktop.querySelector('.activeOpacity');
-        let next = active.nextElementSibling;
+    // let bckInt = setInterval(() => {
+    //     let home_desktop = document.querySelector('.header__desktop');
+    //     let active = home_desktop.querySelector('.activeOpacity');
+    //     let next = active.nextElementSibling;
 
-        if (next) {
-            active.classList.add('disabledOpacity');
-            active.classList.remove('activeOpacity');
+    //     if (next) {
+    //         active.classList.add('disabledOpacity');
+    //         active.classList.remove('activeOpacity');
 
-            next.classList.remove('disabledOpacity');
-            next.classList.add('activeOpacity');
-        }
-        else {
-            clearInterval(bckInt);
-            //go to first element
-            next = home_desktop.querySelector('.header__desktop__text-box-1');
+    //         next.classList.remove('disabledOpacity');
+    //         next.classList.add('activeOpacity');
+    //     }
+    //     else {
+    //         clearInterval(bckInt);
+    //         //go to first element
+    //         next = home_desktop.querySelector('.header__desktop__text-box-1');
 
-            active.classList.add('disabledOpacity');
-            active.classList.remove('activeOpacity');
+    //         active.classList.add('disabledOpacity');
+    //         active.classList.remove('activeOpacity');
 
-            next.classList.remove('disabledOpacity');
-            next.classList.add('activeOpacity');
-        }
-    }, 5000);
+    //         next.classList.remove('disabledOpacity');
+    //         next.classList.add('activeOpacity');
+    //     }
+    // }, 5000);
 
     const carouselInner = document.querySelector('.kozmetika__carousel').querySelector('.carousel__custom__wrapper__inner');
     var sliderManager = new Hammer.Manager(carouselInner);
