@@ -5283,12 +5283,13 @@ img {
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   /*font-size: 16px;*/
   line-height: 1.7;
   color: #777;
   background-color: #f9f3f3;
+  -moz-osx-font-smoothing: grayscale;
 }
 body .heading-primary {
   color: #ffffff;
@@ -5306,6 +5307,17 @@ body .heading-primary--main {
 @media (min-width: 768px) {
   body .heading-primary--main {
     letter-spacing: 3rem;
+  }
+}
+body .heading-primary--main.category {
+  letter-spacing: 1.5rem;
+  font-size: 5rem;
+  animation: none;
+}
+@media (min-width: 768px) {
+  body .heading-primary--main.category {
+    letter-spacing: 2.5rem;
+    font-size: 5.5rem;
   }
 }
 body .heading-primary--sub {
@@ -5444,7 +5456,6 @@ body .heading-primary--sub-5 {
 
 .header {
   height: 45rem;
-  padding: 0 0.5rem;
 }
 @media (min-width: 992px) {
   .header {
@@ -5454,14 +5465,22 @@ body .heading-primary--sub-5 {
 .header__desktop {
   width: 100%;
   height: 27rem;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../images/bck_cropped.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../images/bck_cropped2.jpg);
   background-size: cover;
-  background-position: top;
+  background-position: center;
+  position: relative;
 }
 @media (min-width: 992px) {
   .header__desktop {
     height: 20rem;
   }
+}
+.header__desktop__text-box-2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 .header__desktop__wrapper {
   position: relative;
@@ -5473,12 +5492,7 @@ body .heading-primary--sub-5 {
 }
 @media (min-width: 768px) {
   .header__desktop__wrapper {
-    width: 95%;
-  }
-}
-@media (min-width: 992px) {
-  .header__desktop__wrapper {
-    width: 80%;
+    width: 85%;
   }
 }
 @media (min-width: 1400px) {
@@ -5490,10 +5504,11 @@ body .heading-primary--sub-5 {
   position: relative;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to right bottom, rgba(119, 143, 122, 0.45), rgba(24, 36, 24, 0.37)), url(../images/kozm3.jpg);
+  background-image: linear-gradient(to right bottom, rgba(100, 194, 111, 0.73), rgba(12, 81, 12, 0.78)), url(../images/kozm3.jpg);
   background-size: cover;
   background-position: center;
-  opacity: 0.9;
+  opacity: 1;
+  clip-path: polygon(40% 0, 100% 0%, 100% 100%, 0 100%);
 }
 @media (min-width: 768px) {
   .header__desktop__wrapper__bck-image {
@@ -5505,18 +5520,24 @@ body .heading-primary--sub-5 {
     clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
   }
 }
-.header__desktop__wrapper__bck-image [class^=header__desktop__text-box] {
+.header__desktop__wrapper__bck-image__text-box-2 {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 80%;
+  transform: translate(-80%, -50%);
   text-align: center;
-  transition: all 1s linear;
+}
+@media (min-width: 992px) {
+  .header__desktop__wrapper__bck-image__text-box-2 {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 .header__search-top-bar {
   width: 95%;
   height: 18rem;
   margin: 0 auto;
+  background-color: #f7f7f7;
   display: flex;
   flex-direction: column;
 }
@@ -6129,11 +6150,16 @@ main .container .filters__sort__sort select {
   font-size: 2.5rem;
 }
 main .container_prod {
-  width: 100%;
+  width: 95%;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   gap: 1rem;
+}
+@media (min-width: 576px) {
+  main .container_prod {
+    width: 90%;
+  }
 }
 @media (min-width: 768px) {
   main .container_prod {
@@ -6279,17 +6305,21 @@ main .container_prod__products {
 main .container_prod__products__wrapper {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  text-align: center;
   padding-bottom: 3rem;
 }
-main .container_prod__products__wrapper__tittle {
+main .container_prod__products__wrapper__span {
+  flex: 15 1 0;
+}
+main .container_prod__products__wrapper__span__tittle {
   font-size: 2.5rem;
 }
 main .container_prod__products__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   row-gap: 3rem;
-  column-gap: 1rem;
+  column-gap: 0;
 }
 @media (min-width: 768px) {
   main .container_prod__products__grid {
@@ -6310,49 +6340,104 @@ main .container_prod__products__grid .kozmetika__carousel__prod__wrapper {
   overflow: hidden;
   background: #ffffff;
   transition: all 0.2s;
-  height: 40rem;
-  flex-direction: column;
+  height: 30rem;
+  background-color: rgba(245, 234, 234, 0.4);
   align-items: center;
-  border: 1px solid rgba(85, 82, 82, 0.34);
-  border-radius: 1rem;
+  flex-direction: row;
+  border: 1px solid rgba(117, 111, 111, 0.445);
+  border-radius: 0.5rem;
+}
+@media (min-width: 768px) {
+  main .container_prod__products__grid .kozmetika__carousel__prod__wrapper {
+    height: 45rem;
+    flex-direction: column;
+  }
 }
 main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__image {
   position: relative;
-  width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
-  margin: 1rem auto;
+  align-items: center;
   transition: all 0.5s;
   overflow: hidden;
+  flex: 1 1 0;
+  width: 0;
+}
+@media (min-width: 768px) {
+  main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__image {
+    width: 100%;
+    flex: 2 1 0;
+  }
 }
 main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__image__wrapper {
   width: 100%;
-  height: 100%;
+  max-height: 90%;
   display: flex;
   justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+@media (min-width: 576px) {
+  main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__image__wrapper {
+    width: 80%;
+    max-height: 80%;
+  }
+}
+@media (min-width: 768px) {
+  main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__image__wrapper {
+    width: 95%;
+    max-height: 95%;
+  }
 }
 main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__image__wrapper img {
   transition: all 0.5s;
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
+  mix-blend-mode: multiply;
 }
-main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__image__wrapper img:hover {
-  transform: scale(1.2);
+@media (min-width: 992px) {
+  main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__image__wrapper img:hover {
+    transform: scale(1.2);
+  }
 }
-main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__tittle {
+main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__pricewrap {
+  flex: 1 1 0;
+  width: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rem 0.5rem 0 0.5rem;
+  background-color: #f7f7f7;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__pricewrap {
+    width: 100%;
+    padding: 1rem 0 0 0;
+    flex: 1.5 1 0;
+  }
+}
+main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__pricewrap__tittle {
   font-size: 2rem;
   text-align: center;
 }
-main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__tittle__link {
+main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__pricewrap__tittle__link {
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__price {
+@media (min-width: 768px) {
+  main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__pricewrap__tittle__link {
+    -webkit-line-clamp: 2;
+  }
+}
+main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__pricewrap__price {
   width: 90%;
   margin-top: 0.5rem;
   display: flex;
@@ -6361,19 +6446,57 @@ main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__price 
   justify-content: space-between;
 }
 @media (min-width: 992px) {
-  main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__price {
+  main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__pricewrap__price {
     margin-top: 1.5rem;
   }
 }
-main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__price .price {
+main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__pricewrap__price .price {
   font-size: 3rem;
   color: red;
 }
-main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__price .bag {
+main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__pricewrap__price .bag {
   font-size: 3rem;
 }
-main .container_prod__products__grid .kozmetika__carousel__prod__wrapper:hover {
-  box-shadow: 0 0 5rem rgba(33, 33, 33, 0.3);
+main .container_prod__pagination {
+  padding-top: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+}
+@media (min-width: 576px) {
+  main .container_prod__pagination {
+    gap: 2rem;
+  }
+}
+@media (min-width: 992px) {
+  main .container_prod__pagination {
+    justify-content: flex-end;
+  }
+}
+main .container_prod__pagination span {
+  border-radius: 0.5rem;
+  color: rgb(27, 24, 24);
+  font-size: 2.5rem;
+  padding: 1rem;
+}
+main .container_prod__pagination span:not(.disabled) {
+  border: 1px solid lightblue;
+  cursor: pointer;
+}
+@media (min-width: 576px) {
+  main .container_prod__pagination span {
+    padding: 2rem;
+  }
+}
+main .container_prod__pagination span:hover {
+  background-color: #c1e1e6;
+}
+main .container_prod__pagination span.disabled {
+  border: 1px solid rgb(186, 210, 218);
+  color: #a5a19e;
+  pointer-events: none;
 }
 
 #footer {

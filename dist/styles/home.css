@@ -5283,12 +5283,13 @@ img {
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   /*font-size: 16px;*/
   line-height: 1.7;
   color: #777;
   background-color: #f9f3f3;
+  -moz-osx-font-smoothing: grayscale;
 }
 body .heading-primary {
   color: #ffffff;
@@ -5306,6 +5307,17 @@ body .heading-primary--main {
 @media (min-width: 768px) {
   body .heading-primary--main {
     letter-spacing: 3rem;
+  }
+}
+body .heading-primary--main.category {
+  letter-spacing: 1.5rem;
+  font-size: 5rem;
+  animation: none;
+}
+@media (min-width: 768px) {
+  body .heading-primary--main.category {
+    letter-spacing: 2.5rem;
+    font-size: 5.5rem;
   }
 }
 body .heading-primary--sub {
@@ -5489,7 +5501,7 @@ body .heading-primary--sub-5 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to right bottom, rgba(81, 126, 74, 0.8), rgba(34, 159, 56, 0.8)), url(../images/back2.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../images/back2.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -5500,22 +5512,22 @@ body .heading-primary--sub-5 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to right bottom, rgba(81, 126, 74, 0.8), rgba(26, 86, 37, 0.8)), url(../images/bck_cropped.jpg);
+  background-image: linear-gradient(to right bottom, rgba(82, 160, 72, 0.44), rgba(63, 162, 81, 0.43));
   background-repeat: no-repeat;
   background-size: cover;
-  -webkit-clip-path: polygon(100% 30%, 100% 0, 100% 100%, 30% 100%);
-  clip-path: polygon(100% 30%, 100% 0, 100% 100%, 30% 100%);
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 100% 100%, 0% 100%);
+  clip-path: polygon(100% 0, 100% 100%, 100% 100%, 0% 100%);
 }
 @media (min-width: 768px) {
   .header__desktop .bck_image_2 {
-    -webkit-clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 50% 100%);
-    clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 50% 100%);
+    -webkit-clip-path: polygon(90% 0%, 100% 0%, 100% 100%, 50% 100%);
+    clip-path: polygon(90% 0%, 100% 0%, 100% 100%, 50% 100%);
   }
 }
 @media (min-width: 992px) {
   .header__desktop .bck_image_2 {
-    -webkit-clip-path: polygon(80% 0%, 100% 0%, 100% 100%, 60% 100%);
-    clip-path: polygon(80% 0%, 100% 0%, 100% 100%, 60% 100%);
+    -webkit-clip-path: polygon(80% 0%, 100% 0%, 100% 100%, 50% 100%);
+    clip-path: polygon(80% 0%, 100% 0%, 100% 100%, 50% 100%);
   }
 }
 .header__desktop__text-box {
@@ -5911,22 +5923,18 @@ body .heading-primary--sub-5 {
     padding: 0 3rem;
   }
 }
-.navigation__desktop__item__dropdown.sport_wear {
-  left: -5%;
-}
 .navigation__desktop__item__dropdown {
   display: none;
   position: absolute;
   opacity: 0.98;
-  top: 101%;
-  width: 30rem;
+  left: 50%;
+  top: 100%;
+  width: 35rem;
   list-style: none;
   background-color: #25e5ae;
+  transform: translateX(-50%);
   color: rgb(29, 27, 27);
   z-index: 500;
-}
-.navigation__desktop__item__dropdown:not(.sport_wear) {
-  left: -25%;
 }
 .navigation__desktop__item__dropdown__item {
   transition: all 0.3s;
@@ -5946,8 +5954,14 @@ body .heading-primary--sub-5 {
 .navigation__desktop__item__dropdown:hover, .navigation__desktop__item__dropdown:focus-within, .navigation__desktop__item__dropdown:focus {
   display: none;
 }
+.navigation__desktop__item:first-child > .navigation__desktop__item__dropdown {
+  left: 10%;
+  transform: translateX(-10%);
+}
 .navigation__desktop__item:last-child > .navigation__desktop__item__dropdown {
-  left: -55%;
+  right: 10%;
+  left: unset;
+  transform: translateX(10%);
 }
 .navigation__desktop__item:hover {
   color: rgb(92, 82, 233);
@@ -5957,9 +5971,6 @@ body .heading-primary--sub-5 {
   display: block;
 }
 
-main {
-  background-color: #f9f3f3;
-}
 main .container_prod {
   width: 98%;
   margin: 0 auto;
@@ -6541,7 +6552,8 @@ main .container_prod {
 }
 .carousel__custom__wrapper__inner__item__wrapper__image {
   width: 100%;
-  height: 65%;
+  flex: 2 1 0;
+  overflow: hidden;
   background-color: rgba(230, 213, 213, 0.14);
   display: flex;
   justify-content: center;
@@ -6549,8 +6561,8 @@ main .container_prod {
   transition: all 0.5s;
 }
 .carousel__custom__wrapper__inner__item__wrapper__image__wrapper {
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  max-height: 90%;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -6575,6 +6587,7 @@ main .container_prod {
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
+  flex: 1.4 1 0;
   background-color: rgba(90, 108, 94, 0.16);
 }
 .carousel__custom__wrapper__inner__item__wrapper__second__tittle {

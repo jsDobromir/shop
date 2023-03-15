@@ -39,21 +39,20 @@
         @include media-breakpoint-up(xxl) {
             padding: 0 3rem;
         }
-        &__dropdown.sport_wear {
-            left: -5%;
-        }
+        // &__dropdown.sport_wear {
+        //     left: -5%;
+        // }
         &__dropdown {
             display: none;
             position: absolute;
             opacity: .98;
-            &:not(.sport_wear) {
-                left: -25%;
-            }
+            left: 50%;
             
-            top: 101%;
-            width: 30rem;
+            top: 100%;
+            width: 35rem;
             list-style: none;
             background-color: #25e5ae;
+            transform: translateX(-50%);
             color: rgb(29, 27, 27);
             z-index: 500;
             &__item {
@@ -77,9 +76,14 @@
                 display: none;
             }
         }
-
+        &:first-child > .navigation__desktop__item__dropdown {
+            left: 10%;
+            transform: translateX(-10%);
+        }
         &:last-child > .navigation__desktop__item__dropdown{
-            left: -55%;
+            right: 10%;
+            left: unset;
+            transform: translateX(10%);
         }
         &:hover {
             color: rgb(92, 82, 233);

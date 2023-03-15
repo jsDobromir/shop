@@ -1,10 +1,12 @@
 body {
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
     /*font-size: 16px;*/
     line-height: 1.7;
     color: $color-grey-dark;
     background-color: #f9f3f3;
+    -moz-osx-font-smoothing: grayscale;
+
     
     .heading-primary {
         color: #ffffff;
@@ -23,7 +25,15 @@ body {
             }
             animation: moveInLeft 1s ease-out;
         }
-
+        &--main.category {
+            letter-spacing: 1.5rem;
+            font-size: 5rem;
+            @include media-breakpoint-up(md) {
+                letter-spacing: 2.5rem;
+                font-size: 5.5rem;
+            }
+            animation: none;
+        }
         &--sub {
             display: block;
             font-size: 4rem;

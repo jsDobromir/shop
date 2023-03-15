@@ -2069,3 +2069,7 @@ resp_sm 252 x 480
                     </div>
 
 //Organica.bg produkti za tvoeto zdrave
+
+//za carousela - pri pan movement, ako 
+
+//add to cart - popup with cart items

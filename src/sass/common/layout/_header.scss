@@ -39,7 +39,8 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-image: linear-gradient(to right bottom, rgb(81 126 74 / 80%), rgb(34 159 56 / 80%)), url(../images/back2.jpg);
+                background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8),
+                rgba($color-primary-dark, 0.8)), url(../images/back2.jpg);
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: cover;
@@ -51,20 +52,20 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-image: linear-gradient(to right bottom, rgba(81, 126, 74, 0.8), rgb(26 86 37 / 80%)), url(../images/bck_cropped.jpg);
+                background-image: linear-gradient(to right bottom, rgba(82, 160, 72, 0.44), rgba(63, 162, 81, 0.43));
                 background-repeat: no-repeat;
                 background-size: cover;
-                -webkit-clip-path: polygon(100% 30%, 100% 0, 100% 100%, 30% 100%);
-                clip-path: polygon(100% 30%, 100% 0, 100% 100%, 30% 100%);
+                -webkit-clip-path: polygon(100% 0, 100% 100%, 100% 100%, 0% 100%);
+                clip-path: polygon(100% 0, 100% 100%, 100% 100%, 0% 100%);
 
                 @include media-breakpoint-up(md) {
-                    -webkit-clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 50% 100%);
-                    clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 50% 100%);
+                    -webkit-clip-path: polygon(90% 0%, 100% 0%, 100% 100%, 50% 100%);
+                    clip-path: polygon(90% 0%, 100% 0%, 100% 100%, 50% 100%);
                 }
 
                 @include media-breakpoint-up(lg) {
-                    -webkit-clip-path: polygon(80% 0%, 100% 0%, 100% 100%, 60% 100%);
-                    clip-path: polygon(80% 0%, 100% 0%, 100% 100%, 60% 100%);
+                    -webkit-clip-path: polygon(80% 0%, 100% 0%, 100% 100%, 50% 100%);
+                    clip-path: polygon(80% 0%, 100% 0%, 100% 100%, 50% 100%);
                 }
             }
         }
