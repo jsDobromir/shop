@@ -101,10 +101,23 @@ export default class CustomCarousel {
             activeElement.classList.remove('active');
             nextElement.classList.add('active');
             //load next two images
+            //preload the image
             let image1 = (nextElement && nextElement.nextElementSibling) ? nextElement.nextElementSibling.querySelector('.imgClass') : undefined;
-            if (image1) image1.srcset = image1.dataset.srcset;
+            if (image1) {
+                let srcset = image1.dataset.srcset;
+                const loadedimage = new Image();
+                loadedimage.srcset = srcset;
+                loadedimage.onload = () => console.log('image loaded');
+                image1.srcset = srcset;
+            }
             let image2 = (nextElement && nextElement.nextElementSibling && nextElement.nextElementSibling.nextElementSibling) ? nextElement.nextElementSibling.nextElementSibling.querySelector('.imgClass') : undefined;
-            if (image2) image2.srcset = image2.dataset.srcset;
+            if (image2) {
+                let srcset = image2.dataset.srcset;
+                const loadedimage = new Image();
+                loadedimage.srcset = srcset;
+                loadedimage.onload = () => console.log('image loaded');
+                image2.srcset = srcset;
+            }
             //
             let xPos = nextElement.getBoundingClientRect().x;
             let currentXposition = this.carouselInner.getBoundingClientRect().x;
