@@ -1,0 +1,244 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "title": "InstaNatural Retinol Cream",
+            "description" : "Хидратиращ крем с ретинол за лице срещу бръчки, фини линии, акне и хиперпигментация, крем против стареене и нощен крем с ретинол с витамин С и хиалуронова киселина",
+            "imageFront": "/prod_images/prod1/front_small.jpg",
+            "imagesResp": "/prod_images/prod1/resp_xs.jpg 1x, /prod_images/prod1/resp_sm.jpg 1.5x, /prod_images/prod1/resp_md.jpg 2x, /prod_images/prod1/resp_lg.jpg 2.5x, /prod_images/prod1/resp_xl.jpg 3x",
+            "price": 88
+        },
+        {
+            "id": 2,
+            "title": "InstaNatural Youth Express Eye Gel",
+            "description": "Натурален крем за очи против стареене, с масло от жожоба, аминокиселини и пептиди, хидратиращ и озаряващ крем под очите за тъмни кръгове, омекотява линии и бръчки",
+            "imageFront": "/prod_images/prod2/front_small.jpg",
+            "imagesResp": "/prod_images/prod2/resp_xs.jpg 1x, /prod_images/prod2/resp_sm.jpg 1.5x, /prod_images/prod2/resp_md.jpg 2x, /prod_images/prod2/resp_lg.jpg 2.5x, /prod_images/prod2/resp_xl.jpg 3x",
+            "price": 120
+        },
+        {
+            "id": 3,
+            "title": "InstaNatural Age Defying & Skin Clearing Serum",
+            "description": "Серум с ретинол, Витамин Ц, ниацинамид и салицилова киселина за петна, против стареене и хиперпигментация",
+            "imageFront": "/prod_images/prod3/front_small.jpg",
+            "imagesResp": "/prod_images/prod3/resp_xs.jpg 1x, /prod_images/prod3/resp_sm.jpg 1.5x, /prod_images/prod3/resp_md.jpg 2x, /prod_images/prod3/resp_lg.jpg 2.5x, /prod_images/prod3/resp_xl.jpg 3x",
+            "price": 75
+        },
+        {
+            "id": 4,
+            "title": "InstaNatural Niacinamide Serum for Face",
+            "description": "Серум с ниацинамид и хиалуронова киселина с витамин Е, серум против стареене и серум срещу акне за хиперпигментация",
+            "imageFront": "/prod_images/prod4/front_small.jpg",
+            "imagesResp": "/prod_images/prod4/resp_xs.jpg 1x, /prod_images/prod4/resp_sm.jpg 1.5x, /prod_images/prod4/resp_md.jpg 2x, /prod_images/prod4/resp_lg.jpg 2.5x, /prod_images/prod4/resp_xl.jpg 3x",
+            "price": 120
+        },
+        {
+            "id": 5,
+            "title": "Instanatural Eye Serum",
+            "description": "Околоочен серум, премахва тъмните кръгове и бръчките около очите, съдържа Витамин Ц, кофеин, Хиалурианова киселина",
+            "imageFront": "/prod_images/prod5/front_small.jpg",
+            "imagesResp": "/prod_images/prod4/resp_xs.jpg 1x, /prod_images/prod4/resp_sm.jpg 1.5x, /prod_images/prod4/resp_md.jpg 2x, /prod_images/prod4/resp_lg.jpg 2.5x, /prod_images/prod4/resp_xl.jpg 3x",
+            "price": 52
+        },
+        {
+            "id": 6,
+            "title": "InstaNatural Hyaluronic Acid Serum",
+            "description": "Серум за лице с витамин С, масло от жожоба и алое вера за хидратация, озаряване и против стареене",
+            "imageFront": "/prod_images/prod6/front_small.jpg",
+            "imagesResp": "/prod_images/prod6/resp_xs.jpg 1x, /prod_images/prod6/resp_sm.jpg 1.5x, /prod_images/prod6/resp_md.jpg 2x, /prod_images/prod6/resp_lg.jpg 2.5x, /prod_images/prod6/resp_xl.jpg 3x",
+            "price": 52
+        },
+        {
+            "id": 7,
+            "title": "InstaNatural Vitamin C Whitening Serum",
+            "description": "Серум за бръчки, фини линии, хиперпигментация и други - Мощна формула срещу торбички под очите и стареене - С хиалуронова киселина и ниацинамид - 30 ml",
+            "imageFront": "/prod_images/prod7/front_small.jpg",
+            "imagesResp": "/prod_images/prod7/resp_xs.jpg 1x, /prod_images/prod7/resp_sm.jpg 1.5x, /prod_images/prod7/resp_md.jpg 2x, /prod_images/prod7/resp_lg.jpg 2.5x, /prod_images/prod7/resp_xl.jpg 3x",
+            "price": 120
+        },
+        {
+            "id": 8,
+            "title": "InstaNatural Vitamin C Serum",
+            "description": "Серум против стареене за лице - Намалява бръчките, хиперпигментацията и слънчевите петна - Съдържа чист витамин С и хиалуронова киселина - С органично арганово и шипково масло, витамин Е, ферулинова киселина и морски зърнастец - 30 ml",
+            "imageFront": "/prod_images/prod8/front_small.jpg",
+            "imagesResp": "/prod_images/prod8/resp_xs.jpg 1x, /prod_images/prod8/resp_sm.jpg 1.5x, /prod_images/prod8/resp_md.jpg 2x, /prod_images/prod8/resp_lg.jpg 2.5x, /prod_images/prod8/resp_xl.jpg 3x",
+            "price": 52
+        },
+        {
+            "id": 9,
+            "title": "InstaNatural Vitamin C Toner",
+            "description": "Тоник и минимизатор на порите с хамамелис, тоник против стареене за лице, грунд за лице за серум и овлажнител",
+            "imageFront": "/prod_images/prod9/front_small.jpg",
+            "imagesResp": "/prod_images/prod9/resp_xs.jpg 1x, /prod_images/prod9/resp_sm.jpg 1.5x, /prod_images/prod9/resp_md.jpg 2x, /prod_images/prod9/resp_lg.jpg 2.5x, /prod_images/prod9/resp_xl.jpg 3x",
+            "price": 41
+        },
+        {
+            "id": 10,
+            "title": "InstaNatural Glycolic Acid Cleanser",
+            "description": "Минимизатор на порите, против стареене и ексфолираща вода за лице за хиперпигментация и акне, с витамин Е и млечна киселина",
+            "imageFront": "/prod_images/prod10/front_small.jpg",
+            "imagesResp": "/prod_images/prod10/resp_xs.jpg 1x, /prod_images/prod10/resp_sm.jpg 1.5x, /prod_images/prod10/resp_md.jpg 2x, /prod_images/prod10/resp_lg.jpg 2.5x, /prod_images/prod10/resp_xl.jpg 3x",
+            "price": 48
+        },
+        {
+            "id": 11,
+            "title": "Poppy Austin Anti Aging Face Serum",
+            "description": "Серум за лице с витамин С и хиалуронова киселина, витамин С за серум за лице за жени, масло от витамин С за лице, серум с витамин С за лице, серум с витамин С за лице",
+            "imageFront": "/prod_images/prod17/front_small.jpg",
+            "imagesResp": "/prod_images/prod17/resp_xs.jpg 1x, /prod_images/prod17/resp_sm.jpg 1.5x, /prod_images/prod17/resp_md.jpg 2x, /prod_images/prod17/resp_lg.jpg 2.5x, /prod_images/prod17/resp_xl.jpg 3x",
+            "price": 84
+        },
+        {
+            "id": 12,
+            "title": "Olay AHA24 + Vitamin C Serum",
+            "description": "Серум с AHA, витамин С и ниацинамид, Значително по-сияйна кожа само за 1 ден",
+            "imageFront": "/prod_images/prod18/front_small.jpg",
+            "imagesResp": "/prod_images/prod18/resp_xs.jpg 1x, /prod_images/prod18/resp_sm.jpg 1.5x, /prod_images/prod18/resp_md.jpg 2x, /prod_images/prod18/resp_lg.jpg 2.5x, /prod_images/prod18/resp_xl.jpg 3x",
+            "price": 140
+        },
+        {
+            "id": 13,
+            "title": "Olay Collagen Peptide24 Day Cream",
+            "description": "Хидратиращ крем без аромати с витамин B3 и колагенови пептиди за силна и сияйна кожа без парфюм Грижа за лицето за жени",
+            "imageFront": "/prod_images/prod19/front_small.jpg",
+            "imagesResp": "/prod_images/prod19/resp_xs.jpg 1x, /prod_images/prod19/resp_sm.jpg 1.5x, /prod_images/prod19/resp_md.jpg 2x, /prod_images/prod19/resp_lg.jpg 2.5x, /prod_images/prod19/resp_xl.jpg 3x",
+            "price": 140
+        },
+        {
+            "id": 14,
+            "title": "Olay Regenerist Vitamin C + Peptide 24",
+            "description": "Дневен хидратиращ крем с витамин С, AHA и ниацинамид, Значително по-ярка кожа за 1 ден и изравняване на цвета на кожата за 14 дни",
+            "imageFront": "/prod_images/prod21/front_small.jpg",
+            "imagesResp": "/prod_images/prod21/resp_xs.jpg 1x, /prod_images/prod21/resp_sm.jpg 1.5x, /prod_images/prod21/resp_md.jpg 2x, /prod_images/prod21/resp_lg.jpg 2.5x, /prod_images/prod21/resp_xl.jpg 3x",
+            "price": 140
+        },
+        {
+            "id": 15,
+            "title": "Olay Retinol24, with Retinol and Vitamin B3",
+            "description": "Retinol 24 нощен крем за лице с ниацинамид, аромат против бръчки",
+            "imageFront": "/prod_images/prod22/front_small.jpg",
+            "imagesResp": "/prod_images/prod22/resp_xs.jpg 1x, /prod_images/prod22/resp_sm.jpg 1.5x, /prod_images/prod22/resp_md.jpg 2x, /prod_images/prod22/resp_lg.jpg 2.5x, /prod_images/prod22/resp_xl.jpg 3x",
+            "price": 72
+        },
+        {
+            "id": 16,
+            "title": "Olay Regenerist Serum",
+            "description": "хидратира за подобряване на еластичността и стегната кожа за повдигнат вид. Обогатен с изглаждащ кожата амино-пептиден комплекс",
+            "imageFront": "/prod_images/prod23/front_small.jpg",
+            "imagesResp": "/prod_images/prod23/resp_xs.jpg 1x, /prod_images/prod23/resp_sm.jpg 1.5x, /prod_images/prod23/resp_md.jpg 2x, /prod_images/prod23/resp_lg.jpg 2.5x, /prod_images/prod23/resp_xl.jpg 3x",
+            "price": 65
+        },
+        {
+            "id": 17,
+            "title": "Olay Regenerist Ultra Rich Day Face Cream",
+            "description": "Създаден с витамин B3+ пептиди, вие ще изглеждате и ще се чувствате видимо обновени след първата си употреба. След почистване нанесете върху лицето си",
+            "imageFront": "/prod_images/prod24/front_small.jpg",
+            "imagesResp": "/prod_images/prod24/resp_xs.jpg 1x, /prod_images/prod24/resp_sm.jpg 1.5x, /prod_images/prod24/resp_md.jpg 2x, /prod_images/prod24/resp_lg.jpg 2.5x, /prod_images/prod24/resp_xl.jpg 3x",
+            "price": 65
+        },
+        {
+            "id": 18,
+            "title": "Olay Regenerist Collagen Peptide 24",
+            "description": "Face Moisturizer Cream with Niacinamide for Firmer Skin, Anti-Wrinkle Fragrance-Free",
+            "imageFront": "/prod_images/prod25/front_small.jpg",
+            "imagesResp": "/prod_images/prod25/resp_xs.jpg 1x, /prod_images/prod25/resp_sm.jpg 1.5x, /prod_images/prod25/resp_md.jpg 2x, /prod_images/prod25/resp_lg.jpg 2.5x, /prod_images/prod25/resp_xl.jpg 3x",
+            "price": 65
+        },
+        {
+            "id": 19,
+            "title": "Olay Regenerist Collagen Peptide 24 Serum",
+            "description": "Този серум осигурява предимствата на колагеновия пептид + 24 часа хидратация, ЕКСПЕРТНО ФОРМУЛИРАН",
+            "imageFront": "/prod_images/prod26/front_small.jpg",
+            "imagesResp": "/prod_images/prod26/resp_xs.jpg 1x, /prod_images/prod26/resp_sm.jpg 1.5x, /prod_images/prod26/resp_md.jpg 2x, /prod_images/prod26/resp_lg.jpg 2.5x, /prod_images/prod26/resp_xl.jpg 3x",
+            "price": 65
+        },
+        {
+            "id": 20,
+            "title": "Clinique Moisture Surge",
+            "description": "Този усъвършенстван крем с двойно действие с технология за автоматично попълване помага на кожата да създаде свой собствен вътрешен източник на вода, за да се рехидратира непрекъснато, след което заключва влагата за безкрайно плътен, здравословен блясък",
+            "imageFront": "/prod_images/prod28/front_small.jpg",
+            "imagesResp": "/prod_images/prod28/resp_xs.jpg 1x, /prod_images/prod28/resp_sm.jpg 1.5x, /prod_images/prod28/resp_md.jpg 2x, /prod_images/prod28/resp_lg.jpg 2.5x, /prod_images/prod28/resp_xl.jpg 3x",
+            "price": 65
+        },
+        {
+            "id": 21,
+            "title": "Take The Day Off™ Cleansing Balm",
+            "description": "Препарати за премахване на грим от Clinique",
+            "imageFront": "/prod_images/prod32/front_small.jpg",
+            "imagesResp": "/prod_images/prod32/resp_xs.jpg 1x, /prod_images/prod32/resp_sm.jpg 1.5x, /prod_images/prod32/resp_md.jpg 2x, /prod_images/prod32/resp_lg.jpg 2.5x, /prod_images/prod32/resp_xl.jpg 3x",
+            "price": 65
+        },
+        {
+            "id": 22,
+            "title": "Clinique Smart Clinical Repair Wrinkle",
+            "description": "Силно концентриран овлажнител, който предлага революционна грижа за кожата. Той е насочен към появата на линии и бръчки, като подмладява кожата и подобрява нейния външен вид",
+            "imageFront": "/prod_images/prod33/front_small.jpg",
+            "imagesResp": "/prod_images/prod33/resp_xs.jpg 1x, /prod_images/prod33/resp_sm.jpg 1.5x, /prod_images/prod33/resp_md.jpg 2x, /prod_images/prod33/resp_lg.jpg 2.5x, /prod_images/prod33/resp_xl.jpg 3x",
+            "price": 65
+        },
+        {
+            "id": 23,
+            "title": "Clinique Spf 50 Mineral Sunscreen Fluid for Face",
+            "description": "Изключително лек, практически невидим 100% минерален слънцезащитен крем е невероятно удобен дори за чувствителна кожа.",
+            "imageFront": "/prod_images/prod34/front_small.jpg",
+            "imagesResp": "/prod_images/prod34/resp_xs.jpg 1x, /prod_images/prod34/resp_sm.jpg 1.5x, /prod_images/prod34/resp_md.jpg 2x, /prod_images/prod34/resp_lg.jpg 2.5x, /prod_images/prod34/resp_xl.jpg 3x",
+            "price": 25
+        },
+        {
+            "id": 24,
+            "title": "Clinique Even Better Clinical Radical Dark Spot Corrector",
+            "description": "Това е „заличителят на щети“ на CLINIQUE с изсветляващия комплекс CL302, който видимо изсветлява, като същевременно е достатъчно нежен за всички типове кожа. Този серум съдържа собствена изсветляваща молекула и смес от витамин С за по-равномерен тен на кожата. Той също така подобрява външния вид на съществуващите тъмни петна, включително възрастови петна, като същевременно се насочва към бъдещи тъмни петна",
+            "imageFront": "/prod_images/prod35/front_small.jpg",
+            "imagesResp": "/prod_images/prod35/resp_xs.jpg 1x, /prod_images/prod35/resp_sm.jpg 1.5x, /prod_images/prod35/resp_md.jpg 2x, /prod_images/prod35/resp_lg.jpg 2.5x, /prod_images/prod35/resp_xl.jpg 3x",
+            "price": 25
+        },
+        {
+            "id": 25,
+            "title": "Clinique Smart Clinical Repair Serum",
+            "description": "Серумът е силно концентриран овлажнител, който предлага революционна грижа за кожата. Той е насочен към появата на линии и бръчки, като подмладява кожата и подобрява нейния външен вид.",
+            "imageFront": "/prod_images/prod36/front_small.jpg",
+            "imagesResp": "/prod_images/prod36/resp_xs.jpg 1x, /prod_images/prod36/resp_sm.jpg 1.5x, /prod_images/prod36/resp_md.jpg 2x, /prod_images/prod36/resp_lg.jpg 2.5x, /prod_images/prod36/resp_xl.jpg 3x",
+            "price": 125
+        },
+        {
+            "id": 26,
+            "title": "Clinique Smart Clinical Repair Cream",
+            "description": "Усъвършенстваното инженерство за грижа за кожата осигурява подкрепа, която укрепва кожата и позволява еластично покритие. Пептидният комплекс CL1870 повишава естествения колаген на кожата и подобрява нейната структура. Хиалуроновата киселина осигурява трайна хидратация и намалява фините линии",
+            "imageFront": "/prod_images/prod37/front_small.jpg",
+            "imagesResp": "/prod_images/prod37/resp_xs.jpg 1x, /prod_images/prod37/resp_sm.jpg 1.5x",
+            "price": 125
+        },
+        {
+            "id": 27,
+            "title": "Clinique Smart Clinical Repair Eye Cream",
+            "description": "Усъвършенстваното инженерство за грижа за кожата осигурява подкрепа, която укрепва кожата и позволява еластично покритие. Пептидният комплекс CL1870 повишава естествения колаген на кожата и подобрява нейната структура. Хиалуроновата киселина осигурява трайна хидратация и намалява фините линии",
+            "imageFront": "/prod_images/prod38/front_small.jpg",
+            "imagesResp": "/prod_images/prod38/resp_xs.jpg 1x, /prod_images/prod38/resp_sm.jpg 1.5x",
+            "price": 125
+        },
+        {
+            "id": 28,
+            "title": "La Roche-Posay Toleriane Hydrating Gentle Face Cleanser",
+            "description": "Ежедневен почистващ гел за лице с Ниацинамид",
+            "imageFront": "/prod_images/prod39/front_small.jpg",
+            "imagesResp": "/prod_images/prod39/resp_xs.jpg 1x, /prod_images/prod39/resp_sm.jpg 1.5x",
+            "price": 125
+        },
+        {
+            "id": 29,
+            "title": "100% Organic Cold-Pressed Rose Hip Seed Oil",
+            "description": "Шипково масло за хидратиране и изпъване на кожата",
+            "imageFront": "/prod_images/prod40/front_small.jpg",
+            "imagesResp": "/prod_images/prod40/resp_xs.jpg 1x, /prod_images/prod40/resp_sm.jpg 1.5x",
+            "price": 125
+        },
+        {
+            "id": 30,
+            "title": "Hyaluronic Acid 2% + B5 Hydration Support Formula",
+            "description": "Хиалуроновата киселина помага на кожата да се разтяга и огъва и намалява кожните бръчки и линии. Освен това е доказано, че хиалуроновата киселина помага на раните да зарастват по-бързо и може да намали белезите",
+            "imageFront": "/prod_images/prod41/front_small.jpg",
+            "imagesResp": "/prod_images/prod41/resp_xs.jpg 1x, /prod_images/prod41/resp_sm.jpg 1.5x",
+            "price": 85
+        }
+    ]
+}

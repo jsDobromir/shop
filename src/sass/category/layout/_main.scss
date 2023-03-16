@@ -2,7 +2,7 @@ main {
 
     .container {
         padding-top: 5rem;
-        width: 98%;
+        width: 100%;
         margin: 0 auto;
 
         .filters__sort {
@@ -271,9 +271,10 @@ main {
         flex-direction: row;
         gap: 1rem;
         @include media-breakpoint-up(md) {
-            width: 96%;
+            width: 99%;
         }
         @include media-breakpoint-up(xl) {
+            width: 96%;
             gap: 3rem;
         }
         &__filters {

@@ -1,5 +1,6 @@
-.carousel__custom {
-    width: 100%;
+.container__prod__cosmetics__mobile {
+    width: 95%;
+    margin: 0 auto;
     height: 45rem;
     position: relative;
     mix-blend-mode: multiply;
@@ -7,27 +8,9 @@
         display: flex;
         overflow: hidden;
         position: relative;
-        --item_to_slide: 1;
         width: 100%;
         height: 100%;
         margin: 0 auto;
-        @include media-breakpoint-up(sm) {
-            width: 90%;
-        }
-        @include media-breakpoint-up(md) {
-            width: 98%;
-        }
-        @include media-breakpoint-up(lg) {
-            width: 90%;
-        }
-
-        @include media-breakpoint-up(md) {
-            --item_to_slide: 2;
-        }
-
-        @include media-breakpoint-up(xl) {
-            --item_to_slide: 3;
-        }
 
         &__inner {
             display: flex;
@@ -35,34 +18,18 @@
             align-items: flex-start;
             justify-content: flex-start;
             gap: 1rem;
+
             @include media-breakpoint-up(sm) {
                 gap: 2rem;
             }
 
-            @include media-breakpoint-up(lg) {
-                gap: 3rem;
-            }
-
             width: 100%;
             height: 100%;
-            transition: all .4s ease-in-out;
-
+            transition: all .3s linear;
             &__item {
                 display: flex;
                 height: 100%;
-                min-width: 70%;
-
-                @include media-breakpoint-up(sm) {
-                    min-width: 60%;
-                }
-
-                @include media-breakpoint-up(md) {
-                    min-width: 40%;
-                }
-
-                @include media-breakpoint-up(xl) {
-                    min-width: 27%;
-                }
+                min-width: 33rem;
 
                 flex-direction: column;
                 align-items: center;
@@ -89,7 +56,7 @@
                         transition: all 0.5s;
 
                         &__wrapper {
-                            width: 100%;
+                            max-width: 80%;
                             max-height: 90%;
                             overflow: hidden;
                             display: flex;
@@ -160,7 +127,6 @@
                 }
             }
         }
-
     }
 
     .carousel-control-prev {
@@ -170,6 +136,7 @@
         top: 35%;
         opacity: .7;
         cursor: pointer;
+
         .carousel-control-prev-icon {
             background-color: #657fa5;
             width: 100%;
@@ -189,6 +156,7 @@
         right: 2%;
         opacity: .7;
         cursor: pointer;
+
         .carousel-control-next-icon {
             background-color: #657fa5;
             width: 100%;

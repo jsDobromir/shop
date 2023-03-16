@@ -1,0 +1,27 @@
+mixin bs_carousel(id, classList, outerLoop, innerLoop)
+    div(id=id class=classList data-bs-ride="carousel")
+        .carousel-inner
+            -var index = 0;
+            -var productIndex = 0;
+            while index < outerLoop
+                div(class=`carousel-item ${index==0 ? 'active' : ''}`)
+                    div(class=`container__prod__cosmetics__carousel__wrapper`)
+                        -var innerIndex = 0;
+                        while (innerIndex < innerLoop && productIndex < productsLength)
+                            div(class=`container__prod__cosmetics__carousel__wrapper__item`)
+                                -var product = products[productIndex++];
+                                div(class=`container__prod__cosmetics__carousel__wrapper__item__wrapper`)
+                                    div(class=`container__prod__cosmetics__carousel__wrapper__item__wrapper__image`)
+                                        div(class=`container__prod__cosmetics__carousel__wrapper__item__wrapper__image__wrapper`)
+                                            a(href="/produkt/123123")
+                                                img(src=product.imageFront class="container__prod__cosmetics__carousel__wrapper__item__wrapper__image__wrapper__imgClass")
+                                    div(class=`container__prod__cosmetics__carousel__wrapper__item__wrapper__second`)
+                                        div(class=`container__prod__cosmetics__carousel__wrapper__item__wrapper__second__tittle`)
+                                            h3
+                                                a(href="/produkt/12312" class="container__prod__cosmetics__carousel__wrapper__item__wrapper__second__tittle__link") #{product.title}
+                            - innerIndex++;
+                - index++;
+        button(class="carousel-control-prev d-none" type="button" data-bs-target=`#${id}` data-bs-slide="prev")
+            span.carousel-control-prev-icon(aria-hidden='true')
+        button(class="carousel-control-next" type="button" data-bs-target=`#${id}` data-bs-slide="next")
+            span.carousel-control-next-icon(aria-hidden='true')

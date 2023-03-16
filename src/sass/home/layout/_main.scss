@@ -1,7 +1,7 @@
 
 main {
-    .container_prod {
-        width: 98%;
+    .container__prod {
+        width: 100%;
         margin: 0 auto;
         padding-top: 2rem;
 
@@ -9,5 +9,19 @@ main {
             padding-top: 0;
             width: 92%;
         }
+
+        .container__prod__cosmetics {
+            padding-top: 5rem;
+            position: relative;
+
+            &__tittle {
+                font-size: 3rem;
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+        }
     }
+}
+.hidden {
+    display: none;
 }

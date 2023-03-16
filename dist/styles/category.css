@@ -5933,7 +5933,7 @@ body .heading-primary--sub-5 {
 
 main .container {
   padding-top: 5rem;
-  width: 98%;
+  width: 100%;
   margin: 0 auto;
 }
 main .container .filters__sort {
@@ -6163,11 +6163,12 @@ main .container_prod {
 }
 @media (min-width: 768px) {
   main .container_prod {
-    width: 96%;
+    width: 99%;
   }
 }
 @media (min-width: 1200px) {
   main .container_prod {
+    width: 96%;
     gap: 3rem;
   }
 }
