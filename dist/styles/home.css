@@ -6504,7 +6504,6 @@ main .container__prod .container__prod__cosmetics__tittle {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.5s;
 }
 .container__prod__cosmetics__mobile__wrapper__inner__item__wrapper__image__wrapper {
   max-width: 80%;
