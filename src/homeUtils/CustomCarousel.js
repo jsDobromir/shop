@@ -26,6 +26,12 @@ export default class CustomCarousel {
             }
             activeElement.classList.remove('active');
             nextElement.classList.add('active');
+            //load next 2 images
+            let image1 = (nextElement && nextElement.nextElementSibling) ? nextElement.nextElementSibling.querySelector('.imgClass') : undefined;
+            if (image1) image1.srcset = image1.dataset.srcset;
+            let image2 = (nextElement && nextElement.nextElementSibling && nextElement.nextElementSibling.nextElementSibling) ? nextElement.nextElementSibling.nextElementSibling.querySelector('.imgClass') : undefined;
+            if (image2) image2.srcset = image2.dataset.srcset;
+            //
             let xPos = nextElement.getBoundingClientRect().x;
             let currentXposition = this.carouselInner.getBoundingClientRect().x;
             let newPosition = currentXposition - xPos;
@@ -33,15 +39,6 @@ export default class CustomCarousel {
             this.carouselInner.style.transform = 'translateX(' + (newPosition) + 'px)';
             if (this.items_to_slide === 1) {
                 if (!nextElement.nextElementSibling) {
-                    this.carouselInner.parentElement.parentElement.querySelector('.carousel-control-next').classList.add('d-none');
-                }
-            }
-            else if (this.items_to_slide === 2) {
-                let nextElementSibling = nextElement.nextElementSibling;
-                if (!nextElementSibling) {
-                    this.carouselInner.parentElement.parentElement.querySelector('.carousel-control-next').classList.add('d-none');
-                }
-                if (nextElementSibling && !nextElementSibling.nextElementSibling) {
                     this.carouselInner.parentElement.parentElement.querySelector('.carousel-control-next').classList.add('d-none');
                 }
             }
@@ -101,19 +98,14 @@ export default class CustomCarousel {
             if (this.items_to_slide === 1) {
                 nextElement = activeElement.nextElementSibling;
             }
-            else if (this.items_to_slide === 2) {
-                nextElement = activeElement.nextElementSibling ? activeElement.nextElementSibling.nextElementSibling : null;
-            }
-            else if (this.items_to_slide === 3) {
-                nextElement = (activeElement.nextElementSibling && activeElement.nextElementSibling.nextElementSibling) ?
-                    activeElement.nextElementSibling.nextElementSibling.nextElementSibling : null;
-            }
-            this.carouselInner.parentElement.parentElement.querySelector('.carousel-control-prev').classList.remove('d-none');
-            if (!nextElement || !nextElement.classList.contains('container__prod__cosmetics__mobile__wrapper__inner__item')) {
-                return;
-            }
             activeElement.classList.remove('active');
             nextElement.classList.add('active');
+            //load next two images
+            let image1 = (nextElement && nextElement.nextElementSibling) ? nextElement.nextElementSibling.querySelector('.imgClass') : undefined;
+            if (image1) image1.srcset = image1.dataset.srcset;
+            let image2 = (nextElement && nextElement.nextElementSibling && nextElement.nextElementSibling.nextElementSibling) ? nextElement.nextElementSibling.nextElementSibling.querySelector('.imgClass') : undefined;
+            if (image2) image2.srcset = image2.dataset.srcset;
+            //
             let xPos = nextElement.getBoundingClientRect().x;
             let currentXposition = this.carouselInner.getBoundingClientRect().x;
             let newPosition = currentXposition - xPos;

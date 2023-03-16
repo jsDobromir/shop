@@ -289,13 +289,16 @@ html(lang="en")
                     .container__prod__cosmetics__mobile.d-sm-none
                         .container__prod__cosmetics__mobile__wrapper
                             .container__prod__cosmetics__mobile__wrapper__inner
-                                each product in products
+                                each product, index in products
                                     .container__prod__cosmetics__mobile__wrapper__inner__item.active
                                         .container__prod__cosmetics__mobile__wrapper__inner__item__wrapper
                                             .container__prod__cosmetics__mobile__wrapper__inner__item__wrapper__image
                                                 .container__prod__cosmetics__mobile__wrapper__inner__item__wrapper__image__wrapper
                                                     a(href="/produkt/12312")
-                                                        img(src=product.imageFront srcset=product.imagesResp class="container__prod__cosmetics__mobile__wrapper__inner__item__wrapper__image__wrapper__imgClass")
+                                                        if index < 2
+                                                            img(src=product.imageFront srcset=product.imagesResp class="imgClass")
+                                                        else
+                                                            img(data-src=product.imageFront data-srcset=product.imagesResp class="imgClass")
                                             .container__prod__cosmetics__mobile__wrapper__inner__item__wrapper__second
                                                 .container__prod__cosmetics__mobile__wrapper__inner__item__wrapper__second__tittle
                                                     h3
@@ -308,10 +311,7 @@ html(lang="en")
                     +bs_carousel('carousel_sm', 'container__prod__cosmetics__carousel carousel slide d-none d-sm-block d-md-none', respLengths.sm, 2)
                     +bs_carousel('carousel_md', 'container__prod__cosmetics__carousel carousel slide d-none d-md-block d-xl-none', respLengths.md, 3)
                     +bs_carousel('carousel_xl', 'container__prod__cosmetics__carousel carousel slide d-none d-xl-block', respLengths.xl, 4)
-                    .hidden
-                        var index = 1;
-                        while index <= 41
-                            img(src=`/prod${index}/front_small.jpg`)
+                    
             footer#footer
                 section.rel__image
                     .rel__image__wrapper
