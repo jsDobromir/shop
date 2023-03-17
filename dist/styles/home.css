@@ -5992,6 +5992,10 @@ main .container__prod .container__prod__cosmetics__tittle {
   margin-bottom: 2rem;
 }
 
+.hidden {
+  display: none;
+}
+
 #footer {
   background-color: #14433d;
   width: 100%;
