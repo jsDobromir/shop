@@ -14,8 +14,8 @@ app.use(express.static(path.join(__dirname, 'dist')));
 app.get('/', (req, res) => {
     let data = fs.readFileSync('./products.json', 'utf-8');
     data = JSON.parse(data);
-    let products = data.products;
-    let respLengths = {sm: Math.round(products.length / 2), md: Math.round(products.length / 3), xl: Math.round(products.length / 4)};
+    let products = data.products.slice(0, 30);
+    let respLengths = {sm: Math.round(products.length / 2), md: Math.round(products.length / 3), xl: Math.round(products.length / 5)};
     res.render('index', {products: products, respLengths, productsLength: products.length});
 });
 

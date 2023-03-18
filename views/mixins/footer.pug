@@ -1,0 +1,59 @@
+mixin footer()
+    footer#footer
+        section.rel__image
+            .rel__image__wrapper
+                .rel__image__wrapper__image
+        section.footer__content
+            .footer__content__menu
+                .footer__content__menu__item.footer__content__menu__item__klient
+                    input#footer-item-1.footer__content__menu__item__checkbox.footer__content__menu__item__klient__checkbox(type='checkbox')
+                    label.footer__content__menu__item__klient__dropdown(for='footer-item-1')
+                        span.footer__content__menu__item__klient__dropdown__wrapper
+                            h4.footer__content__menu__item__klient__dropdown__wrapper__tittle
+                                | За клиента
+                            span.footer__content__menu__item__klient__dropdown__wrapper__plus-icon.d-lg-none
+                    ul.footer__content__menu__item__klient__list
+                        li.footer__content__menu__item__list__klient__item
+                            a(href='#') Контакти
+                        li.footer__content__menu__item__list__klient___item
+                            a(href='#') За нас
+                        li.footer__content__menu__item__list__klient___item
+                            a(href='#') Връщане на продукт
+                        li.footer__content__menu__item__list__klient___item
+                            a(href='#') Доставка и плащане
+                        li.footer__content__menu__item__list__klient___item
+                            a(href='#') Често задавани въпроси
+                        li.footer__content__menu__item__list__klient___item
+                            a(href='#') Политика за поверителност
+                        li.footer__content__menu__item__list__klient___item
+                            a(href='#') Политика за използване на бисквитки
+                .footer__content__menu__item.footer__content__menu__item__kategorii
+                    input#footer-item-2.footer__content__menu__item__checkbox.footer__content__menu__item__kategorii__checkbox(type='checkbox')
+                    label.footer__content__menu__item__kategorii__dropdown(for='footer-item-2')
+                        span.footer__content__menu__item__kategorii__dropdown__wrapper
+                            h4.footer__content__menu__item__kategorii__dropdown__wrapper__tittle
+                                | Категории
+                            span.footer__content__menu__item__kategorii__dropdown__wrapper__plus-icon.d-lg-none
+                    ul.footer__content__menu__item__kategorii__list
+                        li.footer__content__menu__item__list__kategorii__item
+                            a(href='#') Козметика
+                        li.footer__content__menu__item__list__kategorii___item
+                            a(href='#') Добавки
+                        li.footer__content__menu__item__list__kategorii___item
+                            a(href='#') Витамини
+                        li.footer__content__menu__item__list__kategorii___item
+                            a(href='#') Спорт
+                        li.footer__content__menu__item__list__kategorii___item
+                            a(href='#') Спортно облекло
+                        li.footer__content__menu__item__list__kategorii___item
+                            a(href='#') За Дома
+                .footer__content__menu__item.footer__content__menu__item__sub
+                    h4.footer__content__menu__item__title.footer__content__menu__item__sub__title
+                        | Абонирай се за новини и промоции
+                    .footer__content__menu__item__sub__newsletter
+                        form.footer__content__menu__item__sub__newsletter__form(action='#')
+                            input.form__input(type='email' name='email' placeholder='Имейл')
+                            button.btn.btn--green(type='button') Абонирай се
+        section.footer_rights
+            p.footer_rights_text
+                | Всички права запазени 2023@

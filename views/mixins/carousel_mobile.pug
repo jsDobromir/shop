@@ -1,0 +1,29 @@
+mixin carousel_mobile()
+    .container__prod__cosmetics__mobile.d-sm-none
+        .container__prod__cosmetics__mobile__wrapper
+            .container__prod__cosmetics__mobile__wrapper__inner
+                each product, index in products
+                    .container__prod__cosmetics__mobile__wrapper__inner__item.active
+                        .container__prod__cosmetics__mobile__wrapper__inner__item__wrapper
+                            .container__prod__cosmetics__mobile__wrapper__inner__item__wrapper__image
+                                .container__prod__cosmetics__mobile__wrapper__inner__item__wrapper__image__wrapper
+                                    a(href="/produkt/12312")
+                                        if index < 2
+                                            img(src=product.imageFront srcset=product.imagesResp class="imgClass")
+                                        else
+                                            img(data-src=product.imageFront data-srcset=product.imagesResp class="imgClass")
+                            .container__prod__cosmetics__mobile__wrapper__inner__item__wrapper__second
+                                .container__prod__cosmetics__mobile__wrapper__inner__item__wrapper__second__wrapper
+                                    .container__prod__cosmetics__mobile__wrapper__inner__item__wrapper__second__wrapper__tittle
+                                        h3
+                                            a(href="/produkt/123122" class="container__prod__cosmetics__mobile__wrapper__inner__item__wrapper__second__wrapper__tittle__link") #{product.title}
+                                    .container__prod__cosmetics__mobile__wrapper__inner__item__wrapper__second__wrapper__description
+                                        p #{product.description}
+                                .container__prod__cosmetics__mobile__wrapper__inner__item__wrapper__second__price
+                                    span(class="price") #{product.price} лв
+                                    span(class="bag")
+                                        i(class="fa-solid fa-cart-plus fa-xl")
+        button.carousel-control-prev.d-none(type='button')
+            span.carousel-control-prev-icon(aria-hidden='true')
+        button.carousel-control-next(type='button')
+            span.carousel-control-next-icon(aria-hidden='true')

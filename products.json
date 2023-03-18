@@ -6,7 +6,8 @@
             "description" : "Хидратиращ крем с ретинол за лице срещу бръчки, фини линии, акне и хиперпигментация, крем против стареене и нощен крем с ретинол с витамин С и хиалуронова киселина",
             "imageFront": "/prod_images/prod1/front_small.jpg",
             "imagesResp": "/prod_images/prod1/resp_xs.jpg 1x, /prod_images/prod1/resp_sm.jpg 1.5x, /prod_images/prod1/resp_md.jpg 2x, /prod_images/prod1/resp_lg.jpg 2.5x, /prod_images/prod1/resp_xl.jpg 3x",
-            "price": 88
+            "price": 88,
+            "category": "lice"
         },
         {
             "id": 2,
@@ -14,7 +15,8 @@
             "description": "Натурален крем за очи против стареене, с масло от жожоба, аминокиселини и пептиди, хидратиращ и озаряващ крем под очите за тъмни кръгове, омекотява линии и бръчки",
             "imageFront": "/prod_images/prod2/front_small.jpg",
             "imagesResp": "/prod_images/prod2/resp_xs.jpg 1x, /prod_images/prod2/resp_sm.jpg 1.5x, /prod_images/prod2/resp_md.jpg 2x, /prod_images/prod2/resp_lg.jpg 2.5x, /prod_images/prod2/resp_xl.jpg 3x",
-            "price": 120
+            "price": 120,
+            "category": "lice"
         },
         {
             "id": 3,
@@ -22,7 +24,8 @@
             "description": "Серум с ретинол, Витамин Ц, ниацинамид и салицилова киселина за петна, против стареене и хиперпигментация",
             "imageFront": "/prod_images/prod3/front_small.jpg",
             "imagesResp": "/prod_images/prod3/resp_xs.jpg 1x, /prod_images/prod3/resp_sm.jpg 1.5x, /prod_images/prod3/resp_md.jpg 2x, /prod_images/prod3/resp_lg.jpg 2.5x, /prod_images/prod3/resp_xl.jpg 3x",
-            "price": 75
+            "price": 75,
+            "category": "lice"
         },
         {
             "id": 4,
@@ -30,7 +33,8 @@
             "description": "Серум с ниацинамид и хиалуронова киселина с витамин Е, серум против стареене и серум срещу акне за хиперпигментация",
             "imageFront": "/prod_images/prod4/front_small.jpg",
             "imagesResp": "/prod_images/prod4/resp_xs.jpg 1x, /prod_images/prod4/resp_sm.jpg 1.5x, /prod_images/prod4/resp_md.jpg 2x, /prod_images/prod4/resp_lg.jpg 2.5x, /prod_images/prod4/resp_xl.jpg 3x",
-            "price": 120
+            "price": 120,
+            "category": "lice"
         },
         {
             "id": 5,
@@ -38,7 +42,8 @@
             "description": "Околоочен серум, премахва тъмните кръгове и бръчките около очите, съдържа Витамин Ц, кофеин, Хиалурианова киселина",
             "imageFront": "/prod_images/prod5/front_small.jpg",
             "imagesResp": "/prod_images/prod5/resp_xs.jpg 1x, /prod_images/prod5/resp_sm.jpg 1.5x, /prod_images/prod5/resp_md.jpg 2x, /prod_images/prod5/resp_lg.jpg 2.5x, /prod_images/prod5/resp_xl.jpg 3x",
-            "price": 52
+            "price": 52,
+            "category": "lice"
         },
         {
             "id": 6,
@@ -46,7 +51,8 @@
             "description": "Серум за лице с витамин С, масло от жожоба и алое вера за хидратация, озаряване и против стареене",
             "imageFront": "/prod_images/prod6/front_small.jpg",
             "imagesResp": "/prod_images/prod6/resp_xs.jpg 1x, /prod_images/prod6/resp_sm.jpg 1.5x, /prod_images/prod6/resp_md.jpg 2x, /prod_images/prod6/resp_lg.jpg 2.5x, /prod_images/prod6/resp_xl.jpg 3x",
-            "price": 52
+            "price": 52,
+            "category": "lice"
         },
         {
             "id": 7,
@@ -54,7 +60,8 @@
             "description": "Серум за бръчки, фини линии, хиперпигментация и други - Мощна формула срещу торбички под очите и стареене - С хиалуронова киселина и ниацинамид - 30 ml",
             "imageFront": "/prod_images/prod7/front_small.jpg",
             "imagesResp": "/prod_images/prod7/resp_xs.jpg 1x, /prod_images/prod7/resp_sm.jpg 1.5x, /prod_images/prod7/resp_md.jpg 2x, /prod_images/prod7/resp_lg.jpg 2.5x, /prod_images/prod7/resp_xl.jpg 3x",
-            "price": 120
+            "price": 120,
+            "category": "lice"
         },
         {
             "id": 8,
@@ -62,7 +69,8 @@
             "description": "Серум против стареене за лице - Намалява бръчките, хиперпигментацията и слънчевите петна - Съдържа чист витамин С и хиалуронова киселина - С органично арганово и шипково масло, витамин Е, ферулинова киселина и морски зърнастец - 30 ml",
             "imageFront": "/prod_images/prod8/front_small.jpg",
             "imagesResp": "/prod_images/prod8/resp_xs.jpg 1x, /prod_images/prod8/resp_sm.jpg 1.5x, /prod_images/prod8/resp_md.jpg 2x, /prod_images/prod8/resp_lg.jpg 2.5x, /prod_images/prod8/resp_xl.jpg 3x",
-            "price": 52
+            "price": 52,
+            "category": "lice"
         },
         {
             "id": 9,
@@ -70,7 +78,8 @@
             "description": "Тоник и минимизатор на порите с хамамелис, тоник против стареене за лице, грунд за лице за серум и овлажнител",
             "imageFront": "/prod_images/prod9/front_small.jpg",
             "imagesResp": "/prod_images/prod9/resp_xs.jpg 1x, /prod_images/prod9/resp_sm.jpg 1.5x, /prod_images/prod9/resp_md.jpg 2x, /prod_images/prod9/resp_lg.jpg 2.5x, /prod_images/prod9/resp_xl.jpg 3x",
-            "price": 41
+            "price": 41,
+            "category": "lice"
         },
         {
             "id": 10,
@@ -78,7 +87,8 @@
             "description": "Минимизатор на порите, против стареене и ексфолираща вода за лице за хиперпигментация и акне, с витамин Е и млечна киселина",
             "imageFront": "/prod_images/prod10/front_small.jpg",
             "imagesResp": "/prod_images/prod10/resp_xs.jpg 1x, /prod_images/prod10/resp_sm.jpg 1.5x, /prod_images/prod10/resp_md.jpg 2x, /prod_images/prod10/resp_lg.jpg 2.5x, /prod_images/prod10/resp_xl.jpg 3x",
-            "price": 48
+            "price": 48,
+            "category": "lice"
         },
         {
             "id": 11,
@@ -86,7 +96,8 @@
             "description": "Серум за лице с витамин С и хиалуронова киселина, витамин С за серум за лице за жени, масло от витамин С за лице, серум с витамин С за лице, серум с витамин С за лице",
             "imageFront": "/prod_images/prod17/front_small.jpg",
             "imagesResp": "/prod_images/prod17/resp_xs.jpg 1x, /prod_images/prod17/resp_sm.jpg 1.5x, /prod_images/prod17/resp_md.jpg 2x, /prod_images/prod17/resp_lg.jpg 2.5x, /prod_images/prod17/resp_xl.jpg 3x",
-            "price": 84
+            "price": 84,
+            "category": "lice"
         },
         {
             "id": 12,
@@ -94,7 +105,8 @@
             "description": "Серум с AHA, витамин С и ниацинамид, Значително по-сияйна кожа само за 1 ден",
             "imageFront": "/prod_images/prod18/front_small.jpg",
             "imagesResp": "/prod_images/prod18/resp_xs.jpg 1x, /prod_images/prod18/resp_sm.jpg 1.5x, /prod_images/prod18/resp_md.jpg 2x, /prod_images/prod18/resp_lg.jpg 2.5x, /prod_images/prod18/resp_xl.jpg 3x",
-            "price": 140
+            "price": 140,
+            "category": "lice"
         },
         {
             "id": 13,
@@ -102,7 +114,8 @@
             "description": "Хидратиращ крем без аромати с витамин B3 и колагенови пептиди за силна и сияйна кожа без парфюм Грижа за лицето за жени",
             "imageFront": "/prod_images/prod19/front_small.jpg",
             "imagesResp": "/prod_images/prod19/resp_xs.jpg 1x, /prod_images/prod19/resp_sm.jpg 1.5x, /prod_images/prod19/resp_md.jpg 2x, /prod_images/prod19/resp_lg.jpg 2.5x, /prod_images/prod19/resp_xl.jpg 3x",
-            "price": 140
+            "price": 140,
+            "category": "lice"
         },
         {
             "id": 14,
@@ -110,7 +123,8 @@
             "description": "Дневен хидратиращ крем с витамин С, AHA и ниацинамид, Значително по-ярка кожа за 1 ден и изравняване на цвета на кожата за 14 дни",
             "imageFront": "/prod_images/prod21/front_small.jpg",
             "imagesResp": "/prod_images/prod21/resp_xs.jpg 1x, /prod_images/prod21/resp_sm.jpg 1.5x, /prod_images/prod21/resp_md.jpg 2x, /prod_images/prod21/resp_lg.jpg 2.5x, /prod_images/prod21/resp_xl.jpg 3x",
-            "price": 140
+            "price": 140,
+            "category": "lice"
         },
         {
             "id": 15,
@@ -118,7 +132,8 @@
             "description": "Retinol 24 нощен крем за лице с ниацинамид, аромат против бръчки",
             "imageFront": "/prod_images/prod22/front_small.jpg",
             "imagesResp": "/prod_images/prod22/resp_xs.jpg 1x, /prod_images/prod22/resp_sm.jpg 1.5x, /prod_images/prod22/resp_md.jpg 2x, /prod_images/prod22/resp_lg.jpg 2.5x, /prod_images/prod22/resp_xl.jpg 3x",
-            "price": 72
+            "price": 72,
+            "category": "lice"
         },
         {
             "id": 16,
@@ -126,7 +141,8 @@
             "description": "хидратира за подобряване на еластичността и стегната кожа за повдигнат вид. Обогатен с изглаждащ кожата амино-пептиден комплекс",
             "imageFront": "/prod_images/prod23/front_small.jpg",
             "imagesResp": "/prod_images/prod23/resp_xs.jpg 1x, /prod_images/prod23/resp_sm.jpg 1.5x, /prod_images/prod23/resp_md.jpg 2x, /prod_images/prod23/resp_lg.jpg 2.5x, /prod_images/prod23/resp_xl.jpg 3x",
-            "price": 65
+            "price": 65,
+            "category": "lice"
         },
         {
             "id": 17,
@@ -134,7 +150,8 @@
             "description": "Създаден с витамин B3+ пептиди, вие ще изглеждате и ще се чувствате видимо обновени след първата си употреба. След почистване нанесете върху лицето си",
             "imageFront": "/prod_images/prod24/front_small.jpg",
             "imagesResp": "/prod_images/prod24/resp_xs.jpg 1x, /prod_images/prod24/resp_sm.jpg 1.5x, /prod_images/prod24/resp_md.jpg 2x, /prod_images/prod24/resp_lg.jpg 2.5x, /prod_images/prod24/resp_xl.jpg 3x",
-            "price": 65
+            "price": 65,
+            "category": "lice"
         },
         {
             "id": 18,
@@ -142,7 +159,8 @@
             "description": "Face Moisturizer Cream with Niacinamide for Firmer Skin, Anti-Wrinkle Fragrance-Free",
             "imageFront": "/prod_images/prod25/front_small.jpg",
             "imagesResp": "/prod_images/prod25/resp_xs.jpg 1x, /prod_images/prod25/resp_sm.jpg 1.5x, /prod_images/prod25/resp_md.jpg 2x, /prod_images/prod25/resp_lg.jpg 2.5x, /prod_images/prod25/resp_xl.jpg 3x",
-            "price": 65
+            "price": 65,
+            "category": "lice"
         },
         {
             "id": 19,
@@ -150,7 +168,8 @@
             "description": "Този серум осигурява предимствата на колагеновия пептид + 24 часа хидратация, ЕКСПЕРТНО ФОРМУЛИРАН",
             "imageFront": "/prod_images/prod26/front_small.jpg",
             "imagesResp": "/prod_images/prod26/resp_xs.jpg 1x, /prod_images/prod26/resp_sm.jpg 1.5x, /prod_images/prod26/resp_md.jpg 2x, /prod_images/prod26/resp_lg.jpg 2.5x, /prod_images/prod26/resp_xl.jpg 3x",
-            "price": 65
+            "price": 65,
+            "category": "lice"
         },
         {
             "id": 20,
@@ -158,7 +177,8 @@
             "description": "Този усъвършенстван крем с двойно действие с технология за автоматично попълване помага на кожата да създаде свой собствен вътрешен източник на вода, за да се рехидратира непрекъснато, след което заключва влагата за безкрайно плътен, здравословен блясък",
             "imageFront": "/prod_images/prod28/front_small.jpg",
             "imagesResp": "/prod_images/prod28/resp_xs.jpg 1x, /prod_images/prod28/resp_sm.jpg 1.5x, /prod_images/prod28/resp_md.jpg 2x, /prod_images/prod28/resp_lg.jpg 2.5x, /prod_images/prod28/resp_xl.jpg 3x",
-            "price": 65
+            "price": 65,
+            "category": "lice"
         },
         {
             "id": 21,
@@ -166,7 +186,8 @@
             "description": "Препарати за премахване на грим от Clinique",
             "imageFront": "/prod_images/prod32/front_small.jpg",
             "imagesResp": "/prod_images/prod32/resp_xs.jpg 1x, /prod_images/prod32/resp_sm.jpg 1.5x, /prod_images/prod32/resp_md.jpg 2x, /prod_images/prod32/resp_lg.jpg 2.5x, /prod_images/prod32/resp_xl.jpg 3x",
-            "price": 65
+            "price": 65,
+            "category": "lice"
         },
         {
             "id": 22,
@@ -174,7 +195,8 @@
             "description": "Силно концентриран овлажнител, който предлага революционна грижа за кожата. Той е насочен към появата на линии и бръчки, като подмладява кожата и подобрява нейния външен вид",
             "imageFront": "/prod_images/prod33/front_small.jpg",
             "imagesResp": "/prod_images/prod33/resp_xs.jpg 1x, /prod_images/prod33/resp_sm.jpg 1.5x, /prod_images/prod33/resp_md.jpg 2x, /prod_images/prod33/resp_lg.jpg 2.5x, /prod_images/prod33/resp_xl.jpg 3x",
-            "price": 65
+            "price": 65,
+            "category": "lice"
         },
         {
             "id": 23,
@@ -182,7 +204,8 @@
             "description": "Изключително лек, практически невидим 100% минерален слънцезащитен крем е невероятно удобен дори за чувствителна кожа.",
             "imageFront": "/prod_images/prod34/front_small.jpg",
             "imagesResp": "/prod_images/prod34/resp_xs.jpg 1x, /prod_images/prod34/resp_sm.jpg 1.5x, /prod_images/prod34/resp_md.jpg 2x, /prod_images/prod34/resp_lg.jpg 2.5x, /prod_images/prod34/resp_xl.jpg 3x",
-            "price": 25
+            "price": 25,
+            "category": "lice"
         },
         {
             "id": 24,
@@ -190,7 +213,8 @@
             "description": "Това е „заличителят на щети“ на CLINIQUE с изсветляващия комплекс CL302, който видимо изсветлява, като същевременно е достатъчно нежен за всички типове кожа. Този серум съдържа собствена изсветляваща молекула и смес от витамин С за по-равномерен тен на кожата. Той също така подобрява външния вид на съществуващите тъмни петна, включително възрастови петна, като същевременно се насочва към бъдещи тъмни петна",
             "imageFront": "/prod_images/prod35/front_small.jpg",
             "imagesResp": "/prod_images/prod35/resp_xs.jpg 1x, /prod_images/prod35/resp_sm.jpg 1.5x, /prod_images/prod35/resp_md.jpg 2x, /prod_images/prod35/resp_lg.jpg 2.5x, /prod_images/prod35/resp_xl.jpg 3x",
-            "price": 25
+            "price": 25,
+            "category": "lice"
         },
         {
             "id": 25,
@@ -198,7 +222,8 @@
             "description": "Серумът е силно концентриран овлажнител, който предлага революционна грижа за кожата. Той е насочен към появата на линии и бръчки, като подмладява кожата и подобрява нейния външен вид.",
             "imageFront": "/prod_images/prod36/front_small.jpg",
             "imagesResp": "/prod_images/prod36/resp_xs.jpg 1x, /prod_images/prod36/resp_sm.jpg 1.5x, /prod_images/prod36/resp_md.jpg 2x, /prod_images/prod36/resp_lg.jpg 2.5x, /prod_images/prod36/resp_xl.jpg 3x",
-            "price": 125
+            "price": 125,
+            "category": "lice"
         },
         {
             "id": 26,
@@ -206,7 +231,8 @@
             "description": "Усъвършенстваното инженерство за грижа за кожата осигурява подкрепа, която укрепва кожата и позволява еластично покритие. Пептидният комплекс CL1870 повишава естествения колаген на кожата и подобрява нейната структура. Хиалуроновата киселина осигурява трайна хидратация и намалява фините линии",
             "imageFront": "/prod_images/prod37/front_small.jpg",
             "imagesResp": "/prod_images/prod37/resp_xs.jpg 1x, /prod_images/prod37/resp_sm.jpg 1.5x",
-            "price": 125
+            "price": 125,
+            "category": "lice"
         },
         {
             "id": 27,
@@ -214,7 +240,8 @@
             "description": "Усъвършенстваното инженерство за грижа за кожата осигурява подкрепа, която укрепва кожата и позволява еластично покритие. Пептидният комплекс CL1870 повишава естествения колаген на кожата и подобрява нейната структура. Хиалуроновата киселина осигурява трайна хидратация и намалява фините линии",
             "imageFront": "/prod_images/prod38/front_small.jpg",
             "imagesResp": "/prod_images/prod38/resp_xs.jpg 1x, /prod_images/prod38/resp_sm.jpg 1.5x",
-            "price": 125
+            "price": 125,
+            "category": "lice"
         },
         {
             "id": 28,
@@ -222,7 +249,8 @@
             "description": "Ежедневен почистващ гел за лице с Ниацинамид",
             "imageFront": "/prod_images/prod39/front_small.jpg",
             "imagesResp": "/prod_images/prod39/resp_xs.jpg 1x, /prod_images/prod39/resp_sm.jpg 1.5x",
-            "price": 125
+            "price": 125,
+            "category": "lice"
         },
         {
             "id": 29,
@@ -230,15 +258,202 @@
             "description": "Шипково масло за хидратиране и изпъване на кожата",
             "imageFront": "/prod_images/prod40/front_small.jpg",
             "imagesResp": "/prod_images/prod40/resp_xs.jpg 1x, /prod_images/prod40/resp_sm.jpg 1.5x",
-            "price": 125
+            "price": 125,
+            "category": "lice"
         },
         {
             "id": 30,
             "title": "Hyaluronic Acid 2% + B5 Hydration Support Formula",
             "description": "Хиалуроновата киселина помага на кожата да се разтяга и огъва и намалява кожните бръчки и линии. Освен това е доказано, че хиалуроновата киселина помага на раните да зарастват по-бързо и може да намали белезите",
             "imageFront": "/prod_images/prod41/front_small.jpg",
-            "imagesResp": "/prod_images/prod41/resp_xs.jpg 1x, /prod_images/prod41/resp_sm.jpg 1.5x",
-            "price": 85
+            "imagesResp": "/prod_images/prod41/resp_xs.jpg 1x, /prod_images/prod41/resp_sm.jpg 1.5x, /prod_images/prod41/resp_md.jpg 2x, /prod_images/prod41/resp_lg.jpg 2.5x, /prod_images/prod41/resp_xl.jpg 3x",
+            "price": 85,
+            "category": "lice"
+        },
+        {
+            "id": 31,
+            "title": "La Roche-Posay Hyalu B5",
+            "description": "Серум с хиалуронова киселина, витамин в5, мадекасозид",
+            "imageFront": "/prod_images/prod42/front_small.jpg",
+            "imagesResp": "/prod_images/prod42/resp_xs.jpg 1x, /prod_images/prod42/resp_sm.jpg 1.5x, /prod_images/prod42/resp_md.jpg 2x, /prod_images/prod42/resp_lg.jpg 2.5x, /prod_images/prod42/resp_xl.jpg 3x",
+            "price": 92,
+            "url": "https://www.laroche-posay.bg/hyalu-b5/hyalu-b5-serum",
+            "category": "lice"
+        },
+        {
+            "id": 32,
+            "title": "Cicaplast Baume B5",
+            "description": "Балсам с множество приложения за успокояване и защита на раздразнената кожа",
+            "imageFront": "/prod_images/prod43/front_small.jpg",
+            "imagesResp": "/prod_images/prod43/resp_xs.jpg 1x, /prod_images/prod43/resp_sm.jpg 1.5x, /prod_images/prod43/resp_md.jpg 2x, /prod_images/prod43/resp_lg.jpg 2.5x, /prod_images/prod43/resp_xl.jpg 3x",
+            "price": 42,
+            "url": "https://www.laroche-posay.bg/cicaplast/cicaplast-baume-b5",
+            "category": "lice"
+        },
+        {
+            "id": 33,
+            "title": "La Roche-Posay Hyalu B5",
+            "description": "Интензивен хидратиращ крем с хиалуронова киселина",
+            "imageFront": "/prod_images/prod44/front_small.jpg",
+            "imagesResp": "/prod_images/prod44/resp_xs.jpg 1x, /prod_images/prod44/resp_sm.jpg 1.5x, /prod_images/prod44/resp_md.jpg 2x, /prod_images/prod44/resp_lg.jpg 2.5x, /prod_images/prod44/resp_xl.jpg 3x",
+            "url" : "https://www.laroche-posay.bg/hyalu-b5/hyalu-b5-krem",
+            "category": "lice",
+            "price": 48
+        },
+        {
+            "id": 34,
+            "title": "La Roche-Posay Pure Vitamin C",
+            "description": "Серум за лице с чист витамин С с хиалуронова киселина и салицилова киселина, серум за лице против стареене за бръчки и неравномерна текстура на кожата за видимо озаряване и изглаждане",
+            "imageFront": "/prod_images/prod45/front_small.jpg",
+            "imagesResp": "/prod_images/prod45/resp_xs.jpg 1x, /prod_images/prod45/resp_sm.jpg 1.5x, /prod_images/prod45/resp_md.jpg 2x, /prod_images/prod45/resp_lg.jpg 2.5x, /prod_images/prod45/resp_xl.jpg 3x",
+            "price": 120,
+            "url": "https://www.laroche-posay.bg/vitamin-c/pure-vitamin-c10-serum",
+            "category": "lice"
+        },
+        {
+            "id": 35,
+            "title": "La Roche-Posay Effaclar",
+            "description": "Измиващ гел за мазна и склонна към акне кожа",
+            "imageFront": "/prod_images/prod46/front_small.jpg",
+            "imagesResp": "/prod_images/prod46/resp_xs.jpg 1x, /prod_images/prod46/resp_sm.jpg 1.5x, /prod_images/prod46/resp_md.jpg 2x, /prod_images/prod46/resp_lg.jpg 2.5x, /prod_images/prod46/resp_xl.jpg 3x",
+            "price": 30,
+            "url": "https://www.laroche-posay.bg/effaclar/effaclar-prechistvasht-mikropiling-gel",
+            "category": "lice"
+        },
+        {
+            "id": 36,
+            "title": "La Roche-Posay Retinol",
+            "description": "регенериращ серум против бръчки с ретинол",
+            "imageFront": "/prod_images/prod47/front_small.jpg",
+            "imagesResp": "/prod_images/prod47/resp_xs.jpg 1x, /prod_images/prod47/resp_sm.jpg 1.5x, /prod_images/prod47/resp_md.jpg 2x, /prod_images/prod47/resp_lg.jpg 2.5x, /prod_images/prod47/resp_xl.jpg 3x",
+            "price":52,
+            "url": "https://www.laroche-posay.bg/retinol/retinol-b3-serum",
+            "category": "lice"
+        },
+        {
+            "id": 37,
+            "title": "La Roche-Posay Effaclar H",
+            "description": "Хидратиращ почистващ крем",
+            "url": "https://www.notino.bg/la-roche-posay/effaclar-h-khidratirassh-krem-protiv-nesvrshenstvata-na-aknozna-kozha/",
+            "imageFront": "/prod_images/prod48/front_small.jpg",
+            "imagesResp": "/prod_images/prod48/resp_xs.jpg 1x, /prod_images/prod48/resp_sm.jpg 1.5x, /prod_images/prod48/resp_md.jpg 2x, /prod_images/prod48/resp_lg.jpg 2.5x, /prod_images/prod48/resp_xl.jpg 3x",
+            "price": 65,
+            "category": "lice"
+        },
+        {
+            "id": 38,
+            "title": "La Roche-Posay Effaclar Serum",
+            "imageFront": "/prod_images/prod49/front_small.jpg",
+            "imagesResp": "/prod_images/prod49/resp_xs.jpg 1x, /prod_images/prod49/resp_sm.jpg 1.5x, /prod_images/prod49/resp_md.jpg 2x, /prod_images/prod49/resp_lg.jpg 2.5x, /prod_images/prod49/resp_xl.jpg 3x",
+            "description": "EFFACLAR серум е концентрат от ексфолиращи киселини, комбинирани с успокояващ ниацинамид, който действа целенасочено срещу черни точки, несъвършенства, белези и видими пори",
+            "url": "https://www.laroche-posay.bg/effaclar/effaclar-ultrakontsentriran-serum",
+            "category": "lice",
+            "price": 48
+        },
+        {
+            "id": 39,
+            "title": "La Roche-Posay Effaclar",
+            "description": "Стягащ лосион за мазна и проблемна кожа",
+            "imageFront": "/prod_images/prod50/front_small.jpg",
+            "imagesResp": "/prod_images/prod50/resp_xs.jpg 1x, /prod_images/prod50/resp_sm.jpg 1.5x, /prod_images/prod50/resp_md.jpg 2x, /prod_images/prod50/resp_lg.jpg 2.5x, /prod_images/prod50/resp_xl.jpg 3x",
+            "url": "https://www.laroche-posay.bg/effaclar/effaclar-pochistvasht-izmivasht-gel",
+            "category": "lice",
+            "price": 91
+        },
+        {
+            "id": 40,
+            "title": "Résistance Bain Extentioniste",
+            "description": "Шампоан за растеж и укрепване на косата",
+            "imageFront": "/prod_images/prod51/front_small.jpg",
+            "imagesResp": "/prod_images/prod51/resp_xs.jpg 1x, /prod_images/prod51/resp_sm.jpg 1.5x, /prod_images/prod51/resp_md.jpg 2x, /prod_images/prod51/resp_lg.jpg 2.5x, /prod_images/prod51/resp_xl.jpg 3x",
+            "url": "https://www.notino.bg/kerastase/resistance-extentioniste-shampoan-za-razstezh-na-kosata-i-ukrepvane-ot-korenite/",
+            "category": "kosa",
+            "price": 75
+        },
+        {
+            "id": 41,
+            "title": "Densifique Bain Densité",
+            "description": "Хидратиращ и укрепващ шампоан за коса",
+            "imageFront": "/prod_images/prod52/front_small.jpg",
+            "imagesResp": "/prod_images/prod52/resp_xs.jpg 1x, /prod_images/prod52/resp_sm.jpg 1.5x, /prod_images/prod52/resp_md.jpg 2x, /prod_images/prod52/resp_lg.jpg 2.5x, /prod_images/prod52/resp_xl.jpg 3x",
+            "category": "kosa",
+            "url": "https://www.notino.bg/kerastase/densifique-khidratirassha-i-stjagassha-shampoanena-procedura-za-rjadka-kosa/p-599141/",
+            "price": 48
+        },
+        {
+            "id": 42,
+            "title": "Specifique Bain Divalent Shampoo",
+            "description": "Дълбоко почистващ шампоан за мазна кожа на скалпа",
+            "imageFront": "/prod_images/prod53/front_small.jpg",
+            "imagesResp": "/prod_images/prod53/resp_xs.jpg 1x, /prod_images/prod53/resp_sm.jpg 1.5x, /prod_images/prod53/resp_md.jpg 2x, /prod_images/prod53/resp_lg.jpg 2.5x, /prod_images/prod53/resp_xl.jpg 3x",
+            "category": "kosa",
+            "url": "https://www.kerastase.co.uk/ranges/regimen/specifique/specifique-bain-divalent-shampoo/KER_00086.html",
+            "price": 78
+        },
+        {
+            "id": 43,
+            "title": "Resistance Serum Extentioniste",
+            "description": "Укрепващ серум за коса",
+            "url": "https://www.kerastase.co.uk/ranges/regimen/resistance/resistance-serum-extentioniste/KER_00071.html",
+            "imageFront": "/prod_images/prod54/front_small.jpg",
+            "imagesResp": "/prod_images/prod54/resp_xs.jpg 1x, /prod_images/prod54/resp_sm.jpg 1.5x, /prod_images/prod54/resp_md.jpg 2x, /prod_images/prod54/resp_lg.jpg 2.5x, /prod_images/prod54/resp_xl.jpg 3x",
+            "category": "kosa",
+            "price": 48
+        },
+        {
+            "id": 44,
+            "title": "Aveda Shampure™ Nurturing Shampoo",
+            "description": "Успокояващ шампоан за всички видове коса",
+            "url": "https://www.notino.bg/aveda/shampure-uspokojavassh-shampoan-za-vsichki-vidove-kosa/",
+            "url2": "https://www.aveda.com/product/5311/62089/hair-care/shampoo/shampure-nurturing-shampoo?size=8.5_fl_oz%2F250_ml",
+            "imageFront": "/prod_images/prod55/front_small.jpg",
+            "imagesResp": "/prod_images/prod55/resp_xs.jpg 1x, /prod_images/prod55/resp_sm.jpg 1.5x, /prod_images/prod55/resp_md.jpg 2x, /prod_images/prod55/resp_lg.jpg 2.5x, /prod_images/prod55/resp_xl.jpg 3x",
+            "category": "kosa",
+            "price": 55
+        },
+        {
+            "id": 45,
+            "title": "Shampure™ Nurturing Conditioner",
+            "description": "Балсам за подхранване и блясък",
+            "imageFront": "/prod_images/prod56/front_small.jpg",
+            "imagesResp": "/prod_images/prod56/resp_xs.jpg 1x, /prod_images/prod56/resp_sm.jpg 1.5x, /prod_images/prod56/resp_md.jpg 2x, /prod_images/prod56/resp_lg.jpg 2.5x, /prod_images/prod56/resp_xl.jpg 3x",
+            "category": "kosa",
+            "url": "https://www.notino.bg/aveda/shampure-podkhranvassh-balsam/",
+            "url2": "https://www.aveda.com/product/5293/62091/hair-care/conditioner/shampure-nurturing-conditioner?size=8.5_fl_oz%2F250_ml",
+            "price": 81
+        },
+        {
+            "id": 47,
+            "title": "Aveda Botanical Repair™ Strengthening Shampoo",
+            "description": "Подсилващ шампоан за увредена коса",
+            "imageFront": "/prod_images/prod57/front_small.jpg",
+            "imagesResp": "/prod_images/prod57/resp_xs.jpg 1x, /prod_images/prod57/resp_sm.jpg 1.5x, /prod_images/prod57/resp_md.jpg 2x, /prod_images/prod57/resp_lg.jpg 2.5x, /prod_images/prod57/resp_xl.jpg 3x",
+            "category": "kosa",
+            "url": "https://www.notino.bg/aveda/botanical-repair-podsilvassh-shampoan-za-uvredena-kosa/",
+            "url2": "https://www.aveda.com/product/5311/80714/hair-care/shampoo/botanical-repair-strengthening-shampoo?size=6.7_fl_oz%2F200_ml",
+            "price": 22
+        },
+        {
+            "id": 48,
+            "title": "Aveda Botanical Repair™ Strengthening Conditioner",
+            "description": "Подсилващ балсам",
+            "imageFront": "/prod_images/prod58/front_small.jpg",
+            "imagesResp": "/prod_images/prod58/resp_xs.jpg 1x, /prod_images/prod58/resp_sm.jpg 1.5x, /prod_images/prod58/resp_md.jpg 2x, /prod_images/prod58/resp_lg.jpg 2.5x, /prod_images/prod58/resp_xl.jpg 3x",
+            "category": "kosa",
+            "url": "https://www.notino.bg/aveda/botanical-repair-podsilvassh-balsam/",
+            "url2": "https://www.aveda.com/product/5293/80715/hair-care/conditioner/botanical-repair-strengthening-conditioner?size=6.7_fl_oz%2F200_ml",
+            "price": 80
+        },
+        {
+            "id": 49,
+            "title": "Aveda Shampowder™ Dry Shampoo",
+            "description": "Освежаващ сух шампоан",
+            "imageFront": "/prod_images/prod59/front_small.jpg",
+            "imagesResp": "/prod_images/prod59/resp_xs.jpg 1x, /prod_images/prod59/resp_sm.jpg 1.5x, /prod_images/prod59/resp_md.jpg 2x, /prod_images/prod59/resp_lg.jpg 2.5x, /prod_images/prod59/resp_xl.jpg 3x",
+            "category": "kosa",
+            "url": "https://www.notino.bg/aveda/shampowder-osvezhavassh-sukh-shampoan/",
+            "url2": "https://www.aveda.com/product/17811/87258/hair-care/dry-shampoo-and-second-day-hair/shampowder-dry-shampoo?size=2_fl_oz%2F56_g",
+            "price": 70
         }
     ]
 }

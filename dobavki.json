@@ -1,0 +1,14 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "title": "NOW Foods, Quercetin with Bromelain",
+            "description" : "Кверцетин с Бромелаин 120 капсули",
+            "imageFront": "/prod_images/prod11/front_small.jpg",
+            "imagesResp": "/prod_images/prod11/resp_xs.jpg 1x, /prod_images/prod11/resp_sm.jpg 1.5x, /prod_images/prod11/resp_md.jpg 2x, /prod_images/prod11/resp_lg.jpg 2.5x, /prod_images/prod11/resp_xl.jpg 3x",
+            "price": 88,
+            "category": "dobavki",
+            "subCategory": "antioxidants"
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "title": "Life Extension, BioActive Complete B-Complex",
+            "description": "Б Комплекс Витамини",
+            "imageFront": "/prod_images/prod13/front_small.jpg",
+            "imagesResp": "/prod_images/prod13/resp_xs.jpg 1x, /prod_images/prod13/resp_sm.jpg 1.5x, /prod_images/prod13/resp_md.jpg 2x, /prod_images/prod13/resp_lg.jpg 2.5x, /prod_images/prod13/resp_xl.jpg 3x",
+            "category": "vitamini",
+            "subCategory": "Vitamin B",
+            "url": "https://www.iherb.com/pr/life-extension-bioactive-complete-b-complex-60-vegetarian-capsules/67051",
+            "price": 72
+        },
+        {
+            "id": 2,
+            "title": "California Gold Nutrition, Vitamin D3",
+            "description": "Витамин Д3 360 меки капсули",
+            "imageFront": "/prod_images/prod12/front_small.jpg",
+            "imagesResp": "/prod_images/prod12/resp_xs.jpg 1x, /prod_images/prod12/resp_sm.jpg 1.5x, /prod_images/prod12/resp_md.jpg 2x, /prod_images/prod12/resp_lg.jpg 2.5x, /prod_images/prod12/resp_xl.jpg 3x",
+            "url": "https://www.iherb.com/pr/california-gold-nutrition-vitamin-d3-125-mcg-5-000-iu-360-fish-gelatin-softgels/70317",
+            "price": 75,
+            "category": "vitamini"
+        }
+    ]
+}

@@ -25,23 +25,33 @@ export default class CustomCarousel {
                 nextElement = activeElement.nextElementSibling;
             }
             activeElement.classList.remove('active');
+            this.carouselInner.parentElement.parentElement.querySelector('.carousel-control-prev').classList.remove('d-none');
             if (nextElement) {
                 nextElement.classList.add('active');
             }
             //load next two images
             //preload the image
-
-            let xPos = nextElement.getBoundingClientRect().x;
-            let currentXposition = this.carouselInner.getBoundingClientRect().x;
-            let newPosition = currentXposition - xPos;
-            this.currentPosition = newPosition;
-            this.carouselInner.style.transform = 'translateX(' + (newPosition) + 'px)';
-            if (this.items_to_slide === 1) {
-                if (!nextElement.nextElementSibling) {
-                    this.carouselInner.parentElement.parentElement.querySelector('.carousel-control-next').classList.add('d-none');
+            let image1 = (nextElement && nextElement.nextElementSibling) ? nextElement.nextElementSibling.querySelector('.imgClass') : undefined;
+            let promises = [];
+            if (image1) promises.push(this.loadImage(image1));
+            let image2 = (nextElement && nextElement.nextElementSibling && nextElement.nextElementSibling.nextElementSibling) ? nextElement.nextElementSibling.nextElementSibling.querySelector('.imgClass') : undefined;
+            if (image2) promises.push(this.loadImage(image2));
+            let image3 = (nextElement && nextElement.nextElementSibling && nextElement.nextElementSibling.nextElementSibling && nextElement.nextElementSibling.nextElementSibling.nextElementSibling) ? nextElement.nextElementSibling.nextElementSibling.nextElementSibling.querySelector('.imgClass') : undefined;
+            if (image3) promises.push(this.loadImage(image3));
+            //end loading images
+            Promise.all(promises).then(() => {
+                let xPos = nextElement.getBoundingClientRect().x;
+                let currentXposition = this.carouselInner.getBoundingClientRect().x;
+                let newPosition = currentXposition - xPos;
+                this.currentPosition = newPosition;
+                this.carouselInner.style.transform = 'translateX(' + (newPosition) + 'px)';
+                if (this.items_to_slide === 1) {
+                    if (!nextElement.nextElementSibling) {
+                        this.carouselInner.parentElement.parentElement.querySelector('.carousel-control-next').classList.add('d-none');
+                    }
                 }
-            }
-            return;
+                return;
+            });
         });
         this.sliderManager.on('swiperight', (e) => {
             let activeElement = this.carouselInner.querySelector('.active');
@@ -98,6 +108,7 @@ export default class CustomCarousel {
                 nextElement = activeElement.nextElementSibling;
             }
             activeElement.classList.remove('active');
+            this.carouselInner.parentElement.parentElement.querySelector('.carousel-control-prev').classList.remove('d-none');
             if (nextElement) {
                 nextElement.classList.add('active');
             }
@@ -108,6 +119,8 @@ export default class CustomCarousel {
             if (image1) promises.push(this.loadImage(image1));
             let image2 = (nextElement && nextElement.nextElementSibling && nextElement.nextElementSibling.nextElementSibling) ? nextElement.nextElementSibling.nextElementSibling.querySelector('.imgClass') : undefined;
             if (image2) promises.push(this.loadImage(image2));
+            let image3 = (nextElement && nextElement.nextElementSibling && nextElement.nextElementSibling.nextElementSibling && nextElement.nextElementSibling.nextElementSibling.nextElementSibling) ? nextElement.nextElementSibling.nextElementSibling.nextElementSibling.querySelector('.imgClass') : undefined;
+            if (image3) promises.push(this.loadImage(image3));
             //
             Promise.all(promises).then(() => {
                 let xPos = nextElement.getBoundingClientRect().x;

@@ -14,11 +14,22 @@ mixin bs_carousel(id, classList, outerLoop, innerLoop)
                                     div(class=`container__prod__cosmetics__carousel__wrapper__item__wrapper__image`)
                                         div(class=`container__prod__cosmetics__carousel__wrapper__item__wrapper__image__wrapper`)
                                             a(href="/produkt/123123")
-                                                img(src=product.imageFront class="container__prod__cosmetics__carousel__wrapper__item__wrapper__image__wrapper__imgClass")
+                                                if index < 2
+                                                    img(src=product.imageFront srcset=product.imagesResp class="imgClass")
+                                                else
+                                                    img(data-src=product.imageFront data-srcset=product.imagesResp class="imgClass")
                                     div(class=`container__prod__cosmetics__carousel__wrapper__item__wrapper__second`)
-                                        div(class=`container__prod__cosmetics__carousel__wrapper__item__wrapper__second__tittle`)
-                                            h3
-                                                a(href="/produkt/12312" class="container__prod__cosmetics__carousel__wrapper__item__wrapper__second__tittle__link") #{product.title}
+                                        div(class="container__prod__cosmetics__carousel__wrapper__item__wrapper__second__wrapper")
+                                            div(class=`container__prod__cosmetics__carousel__wrapper__item__wrapper__second__wrapper__tittle`)
+                                                h3
+                                                    a(href="/produkt/12312" class="container__prod__cosmetics__carousel__wrapper__item__wrapper__second__wrapper__tittle__link") #{product.title}
+                                            div(class=`container__prod__cosmetics__carousel__wrapper__item__wrapper__second__wrapper__description`)
+                                                p #{product.description}
+                                        div(class=`container__prod__cosmetics__carousel__wrapper__item__wrapper__second__price`)
+                                            span(class="price") #{product.price} лв
+                                            span(class="bag")
+                                                i(class="fa-solid fa-cart-plus fa-xl")
+
                             - innerIndex++;
                 - index++;
         button(class="carousel-control-prev d-none" type="button" data-bs-target=`#${id}` data-bs-slide="prev")

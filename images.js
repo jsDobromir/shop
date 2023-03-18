@@ -5,10 +5,10 @@ const Stream = require('stream').Transform;
 const fsPromises = fs.promises;
 const fetch = require('node-fetch');
 
-const prodFolder = 'prod28';
-const images = ['https://m.media-amazon.com/images/I/51bqSk5XnYL._AC_UL320_.jpg'];
+const prodFolder = 'prod59';
+const images = ['https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61XGMyjKXcL._AC_UL320_.jpg'];
 
-let srcset =  'https://m.media-amazon.com/images/I/51bqSk5XnYL._AC_UL320_.jpg 1x, https://m.media-amazon.com/images/I/51bqSk5XnYL._AC_UL480_FMwebp_QL65_.jpg 1.5x, https://m.media-amazon.com/images/I/51bqSk5XnYL._AC_UL640_FMwebp_QL65_.jpg 2x, https://m.media-amazon.com/images/I/51bqSk5XnYL._AC_UL800_FMwebp_QL65_.jpg 2.5x, https://m.media-amazon.com/images/I/51bqSk5XnYL._AC_UL960_FMwebp_QL65_.jpg 3x';
+let srcset =  'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61XGMyjKXcL._AC_UL320_.jpg 1x, https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61XGMyjKXcL._AC_UL480_FMwebp_QL65_.jpg 1.5x, https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61XGMyjKXcL._AC_UL640_FMwebp_QL65_.jpg 2x, https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61XGMyjKXcL._AC_UL800_FMwebp_QL65_.jpg 2.5x, https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61XGMyjKXcL._AC_UL960_FMwebp_QL65_.jpg 3x';
 
 srcset = srcset.split(', ');
 

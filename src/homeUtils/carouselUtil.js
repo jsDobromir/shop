@@ -15,6 +15,14 @@ export default function buildCarousel(carouselWrapper) {
         carouselDom.querySelector('.carousel-control-next').classList.remove('d-none');
     }
     carouselDom.addEventListener('slid.bs.carousel', (e) => {
+        let nextItem = carouselDom.querySelector('.active').nextElementSibling;
+        if (nextItem) {
+            nextItem.querySelectorAll('.container__prod__cosmetics__carousel__wrapper__item').forEach(item => {
+                let image = item.querySelector('.imgClass');
+                console.log(image);
+                if(!image.srcset) image.srcset = image.dataset.srcset;
+            });
+        }
         if (e.to===0) {
             carouselDom.querySelector('.carousel-control-prev').classList.add('d-none');
             carouselDom.querySelector('.carousel-control-next').classList.remove('d-none');
