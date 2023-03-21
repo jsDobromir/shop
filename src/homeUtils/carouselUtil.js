@@ -1,7 +1,8 @@
 import { Carousel } from "bootstrap";
 
-export default function buildCarousel(carouselWrapper) {
+export default function buildCarousel(carouselWrapper, type) {
     const carouselDom = document.querySelector(`#${carouselWrapper}`);
+    console.log(carouselDom);
     const carousel = new Carousel(carouselDom, {
         interval: 5000,
         keyboard: true,
@@ -17,7 +18,7 @@ export default function buildCarousel(carouselWrapper) {
     carouselDom.addEventListener('slid.bs.carousel', (e) => {
         let nextItem = carouselDom.querySelector('.active').nextElementSibling;
         if (nextItem) {
-            nextItem.querySelectorAll('.container__prod__cosmetics__carousel__wrapper__item').forEach(item => {
+            nextItem.querySelectorAll(`.container__prod__${type}__carousel__wrapper__item`).forEach(item => {
                 let image = item.querySelector('.imgClass');
                 console.log(image);
                 if(!image.srcset) image.srcset = image.dataset.srcset;

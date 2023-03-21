@@ -1,31 +1,31 @@
-mixin bs_carousel(id, classList, outerLoop, innerLoop)
+mixin bs_carousel(id, type, classList, outerLoop, innerLoop, localProducts, localProductsLength)
     div(id=id class=classList data-bs-ride="carousel")
         .carousel-inner
             -var index = 0;
             -var productIndex = 0;
             while index < outerLoop
                 div(class=`carousel-item ${index==0 ? 'active' : ''}`)
-                    div(class=`container__prod__cosmetics__carousel__wrapper`)
+                    div(class=`container__prod__${type}__carousel__wrapper`)
                         -var innerIndex = 0;
-                        while (innerIndex < innerLoop && productIndex < productsLength)
-                            div(class=`container__prod__cosmetics__carousel__wrapper__item`)
-                                -var product = products[productIndex++];
-                                div(class=`container__prod__cosmetics__carousel__wrapper__item__wrapper`)
-                                    div(class=`container__prod__cosmetics__carousel__wrapper__item__wrapper__image`)
-                                        div(class=`container__prod__cosmetics__carousel__wrapper__item__wrapper__image__wrapper`)
+                        while (innerIndex < innerLoop && productIndex < localProductsLength)
+                            div(class=`container__prod__${type}__carousel__wrapper__item`)
+                                -var product = localProducts[productIndex++];
+                                div(class=`container__prod__${type}__carousel__wrapper__item__wrapper`)
+                                    div(class=`container__prod__${type}__carousel__wrapper__item__wrapper__image`)
+                                        div(class=`container__prod__${type}__carousel__wrapper__item__wrapper__image__wrapper`)
                                             a(href="/produkt/123123")
                                                 if index < 2
                                                     img(src=product.imageFront srcset=product.imagesResp class="imgClass")
                                                 else
                                                     img(data-src=product.imageFront data-srcset=product.imagesResp class="imgClass")
-                                    div(class=`container__prod__cosmetics__carousel__wrapper__item__wrapper__second`)
-                                        div(class="container__prod__cosmetics__carousel__wrapper__item__wrapper__second__wrapper")
-                                            div(class=`container__prod__cosmetics__carousel__wrapper__item__wrapper__second__wrapper__tittle`)
+                                    div(class=`container__prod__${type}__carousel__wrapper__item__wrapper__second`)
+                                        div(class=`container__prod__${type}__carousel__wrapper__item__wrapper__second__wrapper`)
+                                            div(class=`container__prod__${type}__carousel__wrapper__item__wrapper__second__wrapper__tittle`)
                                                 h3
-                                                    a(href="/produkt/12312" class="container__prod__cosmetics__carousel__wrapper__item__wrapper__second__wrapper__tittle__link") #{product.title}
-                                            div(class=`container__prod__cosmetics__carousel__wrapper__item__wrapper__second__wrapper__description`)
+                                                    a(href="/produkt/12312" class=`container__prod__${type}__carousel__wrapper__item__wrapper__second__wrapper__tittle__link`) #{product.title}
+                                            div(class=`container__prod__${type}__carousel__wrapper__item__wrapper__second__wrapper__description`)
                                                 p #{product.description}
-                                        div(class=`container__prod__cosmetics__carousel__wrapper__item__wrapper__second__price`)
+                                        div(class=`container__prod__${type}__carousel__wrapper__item__wrapper__second__price`)
                                             span(class="price") #{product.price} лв
                                             span(class="bag")
                                                 i(class="fa-solid fa-cart-plus fa-xl")

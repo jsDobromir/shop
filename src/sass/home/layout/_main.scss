@@ -10,9 +10,12 @@ main {
             width: 92%;
         }
 
-        .container__prod__cosmetics {
-            padding-top: 5rem;
+        .container__prod__cosmetics, .container__prod__supplements, .container__prod__vitamins{
+            padding: 3rem 0;
             position: relative;
+            @include media-breakpoint-up(xl) {
+                border-bottom: 1px solid #e9dede;
+            }
 
             &__tittle {
                 font-size: 3rem;

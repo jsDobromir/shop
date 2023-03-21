@@ -16,7 +16,7 @@ html(lang="en")
         link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap")
         link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer")
         script(type="text/javascript" src="/home.js")
-        title Document
+        title Органика
     body
         +header_home()
         main
@@ -24,11 +24,27 @@ html(lang="en")
                 .container__prod__cosmetics
                     .container__prod__cosmetics__tittle
                         h3 Козметика
-                    +carousel_mobile()
+                    +carousel_mobile('cosmetics', products)
                         
-                    +bs_carousel('carousel_sm', 'container__prod__cosmetics__carousel carousel slide d-none d-sm-block d-md-none', respLengths.sm, 2)
-                    +bs_carousel('carousel_md', 'container__prod__cosmetics__carousel carousel slide d-none d-md-block d-xl-none', respLengths.md, 3)
-                    +bs_carousel('carousel_xl', 'container__prod__cosmetics__carousel carousel slide d-none d-xl-block', respLengths.xl, 5)
+                    +bs_carousel('carousel_sm', 'cosmetics', 'container__prod__cosmetics__carousel carousel slide d-none d-sm-block d-md-none', respLengths.sm, 2, products, productsLength)
+                    +bs_carousel('carousel_md', 'cosmetics', 'container__prod__cosmetics__carousel carousel slide d-none d-md-block d-xl-none', respLengths.md, 3, products, productsLength)
+                    +bs_carousel('carousel_xl', 'cosmetics', 'container__prod__cosmetics__carousel carousel slide d-none d-xl-block', respLengths.xl, 5, products, productsLength)
                     
-            
+                .container__prod__supplements
+                    .container__prod__supplements__tittle
+                        h3 Добавки
+                    +carousel_mobile('supplements', productsDobavki)
+
+                    +bs_carousel('carousel_supp_sm', 'supplements', 'container__prod__supplements__carousel carousel slide d-none d-sm-block d-md-none', respLengthsDobavki.sm, 2, productsDobavki, productsDobavkiLength)
+                    +bs_carousel('carousel_supp_md', 'supplements', 'container__prod__supplements__carousel carousel slide d-none d-md-block d-xl-none', respLengthsDobavki.md, 3, productsDobavki, productsDobavkiLength)
+                    +bs_carousel('carousel_supp_xl', 'supplements', 'container__prod__supplements__carousel carousel slide d-none d-xl-block', respLengthsDobavki.xl, 5, productsDobavki, productsDobavkiLength)
+
+                .container__prod__vitamins
+                    .container__prod__vitamins__tittle
+                        h3 Витамини
+                    +carousel_mobile('vitamins', productsVitamini)
+
+                    +bs_carousel('carousel_vit_sm', 'vitamins', 'container__prod__vitamins__carousel carousel slide d-none d-sm-block d-md-none', respLengthsVitamini.sm, 2, productsVitamini, productsVitaminiLength)
+                    +bs_carousel('carousel_vit_md', 'vitamins', 'container__prod__vitamins__carousel carousel slide d-none d-md-block d-xl-none', respLengthsVitamini.md, 3, productsVitamini, productsVitaminiLength)
+                    +bs_carousel('carousel_vit_xl', 'vitamins', 'container__prod__vitamins__carousel carousel slide d-none d-xl-block', respLengthsVitamini.xl, 5, productsVitamini, productsVitaminiLength)
             +footer()

@@ -1,0 +1,17 @@
+mixin productGrid(localProduct)
+    .container_prod__products__grid__item
+        .container_prod__products__grid__item__image
+            .container_prod__products__grid__item__image__wrapper
+                a(href='/product/retionol_cream')
+                    img.imgclass(src=localProduct.imageFront srcset=localProduct.imagesResp alt=localProduct.title)
+        .container_prod__products__grid__item__pricewrap
+            .container_prod__products__grid__item__pricewrap__inner
+                .container_prod__products__grid__item__pricewrap__inner__tittle
+                    h3
+                        a.container_prod__products__grid__item__pricewrap__inner__tittle__link(href='/product/retionol_cream') #{localProduct.title}
+                .container_prod__products__grid__item__pricewrap__inner__description
+                    p #{localProduct.description}
+            .container_prod__products__grid__item__pricewrap__price
+                span.price #{localProduct.price}лв
+                span.bag
+                    i.fa-solid.fa-cart-plus.fa-xl

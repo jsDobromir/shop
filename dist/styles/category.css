@@ -1,6 +1,7 @@
 /*!*******************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/sass/category.scss ***!
   \*******************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
 /*
 0 - 600px; phone
 600px - 900px; tablet portrait
@@ -14,6 +15,12 @@ $breakpoint argument choices
 - tab-port
 - tab-land
 - big-desktop
+*/
+/*
+    Filters used on category page
+*/
+/*
+    Filters used on desktop category page
 */
 .align-baseline {
   vertical-align: baseline !important;
@@ -5229,6 +5236,14 @@ textarea.form-control-lg {
     transform: translate(-50%, -100%);
   }
 }
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 *,
 *::after,
 *::before {
@@ -5941,6 +5956,13 @@ main .container .filters__sort {
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+  width: 98%;
+  margin: 0 auto;
+}
+@media (min-width: 576px) {
+  main .container .filters__sort {
+    width: 90%;
+  }
 }
 main .container .filters__sort__filter {
   transition: all 0.8s;
@@ -6085,7 +6107,7 @@ main .container .filters__sort__filter__fixedfilters__wrapper__menu__item__label
   border-top: 2px solid black;
   border-left: 2px solid black;
   transform: rotate(225deg);
-  transition: all 0.6s linear;
+  transition: all 0.6s ease-in-out;
 }
 main .container .filters__sort__filter__fixedfilters__wrapper__menu__item__list {
   margin: 0.5rem auto 2rem auto;
@@ -6184,7 +6206,7 @@ main .container_prod__filters__wrapper {
 main .container_prod__filters__wrapper__menu {
   border: 1px solid rgba(11, 62, 44, 0.2666666667);
   border-radius: 1rem;
-  background-image: linear-gradient(to left bottom, rgba(104, 163, 101, 0.226), rgb(254, 255, 254));
+  background-image: linear-gradient(to left bottom, #f2eeee, #f2e8e8);
   width: 90%;
   margin: 0 auto 5rem auto;
   padding: 2rem 0;
@@ -6209,14 +6231,15 @@ main .container_prod__filters__wrapper__menu__item a {
   transition: all 0.4s;
 }
 main .container_prod__filters__wrapper__menu__item a:hover {
-  color: #19c5db;
+  color: #87c7a7;
 }
 main .container_prod__filters__wrapper__menu:hover {
-  transform: translateY(-1rem);
+  transform: translateY(-0.7rem);
 }
 main .container_prod__filters__wrapper__price {
   width: 100%;
   border-bottom: 1px solid rgba(124, 118, 118, 0.541);
+  padding-bottom: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6228,9 +6251,37 @@ main .container_prod__filters__wrapper__price {
     width: 85%;
   }
 }
-main .container_prod__filters__wrapper__price__tittle {
+main .container_prod__filters__wrapper__price__checkbox {
+  display: none;
+}
+main .container_prod__filters__wrapper__price__label__tittle {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+}
+main .container_prod__filters__wrapper__price__label__tittle__h {
   font-size: 3rem;
   text-align: center;
+  cursor: pointer;
+}
+main .container_prod__filters__wrapper__price__label__tittle__plus-icon {
+  position: relative;
+  cursor: pointer;
+  height: 3rem;
+  width: 3rem;
+}
+main .container_prod__filters__wrapper__price__label__tittle__plus-icon:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  width: 2rem;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  transform: rotate(225deg);
+  transition: all 0.6s ease-in-out;
 }
 main .container_prod__filters__wrapper__price__list {
   display: flex;
@@ -6239,7 +6290,9 @@ main .container_prod__filters__wrapper__price__list {
   justify-content: center;
   flex-wrap: wrap;
   gap: 1.5rem;
-  padding-bottom: 5rem;
+  transition: max-height 0.6s ease-in-out;
+  max-height: 0;
+  overflow: hidden;
 }
 main .container_prod__filters__wrapper__price__list__item {
   flex-basis: 45%;
@@ -6254,9 +6307,17 @@ main .container_prod__filters__wrapper__price__list__item:hover {
   cursor: pointer;
   background-color: rgba(77, 235, 156, 0.5254901961);
 }
+main .container_prod__filters__wrapper__price__checkbox:checked ~ .container_prod__filters__wrapper__price__list {
+  max-height: 200rem;
+}
+main .container_prod__filters__wrapper__price__checkbox:checked + .container_prod__filters__wrapper__price__label .container_prod__filters__wrapper__price__label__tittle__plus-icon:after {
+  top: 45%;
+  transform: rotate(45deg);
+}
 main .container_prod__filters__wrapper__brand {
   width: 100%;
   border-bottom: 1px solid rgba(124, 118, 118, 0.541);
+  padding-bottom: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6268,9 +6329,37 @@ main .container_prod__filters__wrapper__brand {
     width: 85%;
   }
 }
-main .container_prod__filters__wrapper__brand__tittle {
+main .container_prod__filters__wrapper__brand__checkbox {
+  display: none;
+}
+main .container_prod__filters__wrapper__brand__label__tittle {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+}
+main .container_prod__filters__wrapper__brand__label__tittle__h {
   font-size: 3rem;
   text-align: center;
+  cursor: pointer;
+}
+main .container_prod__filters__wrapper__brand__label__tittle__plus-icon {
+  position: relative;
+  cursor: pointer;
+  height: 3rem;
+  width: 3rem;
+}
+main .container_prod__filters__wrapper__brand__label__tittle__plus-icon:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  width: 2rem;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  transform: rotate(225deg);
+  transition: all 0.6s ease-in-out;
 }
 main .container_prod__filters__wrapper__brand__list {
   display: flex;
@@ -6279,7 +6368,9 @@ main .container_prod__filters__wrapper__brand__list {
   justify-content: center;
   flex-wrap: wrap;
   gap: 1.5rem;
-  padding-bottom: 5rem;
+  transition: max-height 0.6s ease-in-out;
+  max-height: 0;
+  overflow: hidden;
 }
 main .container_prod__filters__wrapper__brand__list__item {
   flex-basis: 45%;
@@ -6293,6 +6384,13 @@ main .container_prod__filters__wrapper__brand__list__item {
 main .container_prod__filters__wrapper__brand__list__item:hover {
   cursor: pointer;
   background-color: rgba(77, 235, 156, 0.5254901961);
+}
+main .container_prod__filters__wrapper__brand__checkbox:checked ~ .container_prod__filters__wrapper__brand__list {
+  max-height: 200rem;
+}
+main .container_prod__filters__wrapper__brand__checkbox:checked + .container_prod__filters__wrapper__brand__label .container_prod__filters__wrapper__price__label__tittle__plus-icon:after {
+  top: 45%;
+  transform: rotate(45deg);
 }
 main .container_prod__products {
   flex: 1 1 100%;
@@ -6321,21 +6419,31 @@ main .container_prod__products__grid {
   grid-template-columns: repeat(1, 1fr);
   row-gap: 3rem;
   column-gap: 0;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+@media (min-width: 576px) {
+  main .container_prod__products__grid {
+    width: 90%;
+  }
 }
 @media (min-width: 768px) {
   main .container_prod__products__grid {
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 2rem;
+    column-gap: 3rem;
     row-gap: 4rem;
+    width: 90%;
   }
 }
 @media (min-width: 1400px) {
   main .container_prod__products__grid {
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 3rem;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    column-gap: 1.5rem;
   }
 }
-main .container_prod__products__grid .kozmetika__carousel__prod__wrapper {
+main .container_prod__products__grid__item {
   display: flex;
   position: relative;
   overflow: hidden;
@@ -6349,12 +6457,12 @@ main .container_prod__products__grid .kozmetika__carousel__prod__wrapper {
   border-radius: 0.5rem;
 }
 @media (min-width: 768px) {
-  main .container_prod__products__grid .kozmetika__carousel__prod__wrapper {
-    height: 45rem;
+  main .container_prod__products__grid__item {
+    height: 40rem;
     flex-direction: column;
   }
 }
-main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__image {
+main .container_prod__products__grid__item__image {
   position: relative;
   height: 100%;
   display: flex;
@@ -6366,12 +6474,12 @@ main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__image 
   width: 0;
 }
 @media (min-width: 768px) {
-  main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__image {
+  main .container_prod__products__grid__item__image {
     width: 100%;
     flex: 2 1 0;
   }
 }
-main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__image__wrapper {
+main .container_prod__products__grid__item__image__wrapper {
   max-width: 85%;
   max-height: 90%;
   display: flex;
@@ -6379,18 +6487,12 @@ main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__image_
   text-align: center;
 }
 @media (min-width: 576px) {
-  main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__image__wrapper {
+  main .container_prod__products__grid__item__image__wrapper {
     max-width: 80%;
     max-height: 80%;
   }
 }
-@media (min-width: 768px) {
-  main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__image__wrapper {
-    max-width: 80%;
-    max-height: 80%;
-  }
-}
-main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__image__wrapper img {
+main .container_prod__products__grid__item__image__wrapper img {
   transition: all 0.5s;
   max-width: 100%;
   max-height: 100%;
@@ -6398,11 +6500,11 @@ main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__image_
   mix-blend-mode: multiply;
 }
 @media (min-width: 992px) {
-  main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__image__wrapper img:hover {
+  main .container_prod__products__grid__item__image__wrapper img:hover {
     transform: scale(1.15);
   }
 }
-main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__pricewrap {
+main .container_prod__products__grid__item__pricewrap {
   flex: 1 1 0;
   width: 0;
   display: flex;
@@ -6414,23 +6516,43 @@ main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__pricew
   overflow: hidden;
 }
 @media (min-width: 768px) {
-  main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__pricewrap {
+  main .container_prod__products__grid__item__pricewrap {
     width: 100%;
     flex: 1.5 1 0;
   }
 }
-main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__pricewrap__tittle {
+main .container_prod__products__grid__item__pricewrap__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+main .container_prod__products__grid__item__pricewrap__inner__tittle {
   font-size: 2rem;
   text-align: center;
 }
-main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__pricewrap__tittle__link {
+main .container_prod__products__grid__item__pricewrap__inner__tittle__link {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__pricewrap__price {
+@media (min-width: 768px) {
+  main .container_prod__products__grid__item__pricewrap__inner__tittle__link {
+    -webkit-line-clamp: 1;
+  }
+}
+main .container_prod__products__grid__item__pricewrap__inner__description {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.7rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+main .container_prod__products__grid__item__pricewrap__price {
   width: 90%;
   margin-top: 0.5rem;
   display: flex;
@@ -6439,57 +6561,96 @@ main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__pricew
   justify-content: space-between;
 }
 @media (min-width: 992px) {
-  main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__pricewrap__price {
+  main .container_prod__products__grid__item__pricewrap__price {
     margin-top: 1.5rem;
   }
 }
-main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__pricewrap__price .price {
+main .container_prod__products__grid__item__pricewrap__price .price {
   font-size: 3rem;
   color: red;
 }
-main .container_prod__products__grid .kozmetika__carousel__prod__wrapper__pricewrap__price .bag {
+main .container_prod__products__grid__item__pricewrap__price .bag {
   font-size: 3rem;
 }
+main .container_prod__products__grid .loader-container {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+main .container_prod__products__grid .loader-container .loader {
+  border: 16px solid #f3f3f3;
+  /* light gray border */
+  border-top: 16px solid #3498db;
+  /* blue border on top */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  /* the spin animation */
+  margin: auto;
+}
 main .container_prod__pagination {
-  padding-top: 8rem;
+  padding-top: 5rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  main .container_prod__pagination {
+    flex-direction: row;
+  }
+}
+main .container_prod__pagination__prevnext, main .container_prod__pagination__pages, main .container_prod__pagination__nextlg {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   gap: 1rem;
 }
-@media (min-width: 576px) {
-  main .container_prod__pagination {
-    gap: 2rem;
-  }
-}
-@media (min-width: 992px) {
-  main .container_prod__pagination {
-    justify-content: flex-end;
-  }
-}
-main .container_prod__pagination span {
+main .container_prod__pagination .page {
   border-radius: 0.5rem;
   color: rgb(27, 24, 24);
   font-size: 2.5rem;
   padding: 1rem;
 }
-main .container_prod__pagination span:not(.disabled) {
-  border: 1px solid lightblue;
-  cursor: pointer;
-}
 @media (min-width: 576px) {
-  main .container_prod__pagination span {
+  main .container_prod__pagination .page {
     padding: 2rem;
   }
 }
-main .container_prod__pagination span:hover {
+main .container_prod__pagination .page:not(.disabled) {
+  border: 1px solid lightblue;
+  cursor: pointer;
+}
+main .container_prod__pagination .page:not(.disabled):hover {
   background-color: #c1e1e6;
 }
-main .container_prod__pagination span.disabled {
+main .container_prod__pagination .page.disabled {
   border: 1px solid rgb(186, 210, 218);
   color: #a5a19e;
+  cursor: not-allowed;
+}
+main .container_prod__pagination .page.disabled a {
   pointer-events: none;
+}
+main .container_prod__pagination .ellipse {
+  border: 1px solid rgb(223, 227, 228);
+  border-radius: 0.5rem;
+  color: rgb(27, 24, 24);
+  font-size: 2.5rem;
+  padding: 1rem;
+}
+@media (min-width: 576px) {
+  main .container_prod__pagination .ellipse {
+    padding: 2rem;
+  }
+}
+main .container_prod__pagination .ellipse:after {
+  content: "…";
 }
 
 #footer {

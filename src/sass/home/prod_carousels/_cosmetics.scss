@@ -1,8 +1,8 @@
-.container__prod__cosmetics__carousel {
+.container__prod__cosmetics__carousel, .container__prod__supplements__carousel, .container__prod__vitamins__carousel{
 
     width: 95%;
     margin: 0 auto;
-    height: 43rem;
+    height: 40rem;
     position: relative;
     mix-blend-mode: multiply;
 
@@ -66,23 +66,14 @@
                     align-items: center;
 
                     &__wrapper {
-                        max-width: 70%;
-                        max-height: 90%;
-
-                        @include media-breakpoint-up(md) {
-                            max-height: 80%;
-                        }
-
-                        @include media-breakpoint-up(xl) {
-                            max-width: 85%;
-                            max-height: 85%;
-                        }
+                        max-width: 80%;
+                        max-height: 80%;
+                        
 
                         display: flex;
                         justify-content: center;
                         text-align: center;
                     }
-
                     img {
                         transition: all .5s;
                         max-width: 100%;
@@ -109,7 +100,7 @@
                     &__wrapper {
                         display: flex;
                         flex-direction: column;
-                        gap: .5rem;
+                        gap: .1rem;
                         &__tittle {
                             font-size: 1.6rem;
                             text-align: center;

@@ -2,9 +2,10 @@ import Hammer from "hammerjs";
 
 export default class CustomCarousel {
 
-    constructor(carouselWrapper) {
+    constructor(carouselWrapper, type) {
         this.carouselWrapper = carouselWrapper;
-        this.carouselInner = document.querySelector(carouselWrapper).querySelector('.container__prod__cosmetics__mobile__wrapper__inner');
+        this.type = type;
+        this.carouselInner = document.querySelector(carouselWrapper).querySelector(`.container__prod__${this.type}__mobile__wrapper__inner`);
         this.sliderManager = new Hammer.Manager(this.carouselInner);
         this.items_to_slide = 1;
         let Swipe = new Hammer.Swipe({
@@ -83,7 +84,7 @@ export default class CustomCarousel {
                 prevElement = activeElement.previousElementSibling;
             }
             this.carouselInner.parentElement.parentElement.querySelector('.carousel-control-next').classList.remove('d-none');
-            if (!prevElement || !prevElement.classList.contains('container__prod__cosmetics__mobile__wrapper__inner__item')) {
+            if (!prevElement || !prevElement.classList.contains(`container__prod__${this.type}__mobile__wrapper__inner__item`)) {
                 return;
             }
             activeElement.classList.remove('active');
