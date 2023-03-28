@@ -1,0 +1,23 @@
+include ../mixins/header.pug
+include ../mixins/footer.pug
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" text="text/css" href="/styles/error.css")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer")
+        title Органика
+    body
+        +header_home()
+        main
+            .error-container
+                h1 #{errorMsg}
+                a(href='/') Върни се в началото
+        +footer()

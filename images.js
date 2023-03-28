@@ -5,10 +5,10 @@ const Stream = require('stream').Transform;
 const fsPromises = fs.promises;
 const fetch = require('node-fetch');
 
-const prodFolder = 'prod75';
-const images = ['https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/71m2EXrpxSL._AC_UL320_.jpg'];
+const prodFolder = 'prod2/small_images';
+const images = ['https://m.media-amazon.com/images/I/31ualBb9v5L._SS40_.jpg'];
 
-let srcset =  'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/71m2EXrpxSL._AC_UL320_.jpg 1x, https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/71m2EXrpxSL._AC_UL480_FMwebp_QL65_.jpg 1.5x, https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/71m2EXrpxSL._AC_UL640_FMwebp_QL65_.jpg 2x, https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/71m2EXrpxSL._AC_UL800_FMwebp_QL65_.jpg 2.5x, https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/71m2EXrpxSL._AC_UL960_FMwebp_QL65_.jpg 3x';
+let srcset =  'https://m.media-amazon.com/images/I/41PoXB1Q3EL._SS40_.jpg, https://m.media-amazon.com/images/I/41c94Z519jL._SS40_.jpg, https://m.media-amazon.com/images/I/41GP25qe0lL._SS40_.jpg, https://m.media-amazon.com/images/I/41c584+7kRL._SS40_.jpg, https://m.media-amazon.com/images/I/41ZD-S-MI+L._SS40_.jpg';
 
 srcset = srcset.split(', ');
 
@@ -26,22 +26,23 @@ images.push(...srcset);
 console.log(images[0]);
 
 function getName(index) {
-    switch(index) {
-        case 0: 
-            return 'front_small';
-        case 1:
-            return 'resp_xs';
-        case 2:
-            return 'resp_sm';
-        case 3:
-            return 'resp_md';
-        case 4:
-            return 'resp_lg';
-        case 5:
-            return 'resp_xl';
-        default:
-            break
-    }
+    return `image_${(index+1)}`;
+    // switch(index) {
+    //     case 0: 
+    //         return 'front_small';
+    //     case 1:
+    //         return 'resp_xs';
+    //     case 2:
+    //         return 'resp_sm';
+    //     case 3:
+    //         return 'resp_md';
+    //     case 4:
+    //         return 'resp_lg';
+    //     case 5:
+    //         return 'resp_xl';
+    //     default:
+    //         break
+    // }
 }
 
 // function task(index, cb) {

@@ -1,0 +1,50 @@
+@import "common/abstracts/mixins";
+@import "common/abstracts/variables";
+
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/utilities/api";
+@import "bootstrap/scss/helpers";
+
+@import "common/base/animations";
+@import "common/base/base";
+@import "common/base/typography";
+@import "common/base/utilities";
+
+@import "common/layout/header";
+@import "common/layout/navigation";
+@import "common/layout/navigation_desktop";
+@import "common/layout/footer";
+
+.error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 5rem;
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    a {
+        font-size: 2.5rem;
+        font-weight: 600;
+        text-decoration: none;
+        color: #2b2d42;
+        background-color: transparent;
+        padding: 0.5rem 1rem;
+        border-radius: 0.25rem;
+        transition: background-color 0.2s ease-in-out;
+
+        &:hover {
+            background-color: #2b2d42;
+            color: #fff;
+        }
+    }
+}
+

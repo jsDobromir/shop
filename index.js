@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
-const { getPages, getPrevNext } = require('./utils/pagination');
+const categoryRoutes = require('./routes/categoryRoutes');
 const app = express();
 
 app.use(express.json());
@@ -13,7 +13,7 @@ app.set("views", path.resolve(__dirname, "views"));
 app.use(express.static(path.join(__dirname, 'dist')));
 
 app.get('/', (req, res) => {
-    let data = fs.readFileSync('./products.json', 'utf-8');
+    let data = fs.readFileSync('./kozmetika.json', 'utf-8');
     data = JSON.parse(data);
     let dobavki = fs.readFileSync('./dobavki.json', 'utf-8');
     dobavki = JSON.parse(dobavki);
@@ -31,34 +31,37 @@ app.get('/', (req, res) => {
     });
 });
 
-app.get('/kozmetika/:page?', (req, res) => {
-    let page = parseInt(req.params.page) || 1;
-    let products = fs.readFileSync('./products.json', 'utf-8');
-    let limit = 24;
-    let skipIndex = (page - 1) * limit;//calculate the index of the first item to skip
-    let endIndex = skipIndex + limit;
-    products = JSON.parse(products);
-    if (skipIndex >= products.products.length) {
-        return res.redirect('/kozmetika/1');
-    }
-    let totalPages = Math.round(products.products.length / limit);
-    products = products.products.slice(skipIndex, endIndex);
-    let pages = getPages(page, totalPages);
-    let { prevPage, nextPage } = getPrevNext(page, totalPages);
-    res.render('category', { products, productsLength: products.length, totalPages, activePage: page, pages, prevPage, nextPage });
+app.use(categoryRoutes);
+
+app.get('/:category/:subcategory/:produktId', (req, res) => {
+    const category = req.params.category;
+    const produktId = req.params.produktId;
+  
+    // Read the JSON file for the requested category
+    const productsFilePath = path.join(__dirname, `${category}.json`);
+    fs.readFile(productsFilePath, 'utf8', (err, data) => {
+      if (err) {
+        console.error(`Error reading JSON file: ${err}`);
+        return res.status(500).send('Error reading JSON file');
+      }
+  
+      // Parse the JSON data into an array of products
+      let products = JSON.parse(data);
+      products = products.products;
+      
+      // Find the product with the given ID
+      const product = products.find(p => p.id == produktId);
+      if (!product) {
+        return res.status(404).send('Product not found');
+      }
+      // Render the product view with the product data
+      res.render('product', {product});
+    });  
 });
 
-app.post('/kozmetika/:page', (req, res) => {
-    const page = parseInt(req.params.page);
-    const products = JSON.parse(fs.readFileSync('./products.json', 'utf-8'));
-    const limit = 24;
-    const skipIndex = (page - 1) * limit;
-    const endIndex = skipIndex + limit;
-    const totalPages = Math.round(products.products.length / limit);
-    const slicedProducts = products.products.slice(skipIndex, endIndex);
-    const pages = getPages(page, totalPages);
-    const { prevPage, nextPage } = getPrevNext(page, totalPages);
-    return res.json({ products: slicedProducts, totalPages, activePage: page, pages, prevPage, nextPage });  
+app.use((err, req, res, next) => {
+    const statusCode = err.statusCode || 500;
+    return res.status(statusCode).render('errors/error.pug', {errorMsg: err.message});
 });
 
 app.listen(9000, () => {

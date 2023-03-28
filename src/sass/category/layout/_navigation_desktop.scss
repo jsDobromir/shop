@@ -86,7 +86,10 @@
 
     }
     &__item.active {
-        color: rgb(1 1 6 / 58%);
+        color: rgba(41, 27, 27, 0.623);
+        &:hover {
+            color: rgb(29, 27, 27);
+        }
     }
 
     .navigation__desktop__item:not(.active):hover > .navigation__desktop__item__dropdown, 

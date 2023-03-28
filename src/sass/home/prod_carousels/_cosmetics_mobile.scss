@@ -55,8 +55,8 @@
                         align-items: center;
 
                         &__wrapper {
-                            max-width: 85%;
-                            max-height: 85%;
+                            width: 85%;
+                            height: 85%;
                             display: flex;
                             justify-content: center;
                             text-align: center;
@@ -88,13 +88,13 @@
                         &__wrapper {
                             display: flex;
                             flex-direction: column;
-                            gap: .5rem;
+                            gap: .2rem;
                             &__tittle {
                                 font-size: 1.6rem;
                                 text-align: center;
         
                                 h3 {
-                                    font-weight: 800;
+                                    font-weight: 600;
                                 }
         
                                 &__link {
@@ -108,8 +108,9 @@
         
                             &__description {
                                 text-align: center;
-                                font-weight: 600;
-                                font-size: 1.6rem;
+                                font-weight: 500;
+                                font-size: 1.5rem;
+                                line-height: 1.5;
                                 display: -webkit-box;
                                 -webkit-line-clamp: 2;
                                 -webkit-box-orient: vertical;

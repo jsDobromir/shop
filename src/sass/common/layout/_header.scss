@@ -1,6 +1,7 @@
 .header {
     height: 60rem;
     width: 100%;
+    
     @include media-breakpoint-up(md) {
         padding: 0 0.3rem;
     }
@@ -113,7 +114,6 @@
     }
 
     &__search-top-bar {
-        background-color: #f7f7f7;
         height: 30%;
         @include media-breakpoint-up(md) {
             height: 35%;

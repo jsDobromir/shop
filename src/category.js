@@ -11,25 +11,33 @@ document.addEventListener('DOMContentLoaded', (ev) => {
             event.preventDefault();
             let link = event.target;
             if (link.classList.contains('disabled')) return;
-            document.querySelector('.container_prod').scrollIntoView({ behavior: 'smooth' });
+            //load the transparent background
             document.querySelector('.loader-container').classList.remove('d-none');
 
             const page = link.dataset.page;
+            const category = link.getAttribute('href').split('/')[1];
+            const subCategory = link.getAttribute('href').split('/')[2] || '';
 
-            fetch(`/kozmetika/${page}`, { method: 'POST' })
+            fetch(`/${category}/${subCategory}?page=${page}`, { method: 'POST' })
                 .then(response => response.json())
                 .then(data => {
+                    console.log(data);
                     document.querySelector('.container_prod__products__grid').querySelectorAll('.container_prod__products__grid__item').forEach((item, index) => {
                         let product = data.products[index];
                         let newItem = buildItem(product);
                         item.parentNode.replaceChild(newItem, item);
                     });
-                    updatePagination(data);
+                    document.querySelector('.container_prod').scrollIntoView({ behavior: 'smooth' });
+                    history.pushState({ path: data.redirectURL }, '', data.redirectURL);
+                    updatePagination(data, data.category, data.subCategory);
+                    document.querySelector('.loader-container').classList.add('d-none');
+                })
+                .catch((err) => {
                     document.querySelector('.loader-container').classList.add('d-none');
                 });
         }
-        
     });
+
 });
 
 function buildItem(localProduct) {
@@ -93,7 +101,7 @@ function buildItem(localProduct) {
     bag.classList.add('bag');
 
     const cartIcon = document.createElement('i');
-    cartIcon.classList.add('fa-solid', 'fa-cart-plus', 'fa-xl');
+    cartIcon.classList.add('fa-solid', 'fa-cart-plus', 'fa-lg');
 
     bag.appendChild(cartIcon);
     price.appendChild(priceValue);
@@ -108,74 +116,66 @@ function buildItem(localProduct) {
     return itemTop;
 }
 
-function updatePagination(data) {
-    // Find the container for the pagination
-    const container = document.querySelector('.container_prod__pagination');
-
-    // Clear the container
-    container.innerHTML = '';
-
-    // Create and append the "previous" link
-    const prevLink = document.createElement('a');
-    prevLink.href = `/kozmetika/${data.prevPage}`;
-    prevLink.dataset.page = data.prevPage;
-    prevLink.classList.add('page', 'previous');
-    if (data.activePage == 1) {
-        prevLink.classList.add('disabled');
-    }
-    prevLink.textContent = 'Предишна';
-    container.appendChild(prevLink);
-
-    // Create and append the page links
-    const pagesContainer = document.createElement('div');
-    pagesContainer.classList.add('container_prod__pagination__pages');
-    for (let i = 0; i < data.pages.length; i++) {
-        const page = data.pages[i];
-
-        // Create an "ellipsis" span
-        if (page === '...') {
-            const ellipsis = document.createElement('span');
-            ellipsis.classList.add('ellipse');
-            ellipsis.textContent = '...';
-            pagesContainer.appendChild(ellipsis);
+function updatePagination(data, category, subCategory) {
+    const paginationContainer = document.querySelector('.container_prod__pagination');
+    paginationContainer.innerHTML = '';
+    if (data.totalPages > 1) {
+        const prevNextContainer = document.createElement('div');
+        prevNextContainer.classList.add('container_prod__pagination__prevnext');
+        const prevLink = document.createElement('a');
+        prevLink.href = `/${category}${subCategory ? '/' + subCategory : ''}?page=${data.prevPage}`;
+        prevLink.dataset.page = data.prevPage;
+        prevLink.classList.add('page', 'previous');
+        if (data.activePage === 1) {
+            prevLink.classList.add('disabled');
         }
-        // Create a page link
-        else {
-            const pageLink = document.createElement('a');
-            pageLink.href = `/kozmetika/${page}`;
-            pageLink.dataset.page = page;
-            pageLink.classList.add('page');
-            if (page === data.activePage) {
-                pageLink.classList.add('disabled');
+        prevLink.innerText = 'Предишна';
+        prevNextContainer.appendChild(prevLink);
+
+        const nextLinkSm = document.createElement('a');
+        nextLinkSm.href = `/${category}${subCategory ? '/' + subCategory : ''}?page=${data.nextPage}`;
+        nextLinkSm.dataset.page = data.nextPage;
+        nextLinkSm.classList.add('page', 'next', 'd-md-none');
+        if (data.activePage === data.totalPages) {
+            nextLinkSm.classList.add('disabled');
+        }
+        nextLinkSm.innerText = 'Следваща';
+        prevNextContainer.appendChild(nextLinkSm);
+
+        paginationContainer.appendChild(prevNextContainer);
+
+        const pagesContainer = document.createElement('div');
+        pagesContainer.classList.add('container_prod__pagination__pages');
+        for (let page of data.pages) {
+            let pageLink;
+            if (page === '...') {
+                pageLink = document.createElement('span');
+                pageLink.classList.add('ellipse');
+                pageLink.innerText = '...';
+            } else {
+                pageLink = document.createElement('a');
+                pageLink.href = `/${category}${subCategory ? '/' + subCategory : ''}?page=${page}`;
+                pageLink.dataset.page = page;
+                pageLink.classList.add('page');
+                if (page === data.activePage) {
+                    pageLink.classList.add('disabled');
+                }
+                pageLink.innerText = page;
             }
-            pageLink.textContent = page;
             pagesContainer.appendChild(pageLink);
         }
+        paginationContainer.appendChild(pagesContainer);
+        const nextLinkLg = document.createElement('div');
+        nextLinkLg.classList.add('container_prod__pagination__nextlg', 'd-none', 'd-md-flex');
+        const nextLink = document.createElement('a');
+        nextLink.href = `/${category}${subCategory ? '/' + subCategory : ''}?page=${data.nextPage}`;
+        nextLink.dataset.page = data.nextPage;
+        nextLink.classList.add('page', 'next');
+        if (data.activePage === data.totalPages) {
+            nextLink.classList.add('disabled');
+        }
+        nextLink.innerText = 'Следваща';
+        nextLinkLg.appendChild(nextLink);
+        paginationContainer.appendChild(nextLinkLg);
     }
-    container.appendChild(pagesContainer);
-
-    // Create and append the "next" link (small screens)
-    const nextLinkSmall = document.createElement('a');
-    nextLinkSmall.href = `/kozmetika/${data.nextPage}`;
-    nextLinkSmall.dataset.page = data.nextPage;
-    nextLinkSmall.classList.add('d-md-none', 'next', 'page');
-    if (data.activePage == data.totalPages) {
-        nextLinkSmall.classList.add('disabled');
-    }
-    nextLinkSmall.textContent = 'Следваща';
-    container.appendChild(nextLinkSmall);
-
-    // Create and append the "next" link (large screens)
-    const nextLinkLarge = document.createElement('div');
-    nextLinkLarge.classList.add('container_prod__pagination__nextlg', 'd-none', 'd-md-flex');
-    const nextLinkLargeInner = document.createElement('a');
-    nextLinkLargeInner.href = `/kozmetika/${data.nextPage}`;
-    nextLinkLargeInner.dataset.page = data.nextPage;
-    nextLinkLargeInner.classList.add('next', 'page');
-    if (data.activePage == data.totalPages) {
-        nextLinkLargeInner.classList.add('disabled');
-    }
-    nextLinkLargeInner.textContent = 'Следваща';
-    nextLinkLarge.appendChild(nextLinkLargeInner);
-    container.appendChild(nextLinkLarge);
 }

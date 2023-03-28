@@ -41,11 +41,9 @@
                 position: relative;
                 width: 100%;
                 height: 100%;
-                background-image: linear-gradient(to right bottom, rgba(100, 194, 111, 0.73), rgba(12, 81, 12, 0.78)), url(../images/kozm3.jpg);
-                background-size: cover;
-                background-position: center;
+                background-image: linear-gradient(to right bottom, rgb(33 118 42 / 26%), rgb(51 133 51 / 43%));
                 opacity: 1;
-                clip-path: polygon(40% 0, 100% 0%, 100% 100%, 0 100%);
+                clip-path: polygon(100% 0, 100% 0%, 100% 100%, 0 100%);
                 @include media-breakpoint-up(md) {
                     clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
                 }
@@ -72,7 +70,6 @@
         width: 95%;
         height: 18rem;
         margin: 0 auto;
-        background-color: #f7f7f7;
         @include media-breakpoint-up(lg) {
             height: 10rem;
         }

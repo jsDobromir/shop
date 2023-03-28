@@ -1,0 +1,73 @@
+include mixins/bs_carousel.pug
+include mixins/carousel_mobile.pug
+include mixins/header.pug
+include mixins/footer.pug
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" text="text/css" href="/styles/product.css")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer")
+        script(type="text/javascript" src="/product.js")
+        title Органика
+    body
+        +header_menu_common()
+        main
+            .container
+                .container__prod
+                    .container__prod__wrapper
+                        .container__prod__wrapper__tittle
+                            h2 #{product.title}
+                        .container__prod__wrapper__image
+                            .carousel.slide(id='imageCarousel' data-bs-ride='carousel')
+                                .carousel-inner
+                                    each imgSrc, index in product.imagesRespPdp
+                                        div.carousel-item(class=index === 0 ? 'active' : '')
+                                            img.d-block.w-100(src=imgSrc.split(',')[0], srcset=imgSrc, sizes=product.imagesRespSizes[index])
+                                ol.carousel-indicators
+                                    each imgSrc, index in product.imagesRespPdp
+                                        li(data-bs-target='#imageCarousel', data-bs-slide-to=index, class=index === 0 ? 'active' : '')
+                                            .imgWrapper
+                                                img(src=imgSrc.split(',')[0], srcset=imgSrc, sizes=product.imagesRespSizes[index])
+                .container__info
+                    .container__info__price
+                        p.product__price #{product.price} лв
+                        span.text__availability в наличност
+                    .container__info__add-to-bag
+                        form(action='/add-to-bag', method='POST')
+                            div(class="form__wrapper")
+                                div(class="form__group select_input")
+                                    select.form-select#quantity(name='quantity', required)
+                                        each number in Array.from(Array(15), (_, index) => index + 1)
+                                            option(value=number) Количество: #{number}&nbsp;
+                                    span.safe_trans
+                                        i.fa-solid.fa-lock
+                                        span.safe_trans_text Сигурна Транзакция
+                                div(class="form__group")
+                                    button(type='submit' class="btn btn-add-to-bag") Добави в количката
+        div(class="quantity_fixed")
+            div(class="quantity_fixed__content")
+                div(class="quantity_fixed__content__title")
+                    span.quantity_fixed__content__title__span
+                        h2 Количество:
+                    span.quantity_fixed__content__title__close
+                        span.close__icon
+                div(class="quantity_fixed__content__menu")
+                    each number in Array.from(Array(15), (_, index) => index + 1)
+                        span.quantity_fixed__content__menu__item(data-qty=number) #{number}
+        div(class="transaction_container")
+            div(class="transaction_container__content")
+                div(class="transaction_container__content__title")
+                    span.transaction_container__content__title__span
+                        h2 Вашата Транзакция е сигурна:
+                    span.transaction_container__content__title__close
+                        span.close__icon
+                div(class="transaction_container__content__text") Ние разбираме колко важно е за вас да се чувствате сигурни, когато правите покупки онлайн. Ето защо искаме да ви уверим, че всички транзакции в нашия магазин са напълно защитени.Използваме сигурни методи за плащане, които гарантират, че вашите лични данни и финансова информация са защитени. Вашите кредитни карти и банкови данни се обработват чрез криптирана връзка, която осигурява защита на данните при трансфера им.
+        +footer()

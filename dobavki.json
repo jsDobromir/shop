@@ -175,6 +175,17 @@
             "subCategory": "digestive",
             "price": 50,
             "url": "https://www.iherb.com/pr/now-foods-probiotic-10-25-billion-50-veg-capsules/21130"
+        },
+        {
+            "id": 17,
+            "title": "Магнезий Vital Concept DOUBLE MAGNESIUM",
+            "description": "Супер ефективен двоен магнезий Цитратна + карбонатна форма на магнезий",
+            "imageFront": "/prod_images/prod78/front_small.webp",
+            "imagesResp": "",
+            "category": "dobavki",
+            "subCategory": "minerals",
+            "price": 85,
+            "url": "https://www.emag.bg/magnezij-vital-concept-double-magnesium-citratna-karbonatna-forma-90-kapsuli-593720/pd/DZ3L21BBM/?X-Search-Id=ec6f7407e775326fbf9a&X-Product-Id=92902563&X-Search-Page=2&X-Search-Position=0&X-Section=search&X-MB=0&X-Search-Action=view"
         }
     ]
 }

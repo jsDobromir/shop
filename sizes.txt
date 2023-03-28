@@ -8,3 +8,19 @@ resp_sm 252 x 480
 //za carousela - pri pan movement, ako 
 
 //add to cart - popup with cart items
+
+https://m.media-amazon.com/images/I/51bqSk5XnYL._SX425_.jpg":[531,425],
+"https://m.media-amazon.com/images/I/51bqSk5XnYL._SX522_.jpg":[653,522],
+"https://m.media-amazon.com/images/I/51bqSk5XnYL._SX569_.jpg":[711,569],
+"https://m.media-amazon.com/images/I/51bqSk5XnYL._SY355_.jpg":[355,284],
+"https://m.media-amazon.com/images/I/51bqSk5XnYL._SY450_.jpg":[450,360],
+"https://m.media-amazon.com/images/I/51bqSk5XnYL._SX466_.jpg":[583,466],
+"https://m.media-amazon.com/images/I/51bqSk5XnYL._SX679_.jpg":[849,679]
+
+https://m.media-amazon.com/images/I/612WvmJSS+L._SX569_.jpg":[569,569],
+"https://m.media-amazon.com/images/I/612WvmJSS+L._SY355_.jpg":[355,355],
+"https://m.media-amazon.com/images/I/612WvmJSS+L._SX522_.jpg":[522,522],
+"https://m.media-amazon.com/images/I/612WvmJSS+L._SY450_.jpg":[450,450],
+"https://m.media-amazon.com/images/I/612WvmJSS+L._SX679_.jpg":[679,679],
+"https://m.media-amazon.com/images/I/612WvmJSS+L._SX466_.jpg":[466,466],
+"https://m.media-amazon.com/images/I/612WvmJSS+L._SX425_.jpg:[425,425]

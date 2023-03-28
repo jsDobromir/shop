@@ -83,7 +83,7 @@ html(lang="en")
                                 span.container_prod__filters__wrapper__menu__item
                                     a(href='#') Мъжка козметика
                             .container_prod__filters__wrapper__price
-                                input(type="checkbox" id="price-filter-lg" class="container_prod__filters__wrapper__price__checkbox" checked)
+                                input(type="checkbox" id="price-filter-lg" class="container_prod__filters__wrapper__price__checkbox")
                                 label(for="price-filter-lg" class="container_prod__filters__wrapper__price__label")
                                     span.container_prod__filters__wrapper__price__label__tittle
                                         h4.container_prod__filters__wrapper__price__label__tittle__h Избери цена
@@ -95,7 +95,7 @@ html(lang="en")
                                     span.container_prod__filters__wrapper__price__list__item 300 до 600лв
                                     span.container_prod__filters__wrapper__price__list__item 600 до 1200лв
                             .container_prod__filters__wrapper__brand
-                                input(type="checkbox" id="brand-filter-lg" class="container_prod__filters__wrapper__brand__checkbox" checked)
+                                input(type="checkbox" id="brand-filter-lg" class="container_prod__filters__wrapper__brand__checkbox")
                                 label(for="brand-filter-lg" class="container_prod__filters__wrapper__brand__label")
                                     span.container_prod__filters__wrapper__brand__label__tittle
                                         h4.container_prod__filters__wrapper__brand__label__tittle__h Избери марка
@@ -120,18 +120,20 @@ html(lang="en")
                         .container_prod__products__grid
                             each product, index in products
                                 +productGrid(product)
-                            .loader-container.d-none
-                                .loader
                         .container_prod__pagination
-                            .container_prod__pagination__prevnext
-                                a(href=`/kozmetika/${prevPage}` data-page=prevPage class=`page previous ${activePage==1 ? 'disabled' : ''}`) Предишна
-                                a(href=`/kozmetika/${nextPage}` data-page=nextPage class=`d-md-none next page ${activePage==totalPages ? 'disabled' : ''}`) Следваща
-                            .container_prod__pagination__pages
-                                each page, index in pages
-                                    if page == '...'
-                                        span(class='ellipse')
-                                    else
-                                        a(href=`/kozmetika/${page}` data-page=page class=`page ${page==activePage ? 'disabled' : ''}`) #{page}
-                            .container_prod__pagination__nextlg.d-none.d-md-flex
-                                a(href=`/kozmetika/${nextPage}` data-page=nextPage class=`next page ${activePage==totalPages ? 'disabled' : ''}`) Следваща
-                +footer()
+                            if totalPages > 1
+                                .container_prod__pagination__prevnext
+                                    a(href=`/${category}${subCategory ? '/' + subCategory : ''}?page=${prevPage}` data-page=prevPage class=`page previous ${activePage==1 ? 'disabled' : ''}`) Предишна
+                                    a(href=`/${category}${subCategory ? '/' + subCategory : ''}?page=${nextPage}` data-page=nextPage class=`d-md-none next page ${activePage==totalPages ? 'disabled' : ''}`) Следваща
+                                .container_prod__pagination__pages
+                                    each page, index in pages
+                                        if page == '...'
+                                            span(class='ellipse')
+                                        else
+                                            a(href=`/${category}${subCategory ? '/' + subCategory : ''}?page=${page}` data-page=page class=`page ${page==activePage ? 'disabled' : ''}`) #{page}
+                                .container_prod__pagination__nextlg.d-none.d-md-flex
+                                    a(href=`/${category}${subCategory ? '/' + subCategory : ''}?page=${nextPage}` data-page=nextPage class=`next page ${activePage==totalPages ? 'disabled' : ''}`) Следваща
+            .loader-container.d-none
+                .loader-container__spinnercont
+                    .loader-container__spinnercont__loader
+            +footer()
