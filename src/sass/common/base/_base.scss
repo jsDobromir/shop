@@ -28,7 +28,11 @@ html {
     }
     
 }
-
+html:root {
+    &[data-gallery-open="true"] {
+        overflow: hidden;
+    }
+}
 body {
     box-sizing: border-box;
     padding: 0;

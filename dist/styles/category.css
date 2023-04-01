@@ -5286,6 +5286,10 @@ html {
   }
 }
 
+html:root[data-gallery-open=true] {
+  overflow: hidden;
+}
+
 body {
   box-sizing: border-box;
   padding: 0;
@@ -5514,6 +5518,10 @@ body .heading-primary--sub-5 {
   height: 0;
   opacity: 0;
   z-index: -9999;
+}
+
+.overfHidden {
+  overflow: hidden;
 }
 
 .header {

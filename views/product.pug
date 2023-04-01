@@ -21,7 +21,7 @@ html(lang="en")
         +header_menu_common()
         main
             .container
-                .container__prod
+                .container__prod#product
                     .container__prod__wrapper
                         .container__prod__wrapper__tittle
                             h2 #{product.title}
@@ -30,44 +30,68 @@ html(lang="en")
                                 .carousel-inner
                                     each imgSrc, index in product.imagesRespPdp
                                         div.carousel-item(class=index === 0 ? 'active' : '')
-                                            img.d-block.w-100(src=imgSrc.split(',')[0], srcset=imgSrc, sizes=product.imagesRespSizes[index])
+                                            a(href="#productGallery")
+                                                img(src=imgSrc.split(',')[0] srcset=imgSrc sizes=product.imagesRespSizes[index] width="679" height="679")
                                 ol.carousel-indicators
                                     each imgSrc, index in product.imagesRespPdp
                                         li(data-bs-target='#imageCarousel', data-bs-slide-to=index, class=index === 0 ? 'active' : '')
                                             .imgWrapper
-                                                img(src=imgSrc.split(',')[0], srcset=imgSrc, sizes=product.imagesRespSizes[index])
-                .container__info
-                    .container__info__price
-                        p.product__price #{product.price} лв
-                        span.text__availability в наличност
-                    .container__info__add-to-bag
-                        form(action='/add-to-bag', method='POST')
-                            div(class="form__wrapper")
-                                div(class="form__group select_input")
-                                    select.form-select#quantity(name='quantity', required)
-                                        each number in Array.from(Array(15), (_, index) => index + 1)
-                                            option(value=number) Количество: #{number}&nbsp;
-                                    span.safe_trans
-                                        i.fa-solid.fa-lock
-                                        span.safe_trans_text Сигурна Транзакция
-                                div(class="form__group")
-                                    button(type='submit' class="btn btn-add-to-bag") Добави в количката
-        div(class="quantity_fixed")
-            div(class="quantity_fixed__content")
-                div(class="quantity_fixed__content__title")
-                    span.quantity_fixed__content__title__span
-                        h2 Количество:
-                    span.quantity_fixed__content__title__close
-                        span.close__icon
-                div(class="quantity_fixed__content__menu")
-                    each number in Array.from(Array(15), (_, index) => index + 1)
-                        span.quantity_fixed__content__menu__item(data-qty=number) #{number}
-        div(class="transaction_container")
-            div(class="transaction_container__content")
-                div(class="transaction_container__content__title")
-                    span.transaction_container__content__title__span
-                        h2 Вашата Транзакция е сигурна:
-                    span.transaction_container__content__title__close
-                        span.close__icon
-                div(class="transaction_container__content__text") Ние разбираме колко важно е за вас да се чувствате сигурни, когато правите покупки онлайн. Ето защо искаме да ви уверим, че всички транзакции в нашия магазин са напълно защитени.Използваме сигурни методи за плащане, които гарантират, че вашите лични данни и финансова информация са защитени. Вашите кредитни карти и банкови данни се обработват чрез криптирана връзка, която осигурява защита на данните при трансфера им.
+                                                img(src=imgSrc.split(',')[0], srcset=imgSrc sizes=product.imagesRespSizes[index] width="40" height="40")
+                    .container__prod__info
+                        .container__prod__info__price
+                            p.product__price #{product.price} лв
+                            span.text__availability в наличност
+                        .container__prod__info__add-to-bag
+                            form(action='/add-to-bag' method='POST')
+                                div(class="form__wrapper")
+                                    div(class="form__group select_input")
+                                        select.form-select#quantity(name='quantity', required)
+                                            each number in Array.from(Array(15), (_, index) => index + 1)
+                                                option(value=number) Количество: #{number}&nbsp;
+                                        span.safe_trans
+                                            i.fa-solid.fa-lock
+                                            span.safe_trans_text Сигурна Транзакция
+                                    div(class="form__group")
+                                        button(type='submit' class="btn btn-add-to-bag") Добави в количката
+                    .container__product-desc
+                    div(class="quantity_fixed")
+                        div(class="quantity_fixed__content")
+                            div(class="quantity_fixed__content__title")
+                                span.quantity_fixed__content__title__span
+                                    h2 Количество:
+                                span.quantity_fixed__content__title__close
+                                    span.close__icon
+                            div(class="quantity_fixed__content__menu")
+                                each number in Array.from(Array(15), (_, index) => index + 1)
+                                    span.quantity_fixed__content__menu__item(data-qty=number) #{number}
+                    div(class="transaction_container")
+                        div(class="transaction_container__content")
+                            div(class="transaction_container__content__title")
+                                span.transaction_container__content__title__span
+                                    h2 Вашата Транзакция е сигурна:
+                                span.transaction_container__content__title__close
+                                    span.close__icon
+                            div(class="transaction_container__content__text") Ние разбираме колко важно е за вас да се чувствате сигурни, когато правите покупки онлайн. Ето защо искаме да ви уверим, че всички транзакции в нашия магазин са напълно защитени.Използваме сигурни методи за плащане, които гарантират, че вашите лични данни и финансова информация са защитени. Вашите кредитни карти и банкови данни се обработват чрез криптирана връзка, която осигурява защита на данните при трансфера им.
+                    .product_gallery_div#productGallery
+                        .container__prod__wrapper__image
+                            .carousel.slide(id='hiddenCarousel' data-bs-ride='carousel')
+                                div(class="arrows_wrapper")
+                                    button.carousel-control-prev(type='button' data-bs-target='#hiddenCarousel' data-bs-slide='prev')
+                                        span.carousel-control-prev-icon
+                                    button.carousel-control-next(type='button' data-bs-target='#hiddenCarousel' data-bs-slide='next')
+                                        span.carousel-control-next-icon
+                                .carousel-inner
+                                    each imgSrc, index in product.imagesRespPdp
+                                        div.carousel-item(class=index === 0 ? 'active' : '')
+                                            div.carousel_img_wrapper
+                                                input(type="checkbox" id=`zoomCheck_${index}`)
+                                                div(class="imgInnerWrapper")
+                                                    label(for=`zoomCheck_${index}`)
+                                                        img(src=imgSrc.split(',')[0] srcset=imgSrc sizes=product.imagesRespSizes[index] width="679" height="679")
+                                ol.carousel-indicators
+                                    each imgSrc, index in product.imagesRespPdp
+                                        li(data-bs-target='#hiddenCarousel', data-bs-slide-to=index, class=index === 0 ? 'active' : '')
+                                            .imgWrapper
+                                                img(src=imgSrc.split(',')[0], srcset=imgSrc sizes=product.imagesRespSizes[index] width="40" height="40")
+                        a(href="#product" class="popup_close") &times;
         +footer()
