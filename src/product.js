@@ -1,7 +1,7 @@
 import { Carousel } from "bootstrap";
 import Hammer from "hammerjs";
 import { quantityListener, transListener } from "./productUtils/utils.js";
-import { productGalleryHash, initialGalleryHash, scaleListener} from './productUtils/hiddenCarouselUtils.js';
+import { productGalleryHash, initialGalleryHash, scaleListener } from './productUtils/hiddenCarouselUtils.js';
 
 document.addEventListener('DOMContentLoaded', (event) => {
 
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         keyboard: true,
         pause: false,
         ride: false,
-        touch: true,
+        touch: false,
         wrap: true
     });
 
@@ -49,25 +49,73 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     });
 
-    const carouselImages = document.querySelectorAll('.carousel-item img');
-    carouselImages.forEach((image) => {
-    const hammer = new Hammer(image);
-    hammer.get('pinch').set({ enable: true });
+    const carouselImgWrappers = document.querySelectorAll('.carousel_img_wrapper');
+
+    const mc = new Hammer.Manager(document.body);
+    mc.add(new Hammer.Pinch());
+    mc.add(new Hammer.Pan({ direction: Hammer.DIRECTION_ALL, threshold: 0 }));
 
     let lastScale = 1;
+    let lastPosX = 0;
+    let lastPosY = 0;
+    let isDragging = false;
 
-    hammer.on('pinchstart', () => {
-        lastScale = 1;
-    });
+    carouselImgWrappers.forEach((wrapper) => {
+        const imgEl = wrapper.querySelector('img');
+        const checkboxEl = wrapper.querySelector('input[type="checkbox"]');
 
-    hammer.on('pinchmove', (event) => {
-        const scale = Math.max(1, Math.min(lastScale * event.scale, 3));
-        image.style.transform = `scale(${scale})`;
-    });
+        // disable checkbox click event while zooming
+        let isPinching = false;
+        mc.on('pinchstart', () => {
+            isPinching = true;
+        });
+        mc.on('pinchend', () => {
+            isPinching = false;
+        });
+        checkboxEl.addEventListener('click', (e) => {
+            if (isPinching) {
+                e.preventDefault();
+            }
+        });
 
-    hammer.on('pinchend', () => {
-        lastScale = image.style.transform.replace('scale(', '').replace(')', '') || 1;
-    });
+        // enable pinch-to-zoom and panning
+        mc.on('pinchmove', (e) => {
+            const scale = Math.max(1, Math.min(lastScale * e.scale, 3));
+            imgEl.style.transform = `scale(${scale}) translate(${lastPosX}px, ${lastPosY}px)`;
+        });
+        mc.on('panstart', () => {
+            isDragging = true;
+        });
+        mc.on('panmove', (e) => {
+            if (!isDragging || lastScale === 1) {
+                return;
+            }
+            const { deltaX, deltaY } = e;
+            lastPosX += deltaX;
+            lastPosY += deltaY;
+            imgEl.style.transform = `scale(${lastScale}) translate(${lastPosX}px, ${lastPosY}px)`;
+        });
+        mc.on('panend', () => {
+            isDragging = false;
+        });
+
+        // reset zoom and position on checkbox change
+        checkboxEl.addEventListener('change', () => {
+            if (checkboxEl.checked) {
+                imgEl.style.transform = '';
+                lastScale = 1;
+                lastPosX = 0;
+                lastPosY = 0;
+            }
+        });
+
+        // enable scrolling when not zoomed in
+        wrapper.addEventListener('wheel', (e) => {
+            if (lastScale === 1) {
+                e.preventDefault();
+                wrapper.scrollLeft += e.deltaY * 0.25;
+            }
+        });
     });
 
     scaleListener();
