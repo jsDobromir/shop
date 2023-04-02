@@ -36,41 +36,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
         carousel.to(slideIndex);
 
         const carouselItems = document.querySelectorAll('#hiddenCarousel .carousel-item');
-
+        
         carouselItems.forEach((item) => {
             // Get the corresponding checkbox
             const checkbox = item.querySelector('input[type="checkbox"]');
 
             // Check if the carousel item has the active class
-            if (!item.classList.contains('active')) {
+            if (checkbox && !item.classList.contains('active')) {
                 // If it has the active class, leave the checkbox checked
                 checkbox.checked = false;
             }
         });
     });
-
-    const carouselImages = document.querySelectorAll('.carousel-item img');
-    carouselImages.forEach((image) => {
-        const hammer = new Hammer(image);
-        hammer.get('pinch').set({ enable: true });
-
-        let lastScale = 1;
-
-        hammer.on('pinchstart', () => {
-            lastScale = 1;
-        });
-
-        hammer.on('pinchmove', (event) => {
-            const scale = Math.max(1, Math.min(lastScale * event.scale, 3));
-            image.style.transform = `scale(${scale})`;
-        });
-
-        hammer.on('pinchend', () => {
-            lastScale = image.style.transform.replace('scale(', '').replace(')', '') || 1;
-        });
-    });
-
-    scaleListener();
 
     quantityListener();
 

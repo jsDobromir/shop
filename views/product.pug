@@ -84,10 +84,7 @@ html(lang="en")
                                     each imgSrc, index in product.imagesRespPdp
                                         div.carousel-item(class=index === 0 ? 'active' : '')
                                             div.carousel_img_wrapper
-                                                input(type="checkbox" id=`zoomCheck_${index}`)
-                                                div(class="imgInnerWrapper")
-                                                    label(for=`zoomCheck_${index}`)
-                                                        img(src=imgSrc.split(',')[0] srcset=imgSrc sizes=product.imagesRespSizes[index] width="679" height="679")
+                                                img(src=imgSrc.split(',')[0] srcset=imgSrc sizes=product.imagesRespSizes[index] width="679" height="679")
                                 ol.carousel-indicators
                                     each imgSrc, index in product.imagesRespPdp
                                         li(data-bs-target='#hiddenCarousel', data-bs-slide-to=index, class=index === 0 ? 'active' : '')

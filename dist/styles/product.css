@@ -6318,39 +6318,22 @@ body .heading-primary--sub-5 {
   height: 90%;
 }
 .product_gallery_div .container__prod__wrapper__image .carousel .carousel-inner .carousel-item {
+  overflow: auto;
   height: 100%;
 }
 .product_gallery_div .container__prod__wrapper__image .carousel .carousel-inner .carousel-item .carousel_img_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100%;
-  position: relative;
-  overflow: auto;
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
-  scrollbar-width: none; /* Firefox */
-}
-.product_gallery_div .container__prod__wrapper__image .carousel .carousel-inner .carousel-item .carousel_img_wrapper::-webkit-scrollbar {
-  display: none;
-}
-.product_gallery_div .container__prod__wrapper__image .carousel .carousel-inner .carousel-item .carousel_img_wrapper input[type=checkbox] {
-  display: none;
-}
-.product_gallery_div .container__prod__wrapper__image .carousel .carousel-inner .carousel-item .carousel_img_wrapper .imgInnerWrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 100%;
-  height: auto;
 }
-.product_gallery_div .container__prod__wrapper__image .carousel .carousel-inner .carousel-item .carousel_img_wrapper .imgInnerWrapper img {
+.product_gallery_div .container__prod__wrapper__image .carousel .carousel-inner .carousel-item .carousel_img_wrapper img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  transition: all 0.3s ease-in-out;
   cursor: zoom-in;
-  transform-origin: center;
-}
-.product_gallery_div .container__prod__wrapper__image .carousel .carousel-inner .carousel-item .carousel_img_wrapper input[type=checkbox]:checked ~ .imgInnerWrapper {
-  transform: translateY(-50%);
-}
-.product_gallery_div .container__prod__wrapper__image .carousel .carousel-inner .carousel-item .carousel_img_wrapper input[type=checkbox]:checked ~ .imgInnerWrapper label > img {
-  transform: scale(2);
-  cursor: zoom-out;
 }
 .product_gallery_div .container__prod__wrapper__image .carousel .carousel-indicators {
   height: 10%;
