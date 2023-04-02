@@ -6315,7 +6315,7 @@ body .heading-primary--sub-5 {
   transform: translate(-50%, -50%);
 }
 .product_gallery_div .container__prod__wrapper__image .carousel .carousel-inner {
-  height: 90%;
+  height: 80vh;
 }
 .product_gallery_div .container__prod__wrapper__image .carousel .carousel-inner .carousel-item {
   overflow: auto;
@@ -6336,7 +6336,7 @@ body .heading-primary--sub-5 {
   cursor: zoom-in;
 }
 .product_gallery_div .container__prod__wrapper__image .carousel .carousel-indicators {
-  height: 10%;
+  height: 20vh;
   margin: 0 auto;
 }
 .product_gallery_div .container__prod__wrapper__image .carousel .carousel-indicators li {
