@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         keyboard: true,
         pause: false,
         ride: false,
-        touch: false,
+        touch: true,
         wrap: true
     });
 
@@ -67,29 +67,22 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }
         });
     });
-    let deltaScale = 0;
-    let zoomInClicks=0;
-    let nextAction ='zoomIn';
 
-    document.querySelector('.zoom_in_button').addEventListener('click', (event) => {
-        if (zoomInClicks>=3) return;
-        deltaScale+=4;
-        overlay.viewer.panTo({ originX: overlay.clientWidth /2, originY: overlay.clientHeight / 2, scale: 1 });
-        overlay.viewer.zoom({ x: overlay.clientWidth / 2, y: overlay.clientHeight / 2, deltaScale: deltaScale });
-        overlay.scrollIntoView({block: 'center', inline: 'center'});
-        zoomInClicks++;
-    });
-    document.querySelector('.zoom_out_button').addEventListener('click', (event) => {
-        if (zoomInClicks===0) return;
-        zoomInClicks--;
-        deltaScale-=4;
-        if (zoomInClicks<=0) {
-            overlay.viewer.panTo({ originX: 0, originY: 0, scale: 1 });
-            return;
-        }
-        overlay.viewer.panTo({ originX: overlay.clientWidth /2, originY: overlay.clientHeight / 2, scale: 1 });
-        overlay.viewer.zoom({ x: overlay.clientWidth / 2, y: overlay.clientHeight / 2, deltaScale: deltaScale });
-        overlay.scrollIntoView({block: 'center', inline: 'center'});
+    let isZoomedIn = false;
+    document.querySelectorAll('#hiddenCarousel .carousel-item img').forEach((img) => {
+        img.addEventListener('click', (event) => {
+            if (!isZoomedIn) {
+                overlay.viewer.panTo({ originX: overlay.clientWidth /2, originY: overlay.clientHeight / 2, scale: 1 });
+                overlay.viewer.zoom({ x: overlay.clientWidth / 2, y: overlay.clientHeight / 2, deltaScale: 8 });
+                overlay.scrollIntoView({block: 'center', inline: 'center'});
+                isZoomedIn = true;
+                img.style.cursor = 'zoom-out';
+            } else {
+                overlay.viewer.panTo({ originX: 0, originY: 0, scale: 1 });
+                isZoomedIn = false;
+                img.style.cursor = 'zoom-in';
+            }
+        });
     });
 
     quantityListener();
