@@ -1,6 +1,6 @@
 import { Carousel } from "bootstrap";
 import { quantityListener, transListener } from "./productUtils/utils.js";
-import { productGalleryHash, initialGalleryHash, scaleListener } from './productUtils/hiddenCarouselUtils.js';
+import { productGalleryHash, initialGalleryHash } from './productUtils/hiddenCarouselUtils.js';
 import { renderer } from "./productUtils/renderer.js";
 
 document.addEventListener('DOMContentLoaded', (event) => {
@@ -31,10 +31,29 @@ document.addEventListener('DOMContentLoaded', (event) => {
         carouselHidden.to(slideIndex);
     });
 
+    let overlay = document.querySelector('#hiddenCarousel .carousel-item.active .carousel_img_wrapper');
+
+    overlay.viewer = null;
+
+    overlay.viewer = renderer({
+        minScale: 1,
+        maxScale: 4,
+        element: overlay,
+        scaleSensitivity: 10
+    });
+
     hiddenCarouselDom.addEventListener('slid.bs.carousel', (event) => {
         const slideIndex = event.to;
         carousel.to(slideIndex);
 
+        overlay = document.querySelector('#hiddenCarousel .carousel-item.active .carousel_img_wrapper');
+        overlay.viewer = null;
+        overlay.viewer = renderer({
+            minScale: 1,
+            maxScale: 4,
+            element: overlay,
+            scaleSensitivity: 10
+        });
         const carouselItems = document.querySelectorAll('#hiddenCarousel .carousel-item');
 
         carouselItems.forEach((item) => {
@@ -48,35 +67,29 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }
         });
     });
+    let deltaScale = 0;
+    let zoomInClicks=0;
+    let nextAction ='zoomIn';
 
-    const overlay = document.querySelector('#hiddenCarousel .carousel_img_wrapper');
-    const overlayImage = overlay.querySelector('img');
-
-    overlay.viewer = null;
-    let isZoomedIn = false;
-
-    overlay.viewer = renderer({
-        minScale: 1,
-        maxScale: 4,
-        element: overlay,
-        scaleSensitivity: 10
+    document.querySelector('.zoom_in_button').addEventListener('click', (event) => {
+        if (zoomInClicks>=3) return;
+        deltaScale+=4;
+        overlay.viewer.panTo({ originX: overlay.clientWidth /2, originY: overlay.clientHeight / 2, scale: 1 });
+        overlay.viewer.zoom({ x: overlay.clientWidth / 2, y: overlay.clientHeight / 2, deltaScale: deltaScale });
+        overlay.scrollIntoView({block: 'center', inline: 'center'});
+        zoomInClicks++;
     });
-
-    document.querySelectorAll('#hiddenCarousel .carousel-item img').forEach((img) => {
-        img.addEventListener('click', (event) => {
-            if (!isZoomedIn) {
-                overlay.viewer.panTo({ originX: overlay.clientWidth /2, originY: overlay.clientHeight / 2, scale: 1 });
-                overlay.viewer.zoom({ x: overlay.clientWidth / 2, y: overlay.clientHeight / 2, deltaScale: 6 });
-                console.log(overlay.viewer.state);
-                overlay.scrollIntoView({block: 'center', inline: 'center'});
-                isZoomedIn = true;
-                img.style.cursor = 'zoom-out';
-            } else {
-                overlay.viewer.panTo({ originX: 0, originY: 0, scale: 1 });
-                isZoomedIn = false;
-                img.style.cursor = 'zoom-in';
-            }
-        });
+    document.querySelector('.zoom_out_button').addEventListener('click', (event) => {
+        if (zoomInClicks===0) return;
+        zoomInClicks--;
+        deltaScale-=4;
+        if (zoomInClicks<=0) {
+            overlay.viewer.panTo({ originX: 0, originY: 0, scale: 1 });
+            return;
+        }
+        overlay.viewer.panTo({ originX: overlay.clientWidth /2, originY: overlay.clientHeight / 2, scale: 1 });
+        overlay.viewer.zoom({ x: overlay.clientWidth / 2, y: overlay.clientHeight / 2, deltaScale: deltaScale });
+        overlay.scrollIntoView({block: 'center', inline: 'center'});
     });
 
     quantityListener();

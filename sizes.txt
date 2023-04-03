@@ -24,3 +24,5 @@ https://m.media-amazon.com/images/I/612WvmJSS+L._SX569_.jpg":[569,569],
 "https://m.media-amazon.com/images/I/612WvmJSS+L._SX679_.jpg":[679,679],
 "https://m.media-amazon.com/images/I/612WvmJSS+L._SX466_.jpg":[466,466],
 "https://m.media-amazon.com/images/I/612WvmJSS+L._SX425_.jpg:[425,425]
+
+"https://m.media-amazon.com/images/I/71nm6K2j+OL._SX569_.jpg":[569,569],"https://m.media-amazon.com/images/I/71nm6K2j+OL._SY355_.jpg":[355,355],"https://m.media-amazon.com/images/I/71nm6K2j+OL._SY450_.jpg":[450,450],"https://m.media-amazon.com/images/I/71nm6K2j+OL._SX679_.jpg":[679,679],"https://m.media-amazon.com/images/I/71nm6K2j+OL._SX522_.jpg":[522,522],"https://m.media-amazon.com/images/I/71nm6K2j+OL._SX425_.jpg":[425,425],"https://m.media-amazon.com/images/I/71nm6K2j+OL._SX466_.jpg":[466,466]
