@@ -6292,11 +6292,6 @@ body .heading-primary--sub-5 {
   margin: 0 auto;
   width: 90%;
 }
-@media (min-width: 576px) {
-  .product_gallery_div .container__prod__wrapper__image .carousel .top_row .arrows_wrapper {
-    width: 80%;
-  }
-}
 .product_gallery_div .container__prod__wrapper__image .carousel .top_row .arrows_wrapper__buttons {
   display: flex;
   justify-content: center;
@@ -6341,22 +6336,29 @@ body .heading-primary--sub-5 {
 .product_gallery_div .container__prod__wrapper__image .carousel .top_row .arrows_wrapper .popup_close:hover {
   color: #55c57a;
 }
-.product_gallery_div .container__prod__wrapper__image .carousel .top_row .carousel-indicators {
+.product_gallery_div .container__prod__wrapper__image .carousel .top_row .indicator_wrapper .carousel-indicators {
   margin: 0 auto;
   width: 90%;
 }
-@media (orientation: landscape) {
-  .product_gallery_div .container__prod__wrapper__image .carousel .top_row .carousel-indicators {
-    display: none;
-  }
-}
-@media (min-width: 576px) {
-  .product_gallery_div .container__prod__wrapper__image .carousel .top_row .carousel-indicators {
-    width: 80%;
-  }
-}
-.product_gallery_div .container__prod__wrapper__image .carousel .top_row .carousel-indicators li {
+.product_gallery_div .container__prod__wrapper__image .carousel .top_row .indicator_wrapper .carousel-indicators li {
   height: auto;
+}
+.product_gallery_div .container__prod__wrapper__image .carousel .top_row .indicator_wrapper.port {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.product_gallery_div .container__prod__wrapper__image .carousel .top_row .indicator_wrapper.port .carousel-indicators {
+  width: 80%;
+}
+.product_gallery_div .container__prod__wrapper__image .carousel .top_row .indicator_wrapper.port .carousel-indicators .imgWrapper {
+  width: 80%;
+  height: 80%;
+}
+.product_gallery_div .container__prod__wrapper__image .carousel .top_row .indicator_wrapper.port .carousel-indicators .imgWrapper img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
 }
 .product_gallery_div .container__prod__wrapper__image .carousel .carousel-inner {
   height: 80vh;
