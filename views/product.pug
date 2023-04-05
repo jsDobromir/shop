@@ -82,19 +82,13 @@ html(lang="en")
                                                 span.carousel-control-prev-icon
                                             button.carousel-control-next(type='button' data-bs-target='#hiddenCarousel' data-bs-slide='next')
                                                 span.carousel-control-next-icon
-                                        div(class="indicator_wrapper port d-none d-sm-flex")
+                                        a(href="#product" class="popup_close") &times;
+                                        div(class="indicator_wrapper")
                                             ol.carousel-indicators
                                                 each imgSrc, index in product.imagesRespPdp
                                                     li(data-bs-target='#hiddenCarousel', data-bs-slide-to=index, class=index === 0 ? 'active' : '')
                                                         .imgWrapper
                                                             img(src=imgSrc.split(',')[0], srcset=imgSrc sizes=product.imagesRespSizes[index] width="40" height="40")
-                                        a(href="#product" class="popup_close") &times;
-                                    div(class="indicator_wrapper d-sm-none")
-                                        ol.carousel-indicators
-                                            each imgSrc, index in product.imagesRespPdp
-                                                li(data-bs-target='#hiddenCarousel', data-bs-slide-to=index, class=index === 0 ? 'active' : '')
-                                                    .imgWrapper
-                                                        img(src=imgSrc.split(',')[0], srcset=imgSrc sizes=product.imagesRespSizes[index] width="40" height="40")
                                 .carousel-inner
                                     each imgSrc, index in product.imagesRespPdp
                                         div.carousel-item(class=index === 0 ? 'active' : '')

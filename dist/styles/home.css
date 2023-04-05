@@ -6550,11 +6550,6 @@ main .container__prod .container__prod__cosmetics__tittle, main .container__prod
   height: 100%;
   transition: all 0.3s linear;
 }
-@media (min-width: 576px) {
-  .container__prod__cosmetics__mobile__wrapper__inner, .container__prod__supplements__mobile__wrapper__inner, .container__prod__vitamins__mobile__wrapper__inner {
-    gap: 2rem;
-  }
-}
 .container__prod__cosmetics__mobile__wrapper__inner__item, .container__prod__supplements__mobile__wrapper__inner__item, .container__prod__vitamins__mobile__wrapper__inner__item {
   display: flex;
   height: 100%;
@@ -6724,22 +6719,8 @@ main .container__prod .container__prod__cosmetics__tittle, main .container__prod
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: 1rem;
+  gap: 2rem;
   transform: translateX(0);
-}
-@media (min-width: 992px) {
-  .container__prod__cosmetics__carousel__wrapper,
-  .container__prod__supplements__carousel__wrapper,
-  .container__prod__vitamins__carousel__wrapper {
-    gap: 2rem;
-  }
-}
-@media (min-width: 1200px) {
-  .container__prod__cosmetics__carousel__wrapper,
-  .container__prod__supplements__carousel__wrapper,
-  .container__prod__vitamins__carousel__wrapper {
-    gap: 1rem;
-  }
 }
 .container__prod__cosmetics__carousel__wrapper__item,
 .container__prod__supplements__carousel__wrapper__item,
