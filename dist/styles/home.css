@@ -6550,11 +6550,6 @@ main .container__prod .container__prod__cosmetics__tittle, main .container__prod
   height: 100%;
   transition: all 0.3s linear;
 }
-@media (min-width: 768px) {
-  .container__prod__cosmetics__mobile__wrapper__inner, .container__prod__supplements__mobile__wrapper__inner, .container__prod__vitamins__mobile__wrapper__inner {
-    gap: 2rem;
-  }
-}
 .container__prod__cosmetics__mobile__wrapper__inner__item, .container__prod__supplements__mobile__wrapper__inner__item, .container__prod__vitamins__mobile__wrapper__inner__item {
   display: flex;
   height: 100%;

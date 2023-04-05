@@ -22,51 +22,59 @@ export default class CustomCarousel {
 
     attachPanEvents() {
         this.sliderManager.on('panleft', (event) => {
-            if (Math.abs(event.deltaY) > Math.abs(event.deltaX)) return;
-            let activeElement = this.carouselInner.querySelector('.active');
-            let nextElement = activeElement.nextElementSibling || null;
-            var style = window.getComputedStyle(this.carouselInner);
-            var matrix = new WebKitCSSMatrix(style.transform);
-            const currentX = matrix.m41;
-            const newX = currentX + event.deltaX;
+            event.preventDefault();
+            if (event.eventType !== Hammer.INPUT_MOVE) return;
+            if (event.pointerType == 'touch' && (Math.abs(event.deltaX) <= Math.abs(event.deltaY) + 5)) return;
+            if (event.srcEvent.type !== 'pointercancel') {
+                let activeElement = this.carouselInner.querySelector('.active');
+                let nextElement = activeElement.nextElementSibling || null;
+                var style = window.getComputedStyle(this.carouselInner);
+                var matrix = new WebKitCSSMatrix(style.transform);
+                const currentX = matrix.m41;
+                const newX = currentX + event.deltaX;
 
-            if (nextElement) {
-                this.carouselInner.style.transform = `translateX(${newX}px)`;
-            }
+                if (nextElement) {
+                    this.carouselInner.style.transform = `translateX(${newX}px)`;
+                }
 
-            if (nextElement) {
-                let itemX = - (nextElement.offsetLeft - this.container.offsetLeft);
-                let xPos = - (nextElement.offsetLeft);
-                if (newX <= itemX && newX < itemX + this.itemWidth) {
-                    activeElement.classList.remove('active');
-                    nextElement.classList.add('active');
-                    this.carouselInner.style.transform = `translateX(${xPos}px)`;
-                    this.sliderManager.stop();
-                    return;
+                if (nextElement) {
+                    let itemX = - (nextElement.offsetLeft - this.container.offsetLeft);
+                    let xPos = - (nextElement.offsetLeft);
+                    if (newX <= itemX && newX < itemX + this.itemWidth) {
+                        activeElement.classList.remove('active');
+                        nextElement.classList.add('active');
+                        this.carouselInner.style.transform = `translateX(${xPos}px)`;
+                        this.sliderManager.stop();
+                        return;
+                    }
                 }
             }
         });
         this.sliderManager.on('panright', (event) => {
-            if (Math.abs(event.deltaY) > Math.abs(event.deltaX)) return;
-            let activeElement = this.carouselInner.querySelector('.active');
-            let prevElement = activeElement.previousElementSibling || null;
-            var style = window.getComputedStyle(this.carouselInner);
-            var matrix = new WebKitCSSMatrix(style.transform);
-            const currentX = matrix.m41;
-            const newX = currentX + event.deltaX;
+            event.preventDefault();
+            if (event.eventType !== Hammer.INPUT_MOVE) return;
+            if (event.pointerType == 'touch' && (Math.abs(event.deltaX) <= Math.abs(event.deltaY) + 5)) return;
+            if (event.srcEvent.type !== 'pointercancel') {
+                let activeElement = this.carouselInner.querySelector('.active');
+                let prevElement = activeElement.previousElementSibling || null;
+                var style = window.getComputedStyle(this.carouselInner);
+                var matrix = new WebKitCSSMatrix(style.transform);
+                const currentX = matrix.m41;
+                const newX = currentX + event.deltaX;
 
-            if (prevElement) {
-                this.carouselInner.style.transform = `translateX(${newX}px)`;
-            }
-            if (prevElement) {
-                let itemX = - ((prevElement.offsetLeft) - this.container.offsetLeft);
-                let xPos = - (prevElement.offsetLeft);
-                if (newX >= itemX && newX < itemX + this.itemWidth) {
-                    activeElement.classList.remove('active');
-                    prevElement.classList.add('active');
-                    this.carouselInner.style.transform = `translateX(${xPos}px)`;
-                    this.sliderManager.stop();
-                    return;
+                if (prevElement) {
+                    this.carouselInner.style.transform = `translateX(${newX}px)`;
+                }
+                if (prevElement) {
+                    let itemX = - ((prevElement.offsetLeft) - this.container.offsetLeft);
+                    let xPos = - (prevElement.offsetLeft);
+                    if (newX >= itemX && newX < itemX + this.itemWidth) {
+                        activeElement.classList.remove('active');
+                        prevElement.classList.add('active');
+                        this.carouselInner.style.transform = `translateX(${xPos}px)`;
+                        this.sliderManager.stop();
+                        return;
+                    }
                 }
             }
         });
@@ -95,7 +103,6 @@ export default class CustomCarousel {
         //     this.carouselInner.style.transform = `translateX(${newX}px)`;
         // });
         this.sliderManager.on('panend', (event) => {
-            if (Math.abs(event.deltaY) > Math.abs(event.deltaX)) return;
             var panDirection = event.direction;
 
             if (panDirection === Hammer.DIRECTION_LEFT) {
