@@ -9,11 +9,11 @@ export default class CustomCarousel {
         this.carouselInner = document.querySelector(carouselWrapper).querySelector(`.container__prod__${this.type}__mobile__wrapper__inner`);
         this.carouselItems = Array.from(this.carouselInner.querySelectorAll(`.container__prod__${this.type}__mobile__wrapper__inner__item`));
         this.itemWidth = this.carouselItems[0].offsetWidth;
-        console.log(this.carouselItems[1].offsetLeft);
         this.sliderManager = new Hammer.Manager(this.carouselInner);
         this.items_to_slide = 1;
         let Pan = new Hammer.Pan({
-            direction: Hammer.DIRECTION_HORIZONTAL
+            direction: Hammer.DIRECTION_HORIZONTAL,
+            threshold: 10
         });
         this.sliderManager.add(Pan);
         this.currentPosition = 0;
@@ -22,6 +22,7 @@ export default class CustomCarousel {
 
     attachPanEvents() {
         this.sliderManager.on('panleft', (event) => {
+            if (Math.abs(event.deltaY) > Math.abs(event.deltaX)) return;
             let activeElement = this.carouselInner.querySelector('.active');
             let nextElement = activeElement.nextElementSibling || null;
             var style = window.getComputedStyle(this.carouselInner);
@@ -46,6 +47,7 @@ export default class CustomCarousel {
             }
         });
         this.sliderManager.on('panright', (event) => {
+            if (Math.abs(event.deltaY) > Math.abs(event.deltaX)) return;
             let activeElement = this.carouselInner.querySelector('.active');
             let prevElement = activeElement.previousElementSibling || null;
             var style = window.getComputedStyle(this.carouselInner);
@@ -93,6 +95,7 @@ export default class CustomCarousel {
         //     this.carouselInner.style.transform = `translateX(${newX}px)`;
         // });
         this.sliderManager.on('panend', (event) => {
+            if (Math.abs(event.deltaY) > Math.abs(event.deltaX)) return;
             var panDirection = event.direction;
 
             if (panDirection === Hammer.DIRECTION_LEFT) {
