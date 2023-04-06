@@ -1,5 +1,5 @@
 import { Carousel } from "bootstrap";
-import { quantityListener, transListener, attachSlideListener} from "./productUtils/utils.js";
+import { quantityListener, transListener, attachSlideListener, zoomIn, zoomOut} from "./productUtils/utils.js";
 import { productGalleryHash, initialGalleryHash } from './productUtils/hiddenCarouselUtils.js';
 import { renderer } from "./productUtils/renderer.js";
 import Hammer from "hammerjs";
@@ -85,25 +85,34 @@ document.addEventListener('DOMContentLoaded', (event) => {
             carouselHidden.prev();
         }
     });
-    console.log(hammerTime);
+
+    document.querySelector('.zoom-in-icon').addEventListener('click', (event) => {
+        event.preventDefault();
+        let carousel_item_parent = hiddenCarouselDom.querySelector('.carousel-item.active');
+        if (isZoomedIn) return;
+        let img = carousel_item_parent.querySelector('img');
+        zoomIn(overlay, carousel_item_parent, img);
+        isZoomedIn = true;
+    });
+
+    document.querySelector('.zoom-out-icon').addEventListener('click', (event) => {
+        event.preventDefault();
+        let carousel_item_parent = hiddenCarouselDom.querySelector('.carousel-item.active');
+        if (!isZoomedIn) return;
+        let img = carousel_item_parent.querySelector('img');
+        zoomOut(overlay, carousel_item_parent, img);
+        isZoomedIn = false;
+    });
 
     document.querySelectorAll('#hiddenCarousel .carousel-item img').forEach((img) => {
         img.addEventListener('click', (event) => {
             let carousel_item_parent = img.closest('.carousel-item');
             if (!isZoomedIn) {
-                overlay.viewer.panTo({ originX: overlay.clientWidth / 2, originY: overlay.clientHeight / 2, scale: 1 });
-                overlay.viewer.zoom({ x: overlay.clientWidth / 2, y: overlay.clientHeight / 2, deltaScale: 8 });
-                overlay.scrollIntoView({ block: 'center', inline: 'center' });
-                carousel_item_parent.classList.remove('pany');
-                carousel_item_parent.classList.add('panynone');
+                zoomIn(overlay, carousel_item_parent, img);
                 isZoomedIn = true;
-                img.style.cursor = 'zoom-out';
             } else {
-                overlay.viewer.panTo({ originX: 0, originY: 0, scale: 1 });
-                carousel_item_parent.classList.remove('panynone');
-                carousel_item_parent.classList.add('pany');
+                zoomOut(overlay, carousel_item_parent, img);
                 isZoomedIn = false;
-                img.style.cursor = 'zoom-in';
             }
         });
     });

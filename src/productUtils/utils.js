@@ -34,7 +34,7 @@ function quantityListener() {
     const quantityFixed = document.querySelector('.quantity_fixed');
     const quantityContent = document.querySelector('.quantity_fixed__content');
     document.querySelector('.container #quantity').addEventListener('mousedown', (ev) => {
-        if (ev.which!=1) return;
+        if (ev.which != 1) return;
         ev.preventDefault();
         toggleClasses(quantityFixed, 'vis-anim', 'vis-anim-hidden');
         quantityListenerHelper();
@@ -90,4 +90,20 @@ function attachSlideListener(element, carouselHidden) {
     });
 }
 
-export { quantityListener, transListener, attachSlideListener};
+function zoomIn(overlay, carousel_item_parent, img) {
+    overlay.viewer.panTo({ originX: overlay.clientWidth / 2, originY: overlay.clientHeight / 2, scale: 1 });
+    overlay.viewer.zoom({ x: overlay.clientWidth / 2, y: overlay.clientHeight / 2, deltaScale: 8 });
+    overlay.scrollIntoView({ block: 'center', inline: 'center' });
+    carousel_item_parent.classList.remove('pany');
+    carousel_item_parent.classList.add('panynone');
+    img.style.cursor = 'zoom-out';
+}
+
+function zoomOut(overlay, carousel_item_parent, img) {
+    overlay.viewer.panTo({ originX: 0, originY: 0, scale: 1 });
+    carousel_item_parent.classList.remove('panynone');
+    carousel_item_parent.classList.add('pany');
+    img.style.cursor = 'zoom-in';
+}
+
+export { quantityListener, transListener, attachSlideListener, zoomIn, zoomOut };

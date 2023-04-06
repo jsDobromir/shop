@@ -78,10 +78,10 @@ html(lang="en")
                                 div(class="top_row")
                                     div(class="arrows_wrapper")
                                         div(class="arrows_wrapper__buttons")
-                                            button.carousel-control-prev(type='button' data-bs-target='#hiddenCarousel' data-bs-slide='prev')
-                                                span.carousel-control-prev-icon
-                                            button.carousel-control-next(type='button' data-bs-target='#hiddenCarousel' data-bs-slide='next')
-                                                span.carousel-control-next-icon
+                                            button.zoom-in-icon(type='button')
+                                                span.zoom-in-icon-span
+                                            button.zoom-out-icon(type='button')
+                                                span.zoom-out-icon-span
                                         a(href="#product" class="popup_close") &times;
                                         div(class="indicator_wrapper")
                                             ol.carousel-indicators
@@ -93,6 +93,5 @@ html(lang="en")
                                     each imgSrc, index in product.imagesRespPdp
                                         div.carousel-item(class=index === 0 ? 'active' : '')
                                             div.carousel_img_wrapper
-                                                div.carousel_img_wrapper__inner
-                                                    img(src=imgSrc.split(',')[0] srcset=imgSrc sizes=product.imagesRespSizes[index] width="679" height="679")
+                                                img(src=imgSrc.split(',')[0] srcset=imgSrc sizes=product.imagesRespSizes[index] width="679" height="679")
         +footer()
