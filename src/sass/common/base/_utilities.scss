@@ -88,3 +88,11 @@
 .overfHidden {
     overflow: hidden;
 }
+
+.pany {
+    touch-action: pan-y !important;
+}
+
+.panynone {
+    touch-action: unset !important;
+}

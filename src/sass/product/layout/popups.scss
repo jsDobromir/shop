@@ -308,6 +308,7 @@
                 .carousel-item {
                     overflow: auto;
                     height: 100%;
+                    touch-action: pan-y;
 
                     .carousel_img_wrapper {
                         width: 100%;

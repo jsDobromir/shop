@@ -5524,6 +5524,14 @@ body .heading-primary--sub-5 {
   overflow: hidden;
 }
 
+.pany {
+  touch-action: pan-y !important;
+}
+
+.panynone {
+  touch-action: unset !important;
+}
+
 .header {
   height: 45rem;
 }

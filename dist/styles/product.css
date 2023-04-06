@@ -6364,6 +6364,7 @@ body .heading-primary--sub-5 {
 .product_gallery_div .container__prod__wrapper__image .carousel .carousel-inner .carousel-item {
   overflow: auto;
   height: 100%;
+  touch-action: pan-y;
 }
 .product_gallery_div .container__prod__wrapper__image .carousel .carousel-inner .carousel-item .carousel_img_wrapper {
   width: 100%;
@@ -6694,6 +6695,14 @@ body .heading-primary--sub-5 {
 
 .overfHidden {
   overflow: hidden;
+}
+
+.pany {
+  touch-action: pan-y !important;
+}
+
+.panynone {
+  touch-action: unset !important;
 }
 
 .row {

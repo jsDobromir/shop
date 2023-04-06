@@ -73,27 +73,35 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const hiddenCaroselMan = hiddenCarouselDom.querySelector('.carousel-inner');
     let hammerTime = new Hammer(hiddenCaroselMan);
     hammerTime.on('swipeleft', (event) => {
+        console.log('swipeleft');
         if (!isZoomedIn) {
             carouselHidden.next();
         }
     });
 
     hammerTime.on('swiperight', (event) => {
+        console.log('right');
         if (!isZoomedIn) {
             carouselHidden.prev();
         }
-    })
+    });
+    console.log(hammerTime);
 
     document.querySelectorAll('#hiddenCarousel .carousel-item img').forEach((img) => {
         img.addEventListener('click', (event) => {
+            let carousel_item_parent = img.closest('.carousel-item');
             if (!isZoomedIn) {
                 overlay.viewer.panTo({ originX: overlay.clientWidth / 2, originY: overlay.clientHeight / 2, scale: 1 });
                 overlay.viewer.zoom({ x: overlay.clientWidth / 2, y: overlay.clientHeight / 2, deltaScale: 8 });
                 overlay.scrollIntoView({ block: 'center', inline: 'center' });
+                carousel_item_parent.classList.remove('pany');
+                carousel_item_parent.classList.add('panynone');
                 isZoomedIn = true;
                 img.style.cursor = 'zoom-out';
             } else {
                 overlay.viewer.panTo({ originX: 0, originY: 0, scale: 1 });
+                carousel_item_parent.classList.remove('panynone');
+                carousel_item_parent.classList.add('pany');
                 isZoomedIn = false;
                 img.style.cursor = 'zoom-in';
             }
