@@ -6366,13 +6366,14 @@ body .heading-primary--sub-5 {
   height: 100%;
 }
 .product_gallery_div .container__prod__wrapper__image .carousel .carousel-inner .carousel-item .carousel_img_wrapper {
+  width: 100%;
+  height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  width: 100%;
 }
-.product_gallery_div .container__prod__wrapper__image .carousel .carousel-inner .carousel-item .carousel_img_wrapper img {
+.product_gallery_div .container__prod__wrapper__image .carousel .carousel-inner .carousel-item .carousel_img_wrapper__inner img {
   max-height: 100%;
   max-width: 100%;
   object-fit: contain;

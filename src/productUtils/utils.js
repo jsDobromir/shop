@@ -67,4 +67,27 @@ function transListener() {
     });
 }
 
-export { quantityListener, transListener};
+function attachSlideListener(element, carouselHidden) {
+    var touchStartX = null;
+    var touchEndX = null;
+
+    element.addEventListener('touchstart', function (event) {
+        touchStartX = event.touches[0].clientX;
+    });
+
+    element.addEventListener('touchmove', function (event) {
+        touchEndX = event.touches[0].clientX;
+    });
+
+    element.addEventListener('touchend', function (event) {
+        if (touchStartX > touchEndX + 5) {
+            carouselHidden.next();
+        } else if (touchStartX < touchEndX - 5) {
+            carouselHidden.prev();
+        }
+        touchStartX = null;
+        touchEndX = null;
+    });
+}
+
+export { quantityListener, transListener, attachSlideListener};

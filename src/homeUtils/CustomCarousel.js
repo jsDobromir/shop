@@ -13,6 +13,7 @@ export default class CustomCarousel {
         this.items_to_slide = 1;
         let Pan = new Hammer.Pan({
             direction: Hammer.DIRECTION_HORIZONTAL,
+            pointers: 1,
             threshold: 10
         });
         this.sliderManager.add(Pan);
@@ -78,30 +79,7 @@ export default class CustomCarousel {
                 }
             }
         });
-        // this.sliderManager.on('panleft panright', (event) => {
-        //     let activeElement = this.carouselInner.querySelector('.active');
-        //     let nextElement = activeElement.nextElementSibling || null;
-        //     var style = window.getComputedStyle(this.carouselInner);
-        //     var matrix = new WebKitCSSMatrix(style.transform);
-        //     // let xPos = nextElement.getBoundingClientRect().x;
-        //     // let currentXposition = this.carouselInner.getBoundingClientRect().x;
-        //     // let newPosition = currentXposition - xPos;
-        //     const currentX = matrix.m41;
-        //     const newX = currentX + event.deltaX;
-        //     //console.log(newX);
-        //     // Update the position of the carousel
-        //     if (newX > 0) return;
-        //     if (nextElement) {
-        //         let xPos = nextElement.offsetLeft - this.container.offsetLeft;
-        //         console.log(`${matrix.m41}, ${xPos}`);
-        //         if (deltaX >= xPos )
-        //         // if (xPos <= newX) {
-        //         //     this.carouselInner.style.transform = `translateX(${xPos}px)`;
-        //         //     return;
-        //         // }
-        //     }
-        //     this.carouselInner.style.transform = `translateX(${newX}px)`;
-        // });
+        
         this.sliderManager.on('panend', (event) => {
             var panDirection = event.direction;
 
@@ -128,136 +106,4 @@ export default class CustomCarousel {
             }
         })
     }
-
-    // attachPanEvents() {
-    //     if (this.items_to_slide >= 3) return;
-    //     this.sliderManager.on('swipeleft', (e) => {
-    //         let activeElement = this.carouselInner.querySelector('.active');
-    //         let nextElement = null;
-    //         if (this.items_to_slide === 1) {
-    //             nextElement = activeElement.nextElementSibling;
-    //         }
-    //         activeElement.classList.remove('active');
-    //         this.carouselInner.parentElement.parentElement.querySelector('.carousel-control-prev').classList.remove('d-none');
-    //         if (nextElement) {
-    //             nextElement.classList.add('active');
-    //         }
-    //         //load next two images
-    //         //preload the image
-    //         let image1 = (nextElement && nextElement.nextElementSibling) ? nextElement.nextElementSibling.querySelector('.imgClass') : undefined;
-    //         let promises = [];
-    //         if (image1) promises.push(this.loadImage(image1));
-    //         let image2 = (nextElement && nextElement.nextElementSibling && nextElement.nextElementSibling.nextElementSibling) ? nextElement.nextElementSibling.nextElementSibling.querySelector('.imgClass') : undefined;
-    //         if (image2) promises.push(this.loadImage(image2));
-    //         let image3 = (nextElement && nextElement.nextElementSibling && nextElement.nextElementSibling.nextElementSibling && nextElement.nextElementSibling.nextElementSibling.nextElementSibling) ? nextElement.nextElementSibling.nextElementSibling.nextElementSibling.querySelector('.imgClass') : undefined;
-    //         if (image3) promises.push(this.loadImage(image3));
-    //         //end loading images
-    //         Promise.all(promises).then(() => {
-    //             let xPos = nextElement.getBoundingClientRect().x;
-    //             let currentXposition = this.carouselInner.getBoundingClientRect().x;
-    //             let newPosition = currentXposition - xPos;
-    //             this.currentPosition = newPosition;
-    //             this.carouselInner.style.transform = 'translateX(' + (newPosition) + 'px)';
-    //             if (this.items_to_slide === 1) {
-    //                 if (!nextElement.nextElementSibling) {
-    //                     this.carouselInner.parentElement.parentElement.querySelector('.carousel-control-next').classList.add('d-none');
-    //                 }
-    //             }
-    //             return;
-    //         });
-    //     });
-    //     this.sliderManager.on('swiperight', (e) => {
-    //         let activeElement = this.carouselInner.querySelector('.active');
-    //         let prevElement = null;
-    //         if (this.items_to_slide === 1) {
-    //             prevElement = activeElement.previousElementSibling;
-    //         }
-    //         activeElement.classList.remove('active');
-    //         prevElement.classList.add('active');
-    //         let xPos = prevElement.getBoundingClientRect().x;
-    //         let currentXposition = this.carouselInner.getBoundingClientRect().x;
-    //         let newPosition = currentXposition - xPos;
-    //         this.currentPosition = newPosition;
-    //         this.carouselInner.style.transform = 'translateX(' + (newPosition) + 'px)';
-    //         if (this.items_to_slide === 1) {
-    //             if (!prevElement.previousElementSibling) {
-    //                 this.carouselInner.parentElement.parentElement.querySelector('.carousel-control-prev').classList.add('d-none');
-    //             }
-    //         }
-    //         return;
-    //     });
-    // }
-
-    // attachArrowEvents() {
-    //     this.carouselInner.parentElement.parentElement.querySelector('.carousel-control-prev').addEventListener('click', (ev) => {
-    //         let activeElement = this.carouselInner.querySelector('.active');
-    //         let prevElement = null;
-    //         if (this.items_to_slide === 1) {
-    //             prevElement = activeElement.previousElementSibling;
-    //         }
-    //         this.carouselInner.parentElement.parentElement.querySelector('.carousel-control-next').classList.remove('d-none');
-    //         if (!prevElement || !prevElement.classList.contains(`container__prod__${this.type}__mobile__wrapper__inner__item`)) {
-    //             return;
-    //         }
-    //         activeElement.classList.remove('active');
-    //         prevElement.classList.add('active');
-    //         let xPos = prevElement.getBoundingClientRect().x;
-    //         let currentXposition = this.carouselInner.getBoundingClientRect().x;
-    //         let newPosition = currentXposition - xPos;
-    //         this.currentPosition = newPosition;
-    //         this.carouselInner.style.transform = 'translateX(' + (newPosition) + 'px)';
-    //         if (this.items_to_slide === 1) {
-    //             if (!prevElement.previousElementSibling) {
-    //                 this.carouselInner.parentElement.parentElement.querySelector('.carousel-control-prev').classList.add('d-none');
-    //             }
-    //         }
-    //         return;
-    //     });
-
-    //     this.carouselInner.parentElement.parentElement.querySelector('.carousel-control-next').addEventListener('click', (ev) => {
-    //         let activeElement = this.carouselInner.querySelector('.active');
-    //         let nextElement = null;
-    //         if (this.items_to_slide === 1) {
-    //             nextElement = activeElement.nextElementSibling;
-    //         }
-    //         activeElement.classList.remove('active');
-    //         this.carouselInner.parentElement.parentElement.querySelector('.carousel-control-prev').classList.remove('d-none');
-    //         if (nextElement) {
-    //             nextElement.classList.add('active');
-    //         }
-    //         //load next two images
-    //         //preload the image
-    //         let image1 = (nextElement && nextElement.nextElementSibling) ? nextElement.nextElementSibling.querySelector('.imgClass') : undefined;
-    //         let promises = [];
-    //         if (image1) promises.push(this.loadImage(image1));
-    //         let image2 = (nextElement && nextElement.nextElementSibling && nextElement.nextElementSibling.nextElementSibling) ? nextElement.nextElementSibling.nextElementSibling.querySelector('.imgClass') : undefined;
-    //         if (image2) promises.push(this.loadImage(image2));
-    //         let image3 = (nextElement && nextElement.nextElementSibling && nextElement.nextElementSibling.nextElementSibling && nextElement.nextElementSibling.nextElementSibling.nextElementSibling) ? nextElement.nextElementSibling.nextElementSibling.nextElementSibling.querySelector('.imgClass') : undefined;
-    //         if (image3) promises.push(this.loadImage(image3));
-    //         //
-    //         Promise.all(promises).then(() => {
-    //             let xPos = nextElement.getBoundingClientRect().x;
-    //             let currentXposition = this.carouselInner.getBoundingClientRect().x;
-    //             let newPosition = currentXposition - xPos;
-    //             this.currentPosition = newPosition;
-    //             this.carouselInner.style.transform = 'translateX(' + (newPosition) + 'px)';
-    //             if (this.items_to_slide === 1) {
-    //                 if (!nextElement.nextElementSibling) {
-    //                     this.carouselInner.parentElement.parentElement.querySelector('.carousel-control-next').classList.add('d-none');
-    //                 }
-    //             }
-    //             return;
-    //         })
-    //     });
-    // }
-
-    // loadImage(image) {
-    //     return new Promise((resolve, reject) => {
-    //         let src = image.dataset.src;
-    //         image.src = src;
-    //         image.onload = () => {
-    //             return resolve();
-    //         }
-    //     })
-    // }
 }

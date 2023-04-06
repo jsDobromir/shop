@@ -1,7 +1,8 @@
 import { Carousel } from "bootstrap";
-import { quantityListener, transListener } from "./productUtils/utils.js";
+import { quantityListener, transListener, attachSlideListener} from "./productUtils/utils.js";
 import { productGalleryHash, initialGalleryHash } from './productUtils/hiddenCarouselUtils.js';
 import { renderer } from "./productUtils/renderer.js";
+import Hammer from "hammerjs";
 
 document.addEventListener('DOMContentLoaded', (event) => {
 
@@ -22,7 +23,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         keyboard: true,
         pause: false,
         ride: false,
-        touch: true,
+        touch: false,
         wrap: true
     });
 
@@ -32,7 +33,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 
     let overlay = document.querySelector('#hiddenCarousel .carousel-item.active .carousel_img_wrapper');
-
+    var myCarousel = hiddenCarouselDom.querySelector('.carousel_img_wrapper__inner');
     overlay.viewer = null;
 
     overlay.viewer = renderer({
@@ -68,13 +69,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     });
 
+    hiddenCarouselDom.querySelectorAll('.carousel_img_wrapper__inner').forEach((item) => {
+        attachSlideListener(item, carouselHidden);
+    });
+
     let isZoomedIn = false;
     document.querySelectorAll('#hiddenCarousel .carousel-item img').forEach((img) => {
         img.addEventListener('click', (event) => {
             if (!isZoomedIn) {
-                overlay.viewer.panTo({ originX: overlay.clientWidth /2, originY: overlay.clientHeight / 2, scale: 1 });
+                overlay.viewer.panTo({ originX: overlay.clientWidth / 2, originY: overlay.clientHeight / 2, scale: 1 });
                 overlay.viewer.zoom({ x: overlay.clientWidth / 2, y: overlay.clientHeight / 2, deltaScale: 8 });
-                overlay.scrollIntoView({block: 'center', inline: 'center'});
+                overlay.scrollIntoView({ block: 'center', inline: 'center' });
                 isZoomedIn = true;
                 img.style.cursor = 'zoom-out';
             } else {
@@ -84,6 +89,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }
         });
     });
+
+
 
     quantityListener();
 
