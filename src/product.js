@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 
     let overlay = document.querySelector('#hiddenCarousel .carousel-item.active .carousel_img_wrapper');
-    var myCarousel = hiddenCarouselDom.querySelector('.carousel_img_wrapper__inner');
     overlay.viewer = null;
 
     overlay.viewer = renderer({
@@ -69,8 +68,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     });
 
-    hiddenCarouselDom.querySelectorAll('.carousel_img_wrapper__inner').forEach((item) => {
-        attachSlideListener(item, carouselHidden);
+    let carouselHiddenInner = hiddenCarouselDom.querySelector('.carousel-inner');
+    const hammerMan = new Hammer(carouselHiddenInner);
+
+    hammerMan.on('swipeleft', (event) => {
+        carouselHidden.next();
+    });
+    hammerMan.on('swiperight', (event) => {
+        carouselHidden.prev();
     });
 
     let isZoomedIn = false;
