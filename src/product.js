@@ -68,17 +68,22 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     });
 
-    let carouselHiddenInner = hiddenCarouselDom.querySelector('.carousel-inner');
-    const hammerMan = new Hammer(carouselHiddenInner);
-
-    hammerMan.on('swipeleft', (event) => {
-        carouselHidden.next();
-    });
-    hammerMan.on('swiperight', (event) => {
-        carouselHidden.prev();
-    });
-
     let isZoomedIn = false;
+
+    const hiddenCaroselMan = hiddenCarouselDom.querySelector('.carousel-inner');
+    let hammerTime = new Hammer(hiddenCaroselMan);
+    hammerTime.on('swipeleft', (event) => {
+        if (!isZoomedIn) {
+            carouselHidden.next();
+        }
+    });
+
+    hammerTime.on('swiperight', (event) => {
+        if (!isZoomedIn) {
+            carouselHidden.prev();
+        }
+    })
+
     document.querySelectorAll('#hiddenCarousel .carousel-item img').forEach((img) => {
         img.addEventListener('click', (event) => {
             if (!isZoomedIn) {
