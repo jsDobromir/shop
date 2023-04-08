@@ -21,9 +21,17 @@
             }
 
             &__image {
+                width: 100%;
                 .carousel-inner {
-                    .carousel-item img {
-                        cursor: pointer;
+                    .carousel-item {
+                        .imgWrapper {
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+                        }
+                        img {
+                            cursor: pointer;
+                        }
                     }
                 }
                 .carousel-indicators {

@@ -202,7 +202,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: #ffffff;
     z-index: -99999;
 
@@ -220,7 +220,7 @@
             height: 100%;
 
             .top_row {
-                max-height: 15vh;
+                min-height: 5%;
                 display: flex;
                 flex-direction: column;
 
@@ -276,6 +276,7 @@
                                 background-position: 50%;
                                 background-size: 100% 100%;
                             }
+                            
 
                             span {
                                 position: absolute;
@@ -345,7 +346,7 @@
             }
 
             .carousel-inner {
-                height: 85vh;
+                height: 80%;
 
                 .carousel-item {
                     overflow: auto;
@@ -374,4 +375,12 @@
 
         }
     }
+}
+
+.zoom-in-icon-back {
+    background-image: linear-gradient(45deg, #fff0, #6c74774f), url(../images/zoom-in.jpg) !important;
+}
+
+.zoom-out-icon-back {
+    background-image: linear-gradient(45deg, #fff0, #6c74774f), url(../images/zoom-out.jpg) !important;
 }

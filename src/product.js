@@ -89,22 +89,24 @@ document.addEventListener('DOMContentLoaded', (event) => {
     document.querySelector('.zoom-in-icon').addEventListener('click', (event) => {
         event.preventDefault();
         let carousel_item_parent = hiddenCarouselDom.querySelector('.carousel-item.active');
-        if (isZoomedIn) return;
         let img = carousel_item_parent.querySelector('img');
-        zoomIn(overlay, carousel_item_parent, img);
-        isZoomedIn = true;
-    });
-
-    document.querySelector('.zoom-out-icon').addEventListener('click', (event) => {
-        event.preventDefault();
-        let carousel_item_parent = hiddenCarouselDom.querySelector('.carousel-item.active');
-        if (!isZoomedIn) return;
-        let img = carousel_item_parent.querySelector('img');
-        zoomOut(overlay, carousel_item_parent, img);
-        isZoomedIn = false;
+        if (!isZoomedIn) {
+            let elem = document.querySelector('.zoom-in-icon-span');
+            elem.classList.remove('zoom-in-icon-back');
+            elem.classList.add('zoom-out-icon-back');
+            zoomIn(overlay, carousel_item_parent, img);
+            isZoomedIn = true;
+        } else {
+            zoomOut(overlay, carousel_item_parent, img);
+            let elem = document.querySelector('.zoom-in-icon-span');
+            elem.classList.remove('zoom-out-icon-back');
+            elem.classList.add('zoom-in-icon-back');
+            isZoomedIn = false;
+        }
     });
 
     document.querySelectorAll('#hiddenCarousel .carousel-item img').forEach((img) => {
+        console.log(isZoomedIn);
         img.addEventListener('click', (event) => {
             let carousel_item_parent = img.closest('.carousel-item');
             if (!isZoomedIn) {
