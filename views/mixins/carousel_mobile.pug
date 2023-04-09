@@ -8,7 +8,7 @@ mixin carousel_mobile(type, localProducts)
                             div(class=`container__prod__${type}__mobile__wrapper__inner__item__wrapper__image`)
                                 div(class=`container__prod__${type}__mobile__wrapper__inner__item__wrapper__image__wrapper`)
                                     a(href="/produkt/12312")
-                                        img(src=product.imageFront srcset=product.imagesResp class="imgClass")
+                                        img(src=product.imageFront srcset=product.imagesResp class="imgClass" draggable="false")
                             div(class=`container__prod__${type}__mobile__wrapper__inner__item__wrapper__second`)
                                 div(class=`container__prod__${type}__mobile__wrapper__inner__item__wrapper__second__wrapper`)
                                     div(class=`container__prod__${type}__mobile__wrapper__inner__item__wrapper__second__wrapper__tittle`)
@@ -20,3 +20,7 @@ mixin carousel_mobile(type, localProducts)
                                     span(class="price") #{product.price} лв
                                     span(class="bag")
                                         i(class="fa-solid fa-cart-plus fa-lg")
+                div(class=`container__prod__${type}__mobile__wrapper__inner__last-item last-item d-lg-none`)
+                    span(class=`more`)
+                        a(href="/kozmetika") Виж още
+                    span(class=`back`) Върни се в началото

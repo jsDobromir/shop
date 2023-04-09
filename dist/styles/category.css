@@ -5508,7 +5508,7 @@ body .heading-primary--sub-5 {
 
 .vis-anim {
   visibility: visible;
-  height: 100vh;
+  height: 100%;
   opacity: 1;
   z-index: 9999;
 }
@@ -7424,4 +7424,10 @@ main .container_prod__pagination .ellipse:after {
   background-color: rgba(255, 157, 41, 0.8392156863);
   padding: 2.5rem 4rem;
   font-size: 3rem;
+}
+@media (min-width: 768px) {
+  .btn-add-to-bag {
+    width: unset;
+    padding: 2rem 4rem;
+  }
 }

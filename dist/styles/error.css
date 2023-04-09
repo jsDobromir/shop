@@ -4531,7 +4531,7 @@ body .heading-primary--sub-5 {
 
 .vis-anim {
   visibility: visible;
-  height: 100vh;
+  height: 100%;
   opacity: 1;
   z-index: 9999;
 }

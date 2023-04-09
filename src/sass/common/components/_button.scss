@@ -157,4 +157,8 @@
     background-color: #ff9d29d6;
     padding: 2.5rem 4rem;
     font-size: 3rem;
+    @include media-breakpoint-up(md) {
+        width: unset;
+        padding: 2rem 4rem;
+    }
 }

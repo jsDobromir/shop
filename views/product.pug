@@ -23,38 +23,41 @@ html(lang="en")
             .container
                 .container__prod#product
                     .container__prod__wrapper
-                        .container__prod__wrapper__tittle
-                            h2 #{product.title}
-                        .container__prod__wrapper__image
-                            .carousel.slide(id='imageCarousel' data-bs-ride='carousel')
-                                .carousel-inner
-                                    each imgSrc, index in product.imagesRespPdp
-                                        div.carousel-item(class=index === 0 ? 'active' : '')
-                                            div.imgWrapper
-                                                a(href="#productGallery")
-                                                    img(src=imgSrc.split(',')[0] srcset=imgSrc sizes=product.imagesRespSizes[index] width="679" height="679")
-                                ol.carousel-indicators
-                                    each imgSrc, index in product.imagesRespPdp
-                                        li(data-bs-target='#imageCarousel', data-bs-slide-to=index, class=index === 0 ? 'active' : '')
-                                            .imgWrapper
-                                                img(src=imgSrc.split(',')[0], srcset=imgSrc sizes=product.imagesRespSizes[index] width="40" height="40")
-                    .container__prod__info
-                        .container__prod__info__price
-                            p.product__price #{product.price} лв
-                            span.text__availability в наличност
-                        .container__prod__info__add-to-bag
-                            form(action='/add-to-bag' method='POST')
-                                div(class="form__wrapper")
-                                    div(class="form__group select_input")
-                                        select.form-select#quantity(name='quantity', required)
-                                            each number in Array.from(Array(15), (_, index) => index + 1)
-                                                option(value=number) Количество: #{number}&nbsp;
-                                        span.safe_trans
-                                            i.fa-solid.fa-lock
-                                            span.safe_trans_text Сигурна Транзакция
-                                    div(class="form__group")
-                                        button(type='submit' class="btn btn-add-to-bag") Добави в количката
-                    .container__product-desc
+                        .container__prod__wrapper__top
+                            .container__prod__wrapper__top__tittle.d-md-none
+                                h2 #{product.title}
+                            .container__prod__wrapper__top__image
+                                .carousel.slide(id='imageCarousel' data-bs-ride='carousel')
+                                    .carousel-inner
+                                        each imgSrc, index in product.imagesRespPdp
+                                            div.carousel-item(class=index === 0 ? 'active' : '')
+                                                div.imgWrapper
+                                                    a(href="#productGallery")
+                                                        img(src=imgSrc.split(',')[0] srcset=imgSrc sizes=product.imagesRespSizes[index] width="679" height="679")
+                                    ol.carousel-indicators
+                                        each imgSrc, index in product.imagesRespPdp
+                                            li(data-bs-target='#imageCarousel', data-bs-slide-to=index, class=index === 0 ? 'active' : '')
+                                                .imgWrapper
+                                                    img(src=imgSrc.split(',')[0], srcset=imgSrc sizes=product.imagesRespSizes[index] width="40" height="40")
+                        .container__prod__info
+                            .container__prod__wrapper__top__tittle.d-none.d-md-block
+                                h2 #{product.title}
+                                p #{product.description}
+                            .container__prod__info__price
+                                p.product__price #{product.price} лв
+                                span.text__availability в наличност
+                            .container__prod__info__add-to-bag
+                                form(action='/add-to-bag' method='POST')
+                                    div(class="form__wrapper")
+                                        div(class="form__group select_input")
+                                            select.form-select#quantity(name='quantity', required)
+                                                each number in Array.from(Array(15), (_, index) => index + 1)
+                                                    option(value=number) Количество: #{number}&nbsp;
+                                            span.safe_trans
+                                                i.fa-solid.fa-lock
+                                                span.safe_trans_text Сигурна Транзакция
+                                        div(class="form__group")
+                                            button(type='submit' class="btn btn-add-to-bag") Добави в количката
                     div(class="quantity_fixed")
                         div(class="quantity_fixed__content")
                             div(class="quantity_fixed__content__title")

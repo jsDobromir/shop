@@ -2,7 +2,6 @@ import { Carousel } from "bootstrap";
 
 export default function buildCarousel(carouselWrapper, type) {
     const carouselDom = document.querySelector(`#${carouselWrapper}`);
-    console.log(carouselDom);
     const carousel = new Carousel(carouselDom, {
         interval: 5000,
         keyboard: true,
