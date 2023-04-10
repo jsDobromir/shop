@@ -1,11 +1,14 @@
 import buildCarousel from './homeUtils/carouselUtil';
 import slideCarousel from './homeUtils/slideCarousel';
+import {Swiper} from 'swiper';
 
 document.addEventListener('DOMContentLoaded', (ev) => {
 
-    let slideCarouselobj = new slideCarousel('container__prod__cosmetics__mobile', 'cosmetics');
-    let slideCarouselsupp = new slideCarousel('container__prod__supplements__mobile', 'supplements');
-    let slideCarouselobjvit = new slideCarousel('container__prod__vitamins__mobile', 'vitamins');
+    // let slideCarouselobj = new slideCarousel('container__prod__cosmetics__mobile', 'cosmetics');
+    // let slideCarouselsupp = new slideCarousel('container__prod__supplements__mobile', 'supplements');
+    // let slideCarouselobjvit = new slideCarousel('container__prod__vitamins__mobile', 'vitamins');
+
+    var swiper = new Swiper(".swiper", {});
 
     let carouselXl = buildCarousel('carousel_xl', 'cosmetics');
 
