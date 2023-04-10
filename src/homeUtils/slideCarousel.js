@@ -1,3 +1,5 @@
+import Hammer from "hammerjs";
+
 export default class slideCarousel {
 
     constructor(container, type) {
@@ -12,6 +14,7 @@ export default class slideCarousel {
         this.positionDiff = undefined;
         this.startX = undefined;
         this.startY = undefined;
+        
         //dragstart
         this.carousel.addEventListener('touchstart', (e) => {
             console.log('touch start');
@@ -29,17 +32,11 @@ export default class slideCarousel {
             const currentY = (e.touches[0].pageY);
             const diffX = this.startX - currentX;
             const diffY = this.startY - currentY;
-            if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 10) {
+            if (Math.abs(diffX) > (Math.abs(diffY) + 5)) {
                 e.preventDefault();
                 this.carousel.classList.add('dragging');
                 this.positionDiff = (e.touches[0].pageX) - this.prevPageX;
                 this.carousel.scrollLeft = this.prevScrollLeft - this.positionDiff;
-            }
-            else if (this.carousel.contains(e.target) && Math.abs(diffY) > Math.abs(diffX)) {
-                return;
-            }
-            else {
-                e.preventDefault();
             }
         });
         //dragstop
@@ -50,13 +47,12 @@ export default class slideCarousel {
             const endY = e.changedTouches[0].pageY;
             const diffX = this.startX - endX;
             const diffY = this.startY - endY;
-            if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 10) {
+            if (Math.abs(diffX) > (Math.abs(diffY)+5)) {
                 // Only handle horizontal touch events
                 // Your code for handling horizontal touch events goes here
                 let positionDiffLocal = Math.abs(this.positionDiff);
                 if (this.carousel.scrollLeft > this.prevScrollLeft) {
                     let nextElement = this.activeElement.nextSibling;
-                    console.log(nextElement);
                     if (nextElement) {
                         if (nextElement.classList.contains('last-item')) {
                             let nextLeft = this.activeElement.offsetLeft - this.carousel.offsetLeft;
@@ -76,7 +72,6 @@ export default class slideCarousel {
                     }
                 }
                 else {
-                    console.log('left');
                     let prevElement = this.activeElement.previousElementSibling;
                     if (prevElement) {
                         if (positionDiffLocal > (this.itemWidth / 3)) {
@@ -99,10 +94,5 @@ export default class slideCarousel {
             this.activeElement = firstElem;
             this.carousel.scrollLeft = firstElemXPos;
         });
-        // setInterval(() => {
-        //     this.carousel.scrollLeft = this.nextLeft;
-        //     this.nextElem = this.nextElem.nextElementSibling;
-        //     this.nextLeft = this.nextElem.offsetLeft - this.carousel.offsetLeft;
-        // }, 1000);
     }
 }
