@@ -24,20 +24,21 @@ html(lang="en")
                 .container__prod__cosmetics
                     .container__prod__cosmetics__tittle
                         h3 Козметика
-                    +carousel_mobile('cosmetics', products)
+                    //- +carousel_mobile('cosmetics', products)
+                    +carousel_mobile_new('cosmetics', products)
                         
                     +bs_carousel('carousel_xl', 'cosmetics', 'container__prod__cosmetics__carousel carousel slide d-none d-lg-block', respLengths.xl, 4, products, productsLength)
                     
-                //- .container__prod__supplements
-                //-     .container__prod__supplements__tittle
-                //-         h3 Добавки
-                //-     +carousel_mobile('supplements', productsDobavki)
+                .container__prod__supplements
+                    .container__prod__supplements__tittle
+                        h3 Добавки
+                    +carousel_mobile_new('supplements', productsDobavki)
 
-                //-     +bs_carousel('carousel_supp_xl', 'supplements', 'container__prod__supplements__carousel carousel slide d-none d-lg-block', respLengthsDobavki.xl, 4, productsDobavki, productsDobavkiLength)
+                    //- +bs_carousel('carousel_supp_xl', 'supplements', 'container__prod__supplements__carousel carousel slide d-none d-lg-block', respLengthsDobavki.xl, 4, productsDobavki, productsDobavkiLength)
 
-                //- .container__prod__vitamins
-                //-     .container__prod__vitamins__tittle
-                //-         h3 Витамини
-                //-     +carousel_mobile('vitamins', productsVitamini)
-                //-     +bs_carousel('carousel_vit_xl', 'vitamins', 'container__prod__vitamins__carousel carousel slide d-none d-lg-block', respLengthsVitamini.xl, 4, productsVitamini, productsVitaminiLength)
+                .container__prod__vitamins
+                    .container__prod__vitamins__tittle
+                        h3 Витамини
+                    +carousel_mobile_new('vitamins', productsVitamini)
+                    //- +bs_carousel('carousel_vit_xl', 'vitamins', 'container__prod__vitamins__carousel carousel slide d-none d-lg-block', respLengthsVitamini.xl, 4, productsVitamini, productsVitaminiLength)
         +footer()

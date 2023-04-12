@@ -1,4 +1,3 @@
-import Hammer from "hammerjs";
 
 export default class slideCarousel {
 
@@ -7,7 +6,6 @@ export default class slideCarousel {
         this.activeElement = this.carousel.querySelector(`.container__prod__${type}__mobile__wrapper__inner__item.active`);
         this.itemWidth = this.carousel.querySelectorAll(`.container__prod__${type}__mobile__wrapper__inner__item`)[0].offsetWidth;
         this.nextLeft = this.activeElement.offsetLeft - this.carousel.offsetLeft;
-        console.log(this.carousel);
         this.isDragStart = false;
         this.prevPageX = undefined;
         this.prevScrollLeft = undefined;
