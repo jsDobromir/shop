@@ -7,20 +7,31 @@ document.addEventListener('DOMContentLoaded', (ev) => {
     // let slideCarouselobj = new slideCarousel('container__prod__cosmetics__mobile', 'cosmetics');
     // let slideCarouselsupp = new slideCarousel('container__prod__supplements__mobile', 'supplements');
     // let slideCarouselobjvit = new slideCarousel('container__prod__vitamins__mobile', 'vitamins');
-
-    var swiper = new Swiper(".swiper-container-cosmetics", {
+    const spaceBetweenRem = 1.0; // space between slides in rem
+    const spaceBetweenPixels = parseFloat(getComputedStyle(document.documentElement).fontSize) * spaceBetweenRem;
+    
+    var swiper1 = new Swiper(".swiper-container-cosmetics", {
+        slidesPerView: 'auto',
+        spaceBetween: spaceBetweenPixels, 
+        breakpoints: {
+            576: {
+                slidesPerView: 2
+            }
+        },
+        on: {
+            transitionEnd: function() {
+                const activeSlide = this.slides[this.activeIndex];  
+            }
+        }
+    });
+    
+    var swiper2 = new Swiper(".swiper-container-supplements", {
         slidesPerView: 'auto',
         spaceBetween: 10,
         
     });
 
-    var swiper = new Swiper(".swiper-container-supplements", {
-        slidesPerView: 'auto',
-        spaceBetween: 10,
-        
-    });
-
-    var swiper = new Swiper(".swiper-container-vitamins", {
+    var swiper3 = new Swiper(".swiper-container-vitamins", {
         slidesPerView: 'auto',
         spaceBetween: 10,
         

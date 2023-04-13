@@ -1,26 +1,25 @@
 mixin carousel_mobile(type, localProducts)
-    div(class=`container__prod__${type}__mobile d-lg-none container`)
-        div(class=`container__prod__${type}__mobile__wrapper swiper-container`)
-            div(class=`container__prod__${type}__mobile__wrapper__inner swiper-wrapper`)
+    div(class=`container__prod__${type}__mobile swiper d-lg-none`)
+        div(class=`container__prod__${type}__mobile__wrapper swiper-wrapper`)
             each product, index in localProducts
-                div(class=`container__prod__${type}__mobile__wrapper__inner__item swiper-slide ${index === 0 ? 'active' : ''}`)
-                    div(class=`container__prod__${type}__mobile__wrapper__inner__item__wrapper`)
-                        div(class=`container__prod__${type}__mobile__wrapper__inner__item__wrapper__image`)
-                            div(class=`container__prod__${type}__mobile__wrapper__inner__item__wrapper__image__wrapper`)
+                div(class=`container__prod__${type}__mobile__wrapper__item swiper-slide ${index === 0 ? 'active' : ''}`)
+                    div(class=`container__prod__${type}__mobile__wrapper__item__wrapper`)
+                        div(class=`container__prod__${type}__mobile__wrapper__item__wrapper__image`)
+                            div(class=`container__prod__${type}__mobile__wrapper__item__wrapper__image__wrapper`)
                                 a(href="/produkt/12312")
                                     img(src=product.imageFront srcset=product.imagesResp class="imgClass" draggable="false")
-                    div(class=`container__prod__${type}__mobile__wrapper__inner__item__wrapper__second`)
-                        div(class=`container__prod__${type}__mobile__wrapper__inner__item__wrapper__second__wrapper`)
-                            div(class=`container__prod__${type}__mobile__wrapper__inner__item__wrapper__second__wrapper__tittle`)
+                    div(class=`container__prod__${type}__mobile__wrapper__item__wrapper__second`)
+                        div(class=`container__prod__${type}__mobile__wrapper__item__wrapper__second__wrapper`)
+                            div(class=`container__prod__${type}__mobile__wrapper__item__wrapper__second__wrapper__tittle`)
                                 h3
-                                    a(href="/produkt/123122" class=`container__prod__${type}__mobile__wrapper__inner__item__wrapper__second__wrapper__tittle__link`) #{product.title}
-                        div(class=`container__prod__${type}__mobile__wrapper__item__wrapper__inner__second__wrapper__description`)
+                                    a(href="/produkt/123122" class=`container__prod__${type}__mobile__wrapper__item__wrapper__second__wrapper__tittle__link`) #{product.title}
+                        div(class=`container__prod__${type}__mobile__wrapper__item__wrapper__second__wrapper__description`)
                             p #{product.description}
-                        div(class=`container__prod__${type}__mobile__wrapper__inner__item__wrapper__second__price`)
+                        div(class=`container__prod__${type}__mobile__wrapper__item__wrapper__second__price`)
                             span(class="price") #{product.price} лв
                             span(class="bag")
                                 i(class="fa-solid fa-cart-plus fa-lg")
-            div(class=`container__prod__${type}__mobile__wrapper__inner__last-item swiper-slide last-item d-lg-none`)
+            div(class=`container__prod__${type}__mobile__wrapper__last-item last-item d-lg-none`)
             span(class=`more`)
                 a(href="/kozmetika") Виж още
             span(class=`back`) Върни се в началото

@@ -5950,7 +5950,7 @@ body .heading-primary--sub-5 {
 }
 
 .container {
-  width: 100%;
+  width: 100vw;
   position: relative;
 }
 .container__prod {

@@ -1,240 +1,20 @@
-// .container__prod__cosmetics__mobile,
-// .container__prod__supplements__mobile,
-// .container__prod__vitamins__mobile {
-//     width: 95%;
-//     margin: 0 auto;
-//     height: 40rem;
-//     position: relative;
-//     mix-blend-mode: multiply;
-//     overflow: hidden;
-
-//     &__wrapper {
-//         display: flex;
-//         position: relative;
-//         gap: 1rem;
-//         width: 100%;
-//         height: 100%;
-//         margin: 0 auto;
-//         //scroll-behavior: smooth;
-
-//         &__inner {
-//         display: flex;
-//         flex-direction: row;
-//         align-items: center;
-//         justify-content: flex-start;
-//         gap: 1rem;
-//         width: 100%;
-//         height: 100%;
-//         transition: all .3s linear;
-//         overflow: auto;
-//         &__item {
-//             display: flex;
-//             height: 100%;
-//             width: 70%;
-
-//             flex-direction: column;
-//             align-items: center;
-//             border: 1px solid rgba(169, 167, 167, 0.34);
-//             border-radius: 1rem;
-
-//             &__wrapper {
-//                 width: 100%;
-//                 height: 100%;
-//                 display: flex;
-//                 flex-direction: column;
-//                 align-items: center;
-//                 transition: all 0.5s;
-//                 justify-content: center;
-
-//                 &__image {
-//                     width: 100%;
-//                     flex: 2 1 0;
-//                     overflow: hidden;
-//                     background-color: rgba(230, 213, 213, 0.14);
-//                     display: flex;
-//                     justify-content: center;
-//                     align-items: center;
-
-//                     &__wrapper {
-//                         width: 85%;
-//                         height: 85%;
-//                         display: flex;
-//                         justify-content: center;
-//                         text-align: center;
-//                     }
-
-//                     img {
-//                         transition: all .5s;
-//                         max-width: 100%;
-//                         max-height: 100%;
-//                         object-fit: contain;
-//                         mix-blend-mode: multiply;
-
-//                         &:hover {
-//                             @include media-breakpoint-up(xl) {
-//                                 transform: scale(1.2);
-//                             }
-//                         }
-//                     }
-//                 }
-
-//                 &__second {
-//                     display: flex;
-//                     flex-direction: column;
-//                     justify-content: space-between;
-//                     width: 100%;
-//                     flex: 1.3 1 0;
-//                     background-color: rgb(156 165 158 / 16%);
-
-//                     &__wrapper {
-//                         display: flex;
-//                         flex-direction: column;
-//                         gap: .2rem;
-
-//                         &__tittle {
-//                             font-size: 1.6rem;
-//                             text-align: center;
-
-//                             h3 {
-//                                 font-weight: 600;
-//                             }
-
-//                             &__link {
-//                                 display: -webkit-box;
-//                                 -webkit-line-clamp: 1;
-//                                 -webkit-box-orient: vertical;
-//                                 overflow: hidden;
-//                                 text-overflow: ellipsis;
-//                             }
-//                         }
-
-//                         &__description {
-//                             text-align: center;
-//                             font-weight: 500;
-//                             font-size: 1.5rem;
-//                             line-height: 1.5;
-//                             display: -webkit-box;
-//                             -webkit-line-clamp: 2;
-//                             -webkit-box-orient: vertical;
-//                             overflow: hidden;
-//                             text-overflow: ellipsis;
-//                         }
-//                     }
-
-//                     &__price {
-//                         width: 90%;
-//                         margin: 0 auto;
-//                         display: flex;
-//                         flex-direction: row;
-//                         align-items: center;
-//                         justify-content: space-between;
-
-//                         .price {
-//                             font-size: 3rem;
-//                             color: red;
-//                         }
-
-//                         .bag {
-//                             font-size: 3rem;
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-
-//         &__last-item {
-//             min-width: 20rem;
-//             font-size: 2.4rem;
-//             height: 100%;
-//             display: flex;
-//             flex-direction: column;
-//             justify-content: center;
-//             gap: 3rem;
-//             border: 1px solid rgba(169, 167, 167, 0.34);
-//             border-radius: 1rem;
-//             background-color: rgba(230, 213, 213, 0.14);
-//             text-align: center;
-
-//             .more {
-//                 color: #657fa5;
-//             }
-
-//             .back {
-//                 cursor: pointer;
-//                 color: #657fa5;
-//             }
-//         }
-
-//         }
-//     }
-
-//     &__wrapper.dragging {
-//         cursor: grab;
-//         scroll-behavior: auto;
-//     }
-
-//     &__wrapper.dragging img {
-//         pointer-events: none;
-//     }
-
-//     .carousel-control-prev {
-//         left: 2%;
-//         width: 6rem;
-//         height: 6rem;
-//         top: 35%;
-//         opacity: .7;
-//         cursor: pointer;
-
-//         .carousel-control-prev-icon {
-//             background-color: #657fa5;
-//             width: 100%;
-//             height: 100%;
-//         }
-
-//         &:hover,
-//         &:focus {
-//             opacity: .7;
-//         }
-//     }
-
-//     .carousel-control-next {
-//         width: 6rem;
-//         height: 6rem;
-//         top: 35%;
-//         right: 2%;
-//         opacity: .7;
-//         cursor: pointer;
-
-//         .carousel-control-next-icon {
-//             background-color: #657fa5;
-//             width: 100%;
-//             height: 100%;
-//         }
-
-//         &:hover,
-//         &:focus {
-//             opacity: .7;
-//         }
-//     }
-// }
-
-
 .container__prod__cosmetics__mobile,
 .container__prod__supplements__mobile,
 .container__prod__vitamins__mobile {
-    width: 100%;
+    --container-width: 100%;
+    --space-between-rem: 1;
+    width: var(--container-width);
     margin: 0 auto;
     mix-blend-mode: multiply;
-    overflow: hidden;
     height: 42rem;
     display: flex;
     align-items: center;
     justify-content: center;
-
+    overflow: hidden;
+    --slide-width: calc((75% - 4rem) / var(--space-between-rem)); // use the --space-between-rem variable here
     &__wrapper {
         width: 95%;
         height: 95%;
-        margin: 0 auto;
 
         &__inner {
             display: flex;
@@ -248,7 +28,10 @@
             &__item {
                 display: flex;
                 height: 100%;
-                width: 70%;
+                width: var(--slide-width);
+                @include media-breakpoint-up(sm) {
+                    width: calc(var(--container-width) / 2);
+                }
 
                 flex-direction: column;
                 align-items: center;
