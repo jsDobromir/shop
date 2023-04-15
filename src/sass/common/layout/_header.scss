@@ -120,7 +120,7 @@
         }
         width: 95%;
         margin: 0 auto;
-        @include media-breakpoint-up(lg) {
+        @include media-breakpoint-up(xl) {
             height: 10rem;
         }
         display: flex;
@@ -155,7 +155,7 @@
         .form_wrapper-lg {
             display: none;
             flex-grow: .8;
-            @include media-breakpoint-up(lg) {
+            @include media-breakpoint-up(xl) {
                 display: block;
             }
 
@@ -181,7 +181,7 @@
             justify-content: space-between;
             align-items: center;
 
-            @include media-breakpoint-up(lg) {
+            @include media-breakpoint-up(xl) {
                 display: none;
             }
             width: 100%;

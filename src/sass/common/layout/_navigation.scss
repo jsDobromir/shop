@@ -1,5 +1,5 @@
 .navigation {
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
         display: none;
     } 
     &__checkbox {
@@ -45,17 +45,6 @@
             }
         }
     }
-
-    // &__background {
-    //     width: 5rem;
-    //     height: 5rem;
-    //     position: absolute;
-    //     top: 8rem;
-    //     right: 6rem;
-    //     background-image: radial-gradient(#e1dddd, #d4d6df);
-    //     z-index: 1000;
-    //     transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
-    // }
 
     &__nav {
         height: 100vh;

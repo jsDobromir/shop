@@ -5,9 +5,13 @@ main {
         margin: 0 auto;
         padding-top: 2rem;
 
+        @include media-breakpoint-up(xl) {
+            width: 90%;
+        }
+
         @include media-breakpoint-up(xxl) {
             padding-top: 0;
-            width: 92%;
+            width: 85%;
         }
 
         .container__prod__cosmetics, .container__prod__supplements, .container__prod__vitamins{

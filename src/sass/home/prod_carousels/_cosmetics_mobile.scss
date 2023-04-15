@@ -6,7 +6,10 @@
     width: var(--container-width);
     margin: 0 auto;
     mix-blend-mode: multiply;
-    height: 42rem;
+    height: 40rem;
+    @include media-breakpoint-up(xl) {
+        height: 38rem;
+    }
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,6 +18,10 @@
     &__wrapper {
         width: 95%;
         height: 95%;
+        overflow: visible;
+        @include media-breakpoint-up(sm) {
+            overflow: hidden;
+        }
 
         &__inner {
             display: flex;
@@ -35,8 +42,12 @@
                 height: 100%;
                 width: 70%;
 
-                @include media-breakpoint-up(sm) {
-                    width: 50%;
+                @include media-breakpoint-up(md) {
+                    width: 40%;
+                }
+
+                @include media-breakpoint-up(lg) {
+                    width: 28%;
                 }
 
                 flex-direction: column;
