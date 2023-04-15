@@ -11,7 +11,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    --slide-width: calc((75% - 4rem) / var(--space-between-rem)); // use the --space-between-rem variable here
+
     &__wrapper {
         width: 95%;
         height: 95%;
@@ -25,12 +25,18 @@
             height: 100%;
             transition: all .3s linear;
 
+            .swiper-slide {
+                box-sizing: border-box !important;
+                /* Other styles */
+            }
+
             &__item {
                 display: flex;
                 height: 100%;
-                width: var(--slide-width);
+                width: 70%;
+
                 @include media-breakpoint-up(sm) {
-                    width: calc(var(--container-width) / 2);
+                    width: 50%;
                 }
 
                 flex-direction: column;

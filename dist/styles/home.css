@@ -6779,7 +6779,6 @@ main .container__prod .container__prod__cosmetics__tittle, main .container__prod
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  --slide-width: calc((75% - 4rem) / var(--space-between-rem));
 }
 .container__prod__cosmetics__mobile__wrapper,
 .container__prod__supplements__mobile__wrapper,
@@ -6798,12 +6797,18 @@ main .container__prod .container__prod__cosmetics__tittle, main .container__prod
   height: 100%;
   transition: all 0.3s linear;
 }
+.container__prod__cosmetics__mobile__wrapper__inner .swiper-slide,
+.container__prod__supplements__mobile__wrapper__inner .swiper-slide,
+.container__prod__vitamins__mobile__wrapper__inner .swiper-slide {
+  box-sizing: border-box !important;
+  /* Other styles */
+}
 .container__prod__cosmetics__mobile__wrapper__inner__item,
 .container__prod__supplements__mobile__wrapper__inner__item,
 .container__prod__vitamins__mobile__wrapper__inner__item {
   display: flex;
   height: 100%;
-  width: var(--slide-width);
+  width: 70%;
   flex-direction: column;
   align-items: center;
   border: 1px solid rgba(168, 144, 144, 0.2117647059);
@@ -6813,7 +6818,7 @@ main .container__prod .container__prod__cosmetics__tittle, main .container__prod
   .container__prod__cosmetics__mobile__wrapper__inner__item,
   .container__prod__supplements__mobile__wrapper__inner__item,
   .container__prod__vitamins__mobile__wrapper__inner__item {
-    width: calc(var(--container-width) / 2);
+    width: 50%;
   }
 }
 .container__prod__cosmetics__mobile__wrapper__inner__item__wrapper,

@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "pug");
 app.set("views", path.resolve(__dirname, "views"));
 
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, '/dist')));
 
 app.get('/', (req, res) => {
     let data = fs.readFileSync('./kozmetika.json', 'utf-8');
