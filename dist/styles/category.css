@@ -5313,7 +5313,6 @@ body {
   line-height: 1.7;
   color: #777;
   background-color: #f9f3f3;
-  -moz-osx-font-smoothing: grayscale;
 }
 body .heading-primary {
   color: #ffffff;

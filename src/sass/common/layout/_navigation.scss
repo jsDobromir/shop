@@ -50,7 +50,7 @@
         height: 100vh;
         width: 0;
         position: fixed;
-        background-image: radial-gradient(#e1dddd, #d4d6df);
+        background-image: linear-gradient(to right bottom, #c9e0f6, #b6dbdc);
         top: 0;
         left: 0;
         overflow: auto;
@@ -145,12 +145,12 @@
                 max-height: 0;
                 overflow: hidden;
                 text-align: center;
-                font-size: 4rem;
+                font-size: 3.5rem;
                 list-style: none;
                 color: #13131abd;
 
                 &__item:not(:first-child) {
-                    margin-top: 1.5rem;
+                    margin-top: .7rem;
                 }
             }
         }

@@ -1,16 +1,15 @@
-//import buildCarousel from './homeUtils/carouselUtil';
-import slideCarousel from './homeUtils/slideCarousel';
-import {Swiper} from 'swiper';
+import {Swiper, Navigation} from 'swiper';
+
 
 document.addEventListener('DOMContentLoaded', (ev) => {
-
-    // let slideCarouselobj = new slideCarousel('container__prod__cosmetics__mobile', 'cosmetics');
-    // let slideCarouselsupp = new slideCarousel('container__prod__supplements__mobile', 'supplements');
-    // let slideCarouselobjvit = new slideCarousel('container__prod__vitamins__mobile', 'vitamins');
+    Swiper.use([Navigation]);
     const spaceBetweenRem = 1.3; // space between slides in rem
     const spaceBetweenPixels = parseFloat(getComputedStyle(document.documentElement).fontSize) * spaceBetweenRem;
     
-    const spaceBetweenRemLg = 2;
+    const spaceBetweenRemMd = 2;
+    const spaceBetweenPixelsMD = parseFloat(getComputedStyle(document.documentElement).fontSize) * spaceBetweenRemMd;
+
+    const spaceBetweenRemLg = 2.4;
     const spaceBetweenPixelsLg = parseFloat(getComputedStyle(document.documentElement).fontSize) * spaceBetweenRemLg;
 
     const spaceBetweenRemXL = 3;
@@ -28,14 +27,36 @@ document.addEventListener('DOMContentLoaded', (ev) => {
             },
             992: {
                 slidesPerView: 3,
-                spaceBetween: spaceBetweenPixelsLg
+                spaceBetween: spaceBetweenPixelsMD
             },
             1200: {
-                slidesPerView: 'auto'
+                slidesPerView: 'auto',
+                spaceBetween: spaceBetweenPixelsLg
             },
             1400: {
                 slidesPerView: 4,
                 spaceBetween: spaceBetweenPixelsXL
+            }
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        on: {
+            slideChange: function() {
+                if (this.activeIndex > 0) {
+                    document.querySelector('.swiper-container-cosmetics .swiper-button-prev').style.opacity = 1;
+                }
+                if (this.activeIndex===0) {
+                    document.querySelector('.swiper-container-cosmetics .swiper-button-prev').style.opacity = 0.5;
+                }
+
+                if (this.isEnd) {
+                    document.querySelector('.swiper-container-cosmetics .swiper-button-next').style.opacity = 0.5;
+                }
+                else {
+                    document.querySelector('.swiper-container-cosmetics .swiper-button-next').style.opacity = 1;
+                }
             }
         }
     });
@@ -56,11 +77,32 @@ document.addEventListener('DOMContentLoaded', (ev) => {
                 spaceBetween: spaceBetweenPixelsLg
             },
             1200: {
-                slidesPerView: 'auto'
+                slidesPerView: 'auto',
             },
             1400: {
                 slidesPerView: 4,
                 spaceBetween: spaceBetweenPixelsXL
+            }
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        on: {
+            slideChange: function() {
+                if (this.activeIndex > 0) {
+                    document.querySelector('.swiper-container-supplements .swiper-button-prev').style.opacity = 1;
+                }
+                if (this.activeIndex===0) {
+                    document.querySelector('.swiper-container-supplements .swiper-button-prev').style.opacity = 0.5;
+                }
+
+                if (this.isEnd) {
+                    document.querySelector('.swiper-container-supplements .swiper-button-next').style.opacity = 0.5;
+                }
+                else {
+                    document.querySelector('.swiper-container-supplements .swiper-button-next').style.opacity = 1;
+                }
             }
         }
     });
@@ -87,12 +129,38 @@ document.addEventListener('DOMContentLoaded', (ev) => {
                 slidesPerView: 4,
                 spaceBetween: spaceBetweenPixelsXL
             }
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        on: {
+            slideChange: function() {
+                if (this.activeIndex > 0) {
+                    document.querySelector('.swiper-container-vitamins .swiper-button-prev').style.opacity = 1;
+                }
+                if (this.activeIndex===0) {
+                    document.querySelector('.swiper-container-vitamins .swiper-button-prev').style.opacity = 0.5;
+                }
+
+                if (this.isEnd) {
+                    document.querySelector('.swiper-container-vitamins .swiper-button-next').style.opacity = 0.5;
+                }
+                else {
+                    document.querySelector('.swiper-container-vitamins .swiper-button-next').style.opacity = 1;
+                }
+            }
         }
     });
 
-    // let carouselXl = buildCarousel('carousel_xl', 'cosmetics');
+    //checkbox navigation listener
+    document.querySelector('.navigation__checkbox').addEventListener('change', (event) => {
+        if (event.currentTarget.checked) {
+            document.body.classList.add('overfHidden');
+        }
+        else {
+            document.body.classList.remove('overfHidden');
+        }
+    });
 
-    // let carouseSupplXl = buildCarousel('carousel_supp_xl', 'supplements');
-
-    // let carouselVitXl = buildCarousel('carousel_vit_xl', 'vitamins');
 });

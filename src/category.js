@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', (ev) => {
             fetch(`/${category}/${subCategory}?page=${page}`, { method: 'POST' })
                 .then(response => response.json())
                 .then(data => {
-                    console.log(data);
                     document.querySelector('.container_prod__products__grid').querySelectorAll('.container_prod__products__grid__item').forEach((item, index) => {
                         let product = data.products[index];
                         let newItem = buildItem(product);
