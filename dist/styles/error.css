@@ -4345,9 +4345,9 @@ body .heading-primary {
 }
 body .heading-primary--main {
   display: block;
-  font-size: 5.5rem;
-  font-weight: 400;
-  letter-spacing: 1rem;
+  font-size: 5rem;
+  font-weight: 600;
+  letter-spacing: 0.9rem;
   animation: moveInLeft 1s ease-out;
 }
 @media (min-width: 768px) {
@@ -4370,90 +4370,27 @@ body .heading-primary--sub {
   display: block;
   font-size: 4rem;
   font-weight: 700;
-  letter-spacing: 1.8rem;
+  letter-spacing: 1.5rem;
   animation: moveInRight 1s ease-out;
-}
-body .heading-primary--main-2 {
-  display: block;
-  font-weight: 400;
-  letter-spacing: 1rem;
-  font-size: 5rem;
-  line-height: 2;
-}
-@media (min-width: 768px) {
-  body .heading-primary--main-2 {
-    letter-spacing: 3rem;
-  }
-}
-@media (min-width: 768px) {
-  body .heading-primary--main-2 {
-    font-size: 6rem;
-  }
 }
 body .heading-primary--sub-2 {
   display: block;
-  font-weight: 700;
-  letter-spacing: 1.5rem;
-  font-size: 4rem;
-}
-body .heading-primary--main-3 {
-  display: block;
-  font-weight: 400;
-  letter-spacing: 1rem;
-  line-height: 1.5;
+  font-weight: 600;
+  letter-spacing: 1.3rem;
   font-size: 5rem;
-}
-@media (min-width: 768px) {
-  body .heading-primary--main-3 {
-    letter-spacing: 2rem;
-    line-height: 1;
-  }
+  line-height: 1.5;
 }
 @media (min-width: 992px) {
-  body .heading-primary--main-3 {
-    line-height: 1.5;
-    letter-spacing: 2.5rem;
+  body .heading-primary--sub-2 {
+    letter-spacing: 1.7rem;
+    line-height: 1.6;
   }
 }
-body .heading-primary--sub-3 {
-  display: block;
-  font-weight: 700;
-  letter-spacing: 1.5rem;
-  font-size: 4rem;
-}
-body .heading-primary--main-4 {
-  display: block;
-  font-weight: 600;
-  letter-spacing: 1rem;
-  font-size: 5rem;
-}
-@media (min-width: 768px) {
-  body .heading-primary--main-4 {
-    letter-spacing: 2.5rem;
+@media (min-width: 1200px) {
+  body .heading-primary--sub-2 {
+    letter-spacing: 1.8rem;
+    line-height: 1.8;
   }
-}
-body .heading-primary--sub-4 {
-  display: block;
-  font-weight: 500;
-  letter-spacing: 2rem;
-  font-size: 5rem;
-}
-body .heading-primary--main-5 {
-  display: block;
-  font-weight: 600;
-  letter-spacing: 1rem;
-  font-size: 5rem;
-}
-@media (min-width: 768px) {
-  body .heading-primary--main-5 {
-    letter-spacing: 2.5rem;
-  }
-}
-body .heading-primary--sub-5 {
-  display: block;
-  font-weight: 500;
-  letter-spacing: 2rem;
-  font-size: 5rem;
 }
 
 .u-center-text {

@@ -21,14 +21,24 @@
         height: 95%;
         overflow: visible;
         padding-left: 1.3rem;
+        @include media-breakpoint-up(sm) {
+            padding-left: 0;
+            width: 95%;
+            overflow: hidden;
+        }
+        @include media-breakpoint-up(md) {
+            padding-left: 1.3rem;
+            width: 100%;
+            overflow: visible;
+        }
         @include media-breakpoint-up(lg) {
             padding-left: 0;
             width: 95%;
+            overflow: hidden;
         }
 
         @include media-breakpoint-up(xl) {
             width: 95%;
-            overflow: hidden;
         }
         @include media-breakpoint-up(xxl) {
             width: 90%;
@@ -194,8 +204,8 @@
             display: inline-block;
             width: 2.5rem;
             height: 2.5rem;
-            border-top: 0.3rem solid #172227;
-            border-right: 0.3rem solid #172227;
+            border-top: 0.3rem solid #0c79aa;
+            border-right: 0.3rem solid #0c79aa;
             transform: rotate(45deg);
             margin-top: -0.35rem;
         }
@@ -207,11 +217,17 @@
 
         .swiper-button-next {
             left: 95%;
+            @include media-breakpoint-up(xxl) {
+                left: 92%;
+            }
         }
 
         .swiper-button-prev {
             left: 3%;
             opacity: .5;
+            @include media-breakpoint-up(xxl) {
+                left: 6%;
+            }
         }
 
     }
