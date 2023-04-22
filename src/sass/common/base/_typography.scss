@@ -43,8 +43,8 @@ body {
         &--sub-2 {
             display: block;
             font-weight: 600;
-            letter-spacing: 1.3rem;
-            font-size: 5rem;
+            letter-spacing: 1.5rem;
+            font-size: 4rem;
             line-height: 1.5;
             @include media-breakpoint-up(lg) {
                 letter-spacing: 1.7rem;

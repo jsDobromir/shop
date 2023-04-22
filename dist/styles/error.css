@@ -4376,8 +4376,8 @@ body .heading-primary--sub {
 body .heading-primary--sub-2 {
   display: block;
   font-weight: 600;
-  letter-spacing: 1.3rem;
-  font-size: 5rem;
+  letter-spacing: 1.5rem;
+  font-size: 4rem;
   line-height: 1.5;
 }
 @media (min-width: 992px) {
