@@ -1,23 +1,12 @@
 import {Swiper, Navigation} from 'swiper';
-
+import {spaceBetweenRemUtil} from './homeUtils/utils';
 
 document.addEventListener('DOMContentLoaded', (ev) => {
     Swiper.use([Navigation]);
-    const spaceBetweenRem = 1.3; // space between slides in rem
-    const spaceBetweenPixels = parseFloat(getComputedStyle(document.documentElement).fontSize) * spaceBetweenRem;
-    
-    const spaceBetweenRemMd = 2;
-    const spaceBetweenPixelsMD = parseFloat(getComputedStyle(document.documentElement).fontSize) * spaceBetweenRemMd;
-
-    const spaceBetweenRemLg = 2.4;
-    const spaceBetweenPixelsLg = parseFloat(getComputedStyle(document.documentElement).fontSize) * spaceBetweenRemLg;
-
-    const spaceBetweenRemXL = 3;
-    const spaceBetweenPixelsXL = parseFloat(getComputedStyle(document.documentElement).fontSize) * spaceBetweenRemXL;
 
     var swiper1 = new Swiper(".swiper-container-cosmetics", {
         slidesPerView: 'auto',
-        spaceBetween: spaceBetweenPixels,
+        spaceBetween: spaceBetweenRemUtil().spaceBetweenPixels,
         breakpoints: {
             576: {
                 slidesPerView: 2
@@ -27,15 +16,15 @@ document.addEventListener('DOMContentLoaded', (ev) => {
             },
             992: {
                 slidesPerView: 3,
-                spaceBetween: spaceBetweenPixelsMD
+                spaceBetween: spaceBetweenRemUtil().spaceBetweenPixelsMD
             },
             1200: {
-                slidesPerView: 'auto',
-                spaceBetween: spaceBetweenPixelsLg
+                slidesPerView: 4,
+                spaceBetween: spaceBetweenRemUtil().spaceBetweenPixelsLg
             },
             1400: {
                 slidesPerView: 4,
-                spaceBetween: spaceBetweenPixelsXL
+                spaceBetween: spaceBetweenRemUtil().spaceBetweenPixelsXL
             }
         },
         navigation: {
@@ -64,7 +53,7 @@ document.addEventListener('DOMContentLoaded', (ev) => {
     var swiper2 = new Swiper(".swiper-container-supplements", {
         slidesPerView: 'auto',
         spaceBetween: 10,
-        spaceBetween: spaceBetweenPixels,
+        spaceBetween: spaceBetweenRemUtil().spaceBetweenPixels,
         breakpoints: {
             576: {
                 slidesPerView: 2
@@ -74,14 +63,15 @@ document.addEventListener('DOMContentLoaded', (ev) => {
             },
             992: {
                 slidesPerView: 3,
-                spaceBetween: spaceBetweenPixelsLg
+                spaceBetween: spaceBetweenRemUtil().spaceBetweenPixelsLg
             },
             1200: {
-                slidesPerView: 'auto',
+                slidesPerView: 4,
+                spaceBetween: spaceBetweenRemUtil().spaceBetweenPixelsXL
             },
             1400: {
                 slidesPerView: 4,
-                spaceBetween: spaceBetweenPixelsXL
+                spaceBetween: spaceBetweenRemUtil().spaceBetweenPixelsXL
             }
         },
         navigation: {
@@ -110,7 +100,7 @@ document.addEventListener('DOMContentLoaded', (ev) => {
     var swiper3 = new Swiper(".swiper-container-vitamins", {
         slidesPerView: 'auto',
         spaceBetween: 10,
-        spaceBetween: spaceBetweenPixels,
+        spaceBetween: spaceBetweenRemUtil().spaceBetweenPixels,
         breakpoints: {
             576: {
                 slidesPerView: 2
@@ -120,14 +110,14 @@ document.addEventListener('DOMContentLoaded', (ev) => {
             },
             992: {
                 slidesPerView: 3,
-                spaceBetween: spaceBetweenPixelsLg
+                spaceBetween: spaceBetweenRemUtil().spaceBetweenPixelsLg
             },
             1200: {
                 slidesPerView: 'auto'
             },
             1400: {
                 slidesPerView: 4,
-                spaceBetween: spaceBetweenPixelsXL
+                spaceBetween: spaceBetweenRemUtil().spaceBetweenPixelsXL
             }
         },
         navigation: {
@@ -162,5 +152,4 @@ document.addEventListener('DOMContentLoaded', (ev) => {
             document.body.classList.remove('overfHidden');
         }
     });
-
 });
