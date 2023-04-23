@@ -430,6 +430,7 @@ $breakpoint argument choices
                                 transition: max-height 0.8s linear;
                                 max-height: 0;
                                 overflow: hidden;
+
                                 .spancat {
                                     grid-column: span 1;
                                     font-size: 3rem;
@@ -438,7 +439,9 @@ $breakpoint argument choices
                                     padding: 2rem 1rem;
                                     font-weight: 600;
                                     cursor: pointer;
+                                    @include highlight_remove();
                                 }
+
                                 .spanPrice {
                                     grid-column: span 1;
                                     font-size: 3rem;
@@ -447,6 +450,7 @@ $breakpoint argument choices
                                     padding: 2rem 1rem;
                                     font-weight: 500;
                                     cursor: pointer;
+                                    @include highlight_remove();
                                 }
 
                                 .spanBrand {
@@ -457,8 +461,10 @@ $breakpoint argument choices
                                     border-radius: 1rem;
                                     padding: 2rem 1rem;
                                     cursor: pointer;
+                                    @include highlight_remove();
                                 }
                             }
+
                             &__list.categories {
                                 grid-template-columns: repeat(1, 1fr);
                                 width: 80%;
@@ -529,56 +535,19 @@ $breakpoint argument choices
 
 @mixin filters_desktop() {
     &__filters {
-        flex: 1 1 30%;
 
         &__wrapper {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 5rem;
+            padding-top: 5rem;
 
             &__menu {
-                border: 1px solid #0b3e2c44;
-                border-radius: 1rem;
-                background-image: linear-gradient(to left bottom, #f2eeee, #f2e8e8);
-                width: 90%;
-
-                @include media-breakpoint-up(xl) {
-                    width: 70%;
-                }
-
-                margin: 0 auto 5rem auto;
-                padding: 2rem 0;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 1rem;
-                transition: all .4s;
-
-                &__item {
-                    font-size: 2.5rem;
-                    color: rgb(12 22 18 / 68%);
-                    text-align: center;
-
-                    a {
-                        transition: all .4s;
-
-                        &:hover {
-                            color: #87c7a7;
-                        }
-                    }
-                }
-
-                &:hover {
-                    transform: translateY(-.7rem);
-                }
-            }
-
-            &__price {
                 width: 100%;
                 border-bottom: 1px solid rgba(124, 118, 118, 0.541);
                 padding-bottom: 1rem;
+
                 @include media-breakpoint-up(xxl) {
                     width: 85%;
                 }
@@ -599,13 +568,13 @@ $breakpoint argument choices
                         align-items: center;
                         gap: 2rem;
                         justify-content: center;
-    
+
                         &__h {
                             font-size: 3rem;
                             text-align: center;
                             cursor: pointer;
                         }
-    
+
                         &__plus-icon {
                             @include plus_icon();
                         }
@@ -613,19 +582,18 @@ $breakpoint argument choices
                 }
 
                 &__list {
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: center;
-                    flex-wrap: wrap;
+                    display: grid;
+                    grid-template-columns: repeat(1, 1fr);
+                    grid-auto-rows: minmax(0, auto);
                     gap: 1.5rem;
                     transition: max-height 0.6s ease-in-out;
                     max-height: 0;
                     overflow: hidden;
+                    width: 100%;
 
                     &__item {
                         flex-basis: 45%;
-                        font-size: 2rem;
+                        font-size: 2.2rem;
                         border: 1px solid rgba(156, 152, 152, 0.445);
                         border-radius: .5rem;
                         padding: 2rem 1rem;
@@ -639,10 +607,96 @@ $breakpoint argument choices
                     }
                 }
 
-                &__checkbox:checked ~ .container_prod__filters__wrapper__price__list {
+                &__checkbox:checked~.container_prod__filters__wrapper__menu__list {
                     max-height: 200rem;
                 }
-                &__checkbox:checked + .container_prod__filters__wrapper__price__label {
+
+                &__checkbox:checked+.container_prod__filters__wrapper__menu__label {
+                    .container_prod__filters__wrapper__menu__label__tittle__plus-icon {
+                        &:after {
+                            top: 45%;
+                            transform: rotate(45deg);
+                        }
+                    }
+                }
+            }
+
+            &__price {
+                width: 100%;
+                border-bottom: 1px solid rgba(124, 118, 118, 0.541);
+                padding-bottom: 1rem;
+
+                @include media-breakpoint-up(xxl) {
+                    width: 85%;
+                }
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+
+                &__checkbox {
+                    display: none;
+                }
+
+                &__label {
+                    &__tittle {
+                        display: flex;
+                        align-items: center;
+                        gap: 2rem;
+                        justify-content: center;
+
+                        &__h {
+                            font-size: 3rem;
+                            text-align: center;
+                            cursor: pointer;
+                        }
+
+                        &__plus-icon {
+                            @include plus_icon();
+                        }
+                    }
+                }
+
+                &__list {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-auto-rows: minmax(0, auto);
+                    gap: 1.5rem;
+                    width: 100%;
+                    transition: max-height 0.6s ease-in-out;
+                    max-height: 0;
+                    overflow: hidden;
+
+                    &__item {
+                        flex-basis: 45%;
+                        font-size: 2rem;
+                        border: 1px solid rgba(156, 152, 152, 0.445);
+                        border-radius: .5rem;
+                        padding: 2rem 1rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        transition: all .4s;
+
+                        &:last-child {
+                            grid-column: 1 / -1;
+                        }
+
+                        &:hover {
+                            cursor: pointer;
+                            background-color: #4deb9c86;
+                        }
+                    }
+                }
+
+                &__checkbox:checked~.container_prod__filters__wrapper__price__list {
+                    max-height: 200rem;
+                }
+
+                &__checkbox:checked+.container_prod__filters__wrapper__price__label {
                     .container_prod__filters__wrapper__price__label__tittle__plus-icon {
                         &:after {
                             top: 45%;
@@ -656,7 +710,7 @@ $breakpoint argument choices
                 width: 100%;
                 border-bottom: 1px solid rgba(124, 118, 118, 0.541);
                 padding-bottom: 1rem;
-                
+
                 @include media-breakpoint-up(xxl) {
                     width: 85%;
                 }
@@ -677,13 +731,13 @@ $breakpoint argument choices
                         align-items: center;
                         gap: 2rem;
                         justify-content: center;
-    
+
                         &__h {
                             font-size: 3rem;
                             text-align: center;
                             cursor: pointer;
                         }
-    
+
                         &__plus-icon {
                             @include plus_icon();
                         }
@@ -691,12 +745,11 @@ $breakpoint argument choices
                 }
 
                 &__list {
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: center;
-                    flex-wrap: wrap;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-auto-rows: minmax(0, auto);
                     gap: 1.5rem;
+                    width: 100%;
                     transition: max-height 0.6s ease-in-out;
                     max-height: 0;
                     overflow: hidden;
@@ -707,6 +760,9 @@ $breakpoint argument choices
                         border: 1px solid rgba(156, 152, 152, 0.445);
                         border-radius: .5rem;
                         padding: 2rem 1rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                         text-align: center;
                         transition: all .4s;
 
@@ -717,10 +773,11 @@ $breakpoint argument choices
                     }
                 }
 
-                &__checkbox:checked ~ .container_prod__filters__wrapper__brand__list {
+                &__checkbox:checked~.container_prod__filters__wrapper__brand__list {
                     max-height: 200rem;
                 }
-                &__checkbox:checked + .container_prod__filters__wrapper__brand__label {
+
+                &__checkbox:checked+.container_prod__filters__wrapper__brand__label {
                     .container_prod__filters__wrapper__price__label__tittle__plus-icon {
                         &:after {
                             top: 45%;
@@ -732,5 +789,19 @@ $breakpoint argument choices
             }
         }
 
+    }
+}
+
+@mixin highlight_remove() {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    &:focus {
+        outline: none !important;
     }
 }

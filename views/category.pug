@@ -22,25 +22,31 @@ html(lang="en")
         main
             .container
                 +filters_cat_mobile()
-                .container_prod
-                    .container_prod__filters.d-none.d-lg-block
+                .container_prod.row
+                    .container_prod__filters.d-none.d-xl-block.col-xl-3
                         .container_prod__filters__wrapper
                             .container_prod__filters__wrapper__menu
-                                span.container_prod__filters__wrapper__menu__item
-                                    a(href='#') Грижа за кожата
-                                span.container_prod__filters__wrapper__menu__item
-                                    a(href='#') Грижа за косата
-                                span.container_prod__filters__wrapper__menu__item
-                                    a(href='#') Лична грижа
-                                span.container_prod__filters__wrapper__menu__item
-                                    a(href='#') Грим
-                                span.container_prod__filters__wrapper__menu__item
-                                    a(href='#') Мъжка козметика
+                                input(type="checkbox" id="menu-filter-lg" class="container_prod__filters__wrapper__menu__checkbox")
+                                label(for="menu-filter-lg" class="container_prod__filters__wrapper__menu__label")
+                                    span.container_prod__filters__wrapper__menu__label__tittle
+                                        h4.container_prod__filters__wrapper__menu__label__tittle__h Подкатегория
+                                        span.container_prod__filters__wrapper__menu__label__tittle__plus-icon
+                                .container_prod__filters__wrapper__menu__list
+                                    span.container_prod__filters__wrapper__menu__list__item
+                                        a(href='#') Грижа за кожата
+                                    span.container_prod__filters__wrapper__menu__list__item
+                                        a(href='#') Грижа за косата
+                                    span.container_prod__filters__wrapper__menu__list__item
+                                        a(href='#') Лична грижа
+                                    span.container_prod__filters__wrapper__menu__list__item
+                                        a(href='#') Грим
+                                    span.container_prod__filters__wrapper__menu__list__item
+                                        a(href='#') Мъжка козметика
                             .container_prod__filters__wrapper__price
                                 input(type="checkbox" id="price-filter-lg" class="container_prod__filters__wrapper__price__checkbox")
                                 label(for="price-filter-lg" class="container_prod__filters__wrapper__price__label")
                                     span.container_prod__filters__wrapper__price__label__tittle
-                                        h4.container_prod__filters__wrapper__price__label__tittle__h Избери цена
+                                        h4.container_prod__filters__wrapper__price__label__tittle__h Цена
                                         span.container_prod__filters__wrapper__price__label__tittle__plus-icon
                                 .container_prod__filters__wrapper__price__list
                                     span.container_prod__filters__wrapper__price__list__item До 50лв
@@ -52,7 +58,7 @@ html(lang="en")
                                 input(type="checkbox" id="brand-filter-lg" class="container_prod__filters__wrapper__brand__checkbox")
                                 label(for="brand-filter-lg" class="container_prod__filters__wrapper__brand__label")
                                     span.container_prod__filters__wrapper__brand__label__tittle
-                                        h4.container_prod__filters__wrapper__brand__label__tittle__h Избери марка
+                                        h4.container_prod__filters__wrapper__brand__label__tittle__h Марка
                                         span.container_prod__filters__wrapper__price__label__tittle__plus-icon
                                 .container_prod__filters__wrapper__brand__list
                                     span.container_prod__filters__wrapper__brand__list__item InstaNatural
@@ -60,11 +66,11 @@ html(lang="en")
                                     span.container_prod__filters__wrapper__brand__list__item GNC
                                     span.container_prod__filters__wrapper__brand__list__item Life Extension
                                     span.container_prod__filters__wrapper__brand__list__item Olay
-                    .container_prod__products
+                    .container_prod__products.col-12.col-xl-9
                         .container_prod__products__wrapper
                             span.container_prod__products__wrapper__span
                                 h2.container_prod__products__wrapper__span__tittle 82 продукта
-                            .filters__sort__sort.d-none.d-lg-block
+                            .filters__sort__sort.d-none.d-xl-block
                                 .form__group
                                     label.form__label(for='sort_by') Подреди по
                                     select#sort_by.form-select
