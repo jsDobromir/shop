@@ -1,0 +1,61 @@
+mixin filters_cat_mobile()
+    .filters__sort.d-xl-none
+        .filters__sort__filter
+            input#filter.filters__sort__filter__checkbox(type='checkbox')
+            button#filters_button.btn
+                label.filters__sort__filter__label(for='filter')
+                    | филтри
+            .filters__sort__filter__fixedfilters
+                .filters__sort__filter__fixedfilters__wrapper
+                    .filters__sort__filter__fixedfilters__wrapper__close
+                        .filters__sort__filter__fixedfilters__wrapper__close__wrapper
+                            span.close__icon
+                    .filters__sort__filter__fixedfilters__wrapper__menu
+                        .filters__sort__filter__fixedfilters__wrapper__menu__item
+                            input#subcategory.filters__sort__filter__fixedfilters__wrapper__menu__item__checkbox(type='checkbox')
+                            label.filters__sort__filter__fixedfilters__wrapper__menu__item__label(for='subcategory')
+                                span.filters__sort__filter__fixedfilters__wrapper__menu__item__label__wrapper
+                                    h4.filters__sort__filter__fixedfilters__wrapper__menu__item__label__wrapper__title
+                                        | Подкатегория
+                                    span.filters__sort__filter__fixedfilters__wrapper__menu__item__label__wrapper__plus-icon
+                            .filters__sort__filter__fixedfilters__wrapper__menu__item__list.categories
+                                span.spancat Грижа за кожата
+                                span.spancat Грижа за косата
+                                span.spancat Лична грижа
+                                span.spancat Грим
+                                span.spancat Мъжка козметика
+                        .filters__sort__filter__fixedfilters__wrapper__menu__item
+                            input#price-filter.filters__sort__filter__fixedfilters__wrapper__menu__item__checkbox(type='checkbox')
+                            label.filters__sort__filter__fixedfilters__wrapper__menu__item__label(for='price-filter')
+                                span.filters__sort__filter__fixedfilters__wrapper__menu__item__label__wrapper
+                                    h4.filters__sort__filter__fixedfilters__wrapper__menu__item__label__wrapper__title
+                                        | Цена
+                                    span.filters__sort__filter__fixedfilters__wrapper__menu__item__label__wrapper__plus-icon
+                            .filters__sort__filter__fixedfilters__wrapper__menu__item__list
+                                span.spanPrice До 50лв
+                                span.spanPrice 50 до 150лв
+                                span.spanPrice 150 до 300лв
+                                span.spanPrice 300 до 600лв
+                                span.spanPrice 600 до 1200лв
+                        .filters__sort__filter__fixedfilters__wrapper__menu__item
+                            input#brand-filter.filters__sort__filter__fixedfilters__wrapper__menu__item__checkbox(type='checkbox')
+                            label.filters__sort__filter__fixedfilters__wrapper__menu__item__label(for='brand-filter')
+                                span.filters__sort__filter__fixedfilters__wrapper__menu__item__label__wrapper
+                                    h4.filters__sort__filter__fixedfilters__wrapper__menu__item__label__wrapper__title
+                                        | Марка
+                                    span.filters__sort__filter__fixedfilters__wrapper__menu__item__label__wrapper__plus-icon
+                            .filters__sort__filter__fixedfilters__wrapper__menu__item__list
+                                span.spanBrand InstaNatural
+                                span.spanBrand Gold C
+                                span.spanBrand GNC
+                                span.spanBrand Life Extension
+                                span.spanBrand Olay
+                    .applyButton
+                        button.btn-regular.btn--green(type='button') Приложи филтрите
+        .filters__sort__sort
+            .form__group
+                label.form__label(for='sort_by') Подреди по
+                select#sort_by.form-select
+                    option Най-нови
+                    option Цена най-висока
+                    option Цена най-ниска

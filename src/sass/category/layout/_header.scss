@@ -1,6 +1,6 @@
 .header {
     height: 45rem;
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
         height: 35rem;
     }
 
@@ -13,7 +13,7 @@
         background-position: center;
         position: relative;
 
-        @include media-breakpoint-up(lg) {
+        @include media-breakpoint-up(xl) {
             height: 20rem;
         }
         &__text-box-2 {
@@ -70,7 +70,7 @@
         width: 95%;
         height: 18rem;
         margin: 0 auto;
-        @include media-breakpoint-up(lg) {
+        @include media-breakpoint-up(xl) {
             height: 10rem;
         }
         display: flex;
@@ -105,7 +105,7 @@
         .form_wrapper-lg {
             display: none;
             flex-grow: .8;
-            @include media-breakpoint-up(lg) {
+            @include media-breakpoint-up(xl) {
                 display: block;
             }
 
@@ -131,7 +131,7 @@
             justify-content: space-between;
             align-items: center;
 
-            @include media-breakpoint-up(lg) {
+            @include media-breakpoint-up(xl) {
                 display: none;
             }
             width: 100%;
@@ -174,7 +174,7 @@
             align-items: center;
             gap: 3rem;
 
-            @include media-breakpoint-up(lg) {
+            @include media-breakpoint-up(xl) {
                 gap: 5rem;
             }
 

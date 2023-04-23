@@ -33,12 +33,10 @@ function quantityListenerHelper() {
 function quantityListener() {
     const quantityFixed = document.querySelector('.quantity_fixed');
     const quantityContent = document.querySelector('.quantity_fixed__content');
-    document.querySelector('.container #quantity').addEventListener('mousedown', (ev) => {
-        if (ev.which != 1) return;
+    document.querySelector('.container #quantity').addEventListener('click', (ev) => {
         ev.preventDefault();
         toggleClasses(quantityFixed, 'vis-anim', 'vis-anim-hidden');
         quantityListenerHelper();
-
     });
     document.querySelector('.container #quantity').addEventListener('touchstart', (ev) => {
         ev.preventDefault();

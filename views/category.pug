@@ -1,5 +1,6 @@
 include mixins/header.pug
 include mixins/productGridCategory.pug
+include mixins/filters_cat_mobile.pug
 include mixins/footer.pug
 doctype html
 html(lang="en")
@@ -20,54 +21,7 @@ html(lang="en")
         +header_category()
         main
             .container
-                .filters__sort.d-lg-none
-                    .filters__sort__filter
-                        input#filter.filters__sort__filter__checkbox(type='checkbox')
-                        button#filters_button.btn
-                            label.filters__sort__filter__label(for='filter')
-                                | филтри
-                        .filters__sort__filter__fixedfilters
-                            .filters__sort__filter__fixedfilters__wrapper
-                                .filters__sort__filter__fixedfilters__wrapper__close
-                                    .filters__sort__filter__fixedfilters__wrapper__close__wrapper
-                                        span.close__icon
-                                .filters__sort__filter__fixedfilters__wrapper__menu
-                                    .filters__sort__filter__fixedfilters__wrapper__menu__item
-                                        input#price-filter.filters__sort__filter__fixedfilters__wrapper__menu__item__checkbox(type='checkbox')
-                                        label.filters__sort__filter__fixedfilters__wrapper__menu__item__label(for='price-filter')
-                                            span.filters__sort__filter__fixedfilters__wrapper__menu__item__label__wrapper
-                                                h4.filters__sort__filter__fixedfilters__wrapper__menu__item__label__wrapper__title
-                                                    | Избери цена
-                                                span.filters__sort__filter__fixedfilters__wrapper__menu__item__label__wrapper__plus-icon
-                                        .filters__sort__filter__fixedfilters__wrapper__menu__item__list
-                                            span.spanPrice До 50лв
-                                            span.spanPrice 50 до 150лв
-                                            span.spanPrice 150 до 300лв
-                                            span.spanPrice 300 до 600лв
-                                            span.spanPrice 600 до 1200лв
-                                    .filters__sort__filter__fixedfilters__wrapper__menu__item
-                                        input#brand-filter.filters__sort__filter__fixedfilters__wrapper__menu__item__checkbox(type='checkbox')
-                                        label.filters__sort__filter__fixedfilters__wrapper__menu__item__label(for='brand-filter')
-                                            span.filters__sort__filter__fixedfilters__wrapper__menu__item__label__wrapper
-                                                h4.filters__sort__filter__fixedfilters__wrapper__menu__item__label__wrapper__title
-                                                    | Избери марка
-                                                span.filters__sort__filter__fixedfilters__wrapper__menu__item__label__wrapper__plus-icon
-                                        .filters__sort__filter__fixedfilters__wrapper__menu__item__list
-                                            span.spanBrand InstaNatural
-                                            span.spanBrand Gold C
-                                            span.spanBrand GNC
-                                            span.spanBrand Life Extension
-                                            span.spanBrand Olay
-                                .applyButton
-                                    button.btn-regular.btn--green(type='button') Приложи филтрите
-                    .filters__sort__sort
-                        .form__group
-                            label.form__label(for='sort_by') Подреди по
-                            select#sort_by.form-select
-                                option Най-нови
-                                option Цена най-висока
-                                option Цена най-ниска
-
+                +filters_cat_mobile()
                 .container_prod
                     .container_prod__filters.d-none.d-lg-block
                         .container_prod__filters__wrapper

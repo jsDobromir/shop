@@ -2,8 +2,17 @@ document.addEventListener('DOMContentLoaded', (ev) => {
 
     document.querySelector('.close__icon').addEventListener('click', (ev) => {
         document.querySelector('#filter').checked = false;
+        document.body.classList.remove('overfHidden');
     });
-
+    document.querySelector('.filters__sort__filter__checkbox').addEventListener('change', (event) => {
+        console.log(event.currentTarget.checked);
+        if (event.currentTarget.checked) {
+            document.body.classList.add('overfHidden');
+        }
+        else {
+            document.body.classList.remove('overfHidden');
+        }
+    });
 
     //pagination
     document.querySelector('.container_prod__pagination').addEventListener('click', (event) => {
