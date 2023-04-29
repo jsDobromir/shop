@@ -6836,6 +6836,7 @@ main .container__prod .container__prod__cosmetics__tittle, main .container__prod
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  position: relative;
 }
 .container__prod__cosmetics__mobile__wrapper__inner__item__wrapper__image__wrapper,
 .container__prod__supplements__mobile__wrapper__inner__item__wrapper__image__wrapper,

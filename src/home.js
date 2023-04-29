@@ -143,6 +143,30 @@ document.addEventListener('DOMContentLoaded', (ev) => {
         }
     });
 
+    //lazy load images
+    //document.querySelectorAll('.swiper-slide')
+    let observerOptions = {
+        rootMargin: '0px',
+        threshold: 0.1
+    }
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                let imageLz = entry.target.querySelector('.lzload');
+                console.log(entry.target);
+                if (imageLz) {
+                    imageLz.srcset = imageLz.dataset.srcset;
+                    imageLz.classList.remove('lzload');
+                    observer.unobserve(entry.target);
+                }
+            }
+        })
+    }, observerOptions);
+    document.querySelectorAll('.swiper-slide').forEach((slide) => {
+        if (slide) {
+            observer.observe(slide);
+        }
+    })    
     //checkbox navigation listener
     document.querySelector('.navigation__checkbox').addEventListener('change', (event) => {
         if (event.currentTarget.checked) {
