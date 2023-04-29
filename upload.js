@@ -14,13 +14,8 @@ function uploadImage(image, options) {
 }
 
 let promises = [
-    uploadImage("./dist/prod_images/prod1/front_small.jpg", {folder: 'prod1/home', public_id: 'front_small'}),
-    uploadImage("./dist/prod_images/prod1/resp_lg.jpg", {folder: 'prod1/home', public_id: 'resp_lg'}),
-    uploadImage("./dist/prod_images/prod1/resp_md.jpg", {folder: 'prod1/home', public_id: 'resp_md'}),
-    uploadImage("./dist/prod_images/prod1/resp_sm.jpg", {folder: 'prod1/home', public_id: 'resp_sm'}),
-    uploadImage("./dist/prod_images/prod1/resp_xl.jpg", {folder: 'prod1/home', public_id: 'resp_xl'}),
-    uploadImage("./dist/prod_images/prod1/resp_xs.jpg", {folder: 'prod1/home', public_id: 'resp_xs'})
-];
+    uploadImage("./dist/prod_images/prod2/resp_xl.jpg", {folder: 'prod2/home', public_id: 'pic_home'}),
+    ];
 
 Promise.all(promises).then(res => {
     console.log('images uploaded');
