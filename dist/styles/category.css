@@ -6040,7 +6040,7 @@ main .container_prod__filters__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5rem;
+  gap: 2.5rem;
   padding-top: 5rem;
 }
 main .container_prod__filters__wrapper__menu {
