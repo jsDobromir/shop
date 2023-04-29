@@ -3,7 +3,7 @@ import {spaceBetweenRemUtil} from './homeUtils/utils';
 
 document.addEventListener('DOMContentLoaded', (ev) => {
     Swiper.use([Navigation]);
-
+    let containerComst = document.querySelector('.swiper-container-cosmetics');
     var swiper1 = new Swiper(".swiper-container-cosmetics", {
         slidesPerView: 'auto',
         spaceBetween: spaceBetweenRemUtil().spaceBetweenPixels,
@@ -46,10 +46,16 @@ document.addEventListener('DOMContentLoaded', (ev) => {
                 else {
                     document.querySelector('.swiper-container-cosmetics .swiper-button-next').style.opacity = 1;
                 }
+                let lzImage = containerComst.querySelector('.lzload');
+                if (lzImage) {
+                    console.log(lzImage);
+                    lzImage.srcset = lzImage.dataset.srcset;
+                    lzImage.classList.remove('lzload');
+                }
             }
         }
     });
-    
+    let containerSupp = document.querySelector('.swiper-container-supplements');
     var swiper2 = new Swiper(".swiper-container-supplements", {
         slidesPerView: 'auto',
         spaceBetween: 10,
@@ -93,10 +99,17 @@ document.addEventListener('DOMContentLoaded', (ev) => {
                 else {
                     document.querySelector('.swiper-container-supplements .swiper-button-next').style.opacity = 1;
                 }
+
+                let lzImage = containerSupp.querySelector('.lzload');
+                if (lzImage) {
+                    lzImage.srcset = lzImage.dataset.srcset;
+                    lzImage.classList.remove('lzload');
+                }
             }
         }
     });
 
+    let containerVit = document.querySelector('.swiper-container-vitamins');
     var swiper3 = new Swiper(".swiper-container-vitamins", {
         slidesPerView: 'auto',
         spaceBetween: 10,
@@ -139,6 +152,12 @@ document.addEventListener('DOMContentLoaded', (ev) => {
                 else {
                     document.querySelector('.swiper-container-vitamins .swiper-button-next').style.opacity = 1;
                 }
+
+                let lzImage = containerVit.querySelector('.lzload');
+                if (lzImage) {
+                    lzImage.srcset = lzImage.dataset.srcset;
+                    lzImage.classList.remove('lzload');
+                }
             }
         }
     });
@@ -147,7 +166,7 @@ document.addEventListener('DOMContentLoaded', (ev) => {
     //document.querySelectorAll('.swiper-slide')
     let observerOptions = {
         rootMargin: '0px',
-        threshold: 0.1
+        threshold: 0.01
     }
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
