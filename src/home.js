@@ -48,7 +48,6 @@ document.addEventListener('DOMContentLoaded', (ev) => {
                 }
                 let lzImage = containerComst.querySelector('.lzload');
                 if (lzImage) {
-                    console.log(lzImage);
                     lzImage.srcset = lzImage.dataset.srcset;
                     lzImage.classList.remove('lzload');
                 }
@@ -101,6 +100,7 @@ document.addEventListener('DOMContentLoaded', (ev) => {
                 }
 
                 let lzImage = containerSupp.querySelector('.lzload');
+                console.log(lzImage);
                 if (lzImage) {
                     lzImage.srcset = lzImage.dataset.srcset;
                     lzImage.classList.remove('lzload');
@@ -172,7 +172,6 @@ document.addEventListener('DOMContentLoaded', (ev) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 let imageLz = entry.target.querySelector('.lzload');
-                console.log(entry.target);
                 if (imageLz) {
                     imageLz.srcset = imageLz.dataset.srcset;
                     imageLz.classList.remove('lzload');

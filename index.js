@@ -22,11 +22,9 @@ app.get('/', (req, res) => {
     let products = data.products.slice(0, 30);
     let productsDobavki = dobavki.products.slice(0, 30);
     let productsVitamini = vitamini.products.slice(0, 30);
-    console.log(productsVitamini);
     let respLengths = { sm: Math.round(products.length / 2), md: Math.round(products.length / 3), xl: Math.round(products.length / 5) };
     let respLengthsDobavki = { sm: Math.round(productsDobavki.length / 2), md: Math.round(productsDobavki.length / 3), xl: Math.round(productsDobavki.length / 5) }
     let respLengthsVitamini = { sm: Math.round(productsVitamini.length / 2), md: Math.round(productsVitamini.length / 3), xl: Math.round(productsVitamini.length / 5) }
-    console.log(respLengthsVitamini);
     res.render('index', {
         products: products, respLengths, respLengthsDobavki, productsLength: products.length, productsDobavki, productsDobavkiLength: productsDobavki.length,
         productsVitamini, productsVitaminiLength: productsVitamini.length, respLengthsVitamini
