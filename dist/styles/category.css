@@ -6098,7 +6098,7 @@ main .container_prod__filters__wrapper__menu__list {
   transition: max-height 0.6s ease-in-out;
   max-height: 0;
   overflow: hidden;
-  width: 100%;
+  width: 85%;
 }
 main .container_prod__filters__wrapper__menu__list__item {
   flex-basis: 45%;
