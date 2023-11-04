@@ -27,18 +27,13 @@ html(lang="en")
                             .container__prod__wrapper__top__tittle.d-md-none
                                 h2 #{product.title}
                             .container__prod__wrapper__top__image
-                                .carousel.slide(id='imageCarousel' data-bs-ride='carousel')
-                                    .carousel-inner
+                                div(class="swiper flipSwiper")
+                                    div(class="swiper-wrapper")
                                         each imgSrc, index in product.imagesRespPdp
-                                            div.carousel-item(class=index === 0 ? 'active' : '')
-                                                div.imgWrapper
-                                                    a(href="#productGallery")
-                                                        img(src=imgSrc.split(',')[0] srcset=imgSrc sizes=product.imagesRespSizes[index] width="679" height="679")
-                                    ol.carousel-indicators
-                                        each imgSrc, index in product.imagesRespPdp
-                                            li(data-bs-target='#imageCarousel', data-bs-slide-to=index, class=index === 0 ? 'active' : '')
-                                                .imgWrapper
-                                                    img(src=imgSrc.split(',')[0], srcset=imgSrc sizes=product.imagesRespSizes[index] width="40" height="40")
+                                            div(class="swiper-slide")
+                                                div(class="imgWrapper")
+                                                    img(src=imgSrc.split(',')[0] srcset=imgSrc sizes=product.imagesRespSizes[index])
+                                    div(class="swiper-pagination")
                         .container__prod__info
                             .container__prod__wrapper__top__tittle.d-none.d-md-block
                                 h2 #{product.title}

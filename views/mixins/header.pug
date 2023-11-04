@@ -82,7 +82,7 @@ mixin header_menu_common()
                             input#navi-item-4.navigation__checkbox__item(type='checkbox')
                             label.navigation__item__dropdown(for='navi-item-4')
                                 span.navigation__item__dropdown__wrapper
-                                    h4.navigation__item__dropdown__wrapper__tittle Спорт
+                                    h4.navigation__item__dropdown__wrapper__tittle Билкови Продукти
                                     span.plus_icon
                             .navigation__list__nested
                                 ul.navigation__list__nested__list
@@ -102,7 +102,7 @@ mixin header_menu_common()
                             input#navi-item-5.navigation__checkbox__item(type='checkbox')
                             label.navigation__item__dropdown(for='navi-item-5')
                                 span.navigation__item__dropdown__wrapper
-                                    h4.navigation__item__dropdown__wrapper__tittle Спортно Облекло
+                                    h4.navigation__item__dropdown__wrapper__tittle Спорт и Фитнес
                                     span.plus_icon
                             .navigation__list__nested
                                 ul.navigation__list__nested__list
@@ -192,7 +192,7 @@ mixin header_menu_common()
                         li.navigation__desktop__item__dropdown__item
                             a.navigation__desktop__item__dropdown__item__link(href='/vitamini/running/') Витамин Е
                 li.navigation__desktop__item(class=`${category && category=='sport' ? 'active' : ''}`)
-                    a.navigation__desktop__link(href='/sport/') Спорт
+                    a.navigation__desktop__link(href='/sport/') Билкови Продукти
                     ul.navigation__desktop__item__dropdown.sport
                         li.navigation__desktop__item__dropdown__item
                             a.navigation__desktop__item__dropdown__item__link(href='/vitamini/fitness/') Фитнес
@@ -211,9 +211,7 @@ mixin header_menu_common()
                         li.navigation__desktop__item__dropdown__item
                             a.navigation__desktop__item__dropdown__item__link(href='/sport/yoga/') Йога
                 li.navigation__desktop__item
-                    a.navigation__desktop__link(href='/obleklo/')
-                        | Спортно
-                        | Облекло
+                    a.navigation__desktop__link(href='/obleklo/') Спорт и Фитнес
                     ul.navigation__desktop__item__dropdown.sport_wear
                         li.navigation__desktop__item__dropdown__item
                             a.navigation__desktop__item__dropdown__item__link(href='/fashion/womenclothes/') Дамски дрехи

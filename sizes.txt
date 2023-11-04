@@ -1,28 +1,12 @@
-front_small 168 x 320
-resp_xs 168 x 320
-resp_sm 252 x 480
-
-
-//Organica.bg produkti za tvoeto zdrave
-
-//za carousela - pri pan movement, ako 
-
-//add to cart - popup with cart items
-
-https://m.media-amazon.com/images/I/51bqSk5XnYL._SX425_.jpg":[531,425],
-"https://m.media-amazon.com/images/I/51bqSk5XnYL._SX522_.jpg":[653,522],
-"https://m.media-amazon.com/images/I/51bqSk5XnYL._SX569_.jpg":[711,569],
-"https://m.media-amazon.com/images/I/51bqSk5XnYL._SY355_.jpg":[355,284],
-"https://m.media-amazon.com/images/I/51bqSk5XnYL._SY450_.jpg":[450,360],
-"https://m.media-amazon.com/images/I/51bqSk5XnYL._SX466_.jpg":[583,466],
-"https://m.media-amazon.com/images/I/51bqSk5XnYL._SX679_.jpg":[849,679]
-
-https://m.media-amazon.com/images/I/612WvmJSS+L._SX569_.jpg":[569,569],
-"https://m.media-amazon.com/images/I/612WvmJSS+L._SY355_.jpg":[355,355],
-"https://m.media-amazon.com/images/I/612WvmJSS+L._SX522_.jpg":[522,522],
-"https://m.media-amazon.com/images/I/612WvmJSS+L._SY450_.jpg":[450,450],
-"https://m.media-amazon.com/images/I/612WvmJSS+L._SX679_.jpg":[679,679],
-"https://m.media-amazon.com/images/I/612WvmJSS+L._SX466_.jpg":[466,466],
-"https://m.media-amazon.com/images/I/612WvmJSS+L._SX425_.jpg:[425,425]
-
-"https://m.media-amazon.com/images/I/71nm6K2j+OL._SX569_.jpg":[569,569],"https://m.media-amazon.com/images/I/71nm6K2j+OL._SY355_.jpg":[355,355],"https://m.media-amazon.com/images/I/71nm6K2j+OL._SY450_.jpg":[450,450],"https://m.media-amazon.com/images/I/71nm6K2j+OL._SX679_.jpg":[679,679],"https://m.media-amazon.com/images/I/71nm6K2j+OL._SX522_.jpg":[522,522],"https://m.media-amazon.com/images/I/71nm6K2j+OL._SX425_.jpg":[425,425],"https://m.media-amazon.com/images/I/71nm6K2j+OL._SX466_.jpg":[466,466]
+.carousel.slide(id='imageCarousel' data-bs-ride='carousel')
+                                    .carousel-inner
+                                        each imgSrc, index in product.imagesRespPdp
+                                            div.carousel-item(class=index === 0 ? 'active' : '')
+                                                div.imgWrapper
+                                                    a(href="#productGallery")
+                                                        img(src=imgSrc.split(',')[0] srcset=imgSrc sizes=product.imagesRespSizes[index] width="679" height="679")
+                                    ol.carousel-indicators
+                                        each imgSrc, index in product.imagesRespPdp
+                                            li(data-bs-target='#imageCarousel', data-bs-slide-to=index, class=index === 0 ? 'active' : '')
+                                                .imgWrapper
+                                                    img(src=imgSrc.split(',')[0], srcset=imgSrc sizes=product.imagesRespSizes[index] width="40" height="40")
